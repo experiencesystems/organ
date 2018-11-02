@@ -22,7 +22,7 @@ namespace organ
         {
             this.Hide();
             //fazenda.Metodo.MostrarPainelLateral();
-            lblTelefone.LblEmail.Visible = true;
+            //lblTelefone.LblEmail.Visible = true;
         }
     }
 }

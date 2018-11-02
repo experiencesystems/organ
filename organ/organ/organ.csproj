@@ -88,9 +88,6 @@
     <Compile Include="fazenda\consulta\fornecedores.Designer.cs">
       <DependentUpon>fornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Metodo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="plantio\cadastro\nova_ferramenta.cs">
       <SubType>UserControl</SubType>
     </Compile>

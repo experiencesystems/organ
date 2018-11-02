@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sementes1 = new organ.sementes();
-            this.novo_plantio1 = new organ.novo_plantio();
-            this.fertilizantes1 = new organ.fertilizantes();
-            this.solo1 = new organ.solo();
-            this.maquinas1 = new organ.maquinas();
-            this.ferramentas1 = new organ.ferramentas();
-            this.defensivo1 = new organ.defensivo();
             this.btnDefensivo = new System.Windows.Forms.Button();
             this.btnFerramentas = new System.Windows.Forms.Button();
             this.btnMaquinas = new System.Windows.Forms.Button();
@@ -42,60 +35,14 @@
             this.btnFertilizantes = new System.Windows.Forms.Button();
             this.btnSolo = new System.Windows.Forms.Button();
             this.btnNovoPlantio = new System.Windows.Forms.Button();
+            this.defensivo1 = new organ.defensivo();
+            this.ferramentas1 = new organ.ferramentas();
+            this.maquinas1 = new organ.maquinas();
+            this.solo1 = new organ.solo();
+            this.fertilizantes1 = new organ.fertilizantes();
+            this.sementes1 = new organ.sementes();
+            this.novo_plantio1 = new organ.novo_plantio();
             this.SuspendLayout();
-            // 
-            // sementes1
-            // 
-            this.sementes1.Location = new System.Drawing.Point(77, 175);
-            this.sementes1.Name = "sementes1";
-            this.sementes1.Size = new System.Drawing.Size(163, 107);
-            this.sementes1.TabIndex = 11;
-            // 
-            // novo_plantio1
-            // 
-            this.novo_plantio1.Location = new System.Drawing.Point(136, 40);
-            this.novo_plantio1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.novo_plantio1.Name = "novo_plantio1";
-            this.novo_plantio1.Size = new System.Drawing.Size(200, 59);
-            this.novo_plantio1.TabIndex = 10;
-            this.novo_plantio1.Visible = false;
-            // 
-            // fertilizantes1
-            // 
-            this.fertilizantes1.Location = new System.Drawing.Point(591, 165);
-            this.fertilizantes1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.fertilizantes1.Name = "fertilizantes1";
-            this.fertilizantes1.Size = new System.Drawing.Size(150, 43);
-            this.fertilizantes1.TabIndex = 12;
-            // 
-            // solo1
-            // 
-            this.solo1.Location = new System.Drawing.Point(1086, 175);
-            this.solo1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.solo1.Name = "solo1";
-            this.solo1.Size = new System.Drawing.Size(150, 84);
-            this.solo1.TabIndex = 13;
-            // 
-            // maquinas1
-            // 
-            this.maquinas1.Location = new System.Drawing.Point(88, 521);
-            this.maquinas1.Name = "maquinas1";
-            this.maquinas1.Size = new System.Drawing.Size(119, 53);
-            this.maquinas1.TabIndex = 14;
-            // 
-            // ferramentas1
-            // 
-            this.ferramentas1.Location = new System.Drawing.Point(591, 521);
-            this.ferramentas1.Name = "ferramentas1";
-            this.ferramentas1.Size = new System.Drawing.Size(158, 85);
-            this.ferramentas1.TabIndex = 15;
-            // 
-            // defensivo1
-            // 
-            this.defensivo1.Location = new System.Drawing.Point(1083, 521);
-            this.defensivo1.Name = "defensivo1";
-            this.defensivo1.Size = new System.Drawing.Size(153, 76);
-            this.defensivo1.TabIndex = 16;
             // 
             // btnDefensivo
             // 
@@ -221,6 +168,55 @@
             this.btnNovoPlantio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovoPlantio.UseVisualStyleBackColor = true;
             this.btnNovoPlantio.Click += new System.EventHandler(this.btnNovoPlantio_Click);
+            // 
+            // defensivo1
+            // 
+            this.defensivo1.Location = new System.Drawing.Point(1080, 515);
+            this.defensivo1.Name = "defensivo1";
+            this.defensivo1.Size = new System.Drawing.Size(204, 84);
+            this.defensivo1.TabIndex = 16;
+            // 
+            // ferramentas1
+            // 
+            this.ferramentas1.Location = new System.Drawing.Point(587, 515);
+            this.ferramentas1.Name = "ferramentas1";
+            this.ferramentas1.Size = new System.Drawing.Size(258, 67);
+            this.ferramentas1.TabIndex = 15;
+            // 
+            // maquinas1
+            // 
+            this.maquinas1.Location = new System.Drawing.Point(77, 515);
+            this.maquinas1.Name = "maquinas1";
+            this.maquinas1.Size = new System.Drawing.Size(216, 76);
+            this.maquinas1.TabIndex = 14;
+            // 
+            // solo1
+            // 
+            this.solo1.Location = new System.Drawing.Point(1093, 170);
+            this.solo1.Name = "solo1";
+            this.solo1.Size = new System.Drawing.Size(215, 85);
+            this.solo1.TabIndex = 13;
+            // 
+            // fertilizantes1
+            // 
+            this.fertilizantes1.Location = new System.Drawing.Point(587, 170);
+            this.fertilizantes1.Name = "fertilizantes1";
+            this.fertilizantes1.Size = new System.Drawing.Size(211, 73);
+            this.fertilizantes1.TabIndex = 12;
+            // 
+            // sementes1
+            // 
+            this.sementes1.Location = new System.Drawing.Point(77, 170);
+            this.sementes1.Name = "sementes1";
+            this.sementes1.Size = new System.Drawing.Size(193, 79);
+            this.sementes1.TabIndex = 11;
+            // 
+            // novo_plantio1
+            // 
+            this.novo_plantio1.Location = new System.Drawing.Point(77, 41);
+            this.novo_plantio1.Name = "novo_plantio1";
+            this.novo_plantio1.Size = new System.Drawing.Size(407, 65);
+            this.novo_plantio1.TabIndex = 10;
             // 
             // plantio
             // 
