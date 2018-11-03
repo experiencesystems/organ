@@ -1,6 +1,6 @@
 ﻿namespace organ
 {
-    partial class novo_fertilizante
+    partial class nova_ferramenta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNovaMaquina = new System.Windows.Forms.Label();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblNovaFerramenta = new System.Windows.Forms.Label();
             this.tlpBarraSuperior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblNovaMaquina
-            // 
-            this.lblNovaMaquina.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNovaMaquina.AutoSize = true;
-            this.lblNovaMaquina.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblNovaMaquina.Location = new System.Drawing.Point(587, 20);
-            this.lblNovaMaquina.Name = "lblNovaMaquina";
-            this.lblNovaMaquina.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblNovaMaquina.Size = new System.Drawing.Size(218, 34);
-            this.lblNovaMaquina.TabIndex = 30;
-            this.lblNovaMaquina.Text = "Adicionar fertilizante";
             // 
             // tlpBarraSuperior
             // 
@@ -53,7 +41,7 @@
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.68915F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
-            this.tlpBarraSuperior.Controls.Add(this.lblNovaMaquina, 1, 0);
+            this.tlpBarraSuperior.Controls.Add(this.lblNovaFerramenta, 1, 0);
             this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.tlpBarraSuperior.Name = "tlpBarraSuperior";
@@ -61,7 +49,7 @@
             this.tlpBarraSuperior.RowCount = 1;
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBarraSuperior.Size = new System.Drawing.Size(1425, 66);
-            this.tlpBarraSuperior.TabIndex = 39;
+            this.tlpBarraSuperior.TabIndex = 38;
             // 
             // btnVoltar
             // 
@@ -82,16 +70,29 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // novo_fertilizante
+            // lblNovaFerramenta
+            // 
+            this.lblNovaFerramenta.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNovaFerramenta.AutoSize = true;
+            this.lblNovaFerramenta.Font = new System.Drawing.Font("Calibri", 18F);
+            this.lblNovaFerramenta.Location = new System.Drawing.Point(584, 20);
+            this.lblNovaFerramenta.Name = "lblNovaFerramenta";
+            this.lblNovaFerramenta.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblNovaFerramenta.Size = new System.Drawing.Size(223, 34);
+            this.lblNovaFerramenta.TabIndex = 30;
+            this.lblNovaFerramenta.Text = "Adicionar ferramenta";
+            // 
+            // nova_ferramenta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1425, 801);
             this.Controls.Add(this.tlpBarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(131, 83);
-            this.Name = "novo_fertilizante";
+            this.Name = "nova_ferramenta";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "novo_fertilizante";
+            this.Text = "nova_ferramenta";
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.ResumeLayout(false);
@@ -100,8 +101,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNovaMaquina;
         private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label lblNovaFerramenta;
     }
 }

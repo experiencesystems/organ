@@ -37,7 +37,7 @@ namespace organ
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrgan));
             this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pcbOrgan = new System.Windows.Forms.PictureBox();
@@ -55,7 +55,7 @@ namespace organ
             this.plantio1 = new organ.plantio();
             this.inicio1 = new organ.inicio();
             this.pnlSuperior.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOrgan)).BeginInit();
             this.pnlLateral.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace organ
             // pnlSuperior
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.White;
-            this.pnlSuperior.Controls.Add(this.tableLayoutPanel1);
+            this.pnlSuperior.Controls.Add(this.tlpBarraSuperior);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(131, 0);
             this.pnlSuperior.Margin = new System.Windows.Forms.Padding(2);
@@ -71,24 +71,24 @@ namespace organ
             this.pnlSuperior.Size = new System.Drawing.Size(1425, 83);
             this.pnlSuperior.TabIndex = 1;
             // 
-            // tableLayoutPanel1
+            // tlpBarraSuperior
             // 
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
-            this.tableLayoutPanel1.Controls.Add(this.btnConfig, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnSair, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pcbOrgan, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1425, 70);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tlpBarraSuperior.AutoSize = true;
+            this.tlpBarraSuperior.ColumnCount = 3;
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
+            this.tlpBarraSuperior.Controls.Add(this.btnConfig, 0, 0);
+            this.tlpBarraSuperior.Controls.Add(this.btnSair, 2, 0);
+            this.tlpBarraSuperior.Controls.Add(this.pcbOrgan, 1, 0);
+            this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.tlpBarraSuperior.Name = "tlpBarraSuperior";
+            this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.tlpBarraSuperior.RowCount = 1;
+            this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBarraSuperior.Size = new System.Drawing.Size(1425, 70);
+            this.tlpBarraSuperior.TabIndex = 7;
             // 
             // btnConfig
             // 
@@ -153,7 +153,7 @@ namespace organ
             this.btnFazenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFazenda.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFazenda.ForeColor = System.Drawing.Color.FromArgb(121, 137, 131);
+            this.btnFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(137)))), ((int)(((byte)(131)))));
             this.btnFazenda.Image = global::organ.Properties.Resources.fazenda_45;
             this.btnFazenda.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnFazenda.Location = new System.Drawing.Point(-3, 411);
@@ -185,7 +185,7 @@ namespace organ
             this.btnRelatorios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelatorios.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorios.ForeColor = System.Drawing.Color.FromArgb(121, 137, 131);
+            this.btnRelatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(137)))), ((int)(((byte)(131)))));
             this.btnRelatorios.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorios.Image")));
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRelatorios.Location = new System.Drawing.Point(-3, 311);
@@ -208,7 +208,7 @@ namespace organ
             this.btnColheita.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnColheita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColheita.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColheita.ForeColor = System.Drawing.Color.FromArgb(121, 137, 131);
+            this.btnColheita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(137)))), ((int)(((byte)(131)))));
             this.btnColheita.Image = ((System.Drawing.Image)(resources.GetObject("btnColheita.Image")));
             this.btnColheita.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnColheita.Location = new System.Drawing.Point(0, 214);
@@ -231,7 +231,7 @@ namespace organ
             this.btnPlantio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnPlantio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlantio.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlantio.ForeColor = System.Drawing.Color.FromArgb(121, 137, 131);
+            this.btnPlantio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(137)))), ((int)(((byte)(131)))));
             this.btnPlantio.Image = ((System.Drawing.Image)(resources.GetObject("btnPlantio.Image")));
             this.btnPlantio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPlantio.Location = new System.Drawing.Point(-3, 110);
@@ -343,7 +343,7 @@ namespace organ
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlSuperior.ResumeLayout(false);
             this.pnlSuperior.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpBarraSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbOrgan)).EndInit();
             this.pnlLateral.ResumeLayout(false);
             this.pnlLateral.PerformLayout();
@@ -370,6 +370,6 @@ namespace organ
         public Button btnPlantio;
         private Button btnConfig;
         private configuracao configuracao1;
-        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tlpBarraSuperior;
     }
 }

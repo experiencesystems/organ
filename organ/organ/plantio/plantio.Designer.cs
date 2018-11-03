@@ -42,6 +42,7 @@
             this.fertilizantes1 = new organ.fertilizantes();
             this.sementes1 = new organ.sementes();
             this.novo_plantio1 = new organ.novo_plantio();
+            this.nova_semente1 = new organ.nova_semente();
             this.SuspendLayout();
             // 
             // btnDefensivo
@@ -175,6 +176,7 @@
             this.defensivo1.Name = "defensivo1";
             this.defensivo1.Size = new System.Drawing.Size(204, 84);
             this.defensivo1.TabIndex = 16;
+            this.defensivo1.Visible = false;
             // 
             // ferramentas1
             // 
@@ -182,6 +184,7 @@
             this.ferramentas1.Name = "ferramentas1";
             this.ferramentas1.Size = new System.Drawing.Size(258, 67);
             this.ferramentas1.TabIndex = 15;
+            this.ferramentas1.Visible = false;
             // 
             // maquinas1
             // 
@@ -189,6 +192,7 @@
             this.maquinas1.Name = "maquinas1";
             this.maquinas1.Size = new System.Drawing.Size(216, 76);
             this.maquinas1.TabIndex = 14;
+            this.maquinas1.Visible = false;
             // 
             // solo1
             // 
@@ -196,6 +200,7 @@
             this.solo1.Name = "solo1";
             this.solo1.Size = new System.Drawing.Size(215, 85);
             this.solo1.TabIndex = 13;
+            this.solo1.Visible = false;
             // 
             // fertilizantes1
             // 
@@ -203,6 +208,7 @@
             this.fertilizantes1.Name = "fertilizantes1";
             this.fertilizantes1.Size = new System.Drawing.Size(211, 73);
             this.fertilizantes1.TabIndex = 12;
+            this.fertilizantes1.Visible = false;
             // 
             // sementes1
             // 
@@ -210,6 +216,7 @@
             this.sementes1.Name = "sementes1";
             this.sementes1.Size = new System.Drawing.Size(193, 79);
             this.sementes1.TabIndex = 11;
+            this.sementes1.Visible = false;
             // 
             // novo_plantio1
             // 
@@ -217,6 +224,15 @@
             this.novo_plantio1.Name = "novo_plantio1";
             this.novo_plantio1.Size = new System.Drawing.Size(407, 65);
             this.novo_plantio1.TabIndex = 10;
+            this.novo_plantio1.Visible = false;
+            // 
+            // nova_semente1
+            // 
+            this.nova_semente1.Location = new System.Drawing.Point(77, 255);
+            this.nova_semente1.Name = "nova_semente1";
+            this.nova_semente1.Size = new System.Drawing.Size(291, 73);
+            this.nova_semente1.TabIndex = 17;
+            this.nova_semente1.Visible = false;
             // 
             // plantio
             // 
@@ -255,12 +271,13 @@
         private System.Windows.Forms.Button btnMaquinas;
         private System.Windows.Forms.Button btnFerramentas;
         private System.Windows.Forms.Button btnDefensivo;
-        private novo_plantio novo_plantio1;
-        private sementes sementes1;
-        private fertilizantes fertilizantes1;
-        private solo solo1;
-        private maquinas maquinas1;
-        private ferramentas ferramentas1;
-        private defensivo defensivo1;
+        public sementes sementes1;
+        public novo_plantio novo_plantio1;
+        public fertilizantes fertilizantes1;
+        public solo solo1;
+        public maquinas maquinas1;
+        public ferramentas ferramentas1;
+        public defensivo defensivo1;
+        public nova_semente nova_semente1;
     }
 }

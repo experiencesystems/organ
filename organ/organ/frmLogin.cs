@@ -21,7 +21,6 @@ namespace organ
             InitializeComponent();
             this.ActiveControl = pnlLogin;
             pcbOlho.Image = olho_invisivel;
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void txtUsuario_GotFocus(object sender, EventArgs e)

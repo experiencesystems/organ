@@ -21,5 +21,13 @@ namespace organ
         {
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (nova_maquina _nova_maquina = new nova_maquina())
+            {
+                _nova_maquina.ShowDialog(this);
+            }
+        }
     }
 }

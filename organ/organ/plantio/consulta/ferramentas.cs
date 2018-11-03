@@ -21,5 +21,13 @@ namespace organ
         {
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (nova_ferramenta _nova_ferramenta = new nova_ferramenta())
+            {
+                _nova_ferramenta.ShowDialog(this);
+            }
+        }
     }
 }

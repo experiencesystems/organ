@@ -21,5 +21,13 @@ namespace organ
         {
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (nova_praga _nova_praga = new nova_praga())
+            {
+                _nova_praga.ShowDialog(this);
+            }
+        }
     }
 }

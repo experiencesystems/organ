@@ -15,7 +15,6 @@ namespace organ
         public sementes()
         {
             InitializeComponent();
-            nova_semente1.Visible = false;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -24,9 +23,11 @@ namespace organ
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
-        { 
-            nova_semente1.Visible = true;
-            nova_semente1.Dock = DockStyle.Fill;
+        {
+            using (nova_semente _nova_semente = new nova_semente())
+            {
+                _nova_semente.ShowDialog(this);
+            }
         }
     }
 }

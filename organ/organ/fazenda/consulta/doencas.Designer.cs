@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
-            this.lblDoencas = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.lblDoencas = new System.Windows.Forms.Label();
             this.dgvDoencas = new System.Windows.Forms.DataGridView();
             this.tlpBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoencas)).BeginInit();
@@ -42,7 +42,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblDoencas, 1, 0);
@@ -54,18 +54,6 @@
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBarraSuperior.Size = new System.Drawing.Size(1384, 66);
             this.tlpBarraSuperior.TabIndex = 38;
-            // 
-            // lblDoencas
-            // 
-            this.lblDoencas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDoencas.AutoSize = true;
-            this.lblDoencas.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblDoencas.Location = new System.Drawing.Point(574, 20);
-            this.lblDoencas.Name = "lblDoencas";
-            this.lblDoencas.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblDoencas.Size = new System.Drawing.Size(157, 34);
-            this.lblDoencas.TabIndex = 6;
-            this.lblDoencas.Text = "Doenças";
             // 
             // btnVoltar
             // 
@@ -80,7 +68,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(23, 23);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVoltar.Size = new System.Drawing.Size(106, 30);
+            this.btnVoltar.Size = new System.Drawing.Size(105, 30);
             this.btnVoltar.TabIndex = 0;
             this.btnVoltar.Text = "   Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -95,13 +83,26 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1176, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1174, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "  Adicionar novo";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // lblDoencas
+            // 
+            this.lblDoencas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDoencas.AutoSize = true;
+            this.lblDoencas.Font = new System.Drawing.Font("Calibri", 18F);
+            this.lblDoencas.Location = new System.Drawing.Point(572, 20);
+            this.lblDoencas.Name = "lblDoencas";
+            this.lblDoencas.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
+            this.lblDoencas.Size = new System.Drawing.Size(157, 34);
+            this.lblDoencas.TabIndex = 6;
+            this.lblDoencas.Text = "Doenças";
             // 
             // dgvDoencas
             // 

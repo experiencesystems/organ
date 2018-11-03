@@ -21,5 +21,13 @@ namespace organ
         {
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (novo_fertilizante _novo_fertilizante = new novo_fertilizante())
+            {
+                _novo_fertilizante.ShowDialog(this);
+            }
+        }
     }
 }

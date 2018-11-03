@@ -21,8 +21,14 @@ namespace organ
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //fazenda.Metodo.MostrarPainelLateral();
-            //lblTelefone.LblEmail.Visible = true;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (nova_doenca _nova_doenca = new nova_doenca())
+            {
+                _nova_doenca.ShowDialog(this);
+            }
         }
     }
 }

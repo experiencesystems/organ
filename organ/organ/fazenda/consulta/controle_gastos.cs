@@ -21,5 +21,13 @@ namespace organ
         {
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (novo_gasto _novo_gasto = new novo_gasto())
+            {
+                _novo_gasto.ShowDialog(this);
+            }
+        }
     }
 }

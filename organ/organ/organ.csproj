@@ -52,10 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="colheita.cs">
+    <Compile Include="colheita\colheita.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="colheita.Designer.cs">
+    <Compile Include="colheita\colheita.Designer.cs">
       <DependentUpon>colheita.cs</DependentUpon>
     </Compile>
     <Compile Include="configuracao\configuracao.cs">
@@ -88,32 +88,62 @@
     <Compile Include="fazenda\consulta\fornecedores.Designer.cs">
       <DependentUpon>fornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="plantio\cadastro\nova_ferramenta.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="fazenda\cadastro\nova_doenca.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="plantio\cadastro\nova_ferramenta.Designer.cs">
-      <DependentUpon>nova_ferramenta.cs</DependentUpon>
+    <Compile Include="fazenda\cadastro\nova_doenca.Designer.cs">
+      <DependentUpon>nova_doenca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fazenda\cadastro\nova_praga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fazenda\cadastro\nova_praga.Designer.cs">
+      <DependentUpon>nova_praga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fazenda\cadastro\novo_fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fazenda\cadastro\novo_fornecedor.Designer.cs">
+      <DependentUpon>novo_fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fazenda\cadastro\novo_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fazenda\cadastro\novo_funcionario.Designer.cs">
+      <DependentUpon>novo_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fazenda\cadastro\novo_gasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fazenda\cadastro\novo_gasto.Designer.cs">
+      <DependentUpon>novo_gasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plantio\cadastro\nova ferramenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plantio\cadastro\nova ferramenta.Designer.cs">
+      <DependentUpon>nova ferramenta.cs</DependentUpon>
     </Compile>
     <Compile Include="plantio\cadastro\novo_fertilizante.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="plantio\cadastro\novo_fertilizante.Designer.cs">
       <DependentUpon>novo_fertilizante.cs</DependentUpon>
     </Compile>
     <Compile Include="plantio\cadastro\novo_defensivo.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="plantio\cadastro\novo_defensivo.Designer.cs">
       <DependentUpon>novo_defensivo.cs</DependentUpon>
     </Compile>
     <Compile Include="plantio\cadastro\nova_maquina.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="plantio\cadastro\nova_maquina.Designer.cs">
       <DependentUpon>nova_maquina.cs</DependentUpon>
     </Compile>
     <Compile Include="plantio\cadastro\nova_semente.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="plantio\cadastro\nova_semente.Designer.cs">
       <DependentUpon>nova_semente.cs</DependentUpon>
@@ -142,10 +172,10 @@
     <Compile Include="plantio\consulta\fertilizantes.Designer.cs">
       <DependentUpon>fertilizantes.cs</DependentUpon>
     </Compile>
-    <Compile Include="inicio.cs">
+    <Compile Include="inicio\inicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="inicio.Designer.cs">
+    <Compile Include="inicio\inicio.Designer.cs">
       <DependentUpon>inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="frmOrgan.cs">
@@ -204,8 +234,8 @@
     <Compile Include="plantio\consulta\solo.Designer.cs">
       <DependentUpon>solo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ValidacaoCPF.cs" />
-    <EmbeddedResource Include="colheita.resx">
+    <Compile Include="classes\ValidacaoCPF.cs" />
+    <EmbeddedResource Include="colheita\colheita.resx">
       <DependentUpon>colheita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configuracao\configuracao.resx">
@@ -229,7 +259,7 @@
     <EmbeddedResource Include="fazenda\fazenda.resx">
       <DependentUpon>fazenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="inicio.resx">
+    <EmbeddedResource Include="inicio\inicio.resx">
       <DependentUpon>inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrgan.resx">
@@ -238,17 +268,35 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="plantio\cadastro\nova_ferramenta.resx">
-      <DependentUpon>nova_ferramenta.cs</DependentUpon>
+    <EmbeddedResource Include="fazenda\cadastro\nova_doenca.resx">
+      <DependentUpon>nova_doenca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fazenda\cadastro\nova_praga.resx">
+      <DependentUpon>nova_praga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fazenda\cadastro\novo_fornecedor.resx">
+      <DependentUpon>novo_fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fazenda\cadastro\novo_funcionario.resx">
+      <DependentUpon>novo_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fazenda\cadastro\novo_gasto.resx">
+      <DependentUpon>novo_gasto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plantio\cadastro\nova ferramenta.resx">
+      <DependentUpon>nova ferramenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\cadastro\novo_fertilizante.resx">
       <DependentUpon>novo_fertilizante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="plantio\cadastro\novo_defensivo.resx">
+      <DependentUpon>novo_defensivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="plantio\cadastro\nova_maquina.resx">
       <DependentUpon>nova_maquina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="plantio\cadastro\novo_defensivo.resx">
-      <DependentUpon>novo_defensivo.cs</DependentUpon>
+    <EmbeddedResource Include="plantio\cadastro\nova_semente.resx">
+      <DependentUpon>nova_semente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\consulta\defensivo.resx">
       <DependentUpon>defensivo.cs</DependentUpon>
@@ -261,9 +309,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\consulta\maquinas.resx">
       <DependentUpon>maquinas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="plantio\cadastro\nova_semente.resx">
-      <DependentUpon>nova_semente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\cadastro\novo_plantio.resx">
       <DependentUpon>novo_plantio.cs</DependentUpon>
@@ -465,9 +510,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="classes\" />
-    <Folder Include="fazenda\cadastro\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

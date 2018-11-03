@@ -21,5 +21,13 @@ namespace organ
         {
             this.Hide();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (novo_defensivo _novo_defensivo = new novo_defensivo())
+            {
+                _novo_defensivo.ShowDialog(this);
+            }
+        }
     }
 }

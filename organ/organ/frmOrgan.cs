@@ -26,7 +26,11 @@ namespace organ
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja sair dessa aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -60,6 +64,8 @@ namespace organ
             pnlSelecionado.Height = btnPlantio.Height;
             pnlSelecionado.Top = btnPlantio.Top;
             pnlSelecionado.BringToFront();
+            plantio _plantio = new plantio();
+            _plantio.sementes1.Visible = false;
             plantio1.BringToFront();
             
             //inicio

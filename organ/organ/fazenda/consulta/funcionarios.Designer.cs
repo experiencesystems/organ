@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblFuncionarios = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.lblFuncionarios = new System.Windows.Forms.Label();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
@@ -42,7 +42,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel2.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblFuncionarios, 1, 0);
@@ -54,18 +54,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 66);
             this.tableLayoutPanel2.TabIndex = 38;
-            // 
-            // lblFuncionarios
-            // 
-            this.lblFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblFuncionarios.AutoSize = true;
-            this.lblFuncionarios.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblFuncionarios.Location = new System.Drawing.Point(552, 20);
-            this.lblFuncionarios.Name = "lblFuncionarios";
-            this.lblFuncionarios.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblFuncionarios.Size = new System.Drawing.Size(200, 34);
-            this.lblFuncionarios.TabIndex = 6;
-            this.lblFuncionarios.Text = "Funcionários";
             // 
             // btnVoltar
             // 
@@ -80,7 +68,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(23, 23);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVoltar.Size = new System.Drawing.Size(106, 30);
+            this.btnVoltar.Size = new System.Drawing.Size(105, 30);
             this.btnVoltar.TabIndex = 0;
             this.btnVoltar.Text = "   Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -95,13 +83,26 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1176, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1174, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "  Adicionar novo";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // lblFuncionarios
+            // 
+            this.lblFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFuncionarios.AutoSize = true;
+            this.lblFuncionarios.Font = new System.Drawing.Font("Calibri", 18F);
+            this.lblFuncionarios.Location = new System.Drawing.Point(551, 20);
+            this.lblFuncionarios.Name = "lblFuncionarios";
+            this.lblFuncionarios.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
+            this.lblFuncionarios.Size = new System.Drawing.Size(200, 34);
+            this.lblFuncionarios.TabIndex = 6;
+            this.lblFuncionarios.Text = "Funcionários";
             // 
             // dgvFuncionarios
             // 

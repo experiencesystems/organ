@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFerramentas = new System.Windows.Forms.DataGridView();
             this.lblFerramentas = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramentas)).BeginInit();
+            this.tlpBarraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvFerramentas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 112);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1321, 575);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvFerramentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFerramentas.Location = new System.Drawing.Point(40, 112);
+            this.dgvFerramentas.Name = "dgvFerramentas";
+            this.dgvFerramentas.Size = new System.Drawing.Size(1321, 575);
+            this.dgvFerramentas.TabIndex = 11;
             // 
             // lblFerramentas
             // 
@@ -57,23 +57,23 @@
             this.lblFerramentas.TabIndex = 10;
             this.lblFerramentas.Text = "Ferramentas";
             // 
-            // tableLayoutPanel2
+            // tlpBarraSuperior
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
-            this.tableLayoutPanel2.Controls.Add(this.btnVoltar, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblFerramentas, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 66);
-            this.tableLayoutPanel2.TabIndex = 38;
+            this.tlpBarraSuperior.ColumnCount = 3;
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
+            this.tlpBarraSuperior.Controls.Add(this.button1, 2, 0);
+            this.tlpBarraSuperior.Controls.Add(this.lblFerramentas, 1, 0);
+            this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.tlpBarraSuperior.Name = "tlpBarraSuperior";
+            this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
+            this.tlpBarraSuperior.RowCount = 1;
+            this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBarraSuperior.Size = new System.Drawing.Size(1384, 66);
+            this.tlpBarraSuperior.TabIndex = 38;
             // 
             // btnVoltar
             // 
@@ -110,25 +110,26 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "  Adicionar novo";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ferramentas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tlpBarraSuperior);
+            this.Controls.Add(this.dgvFerramentas);
             this.Name = "ferramentas";
             this.Size = new System.Drawing.Size(1384, 874);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramentas)).EndInit();
+            this.tlpBarraSuperior.ResumeLayout(false);
+            this.tlpBarraSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvFerramentas;
         private System.Windows.Forms.Label lblFerramentas;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button button1;
     }
