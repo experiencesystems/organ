@@ -28,37 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label cod_funcionarioLabel;
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblAddFuncionario = new System.Windows.Forms.Label();
             this.tlpNovoFuncionario = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.txtCEP = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtNumCasa = new System.Windows.Forms.TextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblDefensivo = new System.Windows.Forms.Label();
             this.lblDataColheita = new System.Windows.Forms.Label();
-            this.txtQntFertilizante = new System.Windows.Forms.TextBox();
+            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblTalhao = new System.Windows.Forms.Label();
             this.lblQntDefensivo = new System.Windows.Forms.Label();
             this.lblQntFertilizante = new System.Windows.Forms.Label();
             this.lblFertilizante = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.txtQntSemente = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtQntDefensivo = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.dbOrganDataSet = new organ.dbOrganDataSet();
+            this.tbFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbFuncionarioTableAdapter = new organ.dbOrganDataSetTableAdapters.tbFuncionarioTableAdapter();
+            this.tableAdapterManager = new organ.dbOrganDataSetTableAdapters.TableAdapterManager();
+            this.cod_funcionarioLabel1 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            cod_funcionarioLabel = new System.Windows.Forms.Label();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbOrganDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cod_funcionarioLabel
+            // 
+            cod_funcionarioLabel.AutoSize = true;
+            cod_funcionarioLabel.Location = new System.Drawing.Point(222, 575);
+            cod_funcionarioLabel.Name = "cod_funcionarioLabel";
+            cod_funcionarioLabel.Size = new System.Drawing.Size(83, 13);
+            cod_funcionarioLabel.TabIndex = 50;
+            cod_funcionarioLabel.Text = "cod funcionario:";
             // 
             // tlpBarraSuperior
             // 
@@ -74,7 +96,7 @@
             this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
             this.tlpBarraSuperior.RowCount = 1;
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBarraSuperior.Size = new System.Drawing.Size(1425, 66);
+            this.tlpBarraSuperior.Size = new System.Drawing.Size(1445, 66);
             this.tlpBarraSuperior.TabIndex = 41;
             // 
             // btnVoltar
@@ -101,7 +123,7 @@
             this.lblAddFuncionario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddFuncionario.AutoSize = true;
             this.lblAddFuncionario.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblAddFuncionario.Location = new System.Drawing.Point(526, 20);
+            this.lblAddFuncionario.Location = new System.Drawing.Point(537, 20);
             this.lblAddFuncionario.Name = "lblAddFuncionario";
             this.lblAddFuncionario.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblAddFuncionario.Size = new System.Drawing.Size(287, 34);
@@ -116,31 +138,31 @@
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.05281F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.56218F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.77513F));
-            this.tlpNovoFuncionario.Controls.Add(this.textBox9, 3, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox8, 3, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox7, 1, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox6, 3, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox5, 1, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.txtIdade, 3, 0);
+            this.tlpNovoFuncionario.Controls.Add(this.txtSalario, 3, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.txtCEP, 3, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.txtCargo, 1, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.txtNumCasa, 3, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.txtComplemento, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox4, 1, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox3, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox2, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.txtEndereco, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.txtEmail, 1, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.txtTelefone, 1, 2);
             this.tlpNovoFuncionario.Controls.Add(this.lblDefensivo, 0, 2);
             this.tlpNovoFuncionario.Controls.Add(this.lblDataColheita, 0, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.txtQntFertilizante, 3, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtRG, 3, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblTalhao, 0, 4);
             this.tlpNovoFuncionario.Controls.Add(this.lblQntDefensivo, 2, 2);
             this.tlpNovoFuncionario.Controls.Add(this.lblQntFertilizante, 2, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.txtQntSemente, 1, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox1, 1, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.txtQntDefensivo, 3, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
+            this.tlpNovoFuncionario.Controls.Add(this.txtCPF, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtCelular, 3, 2);
             this.tlpNovoFuncionario.Controls.Add(this.label1, 2, 4);
             this.tlpNovoFuncionario.Controls.Add(this.label3, 2, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 6);
             this.tlpNovoFuncionario.Controls.Add(this.label5, 2, 6);
-            this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
             this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(80, 20, 0, 0);
@@ -152,48 +174,56 @@
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tlpNovoFuncionario.Size = new System.Drawing.Size(1425, 735);
+            this.tlpNovoFuncionario.Size = new System.Drawing.Size(1425, 438);
             this.tlpNovoFuncionario.TabIndex = 43;
             // 
-            // textBox9
+            // txtIdade
             // 
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox9.Location = new System.Drawing.Point(946, 298);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(360, 33);
-            this.textBox9.TabIndex = 45;
+            this.txtIdade.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdade.Location = new System.Drawing.Point(946, 23);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(361, 33);
+            this.txtIdade.TabIndex = 50;
             // 
-            // textBox8
+            // txtSalario
             // 
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox8.Location = new System.Drawing.Point(946, 353);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(360, 33);
-            this.textBox8.TabIndex = 45;
+            this.txtSalario.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtSalario.Location = new System.Drawing.Point(946, 353);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(360, 33);
+            this.txtSalario.TabIndex = 50;
             // 
-            // textBox7
+            // txtCEP
             // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox7.Location = new System.Drawing.Point(308, 353);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(401, 33);
-            this.textBox7.TabIndex = 45;
+            this.txtCEP.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtCEP.Location = new System.Drawing.Point(946, 298);
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(360, 33);
+            this.txtCEP.TabIndex = 45;
             // 
-            // textBox6
+            // txtCargo
             // 
-            this.textBox6.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox6.Location = new System.Drawing.Point(946, 243);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(361, 33);
-            this.textBox6.TabIndex = 45;
+            this.txtCargo.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtCargo.Location = new System.Drawing.Point(308, 353);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(401, 33);
+            this.txtCargo.TabIndex = 45;
             // 
-            // textBox5
+            // txtNumCasa
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox5.Location = new System.Drawing.Point(308, 298);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(401, 33);
-            this.textBox5.TabIndex = 44;
+            this.txtNumCasa.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtNumCasa.Location = new System.Drawing.Point(946, 243);
+            this.txtNumCasa.Name = "txtNumCasa";
+            this.txtNumCasa.Size = new System.Drawing.Size(361, 33);
+            this.txtNumCasa.TabIndex = 45;
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtComplemento.Location = new System.Drawing.Point(308, 298);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(401, 33);
+            this.txtComplemento.TabIndex = 44;
             // 
             // label2
             // 
@@ -205,29 +235,29 @@
             this.label2.TabIndex = 45;
             this.label2.Text = "Complemento";
             // 
-            // textBox4
+            // txtEndereco
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox4.Location = new System.Drawing.Point(308, 243);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(401, 33);
-            this.textBox4.TabIndex = 43;
+            this.txtEndereco.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtEndereco.Location = new System.Drawing.Point(308, 243);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(401, 33);
+            this.txtEndereco.TabIndex = 43;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox3.Location = new System.Drawing.Point(308, 188);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(401, 33);
-            this.textBox3.TabIndex = 42;
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtEmail.Location = new System.Drawing.Point(308, 188);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(401, 33);
+            this.txtEmail.TabIndex = 42;
             // 
-            // textBox2
+            // txtTelefone
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox2.Location = new System.Drawing.Point(308, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(401, 33);
-            this.textBox2.TabIndex = 41;
+            this.txtTelefone.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtTelefone.Location = new System.Drawing.Point(308, 133);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(401, 33);
+            this.txtTelefone.TabIndex = 41;
             // 
             // lblDefensivo
             // 
@@ -251,13 +281,13 @@
             this.lblDataColheita.TabIndex = 8;
             this.lblDataColheita.Text = "Email";
             // 
-            // txtQntFertilizante
+            // txtRG
             // 
-            this.txtQntFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQntFertilizante.Location = new System.Drawing.Point(946, 78);
-            this.txtQntFertilizante.Name = "txtQntFertilizante";
-            this.txtQntFertilizante.Size = new System.Drawing.Size(361, 33);
-            this.txtQntFertilizante.TabIndex = 20;
+            this.txtRG.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(946, 78);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(361, 33);
+            this.txtRG.TabIndex = 20;
             // 
             // lblTalhao
             // 
@@ -315,29 +345,29 @@
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome";
             // 
-            // txtQntSemente
+            // txtNome
             // 
-            this.txtQntSemente.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQntSemente.Location = new System.Drawing.Point(308, 23);
-            this.txtQntSemente.Name = "txtQntSemente";
-            this.txtQntSemente.Size = new System.Drawing.Size(401, 33);
-            this.txtQntSemente.TabIndex = 18;
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(308, 23);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(401, 33);
+            this.txtNome.TabIndex = 18;
             // 
-            // textBox1
+            // txtCPF
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.textBox1.Location = new System.Drawing.Point(308, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(401, 33);
-            this.textBox1.TabIndex = 31;
+            this.txtCPF.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtCPF.Location = new System.Drawing.Point(308, 78);
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(401, 33);
+            this.txtCPF.TabIndex = 31;
             // 
-            // txtQntDefensivo
+            // txtCelular
             // 
-            this.txtQntDefensivo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQntDefensivo.Location = new System.Drawing.Point(946, 133);
-            this.txtQntDefensivo.Name = "txtQntDefensivo";
-            this.txtQntDefensivo.Size = new System.Drawing.Size(361, 33);
-            this.txtQntDefensivo.TabIndex = 19;
+            this.txtCelular.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(946, 133);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(361, 33);
+            this.txtCelular.TabIndex = 19;
             // 
             // label1
             // 
@@ -379,12 +409,80 @@
             this.label5.TabIndex = 48;
             this.label5.Text = "Salário";
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(907, 600);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(193, 92);
+            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Text = "button1";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // dbOrganDataSet
+            // 
+            this.dbOrganDataSet.DataSetName = "dbOrganDataSet";
+            this.dbOrganDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbFuncionarioBindingSource
+            // 
+            this.tbFuncionarioBindingSource.DataMember = "tbFuncionario";
+            this.tbFuncionarioBindingSource.DataSource = this.dbOrganDataSet;
+            // 
+            // tbFuncionarioTableAdapter
+            // 
+            this.tbFuncionarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.tbColheitaTableAdapter = null;
+            this.tableAdapterManager.tbDefensivoTableAdapter = null;
+            this.tableAdapterManager.tbDoencaTableAdapter = null;
+            this.tableAdapterManager.tbEnderecoTableAdapter = null;
+            this.tableAdapterManager.tbEstoqueTableAdapter = null;
+            this.tableAdapterManager.tbFerramentaTableAdapter = null;
+            this.tableAdapterManager.tbFertilizanteTableAdapter = null;
+            this.tableAdapterManager.tbFornecedorTableAdapter = null;
+            this.tableAdapterManager.tbFuncionarioTableAdapter = this.tbFuncionarioTableAdapter;
+            this.tableAdapterManager.tbHistorico_EstoqueTableAdapter = null;
+            this.tableAdapterManager.tbLoginTableAdapter = null;
+            this.tableAdapterManager.tbMaquinaTableAdapter = null;
+            this.tableAdapterManager.tbPerfilTableAdapter = null;
+            this.tableAdapterManager.tbPlantioTableAdapter = null;
+            this.tableAdapterManager.tbPragaTableAdapter = null;
+            this.tableAdapterManager.tbRelatorioTableAdapter = null;
+            this.tableAdapterManager.tbSementeTableAdapter = null;
+            this.tableAdapterManager.tbTalhaoTableAdapter = null;
+            this.tableAdapterManager.tbUsuarioTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = organ.dbOrganDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cod_funcionarioLabel1
+            // 
+            this.cod_funcionarioLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tbFuncionarioBindingSource, "cod_funcionario", true));
+            this.cod_funcionarioLabel1.Location = new System.Drawing.Point(311, 575);
+            this.cod_funcionarioLabel1.Name = "cod_funcionarioLabel1";
+            this.cod_funcionarioLabel1.Size = new System.Drawing.Size(100, 23);
+            this.cod_funcionarioLabel1.TabIndex = 51;
+            this.cod_funcionarioLabel1.Text = "label6";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(494, 614);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 52;
+            // 
             // novo_funcionario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1425, 801);
+            this.ClientSize = new System.Drawing.Size(1445, 801);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(cod_funcionarioLabel);
+            this.Controls.Add(this.cod_funcionarioLabel1);
             this.Controls.Add(this.tlpNovoFuncionario);
             this.Controls.Add(this.tlpBarraSuperior);
+            this.Controls.Add(this.btnRegistrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(131, 83);
             this.Name = "novo_funcionario";
@@ -395,6 +493,8 @@
             this.tlpBarraSuperior.PerformLayout();
             this.tlpNovoFuncionario.ResumeLayout(false);
             this.tlpNovoFuncionario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbOrganDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,29 +505,37 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblAddFuncionario;
         private System.Windows.Forms.TableLayoutPanel tlpNovoFuncionario;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCEP;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtNumCasa;
+        private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lblDefensivo;
         private System.Windows.Forms.Label lblDataColheita;
-        private System.Windows.Forms.TextBox txtQntFertilizante;
+        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblTalhao;
         private System.Windows.Forms.Label lblQntDefensivo;
         private System.Windows.Forms.Label lblQntFertilizante;
         private System.Windows.Forms.Label lblFertilizante;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtQntSemente;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtQntDefensivo;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.TextBox txtIdade;
+        private dbOrganDataSet dbOrganDataSet;
+        private System.Windows.Forms.BindingSource tbFuncionarioBindingSource;
+        private dbOrganDataSetTableAdapters.tbFuncionarioTableAdapter tbFuncionarioTableAdapter;
+        private dbOrganDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label cod_funcionarioLabel1;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

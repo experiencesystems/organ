@@ -39,7 +39,7 @@
             this.lblSementes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSementes.AutoSize = true;
             this.lblSementes.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblSementes.Location = new System.Drawing.Point(545, 20);
+            this.lblSementes.Location = new System.Drawing.Point(577, 20);
             this.lblSementes.Name = "lblSementes";
             this.lblSementes.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblSementes.Size = new System.Drawing.Size(258, 34);
@@ -60,7 +60,7 @@
             this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
             this.tlpBarraSuperior.RowCount = 1;
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBarraSuperior.Size = new System.Drawing.Size(1425, 66);
+            this.tlpBarraSuperior.Size = new System.Drawing.Size(1483, 66);
             this.tlpBarraSuperior.TabIndex = 39;
             // 
             // btnVoltar
@@ -85,7 +85,7 @@
             // nova_semente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1425, 801);
+            this.ClientSize = new System.Drawing.Size(1483, 801);
             this.Controls.Add(this.tlpBarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(131, 83);

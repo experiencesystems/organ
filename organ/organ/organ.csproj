@@ -64,6 +64,11 @@
     <Compile Include="configuracao\configuracao.Designer.cs">
       <DependentUpon>configuracao.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbOrganDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fazenda\consulta\doencas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,6 +335,17 @@
     <EmbeddedResource Include="plantio\consulta\sementes.resx">
       <DependentUpon>sementes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dbOrganDataSet.xsc">
+      <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbOrganDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbOrganDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbOrganDataSet.xss">
+      <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
