@@ -13,8 +13,7 @@ namespace organ
 {
     public partial class novo_defensivo : Form
     {
-        string connectionString = @"Data Source=LAB2PC12\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=***********";
-        bool novo;
+        string connectionString = @"Data Source=LAB2PC12\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=1234567";
 
         public novo_defensivo()
         {

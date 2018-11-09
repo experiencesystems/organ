@@ -153,6 +153,26 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dinheiros {
+            get {
+                object obj = ResourceManager.GetObject("dinheiros", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doencas {
+            get {
+                object obj = ResourceManager.GetObject("doencas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exp_systems {
             get {
                 object obj = ResourceManager.GetObject("exp systems", resourceCulture);
@@ -166,6 +186,16 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap Eye_64px {
             get {
                 object obj = ResourceManager.GetObject("Eye_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap farmer {
+            get {
+                object obj = ResourceManager.GetObject("farmer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +266,16 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap funcionario {
             get {
                 object obj = ResourceManager.GetObject("funcionario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap funcionario1 {
+            get {
+                object obj = ResourceManager.GetObject("funcionario1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

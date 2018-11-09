@@ -13,8 +13,7 @@ namespace organ
 {
     public partial class novo_funcionario : Form
     {
-        string connectionString = @"Data Source=LAB2PC12\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=1234567";
-        bool novo;
+        string connectionString = @"Data Source=LAB2PC16\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=1234567";
 
         public novo_funcionario()
         {
@@ -28,7 +27,12 @@ namespace organ
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string sql = "alter table tbFuncionario nocheck constraint FK_tbFuncionario_tbEndereco;"+" alter table tbFuncionario nocheck constraint FK_tbFuncionario_tbUsuario;" + "alter table tbFuncionario alter column cod_usuario int null;" + " INSERT INTO tbFuncionario (cod_funcionario, nome_func, cpf_func, rg_func, idade_func, tel_func, cel_func, email_func, cargo_func, salario_func, numcasa_func, cep_func) " + "VALUES (" + txtCodigo.Text + ", '" + txtNome.Text + "', " + txtCPF.Text + ", " + txtRG.Text + ", " + txtIdade.Text + ", " + txtTelefone.Text + ", " + txtCelular.Text + ", '" + txtEmail.Text + "', '" + txtCargo.Text + "', " + txtSalario.Text + ", " + txtNumCasa.Text + ", " + txtCEP.Text + ")";
+            string sql = "alter table tbFuncionario nocheck constraint FK_tbFuncionario_tbEndereco;"+
+                         "alter table tbFuncionario nocheck constraint FK_tbFuncionario_tbUsuario;" +
+                         "alter table tbFuncionario alter column cod_usuario int null;" +
+                         "INSERT INTO tbFuncionario (nome_func, cpf_func, rg_func, idade_func, tel_func, cel_func, email_func, cargo_func, salario_func, numcasa_func, cep_func) "+
+                         "VALUES ('" + txtNome.Text + "', " + txtCPF.Text + ", " + txtRG.Text + ", " + txtIdade.Text + ", " + txtTelefone.Text + ", " + txtCelular.Text + ", '"
+                         + txtEmail.Text + "', '" + txtCargo.Text + "', " + txtSalario.Text + ", " + txtNumCasa.Text + ", " + txtCEP.Text + ")";
 
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(sql, con);

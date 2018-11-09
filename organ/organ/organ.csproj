@@ -462,6 +462,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Camada%25201.ico" />
+    <Resource Include="Resources\doencas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\farmer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\funcionario1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\dinheiros.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\defensivo_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

@@ -28,22 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvMaquinas = new System.Windows.Forms.DataGridView();
             this.lblMaquinas = new System.Windows.Forms.Label();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinas)).BeginInit();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvControleGastos = new System.Windows.Forms.DataGridView();
             this.tlpBarraSuperior.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvMaquinas
-            // 
-            this.dgvMaquinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaquinas.Location = new System.Drawing.Point(40, 112);
-            this.dgvMaquinas.Name = "dgvMaquinas";
-            this.dgvMaquinas.Size = new System.Drawing.Size(1321, 575);
-            this.dgvMaquinas.TabIndex = 11;
             // 
             // lblMaquinas
             // 
@@ -112,25 +106,51 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 808);
+            this.tableLayoutPanel1.TabIndex = 41;
+            // 
+            // dgvControleGastos
+            // 
+            this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
+            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvControleGastos.Name = "dgvControleGastos";
+            this.dgvControleGastos.Size = new System.Drawing.Size(1139, 748);
+            this.dgvControleGastos.TabIndex = 39;
+            // 
             // maquinas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tlpBarraSuperior);
-            this.Controls.Add(this.dgvMaquinas);
             this.Name = "maquinas";
             this.Size = new System.Drawing.Size(1384, 874);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinas)).EndInit();
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvMaquinas;
         private System.Windows.Forms.Label lblMaquinas;
         private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dgvControleGastos;
     }
 }

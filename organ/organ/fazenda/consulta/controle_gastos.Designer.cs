@@ -33,8 +33,10 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblControleGastos = new System.Windows.Forms.Label();
             this.dgvControleGastos = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpBarraSuperior
@@ -42,7 +44,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblControleGastos, 1, 0);
@@ -83,7 +85,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1174, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1173, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
@@ -97,7 +99,7 @@
             this.lblControleGastos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblControleGastos.AutoSize = true;
             this.lblControleGastos.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblControleGastos.Location = new System.Drawing.Point(523, 20);
+            this.lblControleGastos.Location = new System.Drawing.Point(522, 20);
             this.lblControleGastos.Name = "lblControleGastos";
             this.lblControleGastos.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblControleGastos.Size = new System.Drawing.Size(256, 34);
@@ -107,22 +109,39 @@
             // dgvControleGastos
             // 
             this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControleGastos.Location = new System.Drawing.Point(32, 100);
+            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
+            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
             this.dgvControleGastos.Name = "dgvControleGastos";
-            this.dgvControleGastos.Size = new System.Drawing.Size(1321, 575);
+            this.dgvControleGastos.Size = new System.Drawing.Size(1139, 648);
             this.dgvControleGastos.TabIndex = 39;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
+            this.tableLayoutPanel1.TabIndex = 40;
             // 
             // controle_gastos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvControleGastos);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tlpBarraSuperior);
             this.Name = "controle_gastos";
             this.Size = new System.Drawing.Size(1384, 774);
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -134,5 +153,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblControleGastos;
         private System.Windows.Forms.DataGridView dgvControleGastos;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

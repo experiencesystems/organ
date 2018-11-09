@@ -31,11 +31,16 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.lblNovaMaquina = new System.Windows.Forms.Label();
-            this.tlpNovaMaquina = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpNovoFuncionario = new System.Windows.Forms.TableLayoutPanel();
+            this.lblFertilizante = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tlpBarraSuperior.SuspendLayout();
-            this.tlpNovaMaquina.SuspendLayout();
+            this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -86,46 +91,106 @@
             this.lblNovaMaquina.TabIndex = 30;
             this.lblNovaMaquina.Text = "Adicionar máquina";
             // 
-            // tlpNovaMaquina
+            // tlpNovoFuncionario
             // 
-            this.tlpNovaMaquina.ColumnCount = 2;
-            this.tlpNovaMaquina.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpNovaMaquina.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpNovaMaquina.Controls.Add(this.lblNome, 0, 0);
-            this.tlpNovaMaquina.Controls.Add(this.txtNome, 1, 0);
-            this.tlpNovaMaquina.Location = new System.Drawing.Point(124, 97);
-            this.tlpNovaMaquina.Name = "tlpNovaMaquina";
-            this.tlpNovaMaquina.RowCount = 3;
-            this.tlpNovaMaquina.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpNovaMaquina.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpNovaMaquina.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.tlpNovaMaquina.Size = new System.Drawing.Size(833, 346);
-            this.tlpNovaMaquina.TabIndex = 37;
+            this.tlpNovoFuncionario.AutoSize = true;
+            this.tlpNovoFuncionario.ColumnCount = 3;
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.54945F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.45055F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+            this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
+            this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
+            this.tlpNovoFuncionario.Controls.Add(this.textBox1, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.richTextBox1, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 3);
+            this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
+            this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
+            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
+            this.tlpNovoFuncionario.RowCount = 4;
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpNovoFuncionario.Size = new System.Drawing.Size(1425, 735);
+            this.tlpNovoFuncionario.TabIndex = 47;
+            // 
+            // lblFertilizante
+            // 
+            this.lblFertilizante.AutoSize = true;
+            this.lblFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFertilizante.Location = new System.Drawing.Point(103, 90);
+            this.lblFertilizante.Name = "lblFertilizante";
+            this.lblFertilizante.Size = new System.Drawing.Size(66, 26);
+            this.lblFertilizante.TabIndex = 4;
+            this.lblFertilizante.Text = "Marca";
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.lblNome.Location = new System.Drawing.Point(3, 0);
+            this.lblNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(103, 30);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(64, 26);
-            this.lblNome.TabIndex = 31;
-            this.lblNome.Text = "Nome";
+            this.lblNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNome.Size = new System.Drawing.Size(49, 26);
+            this.lblNome.TabIndex = 3;
+            this.lblNome.Text = "Tipo";
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.txtNome.Location = new System.Drawing.Point(419, 3);
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(368, 33);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(411, 33);
-            this.txtNome.TabIndex = 32;
+            this.txtNome.Size = new System.Drawing.Size(766, 33);
+            this.txtNome.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 14F);
+            this.textBox1.Location = new System.Drawing.Point(368, 93);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(766, 30);
+            this.textBox1.TabIndex = 50;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(879, 213);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(368, 153);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(766, 54);
+            this.richTextBox1.TabIndex = 54;
+            this.richTextBox1.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(103, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Descrição";
             // 
             // nova_maquina
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1425, 801);
+            this.Controls.Add(this.tlpNovoFuncionario);
             this.Controls.Add(this.tlpBarraSuperior);
-            this.Controls.Add(this.tlpNovaMaquina);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(131, 83);
             this.Name = "nova_maquina";
@@ -134,9 +199,10 @@
             this.Text = "nova_maquina";
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
-            this.tlpNovaMaquina.ResumeLayout(false);
-            this.tlpNovaMaquina.PerformLayout();
+            this.tlpNovoFuncionario.ResumeLayout(false);
+            this.tlpNovoFuncionario.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,8 +211,13 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Label lblNovaMaquina;
-        private System.Windows.Forms.TableLayoutPanel tlpNovaMaquina;
+        private System.Windows.Forms.TableLayoutPanel tlpNovoFuncionario;
+        private System.Windows.Forms.Label lblFertilizante;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }

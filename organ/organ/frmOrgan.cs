@@ -17,8 +17,6 @@ namespace organ
         public frmOrgan()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
             inicio1.BringToFront();
 
             btnInicio.Image = Resources.home_100;

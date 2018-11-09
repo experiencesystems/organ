@@ -21,5 +21,10 @@ namespace organ
         {
             this.Close();
         }
+
+        private void novo_fertilizante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

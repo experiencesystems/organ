@@ -32,9 +32,11 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblFuncionarios = new System.Windows.Forms.Label();
-            this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvControleGastos = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -42,7 +44,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel2.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAdd, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblFuncionarios, 1, 0);
@@ -52,6 +54,7 @@
             this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1384, 66);
             this.tableLayoutPanel2.TabIndex = 38;
             // 
@@ -83,7 +86,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1174, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1173, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
@@ -97,32 +100,49 @@
             this.lblFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFuncionarios.AutoSize = true;
             this.lblFuncionarios.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblFuncionarios.Location = new System.Drawing.Point(551, 20);
+            this.lblFuncionarios.Location = new System.Drawing.Point(550, 20);
             this.lblFuncionarios.Name = "lblFuncionarios";
             this.lblFuncionarios.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblFuncionarios.Size = new System.Drawing.Size(200, 34);
             this.lblFuncionarios.TabIndex = 6;
             this.lblFuncionarios.Text = "Funcionários";
             // 
-            // dgvFuncionarios
+            // tableLayoutPanel1
             // 
-            this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionarios.Location = new System.Drawing.Point(32, 100);
-            this.dgvFuncionarios.Name = "dgvFuncionarios";
-            this.dgvFuncionarios.Size = new System.Drawing.Size(1321, 575);
-            this.dgvFuncionarios.TabIndex = 39;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
+            this.tableLayoutPanel1.TabIndex = 41;
+            // 
+            // dgvControleGastos
+            // 
+            this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
+            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvControleGastos.Name = "dgvControleGastos";
+            this.dgvControleGastos.Size = new System.Drawing.Size(1139, 648);
+            this.dgvControleGastos.TabIndex = 39;
             // 
             // funcionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvFuncionarios);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "funcionarios";
             this.Size = new System.Drawing.Size(1384, 774);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,6 +153,7 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblFuncionarios;
-        private System.Windows.Forms.DataGridView dgvFuncionarios;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dgvControleGastos;
     }
 }
