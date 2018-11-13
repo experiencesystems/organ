@@ -69,6 +69,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="estoque.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="estoque.Designer.cs">
+      <DependentUpon>estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="fazenda\consulta\doencas.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,12 @@
     </Compile>
     <Compile Include="fazenda\cadastro\novo_gasto.Designer.cs">
       <DependentUpon>novo_gasto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historico.Designer.cs">
+      <DependentUpon>historico.cs</DependentUpon>
     </Compile>
     <Compile Include="plantio\cadastro\nova ferramenta.cs">
       <SubType>Form</SubType>
@@ -240,11 +252,15 @@
       <DependentUpon>solo.cs</DependentUpon>
     </Compile>
     <Compile Include="classes\ValidacaoCPF.cs" />
+    <Compile Include="StringConexao.cs" />
     <EmbeddedResource Include="colheita\colheita.resx">
       <DependentUpon>colheita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configuracao\configuracao.resx">
       <DependentUpon>configuracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estoque.resx">
+      <DependentUpon>estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fazenda\consulta\controle_gastos.resx">
       <DependentUpon>controle_gastos.cs</DependentUpon>
@@ -263,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fazenda\fazenda.resx">
       <DependentUpon>fazenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historico.resx">
+      <DependentUpon>historico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio\inicio.resx">
       <DependentUpon>inicio.cs</DependentUpon>

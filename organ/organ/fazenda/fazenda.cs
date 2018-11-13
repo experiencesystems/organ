@@ -46,5 +46,11 @@ namespace organ
             doencas1.Visible = true;
             doencas1.Dock = DockStyle.Fill;
         }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            estoque1.Visible = true;
+            estoque1.Dock = DockStyle.Fill;
+        }
     }
 }

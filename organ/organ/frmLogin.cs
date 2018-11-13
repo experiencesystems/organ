@@ -14,8 +14,7 @@ namespace organ
 {
     public partial class frmLogin : Form
     {
-        static int attempt = 3;
-        string connectionString = @"Data Source=LAB2PC16\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=1234567";
+        //static int attempt = 3;
         Bitmap olho_visivel = Properties.Resources.Eye_64px;
         Bitmap olho_invisivel = Properties.Resources.Invisible_64px;
 
@@ -112,11 +111,11 @@ namespace organ
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string sql = "select count (*) as cnt from tbLogin where nome_login = '" + txtUsuario.Text + "' and senha = '" + txtSenha.Text + "';";
-            SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand scmd = new SqlCommand(sql, con);
             con.Open();
-
-            if (scmd.ExecuteScalar().ToString() == "1")
+            //MUDAR P 1 DPS
+            if (scmd.ExecuteScalar().ToString() == "0")
             {
                 MessageBox.Show("YOU ARE GRANTED WITH ACCESS");
             }
@@ -126,8 +125,6 @@ namespace organ
                 MessageBox.Show("YOU ARE NOT GRANTED WITH ACCESS");
                 //lbl_Msg.Text = ("You Have Only " + Convert.ToString(attempt) + " Attempt Left To Try");
                 //--attempt;
-                txtUsuario.Text = "";
-                txtSenha.Text = "";
             }
 
             con.Close();

@@ -13,8 +13,6 @@ namespace organ
 {
     public partial class novo_funcionario : Form
     {
-        string connectionString = @"Data Source=LAB2PC16\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=1234567";
-
         public novo_funcionario()
         {
             InitializeComponent();
@@ -34,7 +32,7 @@ namespace organ
                          "VALUES ('" + txtNome.Text + "', " + txtCPF.Text + ", " + txtRG.Text + ", " + txtIdade.Text + ", " + txtTelefone.Text + ", " + txtCelular.Text + ", '"
                          + txtEmail.Text + "', '" + txtCargo.Text + "', " + txtSalario.Text + ", " + txtNumCasa.Text + ", " + txtCEP.Text + ")";
 
-            SqlConnection con = new SqlConnection(connectionString);
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.CommandType = CommandType.Text;
             con.Open();

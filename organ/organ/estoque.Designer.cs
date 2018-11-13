@@ -1,6 +1,6 @@
 ﻿namespace organ
 {
-    partial class pragas
+    partial class estoque
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,46 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
-            this.lblPragas = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvControleGastos = new System.Windows.Forms.DataGridView();
+            this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.tlpBarraSuperior.SuspendLayout();
+            this.btnHistorico = new System.Windows.Forms.Button();
+            this.lblEstoque = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
+            this.tlpBarraSuperior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tlpBarraSuperior
-            // 
-            this.tlpBarraSuperior.ColumnCount = 3;
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
-            this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
-            this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
-            this.tlpBarraSuperior.Controls.Add(this.lblPragas, 1, 0);
-            this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tlpBarraSuperior.Location = new System.Drawing.Point(0, 0);
-            this.tlpBarraSuperior.Name = "tlpBarraSuperior";
-            this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
-            this.tlpBarraSuperior.RowCount = 1;
-            this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBarraSuperior.Size = new System.Drawing.Size(1384, 66);
-            this.tlpBarraSuperior.TabIndex = 38;
-            // 
-            // lblPragas
-            // 
-            this.lblPragas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblPragas.AutoSize = true;
-            this.lblPragas.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblPragas.Location = new System.Drawing.Point(581, 20);
-            this.lblPragas.Name = "lblPragas";
-            this.lblPragas.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblPragas.Size = new System.Drawing.Size(137, 34);
-            this.lblPragas.TabIndex = 6;
-            this.lblPragas.Text = "Pragas";
             // 
             // tableLayoutPanel1
             // 
@@ -81,7 +51,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
-            this.tableLayoutPanel1.TabIndex = 41;
+            this.tableLayoutPanel1.TabIndex = 43;
             // 
             // dgvControleGastos
             // 
@@ -92,6 +62,24 @@
             this.dgvControleGastos.Name = "dgvControleGastos";
             this.dgvControleGastos.Size = new System.Drawing.Size(1139, 648);
             this.dgvControleGastos.TabIndex = 39;
+            // 
+            // tlpBarraSuperior
+            // 
+            this.tlpBarraSuperior.ColumnCount = 3;
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
+            this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
+            this.tlpBarraSuperior.Controls.Add(this.btnHistorico, 2, 0);
+            this.tlpBarraSuperior.Controls.Add(this.lblEstoque, 1, 0);
+            this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tlpBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.tlpBarraSuperior.Name = "tlpBarraSuperior";
+            this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
+            this.tlpBarraSuperior.RowCount = 1;
+            this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBarraSuperior.Size = new System.Drawing.Size(1384, 66);
+            this.tlpBarraSuperior.TabIndex = 42;
             // 
             // btnVoltar
             // 
@@ -112,47 +100,57 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // btnAdd
+            // btnHistorico
             // 
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
-            this.btnAdd.Image = global::organ.Properties.Resources.soma;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1171, 23);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdd.Size = new System.Drawing.Size(204, 30);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "  Adicionar novo";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnHistorico.FlatAppearance.BorderSize = 0;
+            this.btnHistorico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnHistorico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorico.Font = new System.Drawing.Font("Calibri", 16F);
+            this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorico.Location = new System.Drawing.Point(1172, 23);
+            this.btnHistorico.Name = "btnHistorico";
+            this.btnHistorico.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHistorico.Size = new System.Drawing.Size(204, 30);
+            this.btnHistorico.TabIndex = 8;
+            this.btnHistorico.Text = "  Historico";
+            this.btnHistorico.UseVisualStyleBackColor = true;
             // 
-            // pragas
+            // lblEstoque
+            // 
+            this.lblEstoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEstoque.AutoSize = true;
+            this.lblEstoque.Font = new System.Drawing.Font("Calibri", 18F);
+            this.lblEstoque.Location = new System.Drawing.Point(573, 20);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
+            this.lblEstoque.Size = new System.Drawing.Size(153, 34);
+            this.lblEstoque.TabIndex = 6;
+            this.lblEstoque.Text = "Estoque";
+            // 
+            // estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tlpBarraSuperior);
-            this.Name = "pragas";
+            this.Name = "estoque";
             this.Size = new System.Drawing.Size(1384, 774);
-            this.tlpBarraSuperior.ResumeLayout(false);
-            this.tlpBarraSuperior.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
+            this.tlpBarraSuperior.ResumeLayout(false);
+            this.tlpBarraSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
-        private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Label lblPragas;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dgvControleGastos;
+        private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnHistorico;
+        private System.Windows.Forms.Label lblEstoque;
     }
 }

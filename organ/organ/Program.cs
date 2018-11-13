@@ -6,8 +6,8 @@ using System.Windows.Forms;
 
 namespace organ
 {
-    static class Program
-    {
+    public static class Program
+    {        
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>

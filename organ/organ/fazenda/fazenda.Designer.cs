@@ -39,6 +39,7 @@
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
+            this.estoque1 = new organ.estoque();
             this.SuspendLayout();
             // 
             // pragas1
@@ -187,10 +188,20 @@
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            // 
+            // estoque1
+            // 
+            this.estoque1.Location = new System.Drawing.Point(1057, 405);
+            this.estoque1.Name = "estoque1";
+            this.estoque1.Size = new System.Drawing.Size(261, 81);
+            this.estoque1.TabIndex = 18;
+            this.estoque1.Visible = false;
             // 
             // fazenda
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.estoque1);
             this.Controls.Add(this.pragas1);
             this.Controls.Add(this.doencas1);
             this.Controls.Add(this.fornecedores1);
@@ -221,5 +232,6 @@
         private doencas doencas1;
         private pragas pragas1;
         private System.Windows.Forms.Button btnEstoque;
+        private estoque estoque1;
     }
 }
