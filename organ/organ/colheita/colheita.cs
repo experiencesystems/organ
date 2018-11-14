@@ -17,18 +17,10 @@ namespace organ
             InitializeComponent();
         }
 
-        private void tbColheitaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void tbSementeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.tbColheitaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dbOrganDataSet);
-
-        }
-
-        private void tbColheitaBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tbColheitaBindingSource.EndEdit();
+            this.tbSementeBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dbOrganDataSet);
 
         }

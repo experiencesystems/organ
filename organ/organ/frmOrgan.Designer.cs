@@ -287,7 +287,7 @@ namespace organ
             // 
             this.relatorios1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.relatorios1.Location = new System.Drawing.Point(131, 83);
-            this.relatorios1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.relatorios1.Margin = new System.Windows.Forms.Padding(2);
             this.relatorios1.Name = "relatorios1";
             this.relatorios1.Size = new System.Drawing.Size(1425, 801);
             this.relatorios1.TabIndex = 6;
@@ -296,7 +296,7 @@ namespace organ
             // 
             this.colheita1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.colheita1.Location = new System.Drawing.Point(131, 83);
-            this.colheita1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.colheita1.Margin = new System.Windows.Forms.Padding(2);
             this.colheita1.Name = "colheita1";
             this.colheita1.Size = new System.Drawing.Size(1425, 801);
             this.colheita1.TabIndex = 5;
@@ -317,7 +317,7 @@ namespace organ
             this.inicio1.AutoSize = true;
             this.inicio1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inicio1.Location = new System.Drawing.Point(131, 83);
-            this.inicio1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inicio1.Margin = new System.Windows.Forms.Padding(2);
             this.inicio1.Name = "inicio1";
             this.inicio1.Size = new System.Drawing.Size(1425, 801);
             this.inicio1.TabIndex = 2;

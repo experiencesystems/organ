@@ -129,10 +129,10 @@
     <Compile Include="fazenda\cadastro\novo_gasto.Designer.cs">
       <DependentUpon>novo_gasto.cs</DependentUpon>
     </Compile>
-    <Compile Include="historico.cs">
+    <Compile Include="fazenda\consulta\historico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="historico.Designer.cs">
+    <Compile Include="fazenda\consulta\historico.Designer.cs">
       <DependentUpon>historico.cs</DependentUpon>
     </Compile>
     <Compile Include="plantio\cadastro\nova ferramenta.cs">
@@ -280,7 +280,7 @@
     <EmbeddedResource Include="fazenda\fazenda.resx">
       <DependentUpon>fazenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="historico.resx">
+    <EmbeddedResource Include="fazenda\consulta\historico.resx">
       <DependentUpon>historico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio\inicio.resx">

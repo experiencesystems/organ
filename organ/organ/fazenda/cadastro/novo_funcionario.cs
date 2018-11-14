@@ -42,7 +42,7 @@ namespace organ
                 if (i > 0)
                     MessageBox.Show("Cadastro realizado com sucesso!");
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 MessageBox.Show("Erro: " + ex.ToString());
             }
