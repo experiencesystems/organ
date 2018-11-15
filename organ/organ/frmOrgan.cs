@@ -46,10 +46,10 @@ namespace organ
             btnPlantio.Image = Resources.plantio_45;
             btnPlantio.ForeColor = Color.FromArgb(121, 137, 131);
             //colheita
-            btnColheita.Image = Resources.colheita_45;
+            btnColheita.Image = Resources.colheita_45_4;
             btnColheita.ForeColor = Color.FromArgb(121, 137, 131);
             //relatorios
-            btnRelatorios.Image = Resources.relatorios_45_3;
+            btnRelatorios.Image = Resources.relatorios_45_6;
             btnRelatorios.ForeColor = Color.FromArgb(121, 137, 131);
             //fazenda
             btnFazenda.Image = Resources.fazenda_45;
@@ -62,8 +62,6 @@ namespace organ
             pnlSelecionado.Height = btnPlantio.Height;
             pnlSelecionado.Top = btnPlantio.Top;
             pnlSelecionado.BringToFront();
-            plantio _plantio = new plantio();
-            _plantio.sementes1.Visible = false;
             plantio1.BringToFront();
             
             //inicio
@@ -73,10 +71,10 @@ namespace organ
             btnPlantio.Image = Resources.plantio_100_2;
             btnPlantio.ForeColor = Color.White;
             //colheita
-            btnColheita.Image = Resources.colheita_45;
+            btnColheita.Image = Resources.colheita_45_4;
             btnColheita.ForeColor = Color.FromArgb(121, 137, 131);
             //relatorios
-            btnRelatorios.Image = Resources.relatorios_45_3;
+            btnRelatorios.Image = Resources.relatorios_45_6;
             btnRelatorios.ForeColor = Color.FromArgb(121, 137, 131);
             //fazenda
             btnFazenda.Image = Resources.fazenda_45;
@@ -98,10 +96,10 @@ namespace organ
             btnPlantio.Image = Resources.plantio_45;
             btnPlantio.ForeColor = Color.FromArgb(121, 137, 131);
             //colheita
-            btnColheita.Image = Resources.colheita_100_2;
+            btnColheita.Image = Resources.colheita_100_4;
             btnColheita.ForeColor = Color.White;
             //relatorios
-            btnRelatorios.Image = Resources.relatorios_45_3;
+            btnRelatorios.Image = Resources.relatorios_45_6;
             btnRelatorios.ForeColor = Color.FromArgb(121, 137, 131);
             //fazenda
             btnFazenda.Image = Resources.fazenda_45;
@@ -123,10 +121,10 @@ namespace organ
             btnPlantio.Image = Resources.plantio_45;
             btnPlantio.ForeColor = Color.FromArgb(121, 137, 131);
             //colheita
-            btnColheita.Image = Resources.colheita_45;
+            btnColheita.Image = Resources.colheita_45_4;
             btnColheita.ForeColor = Color.FromArgb(121, 137, 131);
             //relatorios
-            btnRelatorios.Image = Resources.relatorios_100_4;
+            btnRelatorios.Image = Resources.relatorios_100_7;
             btnRelatorios.ForeColor = Color.White;
             //fazenda
             btnFazenda.Image = Resources.fazenda_45;
@@ -148,10 +146,10 @@ namespace organ
             btnPlantio.Image = Resources.plantio_45;
             btnPlantio.ForeColor = Color.FromArgb(121, 137, 131);
             //colheita
-            btnColheita.Image = Resources.colheita_45;
+            btnColheita.Image = Resources.colheita_45_4;
             btnColheita.ForeColor = Color.FromArgb(121, 137, 131);
             //relatorios
-            btnRelatorios.Image = Resources.relatorios_45_3;
+            btnRelatorios.Image = Resources.relatorios_45_6;
             btnRelatorios.ForeColor = Color.FromArgb(121, 137, 131);
             //fazenda
             btnFazenda.Image = Resources.fazenda_100;
@@ -170,10 +168,10 @@ namespace organ
             btnPlantio.Image = Resources.plantio_45;
             btnPlantio.ForeColor = Color.FromArgb(121, 137, 131);
             //colheita
-            btnColheita.Image = Resources.colheita_45;
+            btnColheita.Image = Resources.colheita_45_4;
             btnColheita.ForeColor = Color.FromArgb(121, 137, 131);
             //relatorios
-            btnRelatorios.Image = Resources.relatorios_45_3;
+            btnRelatorios.Image = Resources.relatorios_45_6;
             btnRelatorios.ForeColor = Color.FromArgb(121, 137, 131);
             //fazenda
             btnFazenda.Image = Resources.fazenda_45;

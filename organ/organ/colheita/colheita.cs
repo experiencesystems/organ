@@ -16,13 +16,5 @@ namespace organ
         {
             InitializeComponent();
         }
-
-        private void tbSementeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tbSementeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dbOrganDataSet);
-
-        }
     }
 }

@@ -44,5 +44,15 @@ namespace organ.Properties {
                 return ((string)(this["dbOrganConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-B8RLEG27;Initial Catalog=dbOrgan;Integrated Security=True")]
+        public string dbOrganPCMILENAConnectionString {
+            get {
+                return ((string)(this["dbOrganPCMILENAConnectionString"]));
+            }
+        }
     }
 }

@@ -64,15 +64,15 @@
     <Compile Include="configuracao\configuracao.Designer.cs">
       <DependentUpon>configuracao.cs</DependentUpon>
     </Compile>
-    <Compile Include="dbOrganDataSet.Designer.cs">
+    <Compile Include="dbOrgan.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
+      <DependentUpon>dbOrgan.xsd</DependentUpon>
     </Compile>
-    <Compile Include="estoque.cs">
+    <Compile Include="fazenda\consulta\estoque.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="estoque.Designer.cs">
+    <Compile Include="fazenda\consulta\estoque.Designer.cs">
       <DependentUpon>estoque.cs</DependentUpon>
     </Compile>
     <Compile Include="fazenda\consulta\doencas.cs">
@@ -259,7 +259,7 @@
     <EmbeddedResource Include="configuracao\configuracao.resx">
       <DependentUpon>configuracao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="estoque.resx">
+    <EmbeddedResource Include="fazenda\consulta\estoque.resx">
       <DependentUpon>estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fazenda\consulta\controle_gastos.resx">
@@ -354,16 +354,16 @@
     <EmbeddedResource Include="plantio\consulta\sementes.resx">
       <DependentUpon>sementes.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dbOrganDataSet.xsc">
-      <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
+    <None Include="dbOrgan.xsc">
+      <DependentUpon>dbOrgan.xsd</DependentUpon>
     </None>
-    <None Include="dbOrganDataSet.xsd">
+    <None Include="dbOrgan.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbOrganDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbOrgan.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dbOrganDataSet.xss">
-      <DependentUpon>dbOrganDataSet.xsd</DependentUpon>
+    <None Include="dbOrgan.xss">
+      <DependentUpon>dbOrgan.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -387,9 +387,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\colheita 100.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\Invisible_64px.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -420,11 +417,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\fazenda.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\home 100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -450,26 +442,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\colheita 100_2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\colheita 45.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\relatorios 100_4.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\relatorios 45_3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\fazenda_100.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -481,16 +453,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Camada%25201.ico" />
-    <Resource Include="Resources\doencas.png">
+    <Resource Include="Resources\estoque_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\farmer.png">
+    <Resource Include="Resources\box_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\doencas1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\funcionarios.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\pragas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\controledegastos_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\relatorios 45_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\relatorios 100_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\colheita_45_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\colheita 100_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\trator_10.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\funcionario1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\dinheiros.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\defensivo_2.png">
@@ -499,19 +495,10 @@
     <Resource Include="Resources\ferramentas_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\trator_9.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\solo_3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\semente_7.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\box_3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\box_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\exp systems.png">
@@ -529,25 +516,13 @@
     <Resource Include="Resources\back.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\defensivo.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\ferramentas.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\trator.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\organ completo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\solo.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Resources\fertilizante.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Resources\semente_6.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\icone novo plantio_4.png">

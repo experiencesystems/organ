@@ -35,10 +35,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dbOrganDataSet = new organ.dbOrganDataSet();
             this.tbDefensivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbDefensivoTableAdapter = new organ.dbOrganDataSetTableAdapters.tbDefensivoTableAdapter();
-            this.tableAdapterManager = new organ.dbOrganDataSetTableAdapters.TableAdapterManager();
             this.tbDefensivoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +47,6 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tlpBarraSuperior.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrganDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -136,44 +132,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
             this.tableLayoutPanel1.TabIndex = 41;
-            // 
-            // dbOrganDataSet
-            // 
-            this.dbOrganDataSet.DataSetName = "dbOrganDataSet";
-            this.dbOrganDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbDefensivoBindingSource
-            // 
-            this.tbDefensivoBindingSource.DataMember = "tbDefensivo";
-            this.tbDefensivoBindingSource.DataSource = this.dbOrganDataSet;
-            // 
-            // tbDefensivoTableAdapter
-            // 
-            this.tbDefensivoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tbColheitaTableAdapter = null;
-            this.tableAdapterManager.tbDefensivoTableAdapter = this.tbDefensivoTableAdapter;
-            this.tableAdapterManager.tbDoencaTableAdapter = null;
-            this.tableAdapterManager.tbEnderecoTableAdapter = null;
-            this.tableAdapterManager.tbEstoqueTableAdapter = null;
-            this.tableAdapterManager.tbFerramentaTableAdapter = null;
-            this.tableAdapterManager.tbFertilizanteTableAdapter = null;
-            this.tableAdapterManager.tbFornecedorTableAdapter = null;
-            this.tableAdapterManager.tbFuncionarioTableAdapter = null;
-            this.tableAdapterManager.tbHistorico_EstoqueTableAdapter = null;
-            this.tableAdapterManager.tbLoginTableAdapter = null;
-            this.tableAdapterManager.tbMaquinaTableAdapter = null;
-            this.tableAdapterManager.tbPerfilTableAdapter = null;
-            this.tableAdapterManager.tbPlantioTableAdapter = null;
-            this.tableAdapterManager.tbPragaTableAdapter = null;
-            this.tableAdapterManager.tbRelatorioTableAdapter = null;
-            this.tableAdapterManager.tbSementeTableAdapter = null;
-            this.tableAdapterManager.tbTalhaoTableAdapter = null;
-            this.tableAdapterManager.tbUsuarioTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = organ.dbOrganDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            
             // 
             // tbDefensivoDataGridView
             // 
@@ -257,7 +216,6 @@
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrganDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -271,10 +229,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private dbOrganDataSet dbOrganDataSet;
         private System.Windows.Forms.BindingSource tbDefensivoBindingSource;
-        private dbOrganDataSetTableAdapters.tbDefensivoTableAdapter tbDefensivoTableAdapter;
-        private dbOrganDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView tbDefensivoDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

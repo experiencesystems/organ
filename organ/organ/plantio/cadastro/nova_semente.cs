@@ -15,21 +15,12 @@ namespace organ
         public nova_semente()
         {
             InitializeComponent();
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

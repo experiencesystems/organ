@@ -41,6 +41,12 @@ namespace organ
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pcbOrgan = new System.Windows.Forms.PictureBox();
+            this.configuracao1 = new organ.configuracao();
+            this.fazenda1 = new organ.fazenda();
+            this.relatorios1 = new organ.relatorios();
+            this.colheita1 = new organ.colheita();
+            this.plantio1 = new organ.plantio();
+            this.inicio1 = new organ.inicio();
             this.pnlLateral = new System.Windows.Forms.Panel();
             this.btnFazenda = new System.Windows.Forms.Button();
             this.pnlSelecionado = new System.Windows.Forms.Panel();
@@ -48,12 +54,6 @@ namespace organ
             this.btnColheita = new System.Windows.Forms.Button();
             this.btnPlantio = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.configuracao1 = new organ.configuracao();
-            this.fazenda1 = new organ.fazenda();
-            this.relatorios1 = new organ.relatorios();
-            this.colheita1 = new organ.colheita();
-            this.plantio1 = new organ.plantio();
-            this.inicio1 = new organ.inicio();
             this.pnlSuperior.SuspendLayout();
             this.tlpBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOrgan)).BeginInit();
@@ -127,6 +127,62 @@ namespace organ
             this.pcbOrgan.TabIndex = 3;
             this.pcbOrgan.TabStop = false;
             // 
+            // configuracao1
+            // 
+            this.configuracao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.configuracao1.Location = new System.Drawing.Point(131, 83);
+            this.configuracao1.Name = "configuracao1";
+            this.configuracao1.Size = new System.Drawing.Size(1425, 801);
+            this.configuracao1.TabIndex = 7;
+            // 
+            // fazenda1
+            // 
+            this.fazenda1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fazenda1.Location = new System.Drawing.Point(131, 83);
+            this.fazenda1.Margin = new System.Windows.Forms.Padding(2);
+            this.fazenda1.Name = "fazenda1";
+            this.fazenda1.Size = new System.Drawing.Size(1425, 801);
+            this.fazenda1.TabIndex = 7;
+            // 
+            // relatorios1
+            // 
+            this.relatorios1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.relatorios1.Location = new System.Drawing.Point(131, 83);
+            this.relatorios1.Margin = new System.Windows.Forms.Padding(2);
+            this.relatorios1.Name = "relatorios1";
+            this.relatorios1.Size = new System.Drawing.Size(1425, 801);
+            this.relatorios1.TabIndex = 6;
+            // 
+            // colheita1
+            // 
+            this.colheita1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.colheita1.Location = new System.Drawing.Point(131, 83);
+            this.colheita1.Margin = new System.Windows.Forms.Padding(2);
+            this.colheita1.Name = "colheita1";
+            this.colheita1.Size = new System.Drawing.Size(1425, 801);
+            this.colheita1.TabIndex = 5;
+            // 
+            // plantio1
+            // 
+            this.plantio1.BackColor = System.Drawing.SystemColors.Control;
+            this.plantio1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plantio1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.plantio1.Location = new System.Drawing.Point(131, 83);
+            this.plantio1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.plantio1.Name = "plantio1";
+            this.plantio1.Size = new System.Drawing.Size(1425, 801);
+            this.plantio1.TabIndex = 4;
+            // 
+            // inicio1
+            // 
+            this.inicio1.AutoSize = true;
+            this.inicio1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inicio1.Location = new System.Drawing.Point(131, 83);
+            this.inicio1.Margin = new System.Windows.Forms.Padding(2);
+            this.inicio1.Name = "inicio1";
+            this.inicio1.Size = new System.Drawing.Size(1425, 801);
+            this.inicio1.TabIndex = 2;
+            // 
             // pnlLateral
             // 
             this.pnlLateral.BackgroundImage = global::organ.Properties.Resources.Retângulo_7;
@@ -186,7 +242,7 @@ namespace organ
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelatorios.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(137)))), ((int)(((byte)(131)))));
-            this.btnRelatorios.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorios.Image")));
+            this.btnRelatorios.Image = global::organ.Properties.Resources.relatorios_45_6;
             this.btnRelatorios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRelatorios.Location = new System.Drawing.Point(-3, 311);
             this.btnRelatorios.Margin = new System.Windows.Forms.Padding(2);
@@ -209,7 +265,7 @@ namespace organ
             this.btnColheita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColheita.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnColheita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(137)))), ((int)(((byte)(131)))));
-            this.btnColheita.Image = ((System.Drawing.Image)(resources.GetObject("btnColheita.Image")));
+            this.btnColheita.Image = global::organ.Properties.Resources.colheita_45_4;
             this.btnColheita.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnColheita.Location = new System.Drawing.Point(0, 214);
             this.btnColheita.Margin = new System.Windows.Forms.Padding(2);
@@ -265,62 +321,6 @@ namespace organ
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // configuracao1
-            // 
-            this.configuracao1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.configuracao1.Location = new System.Drawing.Point(131, 83);
-            this.configuracao1.Name = "configuracao1";
-            this.configuracao1.Size = new System.Drawing.Size(1425, 801);
-            this.configuracao1.TabIndex = 7;
-            // 
-            // fazenda1
-            // 
-            this.fazenda1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fazenda1.Location = new System.Drawing.Point(131, 83);
-            this.fazenda1.Margin = new System.Windows.Forms.Padding(2);
-            this.fazenda1.Name = "fazenda1";
-            this.fazenda1.Size = new System.Drawing.Size(1425, 801);
-            this.fazenda1.TabIndex = 7;
-            // 
-            // relatorios1
-            // 
-            this.relatorios1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.relatorios1.Location = new System.Drawing.Point(131, 83);
-            this.relatorios1.Margin = new System.Windows.Forms.Padding(2);
-            this.relatorios1.Name = "relatorios1";
-            this.relatorios1.Size = new System.Drawing.Size(1425, 801);
-            this.relatorios1.TabIndex = 6;
-            // 
-            // colheita1
-            // 
-            this.colheita1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colheita1.Location = new System.Drawing.Point(131, 83);
-            this.colheita1.Margin = new System.Windows.Forms.Padding(2);
-            this.colheita1.Name = "colheita1";
-            this.colheita1.Size = new System.Drawing.Size(1425, 801);
-            this.colheita1.TabIndex = 5;
-            // 
-            // plantio1
-            // 
-            this.plantio1.BackColor = System.Drawing.SystemColors.Control;
-            this.plantio1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plantio1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plantio1.Location = new System.Drawing.Point(131, 83);
-            this.plantio1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.plantio1.Name = "plantio1";
-            this.plantio1.Size = new System.Drawing.Size(1425, 801);
-            this.plantio1.TabIndex = 4;
-            // 
-            // inicio1
-            // 
-            this.inicio1.AutoSize = true;
-            this.inicio1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inicio1.Location = new System.Drawing.Point(131, 83);
-            this.inicio1.Margin = new System.Windows.Forms.Padding(2);
-            this.inicio1.Name = "inicio1";
-            this.inicio1.Size = new System.Drawing.Size(1425, 801);
-            this.inicio1.TabIndex = 2;
             // 
             // frmOrgan
             // 

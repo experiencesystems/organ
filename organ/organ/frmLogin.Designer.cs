@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -35,7 +36,7 @@ namespace organ
         private void InitializeComponent()
             {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlBackground = new System.Windows.Forms.Panel();
             this.pcbSair = new System.Windows.Forms.PictureBox();
             this.lblBemVindo = new System.Windows.Forms.Label();
             this.pnlLogin = new System.Windows.Forms.Panel();
@@ -48,7 +49,7 @@ namespace organ
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlRetaSenha = new System.Windows.Forms.Panel();
-            this.panel3.SuspendLayout();
+            this.pnlBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             this.pnlLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbOlho)).BeginInit();
@@ -56,18 +57,18 @@ namespace organ
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel3
+            // pnlBackground
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Controls.Add(this.pcbSair);
-            this.panel3.Controls.Add(this.lblBemVindo);
-            this.panel3.Controls.Add(this.pnlLogin);
-            this.panel3.Location = new System.Drawing.Point(-26, -19);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(677, 426);
-            this.panel3.TabIndex = 1;
+            this.pnlBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlBackground.BackgroundImage")));
+            this.pnlBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlBackground.Controls.Add(this.pcbSair);
+            this.pnlBackground.Controls.Add(this.lblBemVindo);
+            this.pnlBackground.Controls.Add(this.pnlLogin);
+            this.pnlBackground.Location = new System.Drawing.Point(-26, -19);
+            this.pnlBackground.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Size = new System.Drawing.Size(677, 426);
+            this.pnlBackground.TabIndex = 1;
             // 
             // pcbSair
             // 
@@ -114,6 +115,7 @@ namespace organ
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(265, 268);
             this.pnlLogin.TabIndex = 0;
+            this.pnlLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             this.pnlLogin.Click += new System.EventHandler(this.pnlLogin_Click);
             // 
             // pcbOlho
@@ -204,6 +206,7 @@ namespace organ
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Text = "Senha";
             this.txtSenha.GotFocus += new System.EventHandler(this.txtSenha_GotFocus);
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             this.txtSenha.LostFocus += new System.EventHandler(this.txtSenha_LostFocus);
             // 
             // txtUsuario
@@ -219,6 +222,7 @@ namespace organ
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "Usuário";
             this.txtUsuario.GotFocus += new System.EventHandler(this.txtUsuario_GotFocus);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLogin_KeyPress);
             this.txtUsuario.LostFocus += new System.EventHandler(this.txtUsuario_LostFocus);
             // 
             // pnlRetaSenha
@@ -236,15 +240,15 @@ namespace organ
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(619, 383);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Organ";
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
@@ -264,7 +268,7 @@ namespace organ
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Panel pnlRetaSenha;
         private System.Windows.Forms.Button btnEntrar;
-        private Panel panel3;
+        private Panel pnlBackground;
         private Label lblBemVindo;
         private PictureBox pcbUsuario;
         private PictureBox pcbSenha;

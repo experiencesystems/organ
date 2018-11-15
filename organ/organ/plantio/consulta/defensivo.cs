@@ -29,13 +29,5 @@ namespace organ
                 _novo_defensivo.ShowDialog(this);
             }
         }
-
-        private void tbDefensivoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tbDefensivoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dbOrganDataSet);
-
-        }
     }
 }

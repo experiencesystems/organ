@@ -46,10 +46,10 @@
             this.lblAddDoenca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddDoenca.AutoSize = true;
             this.lblAddDoenca.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblAddDoenca.Location = new System.Drawing.Point(579, 20);
+            this.lblAddDoenca.Location = new System.Drawing.Point(609, 20);
             this.lblAddDoenca.Name = "lblAddDoenca";
-            this.lblAddDoenca.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblAddDoenca.Size = new System.Drawing.Size(246, 34);
+            this.lblAddDoenca.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblAddDoenca.Size = new System.Drawing.Size(186, 34);
             this.lblAddDoenca.TabIndex = 6;
             this.lblAddDoenca.Text = "Adicionar doença";
             // 

@@ -60,13 +60,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.dbOrganDataSet = new organ.dbOrganDataSet();
             this.tbFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbFuncionarioTableAdapter = new organ.dbOrganDataSetTableAdapters.tbFuncionarioTableAdapter();
-            this.tableAdapterManager = new organ.dbOrganDataSetTableAdapters.TableAdapterManager();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrganDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -422,44 +418,7 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // dbOrganDataSet
-            // 
-            this.dbOrganDataSet.DataSetName = "dbOrganDataSet";
-            this.dbOrganDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbFuncionarioBindingSource
-            // 
-            this.tbFuncionarioBindingSource.DataMember = "tbFuncionario";
-            this.tbFuncionarioBindingSource.DataSource = this.dbOrganDataSet;
-            // 
-            // tbFuncionarioTableAdapter
-            // 
-            this.tbFuncionarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tbColheitaTableAdapter = null;
-            this.tableAdapterManager.tbDefensivoTableAdapter = null;
-            this.tableAdapterManager.tbDoencaTableAdapter = null;
-            this.tableAdapterManager.tbEnderecoTableAdapter = null;
-            this.tableAdapterManager.tbEstoqueTableAdapter = null;
-            this.tableAdapterManager.tbFerramentaTableAdapter = null;
-            this.tableAdapterManager.tbFertilizanteTableAdapter = null;
-            this.tableAdapterManager.tbFornecedorTableAdapter = null;
-            this.tableAdapterManager.tbFuncionarioTableAdapter = this.tbFuncionarioTableAdapter;
-            this.tableAdapterManager.tbHistorico_EstoqueTableAdapter = null;
-            this.tableAdapterManager.tbLoginTableAdapter = null;
-            this.tableAdapterManager.tbMaquinaTableAdapter = null;
-            this.tableAdapterManager.tbPerfilTableAdapter = null;
-            this.tableAdapterManager.tbPlantioTableAdapter = null;
-            this.tableAdapterManager.tbPragaTableAdapter = null;
-            this.tableAdapterManager.tbRelatorioTableAdapter = null;
-            this.tableAdapterManager.tbSementeTableAdapter = null;
-            this.tableAdapterManager.tbTalhaoTableAdapter = null;
-            this.tableAdapterManager.tbUsuarioTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = organ.dbOrganDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            
             // 
             // novo_funcionario
             // 
@@ -477,8 +436,6 @@
             this.tlpBarraSuperior.PerformLayout();
             this.tlpNovoFuncionario.ResumeLayout(false);
             this.tlpNovoFuncionario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrganDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,10 +472,7 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtSalario;
         private System.Windows.Forms.TextBox txtIdade;
-        private dbOrganDataSet dbOrganDataSet;
         private System.Windows.Forms.BindingSource tbFuncionarioBindingSource;
-        private dbOrganDataSetTableAdapters.tbFuncionarioTableAdapter tbFuncionarioTableAdapter;
-        private dbOrganDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label lblIdade;
     }
 }

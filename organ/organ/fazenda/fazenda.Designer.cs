@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.estoque1 = new organ.estoque();
             this.pragas1 = new organ.pragas();
             this.doencas1 = new organ.doencas();
             this.fornecedores1 = new organ.fornecedores();
@@ -39,8 +40,15 @@
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
-            this.estoque1 = new organ.estoque();
             this.SuspendLayout();
+            // 
+            // estoque1
+            // 
+            this.estoque1.Location = new System.Drawing.Point(1057, 405);
+            this.estoque1.Name = "estoque1";
+            this.estoque1.Size = new System.Drawing.Size(261, 81);
+            this.estoque1.TabIndex = 18;
+            this.estoque1.Visible = false;
             // 
             // pragas1
             // 
@@ -89,7 +97,7 @@
             this.btnDoenças.FlatAppearance.BorderSize = 2;
             this.btnDoenças.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoenças.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoenças.Image = global::organ.Properties.Resources.doencas;
+            this.btnDoenças.Image = global::organ.Properties.Resources.doencas1;
             this.btnDoenças.Location = new System.Drawing.Point(489, 393);
             this.btnDoenças.Name = "btnDoenças";
             this.btnDoenças.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
@@ -107,7 +115,7 @@
             this.btnControleGastos.FlatAppearance.BorderSize = 2;
             this.btnControleGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnControleGastos.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControleGastos.Image = global::organ.Properties.Resources.dinheiros;
+            this.btnControleGastos.Image = global::organ.Properties.Resources.controledegastos_2;
             this.btnControleGastos.Location = new System.Drawing.Point(42, 393);
             this.btnControleGastos.Name = "btnControleGastos";
             this.btnControleGastos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
@@ -125,7 +133,7 @@
             this.btnPragas.FlatAppearance.BorderSize = 2;
             this.btnPragas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPragas.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPragas.Image = global::organ.Properties.Resources.semente_6;
+            this.btnPragas.Image = global::organ.Properties.Resources.pragas;
             this.btnPragas.Location = new System.Drawing.Point(939, 40);
             this.btnPragas.Name = "btnPragas";
             this.btnPragas.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
@@ -143,7 +151,7 @@
             this.btnFornecedores.FlatAppearance.BorderSize = 2;
             this.btnFornecedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFornecedores.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFornecedores.Image = global::organ.Properties.Resources.box_3;
+            this.btnFornecedores.Image = global::organ.Properties.Resources.box_4;
             this.btnFornecedores.Location = new System.Drawing.Point(489, 40);
             this.btnFornecedores.Name = "btnFornecedores";
             this.btnFornecedores.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
@@ -161,7 +169,7 @@
             this.btnFuncionarios.FlatAppearance.BorderSize = 2;
             this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFuncionarios.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuncionarios.Image = global::organ.Properties.Resources.farmer;
+            this.btnFuncionarios.Image = global::organ.Properties.Resources.funcionarios;
             this.btnFuncionarios.Location = new System.Drawing.Point(42, 40);
             this.btnFuncionarios.Name = "btnFuncionarios";
             this.btnFuncionarios.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
@@ -179,7 +187,7 @@
             this.btnEstoque.FlatAppearance.BorderSize = 2;
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoque.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.Image = global::organ.Properties.Resources.semente_6;
+            this.btnEstoque.Image = global::organ.Properties.Resources.estoque_2;
             this.btnEstoque.Location = new System.Drawing.Point(939, 393);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
@@ -189,14 +197,6 @@
             this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEstoque.UseVisualStyleBackColor = false;
             this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
-            // 
-            // estoque1
-            // 
-            this.estoque1.Location = new System.Drawing.Point(1057, 405);
-            this.estoque1.Name = "estoque1";
-            this.estoque1.Size = new System.Drawing.Size(261, 81);
-            this.estoque1.TabIndex = 18;
-            this.estoque1.Visible = false;
             // 
             // fazenda
             // 
