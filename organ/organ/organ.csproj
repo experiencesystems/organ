@@ -135,6 +135,7 @@
     <Compile Include="fazenda\consulta\historico.Designer.cs">
       <DependentUpon>historico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="plantio\cadastro\nova ferramenta.cs">
       <SubType>Form</SubType>
     </Compile>

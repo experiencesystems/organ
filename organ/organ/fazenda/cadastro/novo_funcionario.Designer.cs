@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblAddFuncionario = new System.Windows.Forms.Label();
             this.tlpNovoFuncionario = new System.Windows.Forms.TableLayoutPanel();
-            this.lblIdade = new System.Windows.Forms.Label();
-            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtSalario = new System.Windows.Forms.TextBox();
             this.txtCEP = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
@@ -59,11 +57,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.tbFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpBarraSuperior
@@ -118,16 +119,11 @@
             // 
             this.tlpNovoFuncionario.AutoSize = true;
             this.tlpNovoFuncionario.ColumnCount = 4;
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.74522F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.36232F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.42029F));
-            this.tlpNovoFuncionario.Controls.Add(this.lblIdade, 2, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.txtIdade, 3, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 3, 7);
-            this.tlpNovoFuncionario.Controls.Add(this.txtSalario, 3, 6);
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7685F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.37967F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.37673F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.4751F));
             this.tlpNovoFuncionario.Controls.Add(this.txtCEP, 3, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.txtCargo, 1, 6);
             this.tlpNovoFuncionario.Controls.Add(this.txtNumCasa, 3, 4);
             this.tlpNovoFuncionario.Controls.Add(this.txtComplemento, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 5);
@@ -147,47 +143,50 @@
             this.tlpNovoFuncionario.Controls.Add(this.txtCelular, 3, 2);
             this.tlpNovoFuncionario.Controls.Add(this.label1, 2, 4);
             this.tlpNovoFuncionario.Controls.Add(this.label3, 2, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.label5, 2, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 3, 9);
+            this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.txtCargo, 1, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.label5, 2, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.txtSalario, 3, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.txtUF, 1, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.label6, 2, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.label8, 0, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.txtCidade, 3, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.txtBairro, 1, 6);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
             this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
-            this.tlpNovoFuncionario.RowCount = 8;
+            this.tlpNovoFuncionario.RowCount = 10;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.Size = new System.Drawing.Size(1480, 734);
             this.tlpNovoFuncionario.TabIndex = 43;
             // 
-            // lblIdade
+            // btnRegistrar
             // 
-            this.lblIdade.AutoSize = true;
-            this.lblIdade.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdade.Location = new System.Drawing.Point(794, 30);
-            this.lblIdade.Name = "lblIdade";
-            this.lblIdade.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIdade.Size = new System.Drawing.Size(59, 26);
-            this.lblIdade.TabIndex = 53;
-            this.lblIdade.Text = "Idade";
-            // 
-            // txtIdade
-            // 
-            this.txtIdade.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdade.Location = new System.Drawing.Point(937, 33);
-            this.txtIdade.Name = "txtIdade";
-            this.txtIdade.Size = new System.Drawing.Size(361, 33);
-            this.txtIdade.TabIndex = 50;
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(937, 573);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtSalario
             // 
             this.txtSalario.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.txtSalario.Location = new System.Drawing.Point(937, 393);
+            this.txtSalario.Location = new System.Drawing.Point(937, 513);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(360, 33);
             this.txtSalario.TabIndex = 50;
@@ -203,7 +202,7 @@
             // txtCargo
             // 
             this.txtCargo.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.txtCargo.Location = new System.Drawing.Point(334, 393);
+            this.txtCargo.Location = new System.Drawing.Point(334, 513);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(401, 33);
             this.txtCargo.TabIndex = 45;
@@ -297,7 +296,7 @@
             this.lblTalhao.Name = "lblTalhao";
             this.lblTalhao.Size = new System.Drawing.Size(225, 60);
             this.lblTalhao.TabIndex = 6;
-            this.lblTalhao.Text = "Endereço";
+            this.lblTalhao.Text = "Endereço*";
             // 
             // lblQntDefensivo
             // 
@@ -319,7 +318,7 @@
             this.lblQntFertilizante.Name = "lblQntFertilizante";
             this.lblQntFertilizante.Size = new System.Drawing.Size(137, 60);
             this.lblQntFertilizante.TabIndex = 11;
-            this.lblQntFertilizante.Text = "RG";
+            this.lblQntFertilizante.Text = "RG*";
             // 
             // lblFertilizante
             // 
@@ -330,7 +329,7 @@
             this.lblFertilizante.Name = "lblFertilizante";
             this.lblFertilizante.Size = new System.Drawing.Size(225, 60);
             this.lblFertilizante.TabIndex = 4;
-            this.lblFertilizante.Text = "CPF";
+            this.lblFertilizante.Text = "CPF*";
             // 
             // lblNome
             // 
@@ -342,7 +341,7 @@
             this.lblNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNome.Size = new System.Drawing.Size(225, 60);
             this.lblNome.TabIndex = 3;
-            this.lblNome.Text = "Nome";
+            this.lblNome.Text = "Nome*";
             // 
             // txtNome
             // 
@@ -374,9 +373,9 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.label1.Location = new System.Drawing.Point(794, 270);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 26);
+            this.label1.Size = new System.Drawing.Size(92, 26);
             this.label1.TabIndex = 44;
-            this.label1.Text = "Número";
+            this.label1.Text = "Número*";
             // 
             // label3
             // 
@@ -384,41 +383,83 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.label3.Location = new System.Drawing.Point(794, 330);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 26);
+            this.label3.Size = new System.Drawing.Size(54, 26);
             this.label3.TabIndex = 46;
-            this.label3.Text = "CEP";
+            this.label3.Text = "CEP*";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label4.Location = new System.Drawing.Point(103, 390);
+            this.label4.Location = new System.Drawing.Point(103, 510);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 26);
+            this.label4.Size = new System.Drawing.Size(71, 26);
             this.label4.TabIndex = 47;
-            this.label4.Text = "Cargo";
+            this.label4.Text = "Cargo*";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label5.Location = new System.Drawing.Point(794, 390);
+            this.label5.Location = new System.Drawing.Point(794, 510);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 26);
+            this.label5.Size = new System.Drawing.Size(80, 26);
             this.label5.TabIndex = 48;
-            this.label5.Text = "Salário";
+            this.label5.Text = "Salário*";
             // 
-            // btnRegistrar
+            // label6
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(937, 453);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label6.Location = new System.Drawing.Point(794, 390);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 26);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Cidade*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label7.Location = new System.Drawing.Point(103, 449);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 26);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "UF*";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtCidade.Location = new System.Drawing.Point(937, 393);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(361, 33);
+            this.txtCidade.TabIndex = 53;
+            // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtUF.Location = new System.Drawing.Point(334, 452);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(401, 33);
+            this.txtUF.TabIndex = 54;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label8.Location = new System.Drawing.Point(103, 390);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 26);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Bairro*";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtBairro.Location = new System.Drawing.Point(334, 393);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(401, 33);
+            this.txtBairro.TabIndex = 56;
             // 
             // novo_funcionario
             // 
@@ -471,8 +512,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtSalario;
-        private System.Windows.Forms.TextBox txtIdade;
-        private System.Windows.Forms.BindingSource tbFuncionarioBindingSource;
-        private System.Windows.Forms.Label lblIdade;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtBairro;
     }
 }

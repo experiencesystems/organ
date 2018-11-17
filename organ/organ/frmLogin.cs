@@ -117,7 +117,7 @@ namespace organ
 
         private void btnEntrar_Click(object sender, EventArgs e)
             {
-                string sql = "select count (*) as cnt from tbLogin where nome_login = '" + txtUsuario.Text + "' and senha = '" + txtSenha.Text + "';";
+                string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = '" + txtUsuario.Text + "' AND senha = '" + txtSenha.Text + "';";
                 SqlConnection con = new SqlConnection(StringConexao.connectionString);
                 SqlCommand scmd = new SqlCommand(sql, con);
                 con.Open();
