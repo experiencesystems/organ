@@ -28,27 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDefensivo = new System.Windows.Forms.Label();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tbDefensivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbDefensivoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDefensivo = new System.Windows.Forms.DataGridView();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDefensivo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDefensivo
@@ -122,89 +111,39 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
-            this.tableLayoutPanel1.Controls.Add(this.tbDefensivoDataGridView, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAtualizar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvDefensivo, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
             this.tableLayoutPanel1.TabIndex = 41;
-            
             // 
-            // tbDefensivoDataGridView
+            // dgvDefensivo
             // 
-            this.tbDefensivoDataGridView.AutoGenerateColumns = false;
-            this.tbDefensivoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tbDefensivoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.tbDefensivoDataGridView.DataSource = this.tbDefensivoBindingSource;
-            this.tbDefensivoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbDefensivoDataGridView.Location = new System.Drawing.Point(30, 30);
-            this.tbDefensivoDataGridView.Margin = new System.Windows.Forms.Padding(30);
-            this.tbDefensivoDataGridView.Name = "tbDefensivoDataGridView";
-            this.tbDefensivoDataGridView.Size = new System.Drawing.Size(1139, 648);
-            this.tbDefensivoDataGridView.TabIndex = 0;
+            this.dgvDefensivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDefensivo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDefensivo.Location = new System.Drawing.Point(30, 30);
+            this.dgvDefensivo.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvDefensivo.Name = "dgvDefensivo";
+            this.dgvDefensivo.Size = new System.Drawing.Size(1109, 648);
+            this.dgvDefensivo.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
+            // btnAtualizar
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_defensivo";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn1.HeaderText = "cod_defensivo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_def";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nome_def";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "marca_def";
-            this.dataGridViewTextBoxColumn3.HeaderText = "marca_def";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "desc_def";
-            this.dataGridViewTextBoxColumn4.HeaderText = "desc_def";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "cod_praga";
-            this.dataGridViewTextBoxColumn5.HeaderText = "cod_praga";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "cod_doenca";
-            this.dataGridViewTextBoxColumn6.HeaderText = "cod_doenca";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "cod_estoque";
-            this.dataGridViewTextBoxColumn7.HeaderText = "cod_estoque";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "cod_fornecedor";
-            this.dataGridViewTextBoxColumn8.HeaderText = "cod_fornecedor";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(1184, 30);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(15, 30, 15, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(184, 62);
+            this.btnAtualizar.TabIndex = 41;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // defensivo
             // 
@@ -216,8 +155,7 @@
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbDefensivoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDefensivo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,8 +167,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.BindingSource tbDefensivoBindingSource;
-        private System.Windows.Forms.DataGridView tbDefensivoDataGridView;
+        private System.Windows.Forms.DataGridView dgvDefensivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -239,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

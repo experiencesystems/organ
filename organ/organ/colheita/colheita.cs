@@ -23,8 +23,11 @@ namespace organ
 
         private void colheita_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(StringConexao.connectionString);
-            con.Open();
+            PreencherCamposSementeData(labels, labels2);
+        }
+
+        void PreencherCamposSementeData(Label[] labels, Label[] labels2)
+        {
 
             labels[0] = lblNomeSemente1;
             labels[1] = lblNomeSemente2;
@@ -51,13 +54,15 @@ namespace organ
             labels2[8] = lblDataColheita9;
             labels2[9] = lblDataColheita10;
             labels2[10] = lblDataColheita11;
-            
+
             string cmdDC;
 
             try
             {
                 for (int i = 0; i <= 10; i++)
                 {
+                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                    con.Open();
                     i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
                     cmdNS = "SELECT S.nome_sem FROM tbPlantio P INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente WHERE cod_talhao = " + i + ";";
                     SqlCommand comNS = new SqlCommand(cmdNS, con);
@@ -93,7 +98,6 @@ namespace organ
             {
                 throw new Exception(ex.Message);
             }
-            con.Close();
         }
-    }
+    }//acaba o método
 }

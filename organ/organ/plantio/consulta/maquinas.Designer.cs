@@ -28,29 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblMaquinas = new System.Windows.Forms.Label();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvMaquinas = new System.Windows.Forms.DataGridView();
             this.tlpCentral = new System.Windows.Forms.TableLayoutPanel();
-            this.dbOrgan = new organ.dbOrgan();
-            this.dbOrganBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbMaquinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbMaquinaTableAdapter = new organ.dbOrganTableAdapters.tbMaquinaTableAdapter();
-            this.txtcod_maquinas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtnome_maq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtdesc_maq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtmarca_maq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtcod_estoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbocod_fornecedor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tlpBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinas)).BeginInit();
             this.tlpCentral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrgan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrganBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMaquinaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMaquinas
@@ -122,26 +108,20 @@
             // 
             // dgvMaquinas
             // 
+            this.dgvMaquinas.AllowUserToAddRows = false;
+            this.dgvMaquinas.AllowUserToDeleteRows = false;
+            this.dgvMaquinas.AllowUserToResizeColumns = false;
+            this.dgvMaquinas.AllowUserToResizeRows = false;
             this.dgvMaquinas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMaquinas.AutoGenerateColumns = false;
+            this.dgvMaquinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaquinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaquinas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.txtcod_maquinas,
-            this.txtnome_maq,
-            this.txtdesc_maq,
-            this.txtmarca_maq,
-            this.txtcod_estoque,
-            this.cbocod_fornecedor});
-            this.dgvMaquinas.DataSource = this.tbMaquinaBindingSource;
             this.dgvMaquinas.Location = new System.Drawing.Point(20, 20);
             this.dgvMaquinas.Margin = new System.Windows.Forms.Padding(20);
             this.dgvMaquinas.Name = "dgvMaquinas";
             this.dgvMaquinas.Size = new System.Drawing.Size(1344, 768);
             this.dgvMaquinas.TabIndex = 39;
-            this.dgvMaquinas.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaquinas_CellValueChanged);
-            this.dgvMaquinas.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvMaquinas_EditingControlShowing);
             this.dgvMaquinas.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvMaquinas_UserDeletingRow);
             // 
             // tlpCentral
@@ -157,66 +137,6 @@
             this.tlpCentral.Size = new System.Drawing.Size(1384, 808);
             this.tlpCentral.TabIndex = 40;
             // 
-            // dbOrgan
-            // 
-            this.dbOrgan.DataSetName = "dbOrgan";
-            this.dbOrgan.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dbOrganBindingSource
-            // 
-            this.dbOrganBindingSource.DataSource = this.dbOrgan;
-            this.dbOrganBindingSource.Position = 0;
-            // 
-            // tbMaquinaBindingSource
-            // 
-            this.tbMaquinaBindingSource.DataMember = "tbMaquina";
-            this.tbMaquinaBindingSource.DataSource = this.dbOrganBindingSource;
-            // 
-            // tbMaquinaTableAdapter
-            // 
-            this.tbMaquinaTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtcod_maquinas
-            // 
-            this.txtcod_maquinas.DataPropertyName = "txtcod_maquinas";
-            this.txtcod_maquinas.HeaderText = "Código";
-            this.txtcod_maquinas.Name = "txtcod_maquinas";
-            this.txtcod_maquinas.ReadOnly = true;
-            // 
-            // txtnome_maq
-            // 
-            this.txtnome_maq.DataPropertyName = "txtnome_maq";
-            this.txtnome_maq.HeaderText = "Nome";
-            this.txtnome_maq.Name = "txtnome_maq";
-            // 
-            // txtdesc_maq
-            // 
-            this.txtdesc_maq.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txtdesc_maq.DataPropertyName = "txtdesc_maq";
-            this.txtdesc_maq.HeaderText = "Descrição";
-            this.txtdesc_maq.Name = "txtdesc_maq";
-            // 
-            // txtmarca_maq
-            // 
-            this.txtmarca_maq.DataPropertyName = "txtmarca_maq";
-            this.txtmarca_maq.HeaderText = "Marca";
-            this.txtmarca_maq.Name = "txtmarca_maq";
-            // 
-            // txtcod_estoque
-            // 
-            this.txtcod_estoque.DataPropertyName = "txtcod_estoque";
-            this.txtcod_estoque.HeaderText = "Código do estoque";
-            this.txtcod_estoque.Name = "txtcod_estoque";
-            this.txtcod_estoque.Visible = false;
-            // 
-            // cbocod_fornecedor
-            // 
-            this.cbocod_fornecedor.DataPropertyName = "cbocod_fornecedor";
-            this.cbocod_fornecedor.HeaderText = "Fornecedor";
-            this.cbocod_fornecedor.Name = "cbocod_fornecedor";
-            this.cbocod_fornecedor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cbocod_fornecedor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // maquinas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -229,9 +149,6 @@
             this.tlpBarraSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaquinas)).EndInit();
             this.tlpCentral.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrgan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbOrganBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMaquinaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,10 +160,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvMaquinas;
         private System.Windows.Forms.TableLayoutPanel tlpCentral;
-        private System.Windows.Forms.BindingSource tbMaquinaBindingSource;
-        private System.Windows.Forms.BindingSource dbOrganBindingSource;
-        private dbOrgan dbOrgan;
-        private dbOrganTableAdapters.tbMaquinaTableAdapter tbMaquinaTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtcod_maquinas;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtnome_maq;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtdesc_maq;

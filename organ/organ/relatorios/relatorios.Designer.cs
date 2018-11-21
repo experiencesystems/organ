@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.lblDefensivo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvControleGastos = new System.Windows.Forms.DataGridView();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.dgvRelatorios = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpBarraSuperior
@@ -43,7 +44,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblDefensivo, 1, 0);
             this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -55,29 +56,12 @@
             this.tlpBarraSuperior.Size = new System.Drawing.Size(1406, 66);
             this.tlpBarraSuperior.TabIndex = 39;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
-            this.btnAdd.Image = global::organ.Properties.Resources.soma;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1199, 23);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAdd.Size = new System.Drawing.Size(204, 30);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "  Adicionar novo";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            // 
             // lblDefensivo
             // 
             this.lblDefensivo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDefensivo.AutoSize = true;
             this.lblDefensivo.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblDefensivo.Location = new System.Drawing.Point(578, 20);
+            this.lblDefensivo.Location = new System.Drawing.Point(576, 20);
             this.lblDefensivo.Name = "lblDefensivo";
             this.lblDefensivo.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblDefensivo.Size = new System.Drawing.Size(173, 34);
@@ -87,26 +71,57 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
-            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAtualizar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvRelatorios, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1406, 722);
             this.tableLayoutPanel1.TabIndex = 42;
             // 
-            // dgvControleGastos
+            // btnAtualizar
             // 
-            this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
-            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
-            this.dgvControleGastos.Name = "dgvControleGastos";
-            this.dgvControleGastos.Size = new System.Drawing.Size(1161, 662);
-            this.dgvControleGastos.TabIndex = 39;
+            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(1206, 30);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(15, 30, 15, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(184, 62);
+            this.btnAtualizar.TabIndex = 45;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // dgvRelatorios
+            // 
+            this.dgvRelatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRelatorios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRelatorios.Location = new System.Drawing.Point(30, 30);
+            this.dgvRelatorios.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvRelatorios.Name = "dgvRelatorios";
+            this.dgvRelatorios.Size = new System.Drawing.Size(1131, 662);
+            this.dgvRelatorios.TabIndex = 39;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
+            this.btnAdd.Image = global::organ.Properties.Resources.soma;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(1196, 23);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAdd.Size = new System.Drawing.Size(204, 30);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "  Adicionar novo";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // relatorios
             // 
@@ -114,13 +129,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tlpBarraSuperior);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "relatorios";
             this.Size = new System.Drawing.Size(1406, 788);
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,6 +146,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblDefensivo;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dgvControleGastos;
+        private System.Windows.Forms.DataGridView dgvRelatorios;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

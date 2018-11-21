@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Endereco.cs" />
     <Compile Include="colheita\colheita.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,7 +136,14 @@
     <Compile Include="fazenda\consulta\historico.Designer.cs">
       <DependentUpon>historico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
+    <Compile Include="classes\Fornecedor.cs" />
+    <Compile Include="classes\Login.cs" />
+    <Compile Include="relatorios\novo_relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="relatorios\novo_relatorio.Designer.cs">
+      <DependentUpon>novo_relatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="plantio\cadastro\nova ferramenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,8 +260,8 @@
     <Compile Include="plantio\consulta\solo.Designer.cs">
       <DependentUpon>solo.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes\ValidacaoCPF.cs" />
-    <Compile Include="StringConexao.cs" />
+    <Compile Include="classes\CPF_CNPJ.cs" />
+    <Compile Include="classes\StringConexao.cs" />
     <EmbeddedResource Include="colheita\colheita.resx">
       <DependentUpon>colheita.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,6 +356,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="relatorios\novo_relatorio.resx">
+      <DependentUpon>novo_relatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="relatorios\relatorios.resx">
       <DependentUpon>relatorios.cs</DependentUpon>
@@ -454,6 +465,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Camada%25201.ico" />
+    <Resource Include="Resources\controls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\estoque_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

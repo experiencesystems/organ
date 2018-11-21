@@ -164,7 +164,6 @@ namespace organ
             this.btnEntrar.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.OliveDrab;
             this.btnEntrar.Location = new System.Drawing.Point(167, 202);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(70, 30);
             this.btnEntrar.TabIndex = 4;
@@ -238,7 +237,6 @@ namespace organ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(619, 383);
             this.Controls.Add(this.pnlBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -246,7 +244,7 @@ namespace organ
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Organ";
+            this.Text = "Login";
             this.pnlBackground.ResumeLayout(false);
             this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();

@@ -38,9 +38,9 @@ namespace organ
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrgan));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
-            this.btnConfig = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pcbOrgan = new System.Windows.Forms.PictureBox();
+            this.btnConfig = new System.Windows.Forms.Button();
             this.configuracao1 = new organ.configuracao();
             this.fazenda1 = new organ.fazenda();
             this.relatorios1 = new organ.relatorios();
@@ -78,9 +78,9 @@ namespace organ
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
-            this.tlpBarraSuperior.Controls.Add(this.btnConfig, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.btnSair, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.pcbOrgan, 1, 0);
+            this.tlpBarraSuperior.Controls.Add(this.btnConfig, 0, 0);
             this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.tlpBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.tlpBarraSuperior.Name = "tlpBarraSuperior";
@@ -89,17 +89,6 @@ namespace organ
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBarraSuperior.Size = new System.Drawing.Size(1425, 70);
             this.tlpBarraSuperior.TabIndex = 7;
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnConfig.Location = new System.Drawing.Point(18, 31);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(85, 23);
-            this.btnConfig.TabIndex = 6;
-            this.btnConfig.Text = "Configurações";
-            this.btnConfig.UseVisualStyleBackColor = true;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // btnSair
             // 
@@ -126,6 +115,21 @@ namespace organ
             this.pcbOrgan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbOrgan.TabIndex = 3;
             this.pcbOrgan.TabStop = false;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnConfig.BackgroundImage = global::organ.Properties.Resources.settings;
+            this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.Location = new System.Drawing.Point(17, 25);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(35, 35);
+            this.btnConfig.TabIndex = 6;
+            this.btnConfig.UseVisualStyleBackColor = true;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // configuracao1
             // 

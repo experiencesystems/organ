@@ -33,10 +33,11 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblDoencas = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvControleGastos = new System.Windows.Forms.DataGridView();
+            this.dgvDoencas = new System.Windows.Forms.DataGridView();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoencas)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpBarraSuperior
@@ -44,7 +45,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblDoencas, 1, 0);
@@ -54,7 +55,7 @@
             this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
             this.tlpBarraSuperior.RowCount = 1;
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tlpBarraSuperior.Size = new System.Drawing.Size(1384, 66);
             this.tlpBarraSuperior.TabIndex = 38;
             // 
@@ -86,7 +87,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1173, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1172, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
@@ -100,7 +101,7 @@
             this.lblDoencas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDoencas.AutoSize = true;
             this.lblDoencas.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblDoencas.Location = new System.Drawing.Point(572, 20);
+            this.lblDoencas.Location = new System.Drawing.Point(571, 20);
             this.lblDoencas.Name = "lblDoencas";
             this.lblDoencas.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblDoencas.Size = new System.Drawing.Size(157, 34);
@@ -110,26 +111,39 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
-            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAtualizar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvDoencas, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
             this.tableLayoutPanel1.TabIndex = 41;
             // 
-            // dgvControleGastos
+            // dgvDoencas
             // 
-            this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
-            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
-            this.dgvControleGastos.Name = "dgvControleGastos";
-            this.dgvControleGastos.Size = new System.Drawing.Size(1139, 648);
-            this.dgvControleGastos.TabIndex = 39;
+            this.dgvDoencas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoencas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDoencas.Location = new System.Drawing.Point(30, 30);
+            this.dgvDoencas.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvDoencas.Name = "dgvDoencas";
+            this.dgvDoencas.Size = new System.Drawing.Size(1109, 648);
+            this.dgvDoencas.TabIndex = 39;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(1184, 30);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(15, 30, 15, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(184, 62);
+            this.btnAtualizar.TabIndex = 41;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // doencas
             // 
@@ -142,7 +156,7 @@
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoencas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,6 +168,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblDoencas;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dgvControleGastos;
+        private System.Windows.Forms.DataGridView dgvDoencas;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

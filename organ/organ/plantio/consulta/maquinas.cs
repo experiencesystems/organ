@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Reflection;
 
 namespace organ
 {
@@ -31,26 +32,8 @@ namespace organ
             }
         }
 
-        void PreencherComboBox()
+        private void maquinas_Load(object sender, EventArgs ex)
         {
-            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
-            {
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tbFornecedor", con);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                cbocod_fornecedor.ValueMember = "cod_fornecedor";
-                cbocod_fornecedor.DisplayMember = "nome_fantasia";
-                DataRow topItem = dtbl.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "Selecione um item";
-                dtbl.Rows.InsertAt(topItem, 0);
-                cbocod_fornecedor.DataSource = dtbl;
-            }
-        }
-
-        private void maquinas_Load(object sender, EventArgs e)
-        {
-            PreencherComboBox();
             PreencherDataGridView();
         }
 
@@ -58,56 +41,27 @@ namespace organ
         {
             using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM tbMaquina", con);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dgvMaquinas.DataSource = dtbl;
-            }
-        }
-
-        private void dgvMaquinas_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvMaquinas.CurrentRow != null)
-            {
-                using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+                try
                 {
-                    con.Open();
-                    DataGridViewRow dgvRow = dgvMaquinas.CurrentRow;
-                    SqlCommand sqlCmd = new SqlCommand("MaquinasInsertUpdate", con);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-
-                    if (dgvRow.Cells["txtcod_maquinas"].Value == DBNull.Value)
-                    {//insert
-                        sqlCmd.Parameters.AddWithValue("@cod_maquinas", 0);
-                    }
-                    else//update
-                    {
-                        sqlCmd.Parameters.AddWithValue("@cod_maquinas", Convert.ToInt32(dgvRow.Cells["txtcod_maquinas"].Value));
-                        sqlCmd.Parameters.AddWithValue("@nome_maq", dgvRow.Cells["txtnome_maq"].Value == DBNull.Value ? "" : dgvRow.Cells["txtnome_maq"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@desc_maq", dgvRow.Cells["txtdesc_maq"].Value == DBNull.Value ? "" : dgvRow.Cells["txtdesc_maq"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@marca_maq", dgvRow.Cells["txtmarca_maq"].Value == DBNull.Value ? "" : dgvRow.Cells["txtmarca_maq"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@cod_fornecedor", Convert.ToInt32(dgvRow.Cells["cbocod_fornecedor"].Value == DBNull.Value ? "0" : dgvRow.Cells["cbocod_fornecedor"].Value.ToString()));
-                        sqlCmd.ExecuteNonQuery();
-                        PreencherDataGridView();
-                    }
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT M.cod_maquina AS [Código], M.nome_maq AS [Nome], M.marca_maq AS [Marca], M.desc_maq AS [Descrição], " +
+                                                              "E.qtd_estoque AS [Quantidade], F.nome_fantasia AS [Fornecedor] " +
+                                                              "FROM tbMaquina M " +
+                                                              "INNER JOIN tbEstoque E ON M.cod_estoque = E.cod_estoque " +
+                                                              "INNER JOIN tbFornecedor F ON M.cod_fornecedor = F.cod_fornecedor " +
+                                                              "ORDER BY cod_maquina ASC;", con);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                    dgvMaquinas.DataSource = dtbl;
+                }
+                catch (SqlException e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
-        }
-
-        private void dgvMaquinas_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            e.Control.KeyPress -= AllowNumbersOnly;
-            if (dgvMaquinas.CurrentCell.ColumnIndex == 4)
-            {
-
-                e.Control.KeyPress += AllowNumbersOnly;
-            }
-        }
-
-        private void AllowNumbersOnly(Object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
         }
 
         private void dgvMaquinas_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)

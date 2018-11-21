@@ -33,10 +33,11 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvControleGastos = new System.Windows.Forms.DataGridView();
+            this.dgvFerramentas = new System.Windows.Forms.DataGridView();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramentas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFerramentas
@@ -110,26 +111,39 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
-            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAtualizar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvFerramentas, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 808);
             this.tableLayoutPanel1.TabIndex = 41;
             // 
-            // dgvControleGastos
+            // dgvFerramentas
             // 
-            this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
-            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
-            this.dgvControleGastos.Name = "dgvControleGastos";
-            this.dgvControleGastos.Size = new System.Drawing.Size(1139, 748);
-            this.dgvControleGastos.TabIndex = 39;
+            this.dgvFerramentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFerramentas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFerramentas.Location = new System.Drawing.Point(30, 30);
+            this.dgvFerramentas.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvFerramentas.Name = "dgvFerramentas";
+            this.dgvFerramentas.Size = new System.Drawing.Size(1109, 748);
+            this.dgvFerramentas.TabIndex = 39;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(1184, 30);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(15, 30, 15, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(184, 62);
+            this.btnAtualizar.TabIndex = 42;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // ferramentas
             // 
@@ -141,7 +155,7 @@
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFerramentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,6 +166,7 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dgvControleGastos;
+        private System.Windows.Forms.DataGridView dgvFerramentas;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

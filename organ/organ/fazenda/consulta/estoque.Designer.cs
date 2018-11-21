@@ -29,46 +29,48 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dgvControleGastos = new System.Windows.Forms.DataGridView();
+            this.dgvEstoque = new System.Windows.Forms.DataGridView();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.lblEstoque = new System.Windows.Forms.Label();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).BeginInit();
             this.tlpBarraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
-            this.tableLayoutPanel1.Controls.Add(this.dgvControleGastos, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Controls.Add(this.btnAtualizar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.dgvEstoque, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 66);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.40678F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1384, 708);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
-            // dgvControleGastos
+            // dgvEstoque
             // 
-            this.dgvControleGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvControleGastos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvControleGastos.Location = new System.Drawing.Point(30, 30);
-            this.dgvControleGastos.Margin = new System.Windows.Forms.Padding(30);
-            this.dgvControleGastos.Name = "dgvControleGastos";
-            this.dgvControleGastos.Size = new System.Drawing.Size(1139, 648);
-            this.dgvControleGastos.TabIndex = 39;
+            this.dgvEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstoque.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEstoque.Location = new System.Drawing.Point(30, 30);
+            this.dgvEstoque.Margin = new System.Windows.Forms.Padding(30);
+            this.dgvEstoque.Name = "dgvEstoque";
+            this.dgvEstoque.Size = new System.Drawing.Size(1109, 648);
+            this.dgvEstoque.TabIndex = 39;
             // 
             // tlpBarraSuperior
             // 
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.btnHistorico, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblEstoque, 1, 0);
@@ -108,12 +110,12 @@
             this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorico.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorico.Location = new System.Drawing.Point(1172, 23);
+            this.btnHistorico.Location = new System.Drawing.Point(1171, 23);
             this.btnHistorico.Name = "btnHistorico";
             this.btnHistorico.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnHistorico.Size = new System.Drawing.Size(204, 30);
             this.btnHistorico.TabIndex = 8;
-            this.btnHistorico.Text = "  Historico";
+            this.btnHistorico.Text = "  Histórico";
             this.btnHistorico.UseVisualStyleBackColor = true;
             // 
             // lblEstoque
@@ -128,6 +130,18 @@
             this.lblEstoque.TabIndex = 6;
             this.lblEstoque.Text = "Estoque";
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Location = new System.Drawing.Point(1184, 30);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(15, 30, 15, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(184, 62);
+            this.btnAtualizar.TabIndex = 46;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,7 +151,7 @@
             this.Name = "estoque";
             this.Size = new System.Drawing.Size(1384, 774);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvControleGastos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstoque)).EndInit();
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.ResumeLayout(false);
@@ -147,10 +161,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dgvControleGastos;
+        private System.Windows.Forms.DataGridView dgvEstoque;
         private System.Windows.Forms.TableLayoutPanel tlpBarraSuperior;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnHistorico;
         private System.Windows.Forms.Label lblEstoque;
+        private System.Windows.Forms.Button btnAtualizar;
     }
 }

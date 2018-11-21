@@ -36,9 +36,9 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -84,12 +84,13 @@
             this.lblNovaMaquina.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNovaMaquina.AutoSize = true;
             this.lblNovaMaquina.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblNovaMaquina.Location = new System.Drawing.Point(565, 20);
+            this.lblNovaMaquina.Location = new System.Drawing.Point(534, 20);
             this.lblNovaMaquina.Name = "lblNovaMaquina";
-            this.lblNovaMaquina.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblNovaMaquina.Size = new System.Drawing.Size(261, 34);
+            this.lblNovaMaquina.Padding = new System.Windows.Forms.Padding(3, 5, 120, 3);
+            this.lblNovaMaquina.Size = new System.Drawing.Size(324, 36);
             this.lblNovaMaquina.TabIndex = 30;
             this.lblNovaMaquina.Text = "Adicionar máquina";
+            this.lblNovaMaquina.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tlpNovoFuncionario
             // 
@@ -155,16 +156,15 @@
             this.textBox1.Size = new System.Drawing.Size(766, 30);
             this.textBox1.TabIndex = 50;
             // 
-            // btnRegistrar
+            // label2
             // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(879, 213);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(103, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Descrição";
             // 
             // richTextBox1
             // 
@@ -175,15 +175,16 @@
             this.richTextBox1.TabIndex = 54;
             this.richTextBox1.Text = "";
             // 
-            // label2
+            // btnRegistrar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 26);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Descrição";
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(879, 213);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
             // nova_maquina
             // 

@@ -183,6 +183,16 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap controls {
+            get {
+                object obj = ResourceManager.GetObject("controls", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap defensivo {
             get {
                 object obj = ResourceManager.GetObject("defensivo", resourceCulture);
@@ -586,6 +596,16 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap semente_7 {
             get {
                 object obj = ResourceManager.GetObject("semente_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings {
+            get {
+                object obj = ResourceManager.GetObject("settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

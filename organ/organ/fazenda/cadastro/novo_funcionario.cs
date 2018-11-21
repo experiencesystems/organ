@@ -26,17 +26,20 @@ namespace organ
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || txtCPF.Text == "" || txtRG.Text == "" || txtEndereco.Text == "" || txtNumCasa.Text == "" || txtCEP.Text == "" || txtBairro.Text == "" || txtCidade.Text == "" || txtUF.Text == "" || txtCargo.Text == "" || txtSalario.Text == "")
+            RegistrarFuncionario();
+        }
+
+        void RegistrarFuncionario()
+        {
+            if (txtNome.Text == "" || txtCPF.Text == "" || txtRG.Text == "" || txtEndereco.Text == "" || txtNumCasa.Text == "" || txtCEP.Text == "" ||
+                   txtBairro.Text == "" || txtCidade.Text == "" || txtUF.Text == "" || txtCargo.Text == "" || txtSalario.Text == "")
             {
-                MessageBox.Show("Certifique-se de preencher todos os campos que têm asterisco.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             else
             {
-                string sql = "alter table tbFuncionario nocheck constraint FK_tbFuncionario_tbEndereco;" +
-                             "alter table tbFuncionario nocheck constraint FK_tbFuncionario_tbUsuario;" +
-                             "alter table tbFuncionario alter column cod_usuario int null;" +
-                             "INSERT INTO tbFuncionario (nome_func, cpf_func, rg_func, tel_func, cel_func, email_func, cargo_func, salario_func, numcasa_func, cep_func) " +
+                string sql = "INSERT INTO tbFuncionario (nome_func, cpf_func, rg_func, tel_func, cel_func, email_func, cargo_func, salario_func, numcasa_func, cep_func) " +
                              "VALUES ('" + txtNome.Text + "', " + txtCPF.Text + ", " + txtRG.Text + ", " + txtTelefone.Text + ", " + txtCelular.Text + ", '"
                              + txtEmail.Text + "', '" + txtCargo.Text + "', " + txtSalario.Text + ", " + txtNumCasa.Text + ", " + txtCEP.Text + ")";
 
@@ -48,7 +51,12 @@ namespace organ
                 {
                     int i = cmd.ExecuteNonQuery();
                     if (i > 0)
-                        MessageBox.Show("Cadastro realizado com sucesso!");
+                    {
+                        con.InfoMessage += delegate (object sender, SqlInfoMessageEventArgs e)
+                        {
+                            MessageBox.Show(e.Message);
+                        };
+                    }
                 }
                 catch (SqlException ex)
                 {
