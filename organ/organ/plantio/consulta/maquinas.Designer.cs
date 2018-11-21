@@ -112,8 +112,8 @@
             this.dgvMaquinas.AllowUserToDeleteRows = false;
             this.dgvMaquinas.AllowUserToResizeColumns = false;
             this.dgvMaquinas.AllowUserToResizeRows = false;
-            this.dgvMaquinas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvMaquinas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMaquinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaquinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -160,11 +160,5 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvMaquinas;
         private System.Windows.Forms.TableLayoutPanel tlpCentral;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtcod_maquinas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtnome_maq;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtdesc_maq;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtmarca_maq;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtcod_estoque;
-        private System.Windows.Forms.DataGridViewComboBoxColumn cbocod_fornecedor;
     }
 }

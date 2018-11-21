@@ -32,6 +32,7 @@
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tlpNovoDefensivo = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -42,26 +43,27 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tlpNovoFuncionario = new System.Windows.Forms.TableLayoutPanel();
             this.lblFertilizante = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoDefensivo.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
@@ -147,6 +149,16 @@
             this.tlpNovoDefensivo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpNovoDefensivo.Size = new System.Drawing.Size(833, 446);
             this.tlpNovoDefensivo.TabIndex = 46;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label6.Location = new System.Drawing.Point(3, 360);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 26);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Acidez";
             // 
             // textBox3
             // 
@@ -240,16 +252,6 @@
             this.textBox2.Size = new System.Drawing.Size(411, 31);
             this.textBox2.TabIndex = 39;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label6.Location = new System.Drawing.Point(3, 360);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 26);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Acidez";
-            // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,27 +291,29 @@
             this.tlpNovoFuncionario.Controls.Add(this.label10, 0, 4);
             this.tlpNovoFuncionario.Controls.Add(this.label11, 0, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label12, 0, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 7);
             this.tlpNovoFuncionario.Controls.Add(this.textBox7, 1, 0);
             this.tlpNovoFuncionario.Controls.Add(this.textBox9, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.textBox10, 1, 4);
             this.tlpNovoFuncionario.Controls.Add(this.textBox11, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.textBox12, 1, 6);
             this.tlpNovoFuncionario.Controls.Add(this.textBox13, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.label13, 0, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 7);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
             this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
-            this.tlpNovoFuncionario.RowCount = 8;
+            this.tlpNovoFuncionario.RowCount = 9;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.Size = new System.Drawing.Size(1483, 735);
             this.tlpNovoFuncionario.TabIndex = 48;
             // 
@@ -334,14 +338,6 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Nome";
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(383, 33);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(766, 33);
-            this.textBox7.TabIndex = 18;
-            // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Calibri", 14F);
@@ -359,17 +355,6 @@
             this.label8.Size = new System.Drawing.Size(160, 26);
             this.label8.TabIndex = 52;
             this.label8.Text = "Tempo de plantio";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(937, 453);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -395,9 +380,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(103, 381);
+            this.label11.Location = new System.Drawing.Point(103, 330);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(178, 9);
+            this.label11.Size = new System.Drawing.Size(178, 26);
             this.label11.TabIndex = 52;
             this.label11.Text = "Incidência do vento";
             // 
@@ -410,6 +395,26 @@
             this.label12.Size = new System.Drawing.Size(67, 26);
             this.label12.TabIndex = 52;
             this.label12.Text = "Acidez";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(937, 513);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(383, 33);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(766, 33);
+            this.textBox7.TabIndex = 18;
             // 
             // textBox9
             // 
@@ -430,7 +435,7 @@
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(383, 384);
+            this.textBox11.Location = new System.Drawing.Point(383, 333);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(766, 33);
             this.textBox11.TabIndex = 18;
@@ -450,6 +455,26 @@
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(766, 33);
             this.textBox13.TabIndex = 18;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(103, 450);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 26);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "Fornecedor";
+            // 
+            // cboFornecedor
+            // 
+            this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(383, 453);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(766, 34);
+            this.cboFornecedor.TabIndex = 54;
+            this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
             // 
             // nova_semente
             // 
@@ -511,5 +536,7 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cboFornecedor;
     }
 }

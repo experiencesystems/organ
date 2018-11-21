@@ -32,7 +32,6 @@
             this.pragas1 = new organ.pragas();
             this.doencas1 = new organ.doencas();
             this.fornecedores1 = new organ.fornecedores();
-            this.controle_gastos1 = new organ.controle_gastos();
             this.funcionarios1 = new organ.funcionarios();
             this.btnDoenças = new System.Windows.Forms.Button();
             this.btnControleGastos = new System.Windows.Forms.Button();
@@ -44,7 +43,7 @@
             // 
             // estoque1
             // 
-            this.estoque1.Location = new System.Drawing.Point(1057, 405);
+            this.estoque1.Location = new System.Drawing.Point(620, 405);
             this.estoque1.Name = "estoque1";
             this.estoque1.Size = new System.Drawing.Size(261, 81);
             this.estoque1.TabIndex = 18;
@@ -60,7 +59,7 @@
             // 
             // doencas1
             // 
-            this.doencas1.Location = new System.Drawing.Point(736, 418);
+            this.doencas1.Location = new System.Drawing.Point(290, 405);
             this.doencas1.Name = "doencas1";
             this.doencas1.Size = new System.Drawing.Size(133, 65);
             this.doencas1.TabIndex = 15;
@@ -73,14 +72,6 @@
             this.fornecedores1.Size = new System.Drawing.Size(139, 51);
             this.fornecedores1.TabIndex = 14;
             this.fornecedores1.Visible = false;
-            // 
-            // controle_gastos1
-            // 
-            this.controle_gastos1.Location = new System.Drawing.Point(269, 418);
-            this.controle_gastos1.Name = "controle_gastos1";
-            this.controle_gastos1.Size = new System.Drawing.Size(154, 68);
-            this.controle_gastos1.TabIndex = 13;
-            this.controle_gastos1.Visible = false;
             // 
             // funcionarios1
             // 
@@ -98,7 +89,7 @@
             this.btnDoenças.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoenças.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoenças.Image = global::organ.Properties.Resources.doencas1;
-            this.btnDoenças.Location = new System.Drawing.Point(489, 393);
+            this.btnDoenças.Location = new System.Drawing.Point(42, 393);
             this.btnDoenças.Name = "btnDoenças";
             this.btnDoenças.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
             this.btnDoenças.Size = new System.Drawing.Size(405, 310);
@@ -110,21 +101,10 @@
             // 
             // btnControleGastos
             // 
-            this.btnControleGastos.BackColor = System.Drawing.Color.White;
-            this.btnControleGastos.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnControleGastos.FlatAppearance.BorderSize = 2;
-            this.btnControleGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControleGastos.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControleGastos.Image = global::organ.Properties.Resources.controledegastos_2;
-            this.btnControleGastos.Location = new System.Drawing.Point(42, 393);
+            this.btnControleGastos.Location = new System.Drawing.Point(0, 0);
             this.btnControleGastos.Name = "btnControleGastos";
-            this.btnControleGastos.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnControleGastos.Size = new System.Drawing.Size(405, 310);
-            this.btnControleGastos.TabIndex = 10;
-            this.btnControleGastos.Text = "Controle de gastos";
-            this.btnControleGastos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnControleGastos.UseVisualStyleBackColor = false;
-            this.btnControleGastos.Click += new System.EventHandler(this.btnControleGastos_Click);
+            this.btnControleGastos.Size = new System.Drawing.Size(75, 23);
+            this.btnControleGastos.TabIndex = 19;
             // 
             // btnPragas
             // 
@@ -188,7 +168,7 @@
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoque.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.Image = global::organ.Properties.Resources.estoque_2;
-            this.btnEstoque.Location = new System.Drawing.Point(939, 393);
+            this.btnEstoque.Location = new System.Drawing.Point(489, 393);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
             this.btnEstoque.Size = new System.Drawing.Size(405, 310);
@@ -205,7 +185,6 @@
             this.Controls.Add(this.pragas1);
             this.Controls.Add(this.doencas1);
             this.Controls.Add(this.fornecedores1);
-            this.Controls.Add(this.controle_gastos1);
             this.Controls.Add(this.funcionarios1);
             this.Controls.Add(this.btnDoenças);
             this.Controls.Add(this.btnControleGastos);
@@ -227,7 +206,6 @@
         private System.Windows.Forms.Button btnControleGastos;
         private System.Windows.Forms.Button btnDoenças;
         private funcionarios funcionarios1;
-        private controle_gastos controle_gastos1;
         private fornecedores fornecedores1;
         private doencas doencas1;
         private pragas pragas1;

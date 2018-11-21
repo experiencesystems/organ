@@ -39,6 +39,7 @@
     <ApplicationIcon>Camada%25201.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -82,12 +83,6 @@
     <Compile Include="fazenda\consulta\doencas.Designer.cs">
       <DependentUpon>doencas.cs</DependentUpon>
     </Compile>
-    <Compile Include="fazenda\consulta\controle_gastos.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="fazenda\consulta\controle_gastos.Designer.cs">
-      <DependentUpon>controle_gastos.cs</DependentUpon>
-    </Compile>
     <Compile Include="fazenda\consulta\funcionarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,12 +119,6 @@
     <Compile Include="fazenda\cadastro\novo_funcionario.Designer.cs">
       <DependentUpon>novo_funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="fazenda\cadastro\novo_gasto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fazenda\cadastro\novo_gasto.Designer.cs">
-      <DependentUpon>novo_gasto.cs</DependentUpon>
-    </Compile>
     <Compile Include="fazenda\consulta\historico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +127,12 @@
     </Compile>
     <Compile Include="classes\Fornecedor.cs" />
     <Compile Include="classes\Login.cs" />
+    <Compile Include="configuracao\gerenciamento_contas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="configuracao\gerenciamento_contas.Designer.cs">
+      <DependentUpon>gerenciamento_contas.cs</DependentUpon>
+    </Compile>
     <Compile Include="relatorios\novo_relatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,9 +266,6 @@
     <EmbeddedResource Include="fazenda\consulta\estoque.resx">
       <DependentUpon>estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fazenda\consulta\controle_gastos.resx">
-      <DependentUpon>controle_gastos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fazenda\consulta\doencas.resx">
       <DependentUpon>doencas.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,8 +305,8 @@
     <EmbeddedResource Include="fazenda\cadastro\novo_funcionario.resx">
       <DependentUpon>novo_funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fazenda\cadastro\novo_gasto.resx">
-      <DependentUpon>novo_gasto.cs</DependentUpon>
+    <EmbeddedResource Include="configuracao\gerenciamento_contas.resx">
+      <DependentUpon>gerenciamento_contas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\cadastro\nova ferramenta.resx">
       <DependentUpon>nova ferramenta.cs</DependentUpon>

@@ -16,5 +16,11 @@ namespace organ
         {
             InitializeComponent();
         }
+
+        private void llblGerenciamentoContas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            gerenciamento_contas1.Visible = true;
+            gerenciamento_contas1.Dock = DockStyle.Fill;
+        }
     }
 }

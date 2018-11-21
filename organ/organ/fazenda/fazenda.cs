@@ -23,12 +23,6 @@ namespace organ
             funcionarios1.Dock = DockStyle.Fill;
         }
 
-        private void btnControleGastos_Click(object sender, EventArgs e)
-        {
-            controle_gastos1.Visible = true;
-            controle_gastos1.Dock = DockStyle.Fill;
-        }
-
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
             fornecedores1.Visible = true;

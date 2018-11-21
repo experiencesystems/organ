@@ -38,7 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
@@ -106,7 +106,7 @@
             this.tlpNovoFuncionario.Controls.Add(this.textBox1, 1, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.comboBox1, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 2);
             this.tlpNovoFuncionario.Controls.Add(this.richTextBox1, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -179,14 +179,15 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Fornecedor";
             // 
-            // comboBox1
+            // cboFornecedor
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(368, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(558, 31);
-            this.comboBox1.TabIndex = 53;
+            this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(368, 153);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(558, 31);
+            this.cboFornecedor.TabIndex = 53;
+            this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
             // 
             // richTextBox1
             // 
@@ -241,7 +242,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboFornecedor;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnRegistrar;
     }

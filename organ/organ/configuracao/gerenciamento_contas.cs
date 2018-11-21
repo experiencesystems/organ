@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace organ
 {
-    public partial class controle_gastos : UserControl
+    public partial class gerenciamento_contas : UserControl
     {
-        public controle_gastos()
+        public gerenciamento_contas()
         {
             InitializeComponent();
         }
@@ -20,14 +20,6 @@ namespace organ
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            using (novo_gasto _novo_gasto = new novo_gasto())
-            {
-                _novo_gasto.ShowDialog(this);
-            }
         }
     }
 }

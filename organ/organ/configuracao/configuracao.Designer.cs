@@ -36,15 +36,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.llblGerenciamentoContas = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.cboAbrirIniciar = new System.Windows.Forms.CheckBox();
+            this.gerenciamento_contas1 = new organ.gerenciamento_contas();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(628, 37);
@@ -125,41 +126,18 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sair";
             // 
-            // linkLabel2
+            // llblGerenciamentoContas
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel2.Location = new System.Drawing.Point(954, 323);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(121, 24);
-            this.linkLabel2.TabIndex = 8;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Mudar senha";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel3.Location = new System.Drawing.Point(954, 360);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(165, 24);
-            this.linkLabel3.TabIndex = 9;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Criar novo usuário";
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.LinkColor = System.Drawing.Color.Gray;
-            this.linkLabel4.Location = new System.Drawing.Point(954, 398);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(225, 24);
-            this.linkLabel4.TabIndex = 10;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Gerenciamento de contas";
+            this.llblGerenciamentoContas.AutoSize = true;
+            this.llblGerenciamentoContas.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblGerenciamentoContas.LinkColor = System.Drawing.Color.Gray;
+            this.llblGerenciamentoContas.Location = new System.Drawing.Point(954, 398);
+            this.llblGerenciamentoContas.Name = "llblGerenciamentoContas";
+            this.llblGerenciamentoContas.Size = new System.Drawing.Size(225, 24);
+            this.llblGerenciamentoContas.TabIndex = 10;
+            this.llblGerenciamentoContas.TabStop = true;
+            this.llblGerenciamentoContas.Text = "Gerenciamento de contas";
+            this.llblGerenciamentoContas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblGerenciamentoContas_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -184,15 +162,22 @@
             this.cboAbrirIniciar.Text = "Abrir o Organ quando o computador iniciar";
             this.cboAbrirIniciar.UseVisualStyleBackColor = true;
             // 
+            // gerenciamento_contas1
+            // 
+            this.gerenciamento_contas1.Location = new System.Drawing.Point(750, 440);
+            this.gerenciamento_contas1.Name = "gerenciamento_contas1";
+            this.gerenciamento_contas1.Size = new System.Drawing.Size(569, 62);
+            this.gerenciamento_contas1.TabIndex = 13;
+            this.gerenciamento_contas1.Visible = false;
+            // 
             // configuracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gerenciamento_contas1);
             this.Controls.Add(this.cboAbrirIniciar);
             this.Controls.Add(this.linkLabel5);
-            this.Controls.Add(this.linkLabel4);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.llblGerenciamentoContas);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -218,10 +203,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel llblGerenciamentoContas;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.CheckBox cboAbrirIniciar;
+        private gerenciamento_contas gerenciamento_contas1;
     }
 }

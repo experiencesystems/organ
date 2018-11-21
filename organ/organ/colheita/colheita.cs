@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.VisualBasic;
 
 namespace organ
 {
@@ -97,6 +98,49 @@ namespace organ
             catch (SqlException ex)
             {
                 throw new Exception(ex.Message);
+            }
+        }
+        
+        private void btnFazerColheita2_Click(object sender, EventArgs e)
+        {
+            string Prompt = "A senha é obrigatória.";
+
+            string Titulo = "www.macoratti.net";
+
+            string Resultado = Microsoft.VisualBasic.Interaction.InputBox(Prompt, Titulo, "", -1, -1);
+
+
+            /* defina senha apenas para testar. */
+
+            string password = "mac";
+
+
+            /* verifica se o resultado é uma string vazia o que indica que foi cancelado. */
+
+            if (Resultado != "")
+
+            {
+
+                Resultado = Resultado.TrimStart();
+
+                /* Verifica se a senha confere. */
+
+                if (Resultado != password)
+
+                {
+
+                    MessageBox.Show("Senha Incorreta.");
+
+                }
+
+                else
+
+                {
+
+                    MessageBox.Show("Senha válida.");
+
+                }
+
             }
         }
     }//acaba o método
