@@ -133,6 +133,7 @@ namespace organ
                         frmOrgan Interface_Organ = new frmOrgan();
                         Interface_Organ.Show();
                         this.Hide();
+                        
                     }
                     else
                     {

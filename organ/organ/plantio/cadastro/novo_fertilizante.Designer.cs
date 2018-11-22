@@ -41,6 +41,10 @@
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -96,10 +100,12 @@
             // tlpNovoFuncionario
             // 
             this.tlpNovoFuncionario.AutoSize = true;
-            this.tlpNovoFuncionario.ColumnCount = 3;
+            this.tlpNovoFuncionario.ColumnCount = 5;
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.54945F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.45055F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
@@ -108,17 +114,22 @@
             this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 2);
             this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 2);
             this.tlpNovoFuncionario.Controls.Add(this.richTextBox1, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.textBox2, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 3, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.label4, 2, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.comboBox1, 3, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
             this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
-            this.tlpNovoFuncionario.RowCount = 5;
+            this.tlpNovoFuncionario.RowCount = 6;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpNovoFuncionario.Size = new System.Drawing.Size(1425, 735);
             this.tlpNovoFuncionario.TabIndex = 46;
             // 
@@ -146,17 +157,17 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(368, 33);
+            this.txtNome.Location = new System.Drawing.Point(290, 33);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(766, 33);
+            this.txtNome.Size = new System.Drawing.Size(539, 33);
             this.txtNome.TabIndex = 18;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textBox1.Location = new System.Drawing.Point(368, 93);
+            this.textBox1.Location = new System.Drawing.Point(290, 93);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(766, 30);
+            this.textBox1.Size = new System.Drawing.Size(539, 30);
             this.textBox1.TabIndex = 50;
             // 
             // label2
@@ -183,18 +194,18 @@
             // 
             this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(368, 153);
+            this.cboFornecedor.Location = new System.Drawing.Point(290, 153);
             this.cboFornecedor.Name = "cboFornecedor";
-            this.cboFornecedor.Size = new System.Drawing.Size(558, 31);
+            this.cboFornecedor.Size = new System.Drawing.Size(539, 31);
             this.cboFornecedor.TabIndex = 53;
             this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
             // 
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(368, 213);
+            this.richTextBox1.Location = new System.Drawing.Point(290, 213);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(766, 54);
+            this.richTextBox1.Size = new System.Drawing.Size(539, 54);
             this.richTextBox1.TabIndex = 54;
             this.richTextBox1.Text = "";
             // 
@@ -202,12 +213,51 @@
             // 
             this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(879, 273);
+            this.btnRegistrar.Location = new System.Drawing.Point(1048, 333);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.Size = new System.Drawing.Size(207, 50);
             this.btnRegistrar.TabIndex = 49;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(103, 285);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(122, 26);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Quantidade*";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(290, 288);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(539, 33);
+            this.textBox2.TabIndex = 56;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(835, 285);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(188, 26);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Unidade de medida*";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(1048, 288);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(207, 31);
+            this.comboBox1.TabIndex = 58;
             // 
             // novo_fertilizante
             // 
@@ -245,5 +295,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboFornecedor;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

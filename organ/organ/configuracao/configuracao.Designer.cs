@@ -35,11 +35,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.llblSair = new System.Windows.Forms.LinkLabel();
             this.llblGerenciamentoContas = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.cboAbrirIniciar = new System.Windows.Forms.CheckBox();
             this.gerenciamento_contas1 = new organ.gerenciamento_contas();
+            this.lblLogadoComo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -114,17 +115,17 @@
             this.button1.Text = "Fale conosco";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // llblSair
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Firebrick;
-            this.linkLabel1.Location = new System.Drawing.Point(469, 150);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(41, 24);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Sair";
+            this.llblSair.AutoSize = true;
+            this.llblSair.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblSair.LinkColor = System.Drawing.Color.Firebrick;
+            this.llblSair.Location = new System.Drawing.Point(469, 150);
+            this.llblSair.Name = "llblSair";
+            this.llblSair.Size = new System.Drawing.Size(41, 24);
+            this.llblSair.TabIndex = 7;
+            this.llblSair.TabStop = true;
+            this.llblSair.Text = "Sair";
             // 
             // llblGerenciamentoContas
             // 
@@ -170,15 +171,25 @@
             this.gerenciamento_contas1.TabIndex = 13;
             this.gerenciamento_contas1.Visible = false;
             // 
+            // lblLogadoComo
+            // 
+            this.lblLogadoComo.AutoSize = true;
+            this.lblLogadoComo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLogadoComo.Location = new System.Drawing.Point(257, 160);
+            this.lblLogadoComo.Name = "lblLogadoComo";
+            this.lblLogadoComo.Size = new System.Drawing.Size(2, 15);
+            this.lblLogadoComo.TabIndex = 14;
+            // 
             // configuracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblLogadoComo);
             this.Controls.Add(this.gerenciamento_contas1);
             this.Controls.Add(this.cboAbrirIniciar);
             this.Controls.Add(this.linkLabel5);
             this.Controls.Add(this.llblGerenciamentoContas);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.llblSair);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -202,10 +213,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel llblSair;
         private System.Windows.Forms.LinkLabel llblGerenciamentoContas;
         private System.Windows.Forms.LinkLabel linkLabel5;
         private System.Windows.Forms.CheckBox cboAbrirIniciar;
         private gerenciamento_contas gerenciamento_contas1;
+        private System.Windows.Forms.Label lblLogadoComo;
     }
 }

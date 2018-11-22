@@ -58,5 +58,10 @@ namespace organ
         {
             int ID = Convert.ToInt16(cboFornecedor.SelectedValue);
         }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -85,7 +85,7 @@ namespace organ
                             i = i - 1; //Subtrai por causa do vetor (A matriz 0 é relacionada com o talhão 1, e tava
                                        //somando 1 antes, então o talhão 2 iria na label[2], que é o lblDataColheita3)
                             labels2[i].Text = Convert.ToDateTime(readerDC["data_colheita"]).ToString("dd/MM/yyyy");
-                            readerDC.Close();
+                            readerDC.Close();   
                         }
                     }
                     else

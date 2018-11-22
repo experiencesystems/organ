@@ -41,6 +41,8 @@
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -108,17 +110,20 @@
             this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 2);
             this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 2);
             this.tlpNovoFuncionario.Controls.Add(this.richTextBox1, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.textBox2, 1, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
             this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
-            this.tlpNovoFuncionario.RowCount = 5;
+            this.tlpNovoFuncionario.RowCount = 6;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tlpNovoFuncionario.Size = new System.Drawing.Size(1425, 735);
             this.tlpNovoFuncionario.TabIndex = 47;
             // 
@@ -139,9 +144,9 @@
             this.lblNome.Location = new System.Drawing.Point(103, 30);
             this.lblNome.Name = "lblNome";
             this.lblNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNome.Size = new System.Drawing.Size(64, 26);
+            this.lblNome.Size = new System.Drawing.Size(74, 26);
             this.lblNome.TabIndex = 3;
-            this.lblNome.Text = "Nome";
+            this.lblNome.Text = "Nome*";
             // 
             // txtNome
             // 
@@ -175,9 +180,9 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 26);
+            this.label1.Size = new System.Drawing.Size(119, 26);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Fornecedor";
+            this.label1.Text = "Fornecedor*";
             // 
             // cboFornecedor
             // 
@@ -193,8 +198,9 @@
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(368, 213);
+            this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(766, 54);
+            this.richTextBox1.Size = new System.Drawing.Size(766, 67);
             this.richTextBox1.TabIndex = 54;
             this.richTextBox1.Text = "";
             // 
@@ -202,12 +208,30 @@
             // 
             this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(879, 273);
+            this.btnRegistrar.Location = new System.Drawing.Point(879, 371);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
             this.btnRegistrar.TabIndex = 49;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(103, 317);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 26);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Quantidade*";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Calibri", 14F);
+            this.textBox2.Location = new System.Drawing.Point(368, 320);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(439, 30);
+            this.textBox2.TabIndex = 56;
             // 
             // nova_ferramenta
             // 
@@ -245,5 +269,7 @@
         private System.Windows.Forms.ComboBox cboFornecedor;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

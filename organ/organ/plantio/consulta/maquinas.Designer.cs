@@ -112,28 +112,29 @@
             this.dgvMaquinas.AllowUserToDeleteRows = false;
             this.dgvMaquinas.AllowUserToResizeColumns = false;
             this.dgvMaquinas.AllowUserToResizeRows = false;
-            this.dgvMaquinas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvMaquinas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMaquinas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaquinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaquinas.Location = new System.Drawing.Point(20, 20);
             this.dgvMaquinas.Margin = new System.Windows.Forms.Padding(20);
             this.dgvMaquinas.Name = "dgvMaquinas";
-            this.dgvMaquinas.Size = new System.Drawing.Size(1344, 768);
+            this.dgvMaquinas.Size = new System.Drawing.Size(1129, 768);
             this.dgvMaquinas.TabIndex = 39;
             this.dgvMaquinas.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvMaquinas_UserDeletingRow);
             // 
             // tlpCentral
             // 
-            this.tlpCentral.ColumnCount = 1;
-            this.tlpCentral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpCentral.ColumnCount = 2;
+            this.tlpCentral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlpCentral.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
             this.tlpCentral.Controls.Add(this.dgvMaquinas, 0, 0);
             this.tlpCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCentral.Location = new System.Drawing.Point(0, 66);
             this.tlpCentral.Name = "tlpCentral";
             this.tlpCentral.RowCount = 1;
-            this.tlpCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpCentral.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpCentral.Size = new System.Drawing.Size(1384, 808);
             this.tlpCentral.TabIndex = 40;
             // 
