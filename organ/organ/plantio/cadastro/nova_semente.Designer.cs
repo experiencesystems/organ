@@ -61,9 +61,9 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.tlpBarraSuperior.SuspendLayout();
@@ -73,15 +73,17 @@
             // 
             // lblSementes
             // 
-            this.lblSementes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSementes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSementes.AutoSize = true;
             this.lblSementes.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblSementes.Location = new System.Drawing.Point(577, 20);
+            this.lblSementes.Location = new System.Drawing.Point(144, 20);
             this.lblSementes.Name = "lblSementes";
-            this.lblSementes.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblSementes.Size = new System.Drawing.Size(258, 34);
+            this.lblSementes.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblSementes.Size = new System.Drawing.Size(1125, 34);
             this.lblSementes.TabIndex = 2;
             this.lblSementes.Text = "Adicionar semente";
+            this.lblSementes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tlpBarraSuperior
             // 
@@ -281,10 +283,9 @@
             // tlpNovoFuncionario
             // 
             this.tlpNovoFuncionario.AutoSize = true;
-            this.tlpNovoFuncionario.ColumnCount = 3;
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.54945F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.45055F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+            this.tlpNovoFuncionario.ColumnCount = 2;
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.textBox8, 1, 1);
@@ -307,7 +308,7 @@
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
-            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
+            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 400, 0);
             this.tlpNovoFuncionario.RowCount = 10;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
@@ -346,9 +347,9 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textBox8.Location = new System.Drawing.Point(383, 93);
+            this.textBox8.Location = new System.Drawing.Point(397, 93);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(766, 30);
+            this.textBox8.Size = new System.Drawing.Size(683, 30);
             this.textBox8.TabIndex = 50;
             // 
             // label8
@@ -404,62 +405,50 @@
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(383, 33);
+            this.textBox7.Location = new System.Drawing.Point(397, 33);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(766, 33);
+            this.textBox7.Size = new System.Drawing.Size(683, 33);
             this.textBox7.TabIndex = 18;
             // 
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(383, 213);
+            this.textBox9.Location = new System.Drawing.Point(397, 213);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(766, 33);
+            this.textBox9.Size = new System.Drawing.Size(683, 33);
             this.textBox9.TabIndex = 18;
             // 
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(383, 273);
+            this.textBox10.Location = new System.Drawing.Point(397, 273);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(766, 33);
+            this.textBox10.Size = new System.Drawing.Size(683, 33);
             this.textBox10.TabIndex = 18;
             // 
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(383, 333);
+            this.textBox11.Location = new System.Drawing.Point(397, 333);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(766, 33);
+            this.textBox11.Size = new System.Drawing.Size(683, 33);
             this.textBox11.TabIndex = 18;
             // 
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(383, 393);
+            this.textBox12.Location = new System.Drawing.Point(397, 393);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(766, 33);
+            this.textBox12.Size = new System.Drawing.Size(683, 33);
             this.textBox12.TabIndex = 18;
             // 
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(383, 153);
+            this.textBox13.Location = new System.Drawing.Point(397, 153);
             this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(766, 33);
+            this.textBox13.Size = new System.Drawing.Size(683, 33);
             this.textBox13.TabIndex = 18;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(937, 573);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label13
             // 
@@ -475,11 +464,23 @@
             // 
             this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(383, 453);
+            this.cboFornecedor.Location = new System.Drawing.Point(397, 453);
             this.cboFornecedor.Name = "cboFornecedor";
-            this.cboFornecedor.Size = new System.Drawing.Size(766, 34);
+            this.cboFornecedor.Size = new System.Drawing.Size(683, 34);
             this.cboFornecedor.TabIndex = 54;
             this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(825, 573);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label14
             // 
@@ -494,7 +495,7 @@
             // textBox14
             // 
             this.textBox14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(383, 513);
+            this.textBox14.Location = new System.Drawing.Point(397, 513);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(301, 33);
             this.textBox14.TabIndex = 56;

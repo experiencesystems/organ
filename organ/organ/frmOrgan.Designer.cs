@@ -123,68 +123,62 @@ namespace organ
             this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfig.FlatAppearance.BorderSize = 0;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.Location = new System.Drawing.Point(17, 25);
+            this.btnConfig.Location = new System.Drawing.Point(17, 26);
             this.btnConfig.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Size = new System.Drawing.Size(35, 35);
+            this.btnConfig.Size = new System.Drawing.Size(33, 33);
             this.btnConfig.TabIndex = 6;
             this.btnConfig.UseVisualStyleBackColor = true;
             this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // configuracao1
             // 
-            this.configuracao1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.configuracao1.Location = new System.Drawing.Point(131, 83);
+            this.configuracao1.Location = new System.Drawing.Point(964, 340);
             this.configuracao1.Name = "configuracao1";
-            this.configuracao1.Size = new System.Drawing.Size(1425, 801);
+            this.configuracao1.Size = new System.Drawing.Size(526, 68);
             this.configuracao1.TabIndex = 7;
             // 
             // fazenda1
             // 
-            this.fazenda1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fazenda1.Location = new System.Drawing.Point(131, 83);
+            this.fazenda1.Location = new System.Drawing.Point(207, 656);
             this.fazenda1.Margin = new System.Windows.Forms.Padding(2);
             this.fazenda1.Name = "fazenda1";
-            this.fazenda1.Size = new System.Drawing.Size(1425, 801);
+            this.fazenda1.Size = new System.Drawing.Size(386, 76);
             this.fazenda1.TabIndex = 7;
             // 
             // relatorios1
             // 
-            this.relatorios1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.relatorios1.Location = new System.Drawing.Point(131, 83);
+            this.relatorios1.Location = new System.Drawing.Point(218, 540);
             this.relatorios1.Margin = new System.Windows.Forms.Padding(2);
             this.relatorios1.Name = "relatorios1";
-            this.relatorios1.Size = new System.Drawing.Size(1425, 801);
+            this.relatorios1.Size = new System.Drawing.Size(630, 82);
             this.relatorios1.TabIndex = 6;
             // 
             // colheita1
             // 
-            this.colheita1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.colheita1.Location = new System.Drawing.Point(131, 83);
+            this.colheita1.Location = new System.Drawing.Point(207, 441);
             this.colheita1.Margin = new System.Windows.Forms.Padding(2);
             this.colheita1.Name = "colheita1";
-            this.colheita1.Size = new System.Drawing.Size(1425, 801);
+            this.colheita1.Size = new System.Drawing.Size(508, 70);
             this.colheita1.TabIndex = 5;
             // 
             // plantio1
             // 
+            this.plantio1.AutoSize = true;
             this.plantio1.BackColor = System.Drawing.SystemColors.Control;
-            this.plantio1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plantio1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plantio1.Location = new System.Drawing.Point(131, 83);
+            this.plantio1.Location = new System.Drawing.Point(207, 301);
             this.plantio1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.plantio1.Name = "plantio1";
-            this.plantio1.Size = new System.Drawing.Size(1425, 801);
+            this.plantio1.Size = new System.Drawing.Size(652, 145);
             this.plantio1.TabIndex = 4;
             // 
             // inicio1
             // 
-            this.inicio1.AutoSize = true;
-            this.inicio1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inicio1.Location = new System.Drawing.Point(131, 83);
+            this.inicio1.Location = new System.Drawing.Point(166, 99);
             this.inicio1.Margin = new System.Windows.Forms.Padding(2);
             this.inicio1.Name = "inicio1";
-            this.inicio1.Size = new System.Drawing.Size(1425, 801);
+            this.inicio1.Size = new System.Drawing.Size(801, 181);
             this.inicio1.TabIndex = 2;
             // 
             // pnlLateral

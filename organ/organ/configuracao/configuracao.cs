@@ -16,39 +16,45 @@ namespace organ
         public configuracao()
         {
             InitializeComponent();
+            VerificarUserLogado();
         }
 
         private void llblGerenciamentoContas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            gerenciamento_contas1.Visible = true;
-            gerenciamento_contas1.Dock = DockStyle.Fill;
+            //gerenciamento_contas1.Visible = true;
+            //gerenciamento_contas1.Dock = DockStyle.Fill;
         }
 
         public void VerificarUserLogado()
         {
             string cmdUser;
-            try
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
-                SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                con.Open();
-                cmdUser = "select nome_usuario from tbUsuario where ativacao_usuario = 1";
-                SqlCommand comUser = new SqlCommand(cmdUser, con);
-                SqlDataReader reader = comUser.ExecuteReader();
-
-                if (reader.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
+                try
                 {
-                    lblLogadoComo.Text = reader["nome_usuario"].ToString();
-                    reader.Close(); //Tem que fechar um reader para abrir outro
+                    con.Open();
+                    cmdUser = "select * from tbUsuario where ativacao_usuario = 1";
+                    SqlCommand comUser = new SqlCommand(cmdUser, con);
+                    SqlDataReader reader = comUser.ExecuteReader();
+                    if (reader.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
+                    {
+                        lblLogadoComo.Text = reader["nome_usuario"].ToString();
+                        reader.Close();
+                    }
+                    else
+                    {
+                        lblLogadoComo.Text = "Erro";
+                        reader.Close();
+                    }
                 }
-                else
+                catch (Exception e)
                 {
-                    lblLogadoComo.Text = "Erro";
-                    reader.Close();
-                } //Fechar um reader para abrir outro
-            }
-            catch (Exception e)
-            {
-                throw new Exception(e.Message);
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
     }

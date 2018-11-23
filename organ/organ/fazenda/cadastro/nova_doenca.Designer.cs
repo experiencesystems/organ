@@ -43,15 +43,17 @@
             // 
             // lblAddDoenca
             // 
-            this.lblAddDoenca.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAddDoenca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAddDoenca.AutoSize = true;
             this.lblAddDoenca.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblAddDoenca.Location = new System.Drawing.Point(609, 20);
+            this.lblAddDoenca.Location = new System.Drawing.Point(143, 20);
             this.lblAddDoenca.Name = "lblAddDoenca";
             this.lblAddDoenca.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblAddDoenca.Size = new System.Drawing.Size(186, 34);
+            this.lblAddDoenca.Size = new System.Drawing.Size(1118, 34);
             this.lblAddDoenca.TabIndex = 6;
             this.lblAddDoenca.Text = "Adicionar doença";
+            this.lblAddDoenca.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tlpBarraSuperior
             // 
@@ -92,10 +94,9 @@
             // tlpNovoFuncionario
             // 
             this.tlpNovoFuncionario.AutoSize = true;
-            this.tlpNovoFuncionario.ColumnCount = 3;
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.37363F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.62637F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 311F));
+            this.tlpNovoFuncionario.ColumnCount = 2;
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
@@ -104,7 +105,7 @@
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
-            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
+            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 400, 0);
             this.tlpNovoFuncionario.RowCount = 3;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
@@ -119,7 +120,7 @@
             this.lblFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFertilizante.Location = new System.Drawing.Point(103, 90);
             this.lblFertilizante.Name = "lblFertilizante";
-            this.lblFertilizante.Size = new System.Drawing.Size(275, 130);
+            this.lblFertilizante.Size = new System.Drawing.Size(288, 130);
             this.lblFertilizante.TabIndex = 4;
             this.lblFertilizante.Text = "Descrição";
             // 
@@ -131,24 +132,26 @@
             this.lblNome.Location = new System.Drawing.Point(103, 30);
             this.lblNome.Name = "lblNome";
             this.lblNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNome.Size = new System.Drawing.Size(275, 60);
+            this.lblNome.Size = new System.Drawing.Size(288, 60);
             this.lblNome.TabIndex = 3;
-            this.lblNome.Text = "Nome";
+            this.lblNome.Text = "Nome*";
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(384, 33);
+            this.txtNome.Location = new System.Drawing.Point(397, 33);
+            this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(779, 33);
+            this.txtNome.Size = new System.Drawing.Size(680, 33);
             this.txtNome.TabIndex = 18;
             // 
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(384, 93);
+            this.richTextBox1.Location = new System.Drawing.Point(397, 93);
+            this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(781, 109);
+            this.richTextBox1.Size = new System.Drawing.Size(680, 109);
             this.richTextBox1.TabIndex = 50;
             this.richTextBox1.Text = "";
             // 
@@ -156,7 +159,7 @@
             // 
             this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(910, 223);
+            this.btnRegistrar.Location = new System.Drawing.Point(822, 223);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
             this.btnRegistrar.TabIndex = 49;

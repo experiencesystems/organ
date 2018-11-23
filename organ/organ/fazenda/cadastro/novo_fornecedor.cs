@@ -25,7 +25,7 @@ namespace organ
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             if (txtNome.Text != "" || txtRazaoSocial.Text != "" || mskCNPJ.Text != "" || mskTel.Text != "" || txtEmail.Text != "" ||
-                txtSite.Text != "" || mskCEP.Text != "" || txtEndereco.Text != "" || txtNumero.Text != "" || txtBairro.Text != "" ||
+                txtSite.Text != "" || mskCEP.Text != "" || txtEndereco.Text != "" || maskedTextBox1.Text != "" || txtBairro.Text != "" ||
                 txtCidade.Text != "" || txtComplemento.Text != "")
             {
                 DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
@@ -58,7 +58,7 @@ namespace organ
         {
             string CNPJ = mskCNPJ.Text;
 
-            if (txtNome.Text == "" || mskCNPJ.Text == "" || mskCEP.Text == "" || txtEndereco.Text == "" || txtNumero.Text == "" || txtBairro.Text == "" ||
+            if (txtNome.Text == "" || mskCNPJ.Text == "" || mskCEP.Text == "" || txtEndereco.Text == "" || maskedTextBox1.Text == "" || txtBairro.Text == "" ||
                    txtCidade.Text == "" || cboUF.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -86,7 +86,7 @@ namespace organ
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@CEP", SqlDbType.Int).Value = Convert.ToInt32(mskCEP.Text);
-            cmd.Parameters.Add("@NUMERO", SqlDbType.Int).Value = Convert.ToInt16(txtNumero.Text);
+            cmd.Parameters.Add("@NUMERO", SqlDbType.Int).Value = Convert.ToInt16(maskedTextBox1.Text);
             cmd.Parameters.Add("@RUA", SqlDbType.VarChar).Value = txtEndereco.Text;
             cmd.Parameters.Add("@BAIRRO", SqlDbType.VarChar).Value = txtBairro.Text;
             cmd.Parameters.Add("@COMPLEMENTO", SqlDbType.VarChar).Value = txtComplemento.Text;

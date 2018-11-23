@@ -34,7 +34,6 @@
             this.fornecedores1 = new organ.fornecedores();
             this.funcionarios1 = new organ.funcionarios();
             this.btnDoenças = new System.Windows.Forms.Button();
-            this.btnControleGastos = new System.Windows.Forms.Button();
             this.btnPragas = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
@@ -98,13 +97,6 @@
             this.btnDoenças.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDoenças.UseVisualStyleBackColor = false;
             this.btnDoenças.Click += new System.EventHandler(this.btnDoenças_Click);
-            // 
-            // btnControleGastos
-            // 
-            this.btnControleGastos.Location = new System.Drawing.Point(0, 0);
-            this.btnControleGastos.Name = "btnControleGastos";
-            this.btnControleGastos.Size = new System.Drawing.Size(75, 23);
-            this.btnControleGastos.TabIndex = 19;
             // 
             // btnPragas
             // 
@@ -187,7 +179,6 @@
             this.Controls.Add(this.fornecedores1);
             this.Controls.Add(this.funcionarios1);
             this.Controls.Add(this.btnDoenças);
-            this.Controls.Add(this.btnControleGastos);
             this.Controls.Add(this.btnPragas);
             this.Controls.Add(this.btnFornecedores);
             this.Controls.Add(this.btnFuncionarios);
@@ -203,7 +194,6 @@
         private System.Windows.Forms.Button btnFuncionarios;
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.Button btnPragas;
-        private System.Windows.Forms.Button btnControleGastos;
         private System.Windows.Forms.Button btnDoenças;
         private funcionarios funcionarios1;
         private fornecedores fornecedores1;

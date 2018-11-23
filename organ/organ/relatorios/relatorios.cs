@@ -20,9 +20,9 @@ namespace organ
         
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            using (novo_defensivo _novo_defensivo = new novo_defensivo())
+            using (novo_relatorio _novo_relatorio = new novo_relatorio())
             {
-                _novo_defensivo.ShowDialog(this);
+                _novo_relatorio.ShowDialog(this);
             }
         }
 
@@ -57,6 +57,11 @@ namespace organ
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             PreencherDataGridView();
+        }
+
+        private void tlpBarraSuperior_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

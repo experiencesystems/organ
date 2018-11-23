@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Resources;
@@ -18,6 +19,7 @@ namespace organ
         {
             InitializeComponent();
             inicio1.BringToFront();
+            inicio1.Dock = DockStyle.Fill;
 
             btnInicio.Image = Resources.home_100;
         }
@@ -27,7 +29,30 @@ namespace organ
             DialogResult result = MessageBox.Show("Tem certeza que deseja sair dessa aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                Deslogar();
                 Application.Exit();
+            }
+        }
+
+        void Deslogar()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string deslogar = "UPDATE tbUsuario SET ativacao_usuario = 0 WHERE ativacao_usuario = 1;";//só teria um usuário logado
+                    SqlCommand sair = new SqlCommand(deslogar, con);
+                    sair.ExecuteScalar();
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 
@@ -38,6 +63,7 @@ namespace organ
             pnlSelecionado.Top = btnInicio.Top;
             pnlSelecionado.BringToFront();
             inicio1.BringToFront();
+            inicio1.Dock = DockStyle.Fill;
 
             //inicio
             btnInicio.Image = Resources.home_100;
@@ -63,7 +89,8 @@ namespace organ
             pnlSelecionado.Top = btnPlantio.Top;
             pnlSelecionado.BringToFront();
             plantio1.BringToFront();
-            
+            plantio1.Dock = DockStyle.Fill;
+
             //inicio
             btnInicio.Image = Resources.house_45;
             btnInicio.ForeColor = Color.FromArgb(121, 137, 131);
@@ -88,6 +115,7 @@ namespace organ
             pnlSelecionado.Top = btnColheita.Top;
             pnlSelecionado.BringToFront();
             colheita1.BringToFront();
+            colheita1.Dock = DockStyle.Fill;
 
             //inicio
             btnInicio.Image = Resources.house_45;
@@ -113,6 +141,7 @@ namespace organ
             pnlSelecionado.Top = btnRelatorios.Top;
             pnlSelecionado.BringToFront();
             relatorios1.BringToFront();
+            relatorios1.Dock = DockStyle.Fill;
 
             //inicio
             btnInicio.Image = Resources.house_45;
@@ -138,6 +167,7 @@ namespace organ
             pnlSelecionado.Top = btnFazenda.Top;
             pnlSelecionado.BringToFront();
             fazenda1.BringToFront();
+            fazenda1.Dock = DockStyle.Fill;
 
             //inicio
             btnInicio.Image = Resources.house_45;
@@ -159,6 +189,7 @@ namespace organ
         private void btnConfig_Click(object sender, EventArgs e)
         {
             configuracao1.BringToFront();
+            configuracao1.Dock = DockStyle.Fill;
             //deixando tudo como não selecionado
             pnlSelecionado.Visible = false;
             //inicio

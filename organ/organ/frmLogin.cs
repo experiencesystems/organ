@@ -116,31 +116,50 @@ namespace organ
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
-                string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = '" + txtUsuario.Text + "' AND senha = '" + txtSenha.Text + "';";
-                SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                SqlCommand scmd = new SqlCommand(sql, con);
-                con.Open();
+                try
+                {
+                    string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = '" + txtUsuario.Text + "' AND senha = '" + txtSenha.Text + "';";
 
-                if ((txtUsuario.Text == "") || (txtUsuario.Text == "Usuário") || (txtSenha.Text == "Senha") || (txtSenha.Text == ""))
-                {
-                    MessageBox.Show("Digite valores válidos nos campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    if (scmd.ExecuteScalar().ToString() == "1")
+                    SqlCommand scmd = new SqlCommand(sql, con);
+                    con.Open();
+
+                    if ((txtUsuario.Text == "") || (txtUsuario.Text == "Usuário") || (txtSenha.Text == "Senha") || (txtSenha.Text == ""))
                     {
-                        frmOrgan Interface_Organ = new frmOrgan();
-                        Interface_Organ.Show();
-                        this.Hide();
-                        
+                        MessageBox.Show("Digite valores válidos nos campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Usuário ou senha incorretos. Tente novamente.", "Não foi dessa vez. ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        con.Close();
+                        if (scmd.ExecuteScalar().ToString() == "1")
+                        {
+                            string logar = "UPDATE tbUsuario SET ativacao_usuario = 1 FROM tbUsuario U INNER JOIN tbLogin L ON L.cod_login = U.cod_login WHERE L.nome_login = '" +
+                            txtUsuario.Text + "' AND L.senha = '" + txtSenha.Text + "';";
+                            SqlCommand login_usuario = new SqlCommand(logar, con);
+                            login_usuario.ExecuteScalar();
+
+                            frmOrgan Interface_Organ = new frmOrgan();
+                            Interface_Organ.Show();
+                            this.Hide();
+                            con.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário ou senha incorretos. Tente novamente.", "Não foi dessa vez. ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            con.Close();
+                        }
                     }
                 }
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
 
         private void pcbOlho_Click(object sender, EventArgs e)

@@ -22,11 +22,9 @@ namespace organ
             this.Hide();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
-            txtQntDefensivo.Clear();
-            txtQntFertilizante.Clear();
-            txtQntSemente.Clear();
+
         }
 
         /*private void btnAddFunc_Click(object sender, EventArgs e)

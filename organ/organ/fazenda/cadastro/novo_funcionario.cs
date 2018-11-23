@@ -31,12 +31,12 @@ namespace organ
 
         void RegistrarFuncionario()
         {
-            if (txtNome.Text == "" || txtCPF.Text == "" || txtRG.Text == "" || txtEndereco.Text == "" || txtNumCasa.Text == "" || txtCEP.Text == "" ||
+            /*if (txtNome.Text == "" || txtCPF.Text == "" || txtRG.Text == "" || txtEndereco.Text == "" || txtNumCasa.Text == "" || txtCEP.Text == "" ||
                    txtBairro.Text == "" || txtCidade.Text == "" || txtUF.Text == "" || txtCargo.Text == "" || txtSalario.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            if(txtBairro.Text == ""){ }
             else
             {
                 string sql = "INSERT INTO tbFuncionario (nome_func, cpf_func, rg_func, tel_func, cel_func, email_func, cargo_func, salario_func, numcasa_func, cep_func) " +
@@ -66,7 +66,7 @@ namespace organ
                 {
                     con.Close();
                 }
-            }
+            }*/
         }
     }
 }

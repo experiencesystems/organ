@@ -25,6 +25,7 @@ namespace organ
         private void colheita_Load(object sender, EventArgs e)
         {
             PreencherCamposSementeData(labels, labels2);
+            CalcularBarraProgresso();
         }
 
         void PreencherCamposSementeData(Label[] labels, Label[] labels2)
@@ -85,7 +86,7 @@ namespace organ
                             i = i - 1; //Subtrai por causa do vetor (A matriz 0 é relacionada com o talhão 1, e tava
                                        //somando 1 antes, então o talhão 2 iria na label[2], que é o lblDataColheita3)
                             labels2[i].Text = Convert.ToDateTime(readerDC["data_colheita"]).ToString("dd/MM/yyyy");
-                            readerDC.Close();   
+                            readerDC.Close();
                         }
                     }
                     else
@@ -100,7 +101,47 @@ namespace organ
                 throw new Exception(ex.Message);
             }
         }
-        
+
+        void CalcularBarraProgresso()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    int i = 1;
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = " + i + ";";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string data_colheita = reader["data_colheita"].ToString();
+                        string data_inicio = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita).Subtract(Convert.ToDateTime(data_inicio)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao1.Minimum = 0;
+                        pbTalhao1.Maximum = diasFimcomeco;
+                        pbTalhao1.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
+        }
+
         private void btnFazerColheita2_Click(object sender, EventArgs e)
         {
             string Prompt = "A senha é obrigatória.";
@@ -143,5 +184,5 @@ namespace organ
 
             }
         }
-    }//acaba o método
+    }
 }
