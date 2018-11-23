@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Microsoft.VisualBasic;
 
 namespace organ
 {
@@ -16,6 +15,8 @@ namespace organ
     {
         Label[] labels = new Label[11];
         Label[] labels2 = new Label[11];
+        string data_colheita1, data_colheita2, data_colheita3, data_colheita4, data_colheita5, data_colheita6, data_colheita7, data_colheita8, data_colheita9, data_colheita10, data_colheita11;
+        string data_inicio1, data_inicio2, data_inicio3, data_inicio4, data_inicio5, data_inicio6, data_inicio7, data_inicio8, data_inicio9, data_inicio10, data_inicio11;
 
         public colheita()
         {
@@ -24,11 +25,22 @@ namespace organ
 
         private void colheita_Load(object sender, EventArgs e)
         {
-            PreencherCamposSementeData(labels, labels2);
-            CalcularBarraProgresso();
+            PreencherCamposSementeData();
+
+            CalcularBarraProgresso1();
+            CalcularBarraProgresso2();
+            CalcularBarraProgresso3();
+            CalcularBarraProgresso4();
+            CalcularBarraProgresso5();
+            CalcularBarraProgresso6();
+            CalcularBarraProgresso7();
+            CalcularBarraProgresso8();
+            CalcularBarraProgresso9();
+            CalcularBarraProgresso10();
+            CalcularBarraProgresso11();
         }
 
-        void PreencherCamposSementeData(Label[] labels, Label[] labels2)
+        void PreencherCamposSementeData()
         {
 
             labels[0] = lblNomeSemente1;
@@ -102,30 +114,33 @@ namespace organ
             }
         }
 
-        void CalcularBarraProgresso()
+        //
+        //Sim, eu também pensei em fazer um looping, PORÉM, não tem como definir vetor de ProgressBar igual eu tinha feito com as Labels
+        //
+
+        void CalcularBarraProgresso1()
         {
             using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
                 try
                 {
-                    int i = 1;
                     con.Open();
-                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = " + i + ";";
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 1";
                     SqlCommand comData = new SqlCommand(cmdDatas, con);
                     SqlDataReader reader = comData.ExecuteReader();
 
                     if (reader.Read())
                     {
-                        string data_colheita = reader["data_colheita"].ToString();
-                        string data_inicio = reader["data_inicio"].ToString();
+                        data_colheita1 = reader["data_colheita"].ToString();
+                        data_inicio1 = reader["data_inicio"].ToString();
                         DateTime hoje = DateTime.Today;
 
                         //agora - começo
-                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio)));
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio1)));
                         int diasAgoracomeco = agoracomeco.Days;
 
                         //fim - começo
-                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita).Subtract(Convert.ToDateTime(data_inicio)));
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita1).Subtract(Convert.ToDateTime(data_inicio1)));
                         int diasFimcomeco = fimcomeco.Days;
 
                         //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
@@ -139,50 +154,500 @@ namespace organ
                 {
                     throw new Exception(e.Message);
                 }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 
+        void CalcularBarraProgresso2()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 2";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita2 = reader["data_colheita"].ToString();
+                        data_inicio2 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio2)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita2).Subtract(Convert.ToDateTime(data_inicio2)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao2.Minimum = 0;
+                        pbTalhao2.Maximum = diasFimcomeco;
+                        pbTalhao2.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso3()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 3";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita3 = reader["data_colheita"].ToString();
+                        data_inicio3 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio3)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita3).Subtract(Convert.ToDateTime(data_inicio3)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao3.Minimum = 0;
+                        pbTalhao3.Maximum = diasFimcomeco;
+                        pbTalhao3.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso4()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 4";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita4 = reader["data_colheita"].ToString();
+                        data_inicio4 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio4)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita4).Subtract(Convert.ToDateTime(data_inicio4)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao4.Minimum = 0;
+                        pbTalhao4.Maximum = diasFimcomeco;
+                        pbTalhao4.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso5()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 5";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita5 = reader["data_colheita"].ToString();
+                        data_inicio5 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio5)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita5).Subtract(Convert.ToDateTime(data_inicio5)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao5.Minimum = 0;
+                        pbTalhao5.Maximum = diasFimcomeco;
+                        pbTalhao5.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso6()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 6";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita6 = reader["data_colheita"].ToString();
+                        data_inicio6 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio6)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita6).Subtract(Convert.ToDateTime(data_inicio6)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao6.Minimum = 0;
+                        pbTalhao6.Maximum = diasFimcomeco;
+                        pbTalhao6.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso7()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 7";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita7 = reader["data_colheita"].ToString();
+                        data_inicio7 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio7)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita7).Subtract(Convert.ToDateTime(data_inicio7)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao7.Minimum = 0;
+                        pbTalhao7.Maximum = diasFimcomeco;
+                        pbTalhao7.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso8()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 8";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita8 = reader["data_colheita"].ToString();
+                        data_inicio8 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio8)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita8).Subtract(Convert.ToDateTime(data_inicio8)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao8.Minimum = 0;
+                        pbTalhao8.Maximum = diasFimcomeco;
+                        pbTalhao8.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso9()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 9";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita9 = reader["data_colheita"].ToString();
+                        data_inicio9 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio9)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita9).Subtract(Convert.ToDateTime(data_inicio9)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao9.Minimum = 0;
+                        pbTalhao9.Maximum = diasFimcomeco;
+                        pbTalhao9.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso10()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 10";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita10 = reader["data_colheita"].ToString();
+                        data_inicio10 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio10)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita10).Subtract(Convert.ToDateTime(data_inicio10)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao10.Minimum = 0;
+                        pbTalhao10.Maximum = diasFimcomeco;
+                        pbTalhao10.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        void CalcularBarraProgresso11()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 11";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        data_colheita11 = reader["data_colheita"].ToString();
+                        data_inicio11 = reader["data_inicio"].ToString();
+                        DateTime hoje = DateTime.Today;
+
+                        //agora - começo
+                        TimeSpan agoracomeco = (hoje.Subtract(Convert.ToDateTime(data_inicio11)));
+                        int diasAgoracomeco = agoracomeco.Days;
+
+                        //fim - começo
+                        TimeSpan fimcomeco = (Convert.ToDateTime(data_colheita11).Subtract(Convert.ToDateTime(data_inicio11)));
+                        int diasFimcomeco = fimcomeco.Days;
+
+                        //progressBar.Value = (int)((now - start).TotalHours / (end - start).TotalHours);
+
+                        pbTalhao11.Minimum = 0;
+                        pbTalhao11.Maximum = diasFimcomeco;
+                        pbTalhao11.Value = diasAgoracomeco;
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public static string InputBox(string prompt, string title, string defaultValue)
+        {
+            InputBoxDialog ib = new InputBoxDialog();
+            ib.FormPrompt = prompt;
+            ib.FormCaption = title;
+            ib.DefaultValue = defaultValue;
+            ib.ShowDialog();
+            string s = ib.InputResponse;
+            ib.Close();
+
+            if (s == string.Empty)
+                return "";
+            else
+                return s;
+        }
+
+        string QtdColhida;
+
         private void btnFazerColheita2_Click(object sender, EventArgs e)
         {
-            string Prompt = "A senha é obrigatória.";
-
-            string Titulo = "www.macoratti.net";
-
-            string Resultado = Microsoft.VisualBasic.Interaction.InputBox(Prompt, Titulo, "", -1, -1);
-
-
-            /* defina senha apenas para testar. */
-
-            string password = "mac";
-
-
-            /* verifica se o resultado é uma string vazia o que indica que foi cancelado. */
-
-            if (Resultado != "")
-
+            QtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+            bool Valido = QtdColhida.Length <= 9 && QtdColhida.All(char.IsDigit) && QtdColhida != "";
+            DialogResult result = MessageBox.Show("Você irá repetir essa mesma colheita futuramente?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-
-                Resultado = Resultado.TrimStart();
-
-                /* Verifica se a senha confere. */
-
-                if (Resultado != password)
-
+                if (!Valido)
                 {
-
-                    MessageBox.Show("Senha Incorreta.");
-
+                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    QtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
                 }
-
                 else
-
                 {
-
-                    MessageBox.Show("Senha válida.");
-
+                    RepetirColheita();
                 }
-
             }
+            else
+            {
+                if (!Valido)
+                {
+                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    QtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+        }
+
+        void Colheita()
+        {
+            //pegar data de hoje e quantidade e mandar 
+        }
+
+        void RepetirColheita()
+        {
+            
         }
     }
 }

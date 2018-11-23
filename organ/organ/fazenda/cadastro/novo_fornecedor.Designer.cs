@@ -58,7 +58,7 @@
             this.cboUF = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mskNumero = new System.Windows.Forms.MaskedTextBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -147,7 +147,7 @@
             this.tlpNovoFuncionario.Controls.Add(this.cboUF, 3, 6);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 3, 7);
             this.tlpNovoFuncionario.Controls.Add(this.mskCEP, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox1, 3, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.mskNumero, 3, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -420,14 +420,14 @@
             this.mskCEP.TabIndex = 8;
             this.mskCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox1
+            // mskNumero
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(960, 273);
-            this.maskedTextBox1.Mask = "000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(128, 33);
-            this.maskedTextBox1.TabIndex = 75;
+            this.mskNumero.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskNumero.Location = new System.Drawing.Point(960, 273);
+            this.mskNumero.Mask = "000000000";
+            this.mskNumero.Name = "mskNumero";
+            this.mskNumero.Size = new System.Drawing.Size(128, 33);
+            this.mskNumero.TabIndex = 75;
             // 
             // novo_fornecedor
             // 
@@ -482,6 +482,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboUF;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mskNumero;
     }
 }
