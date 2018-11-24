@@ -9,57 +9,71 @@ using System.Windows.Forms;
 
 namespace organ
 {
-    public class Fornecedor
+    public class Funcionario
     {
-        private String nome_fantasia;
-        private String razao_social;
-        private long cnpj;
+        private String nome_funcionario;
+        private long cpf;
+        private long rg;
         private long telefone;
+        private long celular;
         private String email;
-        private String site;
-        
-        public String Nome_fantasia
+        private String cargo;
+        private double salario;
+
+        public String Nome_funcionario
         {
-            get { return nome_fantasia; }
-            set { nome_fantasia = value; }
+            get { return nome_funcionario; }
+            set { nome_funcionario = value; }
         }
-        public long CNPJ
+        public long CPF
         {
-            get { return cnpj; }
-            set { cnpj = value; }
+            get { return cpf; }
+            set { cpf = value; }
         }
-        public String Razao_social
+        public long RG
         {
-            get { return razao_social; }
-            set { razao_social = value; }
+            get { return rg; }
+            set { rg = value; }
         }
         public long Telefone
         {
             get { return telefone; }
             set { telefone = value; }
         }
+        public long Celular
+        {
+            get { return celular; }
+            set { celular = value; }
+        }
         public String Email
         {
             get { return email; }
             set { email = value; }
         }
-        public String Site
+        public String Cargo
         {
-            get { return site; }
-            set { site = value; }
+            get { return cargo; }
+            set { cargo = value; }
+        }
+        public double Salario
+        {
+            get { return salario; }
+            set { salario = value; }
         }
 
         public Endereco endereco { get; set; }
-       
-        public Fornecedor(String nome_fantasia, String razao_social, long cnpj, long telefone, String email, String site, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+
+        public Funcionario(String nome_funcionario, long cpf, long rg, long telefone, long celular, String email, String cargo, double salario, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
-            this.Nome_fantasia = nome_fantasia;
-            this.Razao_social = razao_social;
-            this.CNPJ = cnpj;
+            this.Nome_funcionario = nome_funcionario;
+            this.CPF = cpf;
+            this.RG = rg;
             this.Telefone = telefone;
+            this.Celular = celular;
             this.Email = email;
-            this.Site = site;
+            this.Cargo = cargo;
+            this.Salario = salario;
             endereco.CEP = CEP;
             endereco.Numero = Numero;
             endereco.Rua = Rua;
@@ -69,11 +83,11 @@ namespace organ
             endereco.UF = UF;
         }
 
-        public void RegistrarFornecedor(Fornecedor f)
+        public void RegistrarFuncionario(Funcionario f)
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
 
-            SqlCommand cmd = new SqlCommand("SP_INSERT_FORNECEDOR", con);
+            SqlCommand cmd = new SqlCommand("SP_INSERT_FUNCIONARIO", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@CEP", SqlDbType.Int).Value = f.endereco.CEP;
@@ -83,12 +97,14 @@ namespace organ
             cmd.Parameters.Add("@COMPLEMENTO", SqlDbType.VarChar).Value = f.endereco.Complemento;
             cmd.Parameters.Add("@CIDADE", SqlDbType.VarChar).Value = f.endereco.Cidade;
             cmd.Parameters.Add("@UF", SqlDbType.Char).Value = f.endereco.UF;
-            cmd.Parameters.Add("@NOME_FANTASIA", SqlDbType.VarChar).Value = f.Nome_fantasia;
-            cmd.Parameters.Add("@CNPJ_FORN", SqlDbType.NVarChar).Value = f.CNPJ;
-            cmd.Parameters.Add("@RAZAO_SOCIAL", SqlDbType.VarChar).Value = f.Razao_social;
+            cmd.Parameters.Add("@NOME_FUNC", SqlDbType.VarChar).Value = f.Nome_funcionario;
+            cmd.Parameters.Add("@CPF_FUNC", SqlDbType.NVarChar).Value = f.CPF;
+            cmd.Parameters.Add("@RG", SqlDbType.NVarChar).Value = f.RG;
             cmd.Parameters.Add("@TEL_FORN", SqlDbType.NVarChar).Value = f.Telefone;
+            cmd.Parameters.Add("@CEL_FORN", SqlDbType.NVarChar).Value = f.Celular;
             cmd.Parameters.Add("@EMAIL_FORN", SqlDbType.VarChar).Value = f.Email;
-            cmd.Parameters.Add("@SITE_FORN", SqlDbType.VarChar).Value = f.Site;
+            cmd.Parameters.Add("@CARGO", SqlDbType.VarChar).Value = f.Cargo;
+            cmd.Parameters.Add("@SALARIO", SqlDbType.Money).Value = f.Salario;
 
             con.Open();
 
@@ -113,4 +129,4 @@ namespace organ
             }
         }
     }
-}    
+}

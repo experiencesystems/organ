@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace organ
 {
-    public  class Endereco
+    public class Endereco
     {
         private String cep;
         private int numero;

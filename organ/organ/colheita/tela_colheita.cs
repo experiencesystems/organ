@@ -298,8 +298,8 @@ namespace organ
                 {
                     con.Open();
                     string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 5";
-                    SqlCommand comData = new SqlCommand(cmdDatas, con);
-                    SqlDataReader reader = comData.ExecuteReader();
+                    SqlCommand cmd = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
                     {
@@ -607,19 +607,19 @@ namespace organ
                 return s;
         }
 
-        string QtdColhida;
+        string qtdColhida;
 
         private void btnFazerColheita2_Click(object sender, EventArgs e)
         {
-            QtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-            bool Valido = QtdColhida.Length <= 9 && QtdColhida.All(char.IsDigit) && QtdColhida != "";
             DialogResult result = MessageBox.Show("Você irá repetir essa mesma colheita futuramente?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
                 if (!Valido)
                 {
                     MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    QtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
                 }
                 else
                 {
@@ -628,26 +628,56 @@ namespace organ
             }
             else
             {
+                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
                 if (!Valido)
                 {
                     MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    QtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
                 }
                 else
                 {
-                    Colheita();
+                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                    con.Open();
+                    string cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = 2";
+                    SqlCommand com = new SqlCommand(cmd, con);
+                    SqlDataReader reader = com.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                        Colheita colheita = new Colheita(Convert.ToInt16(qtdColhida), lblDataColheita2.Text, cod_plantio);
+                        colheita.RealizarColheita(colheita);
+                    }
                 }
             }
         }
 
-        void Colheita()
-        {
-            //pegar data de hoje e quantidade e mandar 
-        }
-
         void RepetirColheita()
         {
-            
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 11";
+                    SqlCommand comData = new SqlCommand(cmdDatas, con);
+                    SqlDataReader reader = comData.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

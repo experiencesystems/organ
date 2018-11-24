@@ -124,9 +124,6 @@
   <data name="Lock_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="semente_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\semente_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Invisible_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Invisible_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,9 +132,6 @@
   </data>
   <data name="exp systems" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exp systems.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trator_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trator_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,41 +142,17 @@
   <data name="colheita 100_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\colheita 100_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="relatorios_45_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relatorios 45_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="relatorios 100_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relatorios 100_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Eye_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Eye_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="funcionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\funcionario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colheita_45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colheita 45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trator_9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trator_9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="funcionario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\funcionario1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnNovoPlantio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnNovoPlantio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Retângulo 7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Retângulo 7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colheita_45_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colheita_45_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pragas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pragas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,26 +172,14 @@
   <data name="icone novo plantio_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone novo plantio_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="estoque" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estoque.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="doencas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doencas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="box_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="colheita_100_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colheita 100_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ferramentas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ferramentas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="estoque_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estoque_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="relatorios_100_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relatorios 100_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="relatorios 100_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\relatorios 100_7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,9 +193,6 @@
   <data name="house 45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\house 45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="relatorios 45_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relatorios 45_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="voltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\voltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,32 +202,11 @@
   <data name="plantio_100_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plantio 100_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="defensivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\defensivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="colheita 100_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colheita 100_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="farmer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\farmer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Lock_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock_50px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fazenda_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fazenda_100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\solo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fazenda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fazenda1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="controledegastos_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\controledegastos_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,9 +219,6 @@
   </data>
   <data name="doencas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doencas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="relatorios 100_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\relatorios 100_5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="colheita_45_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\colheita_45_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -306,11 +237,5 @@
   </data>
   <data name="relatorios 100_61" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\relatorios 100_61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dinheiros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dinheiros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="controls" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\controls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -40,8 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -188,9 +188,9 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 26);
+            this.label1.Size = new System.Drawing.Size(109, 26);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Fornecedor*";
+            this.label1.Text = "Fornecedor";
             // 
             // cboFornecedor
             // 
@@ -212,6 +212,16 @@
             this.richTextBox1.TabIndex = 54;
             this.richTextBox1.Text = "";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(103, 291);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 26);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Quantidade*";
+            // 
             // btnRegistrar
             // 
             this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -222,16 +232,6 @@
             this.btnRegistrar.TabIndex = 49;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 291);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 26);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "Quantidade*";
             // 
             // label4
             // 

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 
 namespace organ
 {
@@ -15,8 +17,10 @@ namespace organ
         public inicio()
         {
             InitializeComponent();
-            wbCotacoes.Navigate("www.google.com");
-            //webBrowser1.Navigate(@".\Documentation\index.html");
+            StreamReader reader = new StreamReader("Resources\\cotacao.html");
+            wbCotacoes.DocumentText = reader.ReadToEnd();
+            StreamReader reader2 = new StreamReader("Resources\\clima.html");
+            wbClima.DocumentText = reader2.ReadToEnd();
         }
 
         private void btnProgresso_Click(object sender, EventArgs e)
