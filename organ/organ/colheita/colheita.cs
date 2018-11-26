@@ -71,6 +71,7 @@ namespace organ
 
                     if (readerNS.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
                     {
+
                         i = i - 1;
                         labels[i].Text = readerNS["nome_sem"].ToString();
                         readerNS.Close(); //Tem que fechar um reader para abrir outro
@@ -143,5 +144,6 @@ namespace organ
 
             }
         }
+
     }//acaba o método
 }

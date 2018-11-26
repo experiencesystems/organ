@@ -200,7 +200,7 @@
             this.lblProgressoPlantios.Location = new System.Drawing.Point(3, 0);
             this.lblProgressoPlantios.Name = "lblProgressoPlantios";
             this.lblProgressoPlantios.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.lblProgressoPlantios.Size = new System.Drawing.Size(1383, 43);
+            this.lblProgressoPlantios.Size = new System.Drawing.Size(1383, 56);
             this.lblProgressoPlantios.TabIndex = 6;
             this.lblProgressoPlantios.Text = "Progresso dos plantios";
             this.lblProgressoPlantios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -291,7 +291,7 @@
             this.label29.Location = new System.Drawing.Point(20, 94);
             this.label29.Margin = new System.Windows.Forms.Padding(20);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(138, 23);
+            this.label29.Size = new System.Drawing.Size(117, 35);
             this.label29.TabIndex = 5;
             this.label29.Text = "Data da colheita:";
             // 
@@ -302,7 +302,7 @@
             this.label23.Location = new System.Drawing.Point(20, 20);
             this.label23.Margin = new System.Windows.Forms.Padding(20);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(82, 23);
+            this.label23.Size = new System.Drawing.Size(126, 34);
             this.label23.TabIndex = 4;
             this.label23.Text = "Semente:";
             // 
@@ -313,7 +313,7 @@
             this.lblNomeSemente11.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente11.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente11.Name = "lblNomeSemente11";
-            this.lblNomeSemente11.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente11.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente11.TabIndex = 7;
             // 
             // lblDataColheita11
@@ -323,7 +323,7 @@
             this.lblDataColheita11.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita11.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita11.Name = "lblDataColheita11";
-            this.lblDataColheita11.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita11.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita11.TabIndex = 8;
             // 
             // button21
@@ -456,7 +456,7 @@
             this.lblDataColheita1.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita1.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita1.Name = "lblDataColheita1";
-            this.lblDataColheita1.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita1.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita1.TabIndex = 3;
             // 
             // lblNomeSemente1
@@ -466,7 +466,7 @@
             this.lblNomeSemente1.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente1.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente1.Name = "lblNomeSemente1";
-            this.lblNomeSemente1.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente1.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente1.TabIndex = 2;
             // 
             // lblDescS1
@@ -476,7 +476,7 @@
             this.lblDescS1.Location = new System.Drawing.Point(20, 20);
             this.lblDescS1.Margin = new System.Windows.Forms.Padding(20);
             this.lblDescS1.Name = "lblDescS1";
-            this.lblDescS1.Size = new System.Drawing.Size(82, 23);
+            this.lblDescS1.Size = new System.Drawing.Size(126, 34);
             this.lblDescS1.TabIndex = 0;
             this.lblDescS1.Text = "Semente:";
             // 
@@ -487,7 +487,7 @@
             this.lblDescD1.Location = new System.Drawing.Point(20, 94);
             this.lblDescD1.Margin = new System.Windows.Forms.Padding(20);
             this.lblDescD1.Name = "lblDescD1";
-            this.lblDescD1.Size = new System.Drawing.Size(138, 23);
+            this.lblDescD1.Size = new System.Drawing.Size(117, 35);
             this.lblDescD1.TabIndex = 1;
             this.lblDescD1.Text = "Data da colheita:";
             // 
@@ -586,7 +586,7 @@
             this.label3.Location = new System.Drawing.Point(20, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 23);
+            this.label3.Size = new System.Drawing.Size(117, 35);
             this.label3.TabIndex = 2;
             this.label3.Text = "Data da colheita:";
             // 
@@ -597,7 +597,7 @@
             this.label2.Location = new System.Drawing.Point(20, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 23);
+            this.label2.Size = new System.Drawing.Size(126, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Semente:";
             // 
@@ -608,7 +608,7 @@
             this.lblNomeSemente2.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente2.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente2.Name = "lblNomeSemente2";
-            this.lblNomeSemente2.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente2.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente2.TabIndex = 3;
             // 
             // lblDataColheita2
@@ -618,7 +618,7 @@
             this.lblDataColheita2.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita2.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita2.Name = "lblDataColheita2";
-            this.lblDataColheita2.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita2.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita2.TabIndex = 4;
             // 
             // panel10
@@ -714,7 +714,7 @@
             this.label28.Location = new System.Drawing.Point(20, 94);
             this.label28.Margin = new System.Windows.Forms.Padding(20);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(138, 23);
+            this.label28.Size = new System.Drawing.Size(117, 35);
             this.label28.TabIndex = 5;
             this.label28.Text = "Data da colheita:";
             // 
@@ -725,7 +725,7 @@
             this.label22.Location = new System.Drawing.Point(20, 20);
             this.label22.Margin = new System.Windows.Forms.Padding(20);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 23);
+            this.label22.Size = new System.Drawing.Size(126, 34);
             this.label22.TabIndex = 4;
             this.label22.Text = "Semente:";
             // 
@@ -736,7 +736,7 @@
             this.lblNomeSemente10.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente10.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente10.Name = "lblNomeSemente10";
-            this.lblNomeSemente10.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente10.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente10.TabIndex = 7;
             // 
             // lblDataColheita10
@@ -746,7 +746,7 @@
             this.lblDataColheita10.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita10.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita10.Name = "lblDataColheita10";
-            this.lblDataColheita10.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita10.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita10.TabIndex = 8;
             // 
             // panel4
@@ -842,7 +842,7 @@
             this.label10.Location = new System.Drawing.Point(20, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 23);
+            this.label10.Size = new System.Drawing.Size(126, 34);
             this.label10.TabIndex = 2;
             this.label10.Text = "Semente:";
             // 
@@ -853,7 +853,7 @@
             this.lblNomeSemente4.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente4.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente4.Name = "lblNomeSemente4";
-            this.lblNomeSemente4.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente4.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente4.TabIndex = 5;
             // 
             // lblDataColheita4
@@ -863,7 +863,7 @@
             this.lblDataColheita4.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita4.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita4.Name = "lblDataColheita4";
-            this.lblDataColheita4.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita4.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita4.TabIndex = 6;
             // 
             // label11
@@ -873,7 +873,7 @@
             this.label11.Location = new System.Drawing.Point(20, 94);
             this.label11.Margin = new System.Windows.Forms.Padding(20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(138, 23);
+            this.label11.Size = new System.Drawing.Size(117, 35);
             this.label11.TabIndex = 3;
             this.label11.Text = "Data da colheita:";
             // 
@@ -970,7 +970,7 @@
             this.label27.Location = new System.Drawing.Point(20, 94);
             this.label27.Margin = new System.Windows.Forms.Padding(20);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(138, 23);
+            this.label27.Size = new System.Drawing.Size(117, 35);
             this.label27.TabIndex = 5;
             this.label27.Text = "Data da colheita:";
             // 
@@ -981,7 +981,7 @@
             this.label21.Location = new System.Drawing.Point(20, 20);
             this.label21.Margin = new System.Windows.Forms.Padding(20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(82, 23);
+            this.label21.Size = new System.Drawing.Size(126, 34);
             this.label21.TabIndex = 4;
             this.label21.Text = "Semente:";
             // 
@@ -992,7 +992,7 @@
             this.lblNomeSemente9.Location = new System.Drawing.Point(228, 20);
             this.lblNomeSemente9.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente9.Name = "lblNomeSemente9";
-            this.lblNomeSemente9.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente9.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente9.TabIndex = 7;
             // 
             // lblDataColheita9
@@ -1002,7 +1002,7 @@
             this.lblDataColheita9.Location = new System.Drawing.Point(228, 94);
             this.lblDataColheita9.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita9.Name = "lblDataColheita9";
-            this.lblDataColheita9.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita9.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita9.TabIndex = 8;
             // 
             // panel3
@@ -1099,7 +1099,7 @@
             this.label5.Location = new System.Drawing.Point(20, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 23);
+            this.label5.Size = new System.Drawing.Size(117, 35);
             this.label5.TabIndex = 3;
             this.label5.Text = "Data da colheita:";
             // 
@@ -1110,7 +1110,7 @@
             this.label4.Location = new System.Drawing.Point(20, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 23);
+            this.label4.Size = new System.Drawing.Size(126, 34);
             this.label4.TabIndex = 1;
             this.label4.Text = "Semente:";
             // 
@@ -1121,7 +1121,7 @@
             this.lblNomeSemente3.Location = new System.Drawing.Point(228, 20);
             this.lblNomeSemente3.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente3.Name = "lblNomeSemente3";
-            this.lblNomeSemente3.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente3.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente3.TabIndex = 4;
             // 
             // lblDataColheita3
@@ -1131,7 +1131,7 @@
             this.lblDataColheita3.Location = new System.Drawing.Point(228, 94);
             this.lblDataColheita3.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita3.Name = "lblDataColheita3";
-            this.lblDataColheita3.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita3.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita3.TabIndex = 5;
             // 
             // panel8
@@ -1227,7 +1227,7 @@
             this.label26.Location = new System.Drawing.Point(20, 94);
             this.label26.Margin = new System.Windows.Forms.Padding(20);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(138, 23);
+            this.label26.Size = new System.Drawing.Size(117, 35);
             this.label26.TabIndex = 5;
             this.label26.Text = "Data da colheita:";
             // 
@@ -1238,7 +1238,7 @@
             this.label20.Location = new System.Drawing.Point(20, 20);
             this.label20.Margin = new System.Windows.Forms.Padding(20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 23);
+            this.label20.Size = new System.Drawing.Size(126, 34);
             this.label20.TabIndex = 4;
             this.label20.Text = "Semente:";
             // 
@@ -1249,7 +1249,7 @@
             this.lblNomeSemente8.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente8.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente8.Name = "lblNomeSemente8";
-            this.lblNomeSemente8.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente8.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente8.TabIndex = 7;
             // 
             // lblDataColheita8
@@ -1259,7 +1259,7 @@
             this.lblDataColheita8.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita8.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita8.Name = "lblDataColheita8";
-            this.lblDataColheita8.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita8.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita8.TabIndex = 8;
             // 
             // panel5
@@ -1355,7 +1355,7 @@
             this.label14.Location = new System.Drawing.Point(20, 20);
             this.label14.Margin = new System.Windows.Forms.Padding(20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 23);
+            this.label14.Size = new System.Drawing.Size(126, 34);
             this.label14.TabIndex = 3;
             this.label14.Text = "Semente:";
             // 
@@ -1366,7 +1366,7 @@
             this.lblNomeSemente5.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente5.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente5.Name = "lblNomeSemente5";
-            this.lblNomeSemente5.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente5.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente5.TabIndex = 6;
             // 
             // lblDataColheita5
@@ -1376,7 +1376,7 @@
             this.lblDataColheita5.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita5.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita5.Name = "lblDataColheita5";
-            this.lblDataColheita5.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita5.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita5.TabIndex = 7;
             // 
             // label15
@@ -1386,7 +1386,7 @@
             this.label15.Location = new System.Drawing.Point(20, 94);
             this.label15.Margin = new System.Windows.Forms.Padding(20);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(138, 23);
+            this.label15.Size = new System.Drawing.Size(117, 35);
             this.label15.TabIndex = 4;
             this.label15.Text = "Data da colheita:";
             // 
@@ -1483,7 +1483,7 @@
             this.label25.Location = new System.Drawing.Point(20, 94);
             this.label25.Margin = new System.Windows.Forms.Padding(20);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(138, 23);
+            this.label25.Size = new System.Drawing.Size(117, 35);
             this.label25.TabIndex = 5;
             this.label25.Text = "Data da colheita:";
             // 
@@ -1494,7 +1494,7 @@
             this.label19.Location = new System.Drawing.Point(20, 20);
             this.label19.Margin = new System.Windows.Forms.Padding(20);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(82, 23);
+            this.label19.Size = new System.Drawing.Size(126, 34);
             this.label19.TabIndex = 4;
             this.label19.Text = "Semente:";
             // 
@@ -1505,7 +1505,7 @@
             this.lblNomeSemente7.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente7.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente7.Name = "lblNomeSemente7";
-            this.lblNomeSemente7.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente7.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente7.TabIndex = 7;
             // 
             // lblDataColheita7
@@ -1515,7 +1515,7 @@
             this.lblDataColheita7.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita7.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita7.Name = "lblDataColheita7";
-            this.lblDataColheita7.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita7.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita7.TabIndex = 8;
             // 
             // panel6
@@ -1611,7 +1611,7 @@
             this.label18.Location = new System.Drawing.Point(20, 20);
             this.label18.Margin = new System.Windows.Forms.Padding(20);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 23);
+            this.label18.Size = new System.Drawing.Size(126, 34);
             this.label18.TabIndex = 4;
             this.label18.Text = "Semente:";
             // 
@@ -1623,7 +1623,7 @@
             this.lblNomeSemente6.Location = new System.Drawing.Point(228, 20);
             this.lblNomeSemente6.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente6.Name = "lblNomeSemente6";
-            this.lblNomeSemente6.Size = new System.Drawing.Size(0, 23);
+            this.lblNomeSemente6.Size = new System.Drawing.Size(0, 34);
             this.lblNomeSemente6.TabIndex = 7;
             // 
             // lblDataColheita6
@@ -1633,7 +1633,7 @@
             this.lblDataColheita6.Location = new System.Drawing.Point(228, 94);
             this.lblDataColheita6.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita6.Name = "lblDataColheita6";
-            this.lblDataColheita6.Size = new System.Drawing.Size(0, 23);
+            this.lblDataColheita6.Size = new System.Drawing.Size(0, 35);
             this.lblDataColheita6.TabIndex = 8;
             // 
             // label24
@@ -1643,7 +1643,7 @@
             this.label24.Location = new System.Drawing.Point(20, 94);
             this.label24.Margin = new System.Windows.Forms.Padding(20);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(138, 23);
+            this.label24.Size = new System.Drawing.Size(117, 35);
             this.label24.TabIndex = 5;
             this.label24.Text = "Data da colheita:";
             // 

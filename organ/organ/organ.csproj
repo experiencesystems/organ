@@ -133,6 +133,12 @@
     <Compile Include="configuracao\gerenciamento_contas.Designer.cs">
       <DependentUpon>gerenciamento_contas.cs</DependentUpon>
     </Compile>
+    <Compile Include="plantio\consulta\detalhes_solo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plantio\consulta\detalhes_solo.Designer.cs">
+      <DependentUpon>detalhes_solo.cs</DependentUpon>
+    </Compile>
     <Compile Include="relatorios\novo_relatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\consulta\defensivo.resx">
       <DependentUpon>defensivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plantio\consulta\detalhes_solo.resx">
+      <DependentUpon>detalhes_solo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantio\consulta\ferramentas.resx">
       <DependentUpon>ferramentas.cs</DependentUpon>
