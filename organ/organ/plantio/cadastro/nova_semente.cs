@@ -19,6 +19,9 @@ namespace organ
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             PreencherComboBox();
             CarregaUnidadeMedida();
+            mskAcidez.Text.Replace("%", string.Empty).Replace(",", ".");
+            mskIncSolar.Text.Replace("%", string.Empty).Replace(",", ".");
+            mskIncVento.Text.Replace("%", string.Empty).Replace(",", ".");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

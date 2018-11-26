@@ -19,8 +19,9 @@ namespace organ
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             CarregaEstado();
+            mskSalario.Text.Replace("R$", string.Empty).Replace(",", ".");
         }
-
+        
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();

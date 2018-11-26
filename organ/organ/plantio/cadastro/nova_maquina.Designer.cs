@@ -199,9 +199,9 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 26);
+            this.label1.Size = new System.Drawing.Size(119, 26);
             this.label1.TabIndex = 55;
-            this.label1.Text = "Fornecedor";
+            this.label1.Text = "Fornecedor*";
             // 
             // cboFornecedor
             // 

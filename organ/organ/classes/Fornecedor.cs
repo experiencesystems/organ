@@ -11,7 +11,7 @@ namespace organ
 {
     public class Fornecedor
     {
-        private int codigo;
+        private int cod_fornecedor;
         private String nome_fantasia;
         private String razao_social;
         private long cnpj;
@@ -20,10 +20,10 @@ namespace organ
         private String site;
         private String status;
         
-        public int Codigo
+        public int Codigo_fornecedor
         {
-            get { return codigo; }
-            set { codigo = value; }
+            get { return cod_fornecedor; }
+            set { cod_fornecedor = value; }
         }
         public String Nome_fantasia
         {
@@ -60,13 +60,20 @@ namespace organ
             get { return status; }
             set { status = value; }
         }
+
         public Endereco endereco { get; set; }
        
         public Fornecedor(int codigo)
         {
-            this.Codigo = codigo;
+            this.Codigo_fornecedor = codigo;
         }
         
+        public Fornecedor()
+        {
+
+        }
+
+        //sem cod fornecedor
         public Fornecedor(String nome_fantasia, String razao_social, long cnpj, long telefone, String email, String site, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
@@ -94,7 +101,7 @@ namespace organ
                 CommandType = CommandType.StoredProcedure
             };
 
-            cmd.Parameters.Add("@CEP", SqlDbType.Int).Value = f.endereco.CEP;
+            cmd.Parameters.Add("@CEP", SqlDbType.Char).Value = f.endereco.CEP;
             cmd.Parameters.Add("@NUMERO", SqlDbType.Int).Value = f.endereco.Numero;
             cmd.Parameters.Add("@RUA", SqlDbType.VarChar).Value = f.endereco.Rua;
             cmd.Parameters.Add("@BAIRRO", SqlDbType.VarChar).Value = f.endereco.Bairro;
@@ -102,7 +109,7 @@ namespace organ
             cmd.Parameters.Add("@CIDADE", SqlDbType.VarChar).Value = f.endereco.Cidade;
             cmd.Parameters.Add("@UF", SqlDbType.Char).Value = f.endereco.UF;
             cmd.Parameters.Add("@NOME_FANTASIA", SqlDbType.VarChar).Value = f.Nome_fantasia;
-            cmd.Parameters.Add("@CNPJ_FORN", SqlDbType.NVarChar).Value = f.CNPJ;
+            cmd.Parameters.Add("@CNPJ_FORN", SqlDbType.Char).Value = f.CNPJ;
             cmd.Parameters.Add("@RAZAO_SOCIAL", SqlDbType.VarChar).Value = f.Razao_social;
             cmd.Parameters.Add("@TEL_FORN", SqlDbType.NVarChar).Value = f.Telefone;
             cmd.Parameters.Add("@EMAIL_FORN", SqlDbType.VarChar).Value = f.Email;
@@ -140,7 +147,7 @@ namespace organ
                 {
                     CommandType = CommandType.StoredProcedure
                 };
-                sqlCmd.Parameters.AddWithValue("@COD_FORNECEDOR", f.Codigo);
+                sqlCmd.Parameters.AddWithValue("@COD_FORNECEDOR", f.Codigo_fornecedor);
                 sqlCmd.ExecuteNonQuery();
             }
         }

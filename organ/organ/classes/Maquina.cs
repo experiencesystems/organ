@@ -16,13 +16,16 @@ namespace organ
             this.Codigo = codigo;
         }
 
+        public Fornecedor fornecedor { get; set; }
+
         public Maquina(String nome, String descricao, String marca, int quantidade, int cod_fornecedor, String unidademedida)
         {
+            fornecedor = new Fornecedor();
             this.Nome = nome;
             this.Descricao = descricao;
             this.Marca = marca;
             this.Quantidade = quantidade;
-            this.Cod_fornecedor = cod_fornecedor;
+            fornecedor.Codigo_fornecedor = cod_fornecedor;
             this.UnidadeMedida = unidademedida;
         }
 
@@ -33,11 +36,11 @@ namespace organ
             SqlCommand cmd = new SqlCommand("SP_INSERT_MAQUINA", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = m.Nome;
-            cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = m.Descricao;
-            cmd.Parameters.Add("@MARCA", SqlDbType.VarChar).Value = m.Marca;
-            cmd.Parameters.Add("@QUANTIDADE", SqlDbType.Int).Value = m.Quantidade;
-            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = m.Cod_fornecedor;
+            cmd.Parameters.Add("@NOME_MAQ", SqlDbType.VarChar).Value = m.Nome;
+            cmd.Parameters.Add("@DESC_MAQ", SqlDbType.VarChar).Value = m.Descricao;
+            cmd.Parameters.Add("@MARCA_MAQ", SqlDbType.VarChar).Value = m.Marca;
+            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
+            cmd.Parameters.Add("@QTD_ESTOQUE", SqlDbType.Int).Value = m.Quantidade;
             cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = m.UnidadeMedida;
 
             con.Open();

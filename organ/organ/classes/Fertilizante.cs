@@ -16,13 +16,16 @@ namespace organ
             this.Codigo = codigo;
         }
 
+        public Fornecedor fornecedor { get; set; }
+
         public Fertilizante(String nome, String descricao, String marca, int quantidade, int cod_fornecedor, String unidademedida)
         {
+            fornecedor = new Fornecedor();
             this.Nome = nome;
             this.Descricao = descricao;
             this.Marca = marca;
             this.Quantidade = quantidade;
-            this.Cod_fornecedor = cod_fornecedor;
+            fornecedor.Codigo_fornecedor = cod_fornecedor;
             this.UnidadeMedida = unidademedida;
         }
 
@@ -39,7 +42,7 @@ namespace organ
             cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = f.Descricao;
             cmd.Parameters.Add("@MARCA", SqlDbType.VarChar).Value = f.Marca;
             cmd.Parameters.Add("@QUANTIDADE", SqlDbType.Int).Value = f.Quantidade;
-            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = f.Cod_fornecedor;
+            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
             cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = f.UnidadeMedida;
 
             con.Open();

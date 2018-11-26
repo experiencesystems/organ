@@ -73,7 +73,7 @@ namespace organ
             }
             else
             {
-                Fornecedor f = new Fornecedor(txtNome.Text, txtRazaoSocial.Text, Convert.ToInt64(mskCNPJ.Text), Convert.ToInt32(mskTel.Text), txtEmail.Text, txtSite.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
+                Fornecedor f = new Fornecedor(txtNome.Text, txtRazaoSocial.Text, Convert.ToInt64(mskCNPJ.Text), Convert.ToInt64(mskTel.Text), txtEmail.Text, txtSite.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
                 f.RegistrarFornecedor(f);
             }
         }

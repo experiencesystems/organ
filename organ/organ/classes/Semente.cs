@@ -19,7 +19,6 @@ namespace organ
         private double incidencia_solar;
         private int quantidade;
         private String unidademedida;
-        private int cod_fornecedor;
 
         public Semente(int codigo_semente)
         {
@@ -30,16 +29,19 @@ namespace organ
         {
 
         }
+        
+        public Fornecedor fornecedor { get; set; }
 
         public Semente(String nome, String tipo_solo, double acidez, double incidencia_vento, double incidencia_solar, int quantidade, int cod_fornecedor, String unidademedida)
         {
+            fornecedor = new Fornecedor();
             this.Nome = nome;
             this.Tipo_solo = tipo_solo;
             this.Acidez = acidez;
             this.Incidencia_vento = incidencia_vento;
             this.Incidencia_solar = incidencia_solar;
             this.Quantidade = quantidade;
-            this.Cod_fornecedor = cod_fornecedor;
+            fornecedor.Codigo_fornecedor = cod_fornecedor;
             this.UnidadeMedida = unidademedida;
         }
 
@@ -83,14 +85,7 @@ namespace organ
             get { return unidademedida; }
             set { unidademedida = value; }
         }
-        public Fornecedor fornecedor { get; set; }
-
-        public int Cod_fornecedor
-        {
-            get { return fornecedor.Codigo; }
-            set { cod_fornecedor = fornecedor.Codigo; }
-        }
-
+        
         public void RegistrarSemente(Semente s)
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
@@ -106,7 +101,7 @@ namespace organ
             cmd.Parameters.Add("@INC_VENTO_SEM", SqlDbType.NVarChar).Value = s.Incidencia_vento;
             cmd.Parameters.Add("@INC_SOLAR_SEM", SqlDbType.NVarChar).Value = s.Incidencia_solar;
             cmd.Parameters.Add("@QTD_ESTOQUE", SqlDbType.Int).Value = s.Quantidade;
-            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = s.Cod_fornecedor;
+            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
             cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = s.UnidadeMedida;
 
             con.Open();

@@ -413,7 +413,7 @@
             // 
             this.mskTelefone.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.mskTelefone.Location = new System.Drawing.Point(334, 153);
-            this.mskTelefone.Mask = "(00) 0000-0000";
+            this.mskTelefone.Mask = "(00)0000-0000";
             this.mskTelefone.Name = "mskTelefone";
             this.mskTelefone.Size = new System.Drawing.Size(181, 33);
             this.mskTelefone.TabIndex = 5;
@@ -423,7 +423,7 @@
             // 
             this.mskCelular.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.mskCelular.Location = new System.Drawing.Point(993, 153);
-            this.mskCelular.Mask = "(00) 00000-0000";
+            this.mskCelular.Mask = "(00)00000-0000";
             this.mskCelular.Name = "mskCelular";
             this.mskCelular.Size = new System.Drawing.Size(191, 33);
             this.mskCelular.TabIndex = 6;
@@ -474,7 +474,7 @@
             // 
             this.mskSalario.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.mskSalario.Location = new System.Drawing.Point(993, 513);
-            this.mskSalario.Mask = "$ 00000.00";
+            this.mskSalario.Mask = "$00000.00";
             this.mskSalario.Name = "mskSalario";
             this.mskSalario.Size = new System.Drawing.Size(191, 33);
             this.mskSalario.TabIndex = 17;

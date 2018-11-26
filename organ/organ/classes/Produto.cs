@@ -14,7 +14,6 @@ namespace organ
         private String marca;
         private int quantidade;
         public String unidademedida;
-        private int cod_fornecedor;
 
         public int Codigo
         {
@@ -46,16 +45,6 @@ namespace organ
         {
             get { return unidademedida; }
             set { unidademedida = value; }
-        }
-
-        // perguntar pra aline
-
-        public Fornecedor fornecedor { get; set; }
-        
-        public int Cod_fornecedor
-        {
-            get { return fornecedor.Codigo; }
-            set { cod_fornecedor = fornecedor.Codigo; }
         }
     }
 }

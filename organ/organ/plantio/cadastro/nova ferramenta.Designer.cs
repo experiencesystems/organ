@@ -188,12 +188,13 @@
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 150);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 26);
+            this.label1.Size = new System.Drawing.Size(119, 26);
             this.label1.TabIndex = 51;
-            this.label1.Text = "Fornecedor";
+            this.label1.Text = "Fornecedor*";
             // 
             // cboFornecedor
             // 
+            this.cboFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFornecedor.FormattingEnabled = true;
             this.cboFornecedor.Location = new System.Drawing.Point(380, 153);

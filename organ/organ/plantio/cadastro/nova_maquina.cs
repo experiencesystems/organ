@@ -73,18 +73,18 @@ namespace organ
 
         /*private void cboFornecedor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt16(cboFornecedor.SelectedValue);
+            ID = Convert.ToInt16(cboFornecedor.SelectedIndex);
         }*/
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (txtModelo.Text == "" || mskQuantidade.Text == "" || cboUnidadeMedida.Text == "")
+            if (txtModelo.Text == "" || mskQuantidade.Text == "" || cboUnidadeMedida.Text == "" || cboFornecedor.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Maquina m = new Maquina(txtModelo.Text, rtxtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.ValueMember), cboUnidadeMedida.Text);
+                Maquina m = new Maquina(txtModelo.Text, rtxtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
                 m.RegistrarMaquina(m);
             }
         }
