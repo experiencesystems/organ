@@ -1,32 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace organ
 {
     public class Fornecedor
     {
-        private int cod_fornecedor;
+        private int codigo;
         private String nome_fantasia;
         private String razao_social;
-        private int cnpj;
-        private int tel_fornecedor;
-        private String email_forn;
+        private long cnpj;
+        private long telefone;
+        private String email;
         private String site;
+        private String status;
         
-        public int Cod_fornecedor
+        public int Codigo
         {
-            get { return cod_fornecedor; }
-            set { cod_fornecedor = value; }
+            get { return codigo; }
+            set { codigo = value; }
         }
         public String Nome_fantasia
         {
             get { return nome_fantasia; }
             set { nome_fantasia = value; }
         }
-        public int CNPJ
+        public long CNPJ
         {
             get { return cnpj; }
             set { cnpj = value; }
@@ -36,70 +40,109 @@ namespace organ
             get { return razao_social; }
             set { razao_social = value; }
         }
-        public int Tel_fornecedor
+        public long Telefone
         {
-            get { return tel_fornecedor; }
-            set { tel_fornecedor = value; }
+            get { return telefone; }
+            set { telefone = value; }
         }
-        public String Email_forn
+        public String Email
         {
-            get { return email_forn; }
-            set { email_forn = value; }
+            get { return email; }
+            set { email = value; }
         }
         public String Site
         {
             get { return site; }
             set { site = value; }
         }
-
+        public String Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
         public Endereco endereco { get; set; }
-
-        public static int CEP { get { return CEP; } }
-
-        public static int Numero { get { return Numero; } }
-
-        public static String Rua { get { return Rua; } }
-
-        public static String Bairro { get { return Bairro; } }
-
-        public static String Complemento { get { return Complemento; } }
-
-        public static String Cidade { get { return Cidade; } }
-
-        public static String UF { get { return UF; } }
-
-        public Fornecedor(String nome_fantasia, String razao_social, int cnpj, int tel_fornecedor, String email_forn, String site, int CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+       
+        public Fornecedor(int codigo)
         {
-            this.nome_fantasia = nome_fantasia;
-            this.razao_social = razao_social;
-            this.cnpj = cnpj;
-            this.tel_fornecedor = tel_fornecedor;
-            this.email_forn = email_forn;
-            this.site = site;
-            Endereco.CEP = Endereco.CEP;
-            Endereco.Numero = Endereco.Numero;
-            Endereco.Rua = Endereco.Rua;
-            Endereco.Bairro = Endereco.Bairro;
-            Endereco.Complemento = Endereco.Complemento;
-            Endereco.Cidade = Endereco.Cidade;
-            Endereco.UF = Endereco.UF;
+            this.Codigo = codigo;
+        }
+        
+        public Fornecedor(String nome_fantasia, String razao_social, long cnpj, long telefone, String email, String site, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+        {
+            endereco = new Endereco();
+            this.Nome_fantasia = nome_fantasia;
+            this.Razao_social = razao_social;
+            this.CNPJ = cnpj;
+            this.Telefone = telefone;
+            this.Email = email;
+            this.Site = site;
+            endereco.CEP = CEP;
+            endereco.Numero = Numero;
+            endereco.Rua = Rua;
+            endereco.Bairro = Bairro;
+            endereco.Complemento = Complemento;
+            endereco.Cidade = Cidade;
+            endereco.UF = UF;
+        }
+
+        public void RegistrarFornecedor(Fornecedor f)
+        {
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
+
+            SqlCommand cmd = new SqlCommand("SP_INSERT_FORNECEDOR", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("@CEP", SqlDbType.Int).Value = f.endereco.CEP;
+            cmd.Parameters.Add("@NUMERO", SqlDbType.Int).Value = f.endereco.Numero;
+            cmd.Parameters.Add("@RUA", SqlDbType.VarChar).Value = f.endereco.Rua;
+            cmd.Parameters.Add("@BAIRRO", SqlDbType.VarChar).Value = f.endereco.Bairro;
+            cmd.Parameters.Add("@COMPLEMENTO", SqlDbType.VarChar).Value = f.endereco.Complemento;
+            cmd.Parameters.Add("@CIDADE", SqlDbType.VarChar).Value = f.endereco.Cidade;
+            cmd.Parameters.Add("@UF", SqlDbType.Char).Value = f.endereco.UF;
+            cmd.Parameters.Add("@NOME_FANTASIA", SqlDbType.VarChar).Value = f.Nome_fantasia;
+            cmd.Parameters.Add("@CNPJ_FORN", SqlDbType.NVarChar).Value = f.CNPJ;
+            cmd.Parameters.Add("@RAZAO_SOCIAL", SqlDbType.VarChar).Value = f.Razao_social;
+            cmd.Parameters.Add("@TEL_FORN", SqlDbType.NVarChar).Value = f.Telefone;
+            cmd.Parameters.Add("@EMAIL_FORN", SqlDbType.VarChar).Value = f.Email;
+            cmd.Parameters.Add("@SITE_FORN", SqlDbType.VarChar).Value = f.Site;
+
+            con.Open();
+
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Fornecedor registrado com sucesso!", "Cadastro finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Erro: " + e.ToString());
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public void ExcluirFornecedor(Fornecedor f)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_FORNECEDOR", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_FORNECEDOR", f.Codigo);
+                sqlCmd.ExecuteNonQuery();
+            }
         }
     }
-
-    public class FornecedorCBO
-    {
-        private String display;
-        public String Display
-        {
-            get { return this.display; }
-            set { this.display = value; }
-        }
-
-        private Fornecedor value;
-        public Fornecedor Value
-        {
-            get { return this.value; }
-            set { this.value = value; }
-        }
-    }
-}
+}    

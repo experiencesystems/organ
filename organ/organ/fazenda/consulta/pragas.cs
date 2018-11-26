@@ -38,7 +38,7 @@ namespace organ
                 try
                 {
                     SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_praga AS [Código], nome_praga AS [Nome], desc_praga AS [Descrição] FROM tbPraga " +
-                                                              "ORDER BY cod_praga ASC; ", con);
+                                                              "ORDER BY cod_praga ASC ", con);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvPragas.DataSource = dtbl;
@@ -57,6 +57,23 @@ namespace organ
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             PreencherDataGridView();
+        }
+
+        private void dgvPragas_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (dgvPragas.CurrentRow.Cells["Código"].Value != DBNull.Value)
+            {
+                if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Praga p = new Praga(Convert.ToInt16(dgvPragas.CurrentRow.Cells["Código"].Value));
+
+                    p.ExcluirPraga(p);
+                }
+                else
+                    e.Cancel = true;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

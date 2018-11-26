@@ -73,36 +73,6 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap box {
-            get {
-                object obj = ResourceManager.GetObject("box", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap box_2 {
-            get {
-                object obj = ResourceManager.GetObject("box_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap box_3 {
-            get {
-                object obj = ResourceManager.GetObject("box_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap box_4 {
             get {
                 object obj = ResourceManager.GetObject("box_4", resourceCulture);
@@ -123,9 +93,9 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap colheita_100_3 {
+        internal static System.Drawing.Bitmap colheita_100_2 {
             get {
-                object obj = ResourceManager.GetObject("colheita 100_3", resourceCulture);
+                object obj = ResourceManager.GetObject("colheita 100_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,26 +106,6 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap colheita_100_4 {
             get {
                 object obj = ResourceManager.GetObject("colheita 100_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap colheita_45 {
-            get {
-                object obj = ResourceManager.GetObject("colheita_45", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap colheita_45_3 {
-            get {
-                object obj = ResourceManager.GetObject("colheita_45_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,39 +133,9 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap controls {
-            get {
-                object obj = ResourceManager.GetObject("controls", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap defensivo {
-            get {
-                object obj = ResourceManager.GetObject("defensivo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap defensivo_2 {
             get {
                 object obj = ResourceManager.GetObject("defensivo_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dinheiros {
-            get {
-                object obj = ResourceManager.GetObject("dinheiros", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,16 +156,6 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap doencas1 {
             get {
                 object obj = ResourceManager.GetObject("doencas1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap estoque {
-            get {
-                object obj = ResourceManager.GetObject("estoque", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,26 +193,6 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap farmer {
-            get {
-                object obj = ResourceManager.GetObject("farmer", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap fazenda {
-            get {
-                object obj = ResourceManager.GetObject("fazenda", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap fazenda_100 {
             get {
                 object obj = ResourceManager.GetObject("fazenda_100", resourceCulture);
@@ -323,16 +213,6 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ferramentas {
-            get {
-                object obj = ResourceManager.GetObject("ferramentas", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ferramentas_2 {
             get {
                 object obj = ResourceManager.GetObject("ferramentas_2", resourceCulture);
@@ -346,26 +226,6 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap fertilizante {
             get {
                 object obj = ResourceManager.GetObject("fertilizante", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap funcionario {
-            get {
-                object obj = ResourceManager.GetObject("funcionario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap funcionario1 {
-            get {
-                object obj = ResourceManager.GetObject("funcionario1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,36 +353,6 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap relatorios_100_4 {
-            get {
-                object obj = ResourceManager.GetObject("relatorios_100_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap relatorios_100_5 {
-            get {
-                object obj = ResourceManager.GetObject("relatorios 100_5", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap relatorios_100_6 {
-            get {
-                object obj = ResourceManager.GetObject("relatorios 100_6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap relatorios_100_61 {
             get {
                 object obj = ResourceManager.GetObject("relatorios 100_61", resourceCulture);
@@ -543,26 +373,6 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap relatorios_45_3 {
-            get {
-                object obj = ResourceManager.GetObject("relatorios_45_3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap relatorios_45_4 {
-            get {
-                object obj = ResourceManager.GetObject("relatorios 45_4", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap relatorios_45_6 {
             get {
                 object obj = ResourceManager.GetObject("relatorios 45_6", resourceCulture);
@@ -576,16 +386,6 @@ namespace organ.Properties {
         internal static System.Drawing.Bitmap Retângulo_7 {
             get {
                 object obj = ResourceManager.GetObject("Retângulo 7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap semente_6 {
-            get {
-                object obj = ResourceManager.GetObject("semente_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -623,16 +423,6 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap solo {
-            get {
-                object obj = ResourceManager.GetObject("solo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap solo_3 {
             get {
                 object obj = ResourceManager.GetObject("solo_3", resourceCulture);
@@ -653,29 +443,9 @@ namespace organ.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trator {
-            get {
-                object obj = ResourceManager.GetObject("trator", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap trator_10 {
             get {
                 object obj = ResourceManager.GetObject("trator_10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap trator_9 {
-            get {
-                object obj = ResourceManager.GetObject("trator_9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

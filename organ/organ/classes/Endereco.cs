@@ -8,50 +8,50 @@ namespace organ
 {
     public class Endereco
     {
-        private static int cep;
-        private static int numero;
-        private static String rua;
-        private static String bairro;
-        private static String complemento;
-        private static String cidade;
-        private static String uf;
+        private String cep;
+        private int numero;
+        private String rua;
+        private String bairro;
+        private String complemento;
+        private String cidade;
+        private String uf;
 
-        public static int CEP
+        public String CEP
         {
             get { return cep; }
             set { cep = value; }
         }
-        public static int Numero
+        public int Numero
         {
             get { return numero; }
             set { numero = value; }
         }
 
-        public static String Rua
+        public String Rua
         {
             get { return rua; }
             set { rua = value; }
         }
 
-        public static String Bairro
+        public String Bairro
         {
             get { return bairro; }
             set { bairro = value; }
         }
 
-        public static String Complemento
+        public String Complemento
         {
             get { return complemento; }
             set { complemento = value; }
         }
 
-        public static String Cidade
+        public String Cidade
         {
             get { return cidade; }
             set { cidade = value; }
         }
 
-        public static String UF
+        public String UF
         {
             get { return uf; }
             set { uf = value; }

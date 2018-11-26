@@ -17,6 +17,7 @@ namespace organ
         public doencas()
         {
             InitializeComponent();
+            PreencherDataGridView();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -58,6 +59,23 @@ namespace organ
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             PreencherDataGridView();
+        }
+
+        private void dgvDoencas_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (dgvDoencas.CurrentRow.Cells["Código"].Value != DBNull.Value)
+            {
+                if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                   Doenca d = new Doenca(Convert.ToInt16(dgvDoencas.CurrentRow.Cells["Código"].Value));
+
+                    d.ExcluirDoenca(d);
+                }
+                else
+                    e.Cancel = true;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace organ
         public funcionarios()
         {
             InitializeComponent();
+            PreencherDataGridView();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -60,6 +61,23 @@ namespace organ
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             PreencherDataGridView();
+        }
+
+        private void dgvFuncionarios_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (dgvFuncionarios.CurrentRow.Cells["Código"].Value != DBNull.Value)
+            {
+                if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Funcionario f = new Funcionario(Convert.ToInt16(dgvFuncionarios.CurrentRow.Cells["Código"].Value));
+
+                    f.ExcluirFuncionario(f);
+                }
+                else
+                    e.Cancel = true;
+            }
+            else
+                e.Cancel = true;
         }
     }
 }

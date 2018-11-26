@@ -62,5 +62,22 @@ namespace organ
         {
             PreencherDataGridView();
         }
+
+        private void dgvFornecedores_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            if (dgvFornecedores.CurrentRow.Cells["Código"].Value != DBNull.Value)
+            {
+                if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Fornecedor f = new Fornecedor(Convert.ToInt16(dgvFornecedores.CurrentRow.Cells["Código"].Value));
+
+                    f.ExcluirFornecedor(f);
+                }
+                else
+                    e.Cancel = true;
+            }
+            else
+                e.Cancel = true;
+        }
     }
 }

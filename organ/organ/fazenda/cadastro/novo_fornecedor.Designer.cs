@@ -45,12 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSite = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.cboUF = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.mskNumero = new System.Windows.Forms.MaskedTextBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -101,15 +101,17 @@
             // 
             // lblAddFornecedor
             // 
-            this.lblAddFornecedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAddFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAddFornecedor.AutoSize = true;
             this.lblAddFornecedor.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblAddFornecedor.Location = new System.Drawing.Point(540, 20);
+            this.lblAddFornecedor.Location = new System.Drawing.Point(143, 20);
             this.lblAddFornecedor.Name = "lblAddFornecedor";
-            this.lblAddFornecedor.Padding = new System.Windows.Forms.Padding(3, 5, 100, 0);
-            this.lblAddFornecedor.Size = new System.Drawing.Size(324, 34);
+            this.lblAddFornecedor.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblAddFornecedor.Size = new System.Drawing.Size(1119, 34);
             this.lblAddFornecedor.TabIndex = 6;
             this.lblAddFornecedor.Text = "Adicionar fornecedor";
+            this.lblAddFornecedor.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tlpNovoFuncionario
             // 
@@ -136,7 +138,6 @@
             this.tlpNovoFuncionario.Controls.Add(this.txtEndereco, 1, 4);
             this.tlpNovoFuncionario.Controls.Add(this.label10, 2, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label4, 2, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.txtNumero, 3, 4);
             this.tlpNovoFuncionario.Controls.Add(this.label9, 0, 5);
             this.tlpNovoFuncionario.Controls.Add(this.txtBairro, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label6, 0, 6);
@@ -146,6 +147,7 @@
             this.tlpNovoFuncionario.Controls.Add(this.cboUF, 3, 6);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 3, 7);
             this.tlpNovoFuncionario.Controls.Add(this.mskCEP, 1, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.mskNumero, 3, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -177,6 +179,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(308, 33);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(427, 33);
             this.txtNome.TabIndex = 2;
@@ -195,6 +198,7 @@
             // 
             this.txtRazaoSocial.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRazaoSocial.Location = new System.Drawing.Point(960, 33);
+            this.txtRazaoSocial.MaxLength = 70;
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(415, 33);
             this.txtRazaoSocial.TabIndex = 3;
@@ -253,6 +257,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(308, 153);
+            this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(427, 33);
             this.txtEmail.TabIndex = 6;
@@ -271,6 +276,7 @@
             // 
             this.txtSite.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSite.Location = new System.Drawing.Point(960, 153);
+            this.txtSite.MaxLength = 200;
             this.txtSite.Name = "txtSite";
             this.txtSite.Size = new System.Drawing.Size(415, 33);
             this.txtSite.TabIndex = 7;
@@ -284,18 +290,6 @@
             this.label5.Size = new System.Drawing.Size(54, 26);
             this.label5.TabIndex = 63;
             this.label5.Text = "CEP*";
-            // 
-            // mskCEP
-            // 
-            this.mskCEP.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCEP.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
-            this.mskCEP.Location = new System.Drawing.Point(308, 213);
-            this.mskCEP.Mask = "00000-000";
-            this.mskCEP.Name = "mskCEP";
-            this.mskCEP.Size = new System.Drawing.Size(118, 31);
-            this.mskCEP.SkipLiterals = false;
-            this.mskCEP.TabIndex = 8;
-            this.mskCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label3
             // 
@@ -311,6 +305,7 @@
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(308, 273);
+            this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(427, 33);
             this.txtEndereco.TabIndex = 9;
@@ -335,15 +330,6 @@
             this.label4.TabIndex = 62;
             this.label4.Text = "Número*";
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(960, 273);
-            this.txtNumero.MaxLength = 9;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(262, 33);
-            this.txtNumero.TabIndex = 10;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -358,6 +344,7 @@
             // 
             this.txtBairro.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(308, 333);
+            this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(427, 33);
             this.txtBairro.TabIndex = 11;
@@ -376,6 +363,7 @@
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(308, 393);
+            this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(262, 33);
             this.txtComplemento.TabIndex = 13;
@@ -394,15 +382,18 @@
             // 
             this.txtCidade.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(960, 333);
+            this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(262, 33);
             this.txtCidade.TabIndex = 12;
             // 
             // cboUF
             // 
+            this.cboUF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUF.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.cboUF.FormattingEnabled = true;
             this.cboUF.Location = new System.Drawing.Point(960, 393);
+            this.cboUF.MaxLength = 2;
             this.cboUF.Name = "cboUF";
             this.cboUF.Size = new System.Drawing.Size(112, 34);
             this.cboUF.TabIndex = 14;
@@ -417,6 +408,27 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // mskCEP
+            // 
+            this.mskCEP.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCEP.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.mskCEP.Location = new System.Drawing.Point(308, 213);
+            this.mskCEP.Mask = "00000-000";
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(118, 31);
+            this.mskCEP.SkipLiterals = false;
+            this.mskCEP.TabIndex = 8;
+            this.mskCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // mskNumero
+            // 
+            this.mskNumero.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskNumero.Location = new System.Drawing.Point(960, 273);
+            this.mskNumero.Mask = "000000000";
+            this.mskNumero.Name = "mskNumero";
+            this.mskNumero.Size = new System.Drawing.Size(128, 33);
+            this.mskNumero.TabIndex = 10;
             // 
             // novo_fornecedor
             // 
@@ -451,7 +463,6 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSite;
@@ -472,5 +483,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboUF;
+        private System.Windows.Forms.MaskedTextBox mskNumero;
     }
 }

@@ -35,27 +35,33 @@
             this.lblFertilizante = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxtDescricao = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.mskQuantidade = new System.Windows.Forms.MaskedTextBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNovaMaquina
             // 
-            this.lblNovaMaquina.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNovaMaquina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNovaMaquina.AutoSize = true;
             this.lblNovaMaquina.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblNovaMaquina.Location = new System.Drawing.Point(587, 20);
+            this.lblNovaMaquina.Location = new System.Drawing.Point(138, 20);
             this.lblNovaMaquina.Name = "lblNovaMaquina";
             this.lblNovaMaquina.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblNovaMaquina.Size = new System.Drawing.Size(218, 34);
+            this.lblNovaMaquina.Size = new System.Drawing.Size(1116, 34);
             this.lblNovaMaquina.TabIndex = 30;
             this.lblNovaMaquina.Text = "Adicionar fertilizante";
+            this.lblNovaMaquina.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tlpBarraSuperior
             // 
@@ -96,26 +102,31 @@
             // tlpNovoFuncionario
             // 
             this.tlpNovoFuncionario.AutoSize = true;
-            this.tlpNovoFuncionario.ColumnCount = 3;
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.54945F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.45055F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+            this.tlpNovoFuncionario.ColumnCount = 2;
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox1, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtMarca, 1, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 2);
             this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.richTextBox1, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.rtxtDescricao, 1, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.mskQuantidade, 1, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
-            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
-            this.tlpNovoFuncionario.RowCount = 5;
+            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 400, 0);
+            this.tlpNovoFuncionario.RowCount = 7;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
@@ -139,25 +150,27 @@
             this.lblNome.Location = new System.Drawing.Point(103, 30);
             this.lblNome.Name = "lblNome";
             this.lblNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNome.Size = new System.Drawing.Size(64, 26);
+            this.lblNome.Size = new System.Drawing.Size(74, 26);
             this.lblNome.TabIndex = 3;
-            this.lblNome.Text = "Nome";
+            this.lblNome.Text = "Nome*";
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(368, 33);
+            this.txtNome.Location = new System.Drawing.Point(380, 33);
+            this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(766, 33);
-            this.txtNome.TabIndex = 18;
+            this.txtNome.Size = new System.Drawing.Size(539, 33);
+            this.txtNome.TabIndex = 2;
             // 
-            // textBox1
+            // txtMarca
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textBox1.Location = new System.Drawing.Point(368, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(766, 30);
-            this.textBox1.TabIndex = 50;
+            this.txtMarca.Font = new System.Drawing.Font("Calibri", 14F);
+            this.txtMarca.Location = new System.Drawing.Point(380, 93);
+            this.txtMarca.MaxLength = 50;
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(539, 30);
+            this.txtMarca.TabIndex = 3;
             // 
             // label2
             // 
@@ -181,33 +194,76 @@
             // 
             // cboFornecedor
             // 
+            this.cboFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(368, 153);
+            this.cboFornecedor.Location = new System.Drawing.Point(380, 153);
             this.cboFornecedor.Name = "cboFornecedor";
-            this.cboFornecedor.Size = new System.Drawing.Size(558, 31);
-            this.cboFornecedor.TabIndex = 53;
-            this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
+            this.cboFornecedor.Size = new System.Drawing.Size(539, 31);
+            this.cboFornecedor.TabIndex = 4;
             // 
-            // richTextBox1
+            // rtxtDescricao
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(368, 213);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(766, 54);
-            this.richTextBox1.TabIndex = 54;
-            this.richTextBox1.Text = "";
+            this.rtxtDescricao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtDescricao.Location = new System.Drawing.Point(380, 213);
+            this.rtxtDescricao.MaxLength = 200;
+            this.rtxtDescricao.Name = "rtxtDescricao";
+            this.rtxtDescricao.Size = new System.Drawing.Size(539, 54);
+            this.rtxtDescricao.TabIndex = 5;
+            this.rtxtDescricao.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(103, 285);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(122, 26);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "Quantidade*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(103, 345);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label4.Size = new System.Drawing.Size(188, 26);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Unidade de medida*";
+            // 
+            // cboUnidadeMedida
+            // 
+            this.cboUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidadeMedida.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidadeMedida.FormattingEnabled = true;
+            this.cboUnidadeMedida.Location = new System.Drawing.Point(380, 348);
+            this.cboUnidadeMedida.Name = "cboUnidadeMedida";
+            this.cboUnidadeMedida.Size = new System.Drawing.Size(207, 31);
+            this.cboUnidadeMedida.TabIndex = 7;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(879, 273);
+            this.btnRegistrar.Location = new System.Drawing.Point(815, 408);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.Size = new System.Drawing.Size(207, 50);
+            this.btnRegistrar.TabIndex = 8;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // mskQuantidade
+            // 
+            this.mskQuantidade.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.mskQuantidade.Location = new System.Drawing.Point(380, 288);
+            this.mskQuantidade.Mask = "000000000";
+            this.mskQuantidade.Name = "mskQuantidade";
+            this.mskQuantidade.Size = new System.Drawing.Size(207, 31);
+            this.mskQuantidade.TabIndex = 6;
             // 
             // novo_fertilizante
             // 
@@ -220,7 +276,6 @@
             this.Name = "novo_fertilizante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "novo_fertilizante";
-            this.Load += new System.EventHandler(this.novo_fertilizante_Load);
             this.tlpBarraSuperior.ResumeLayout(false);
             this.tlpBarraSuperior.PerformLayout();
             this.tlpNovoFuncionario.ResumeLayout(false);
@@ -239,11 +294,15 @@
         private System.Windows.Forms.Label lblFertilizante;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboFornecedor;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxtDescricao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboUnidadeMedida;
+        private System.Windows.Forms.MaskedTextBox mskQuantidade;
     }
 }

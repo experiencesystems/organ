@@ -35,7 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,21 +48,21 @@
             this.tlpNovoFuncionario = new System.Windows.Forms.TableLayoutPanel();
             this.lblFertilizante = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtTipoSolo = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.mskIncSolar = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.mskIncVento = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.mskAcidez = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.mskQuantidade = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboUnidadeMedida = new System.Windows.Forms.ComboBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoDefensivo.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
@@ -71,15 +70,17 @@
             // 
             // lblSementes
             // 
-            this.lblSementes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSementes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSementes.AutoSize = true;
             this.lblSementes.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblSementes.Location = new System.Drawing.Point(577, 20);
+            this.lblSementes.Location = new System.Drawing.Point(144, 20);
             this.lblSementes.Name = "lblSementes";
-            this.lblSementes.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblSementes.Size = new System.Drawing.Size(258, 34);
+            this.lblSementes.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.lblSementes.Size = new System.Drawing.Size(1125, 34);
             this.lblSementes.TabIndex = 2;
             this.lblSementes.Text = "Adicionar semente";
+            this.lblSementes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tlpBarraSuperior
             // 
@@ -125,7 +126,6 @@
             this.tlpNovoDefensivo.Controls.Add(this.label6, 0, 6);
             this.tlpNovoDefensivo.Controls.Add(this.textBox3, 1, 5);
             this.tlpNovoDefensivo.Controls.Add(this.lblNome, 0, 0);
-            this.tlpNovoDefensivo.Controls.Add(this.txtNome, 1, 0);
             this.tlpNovoDefensivo.Controls.Add(this.label1, 0, 1);
             this.tlpNovoDefensivo.Controls.Add(this.label3, 0, 3);
             this.tlpNovoDefensivo.Controls.Add(this.label4, 0, 4);
@@ -177,14 +177,6 @@
             this.lblNome.Size = new System.Drawing.Size(64, 26);
             this.lblNome.TabIndex = 31;
             this.lblNome.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(419, 3);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(411, 31);
-            this.txtNome.TabIndex = 32;
             // 
             // label1
             // 
@@ -279,31 +271,30 @@
             // tlpNovoFuncionario
             // 
             this.tlpNovoFuncionario.AutoSize = true;
-            this.tlpNovoFuncionario.ColumnCount = 3;
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.54945F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.45055F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 287F));
+            this.tlpNovoFuncionario.ColumnCount = 2;
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox8, 1, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.label8, 0, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.label9, 0, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.label10, 0, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.label11, 0, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.label12, 0, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox7, 1, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox9, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox10, 1, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox11, 1, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox12, 1, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox13, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.txtTipoSolo, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
+            this.tlpNovoFuncionario.Controls.Add(this.label10, 0, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.mskIncSolar, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.label11, 0, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.mskIncVento, 1, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.label12, 0, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.mskAcidez, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.label13, 0, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.label14, 0, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.mskQuantidade, 1, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.label9, 0, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 7);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
-            this.tlpNovoFuncionario.Controls.Add(this.label13, 0, 7);
-            this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 7);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
-            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 0, 0);
+            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 400, 0);
             this.tlpNovoFuncionario.RowCount = 9;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
@@ -334,133 +325,90 @@
             this.label7.Location = new System.Drawing.Point(103, 30);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(64, 26);
+            this.label7.Size = new System.Drawing.Size(74, 26);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Nome";
+            this.label7.Text = "Nome*";
             // 
-            // textBox8
+            // txtTipoSolo
             // 
-            this.textBox8.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textBox8.Location = new System.Drawing.Point(383, 93);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(766, 30);
-            this.textBox8.TabIndex = 50;
+            this.txtTipoSolo.Font = new System.Drawing.Font("Calibri", 14F);
+            this.txtTipoSolo.Location = new System.Drawing.Point(397, 93);
+            this.txtTipoSolo.MaxLength = 50;
+            this.txtTipoSolo.Name = "txtTipoSolo";
+            this.txtTipoSolo.Size = new System.Drawing.Size(683, 30);
+            this.txtTipoSolo.TabIndex = 3;
             // 
-            // label8
+            // txtNome
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(103, 150);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 26);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Tempo de plantio";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(103, 210);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(211, 26);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "Frequência de irrigação";
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(397, 33);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(683, 33);
+            this.txtNome.TabIndex = 2;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(103, 270);
+            this.label10.Location = new System.Drawing.Point(103, 150);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 26);
             this.label10.TabIndex = 52;
             this.label10.Text = "Incidência solar";
             // 
+            // mskIncSolar
+            // 
+            this.mskIncSolar.Font = new System.Drawing.Font("Calibri", 14F);
+            this.mskIncSolar.Location = new System.Drawing.Point(397, 153);
+            this.mskIncSolar.Mask = "00000.00%";
+            this.mskIncSolar.Name = "mskIncSolar";
+            this.mskIncSolar.Size = new System.Drawing.Size(233, 30);
+            this.mskIncSolar.TabIndex = 4;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(103, 330);
+            this.label11.Location = new System.Drawing.Point(103, 210);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(178, 26);
             this.label11.TabIndex = 52;
             this.label11.Text = "Incidência do vento";
             // 
+            // mskIncVento
+            // 
+            this.mskIncVento.Font = new System.Drawing.Font("Calibri", 14F);
+            this.mskIncVento.Location = new System.Drawing.Point(397, 213);
+            this.mskIncVento.Mask = "00000.00%";
+            this.mskIncVento.Name = "mskIncVento";
+            this.mskIncVento.Size = new System.Drawing.Size(233, 30);
+            this.mskIncVento.TabIndex = 5;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(103, 390);
+            this.label12.Location = new System.Drawing.Point(103, 270);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 26);
             this.label12.TabIndex = 52;
             this.label12.Text = "Acidez";
             // 
-            // btnRegistrar
+            // mskAcidez
             // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(937, 513);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(383, 33);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(766, 33);
-            this.textBox7.TabIndex = 18;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(383, 213);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(766, 33);
-            this.textBox9.TabIndex = 18;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(383, 273);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(766, 33);
-            this.textBox10.TabIndex = 18;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(383, 333);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(766, 33);
-            this.textBox11.TabIndex = 18;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(383, 393);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(766, 33);
-            this.textBox12.TabIndex = 18;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(383, 153);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(766, 33);
-            this.textBox13.TabIndex = 18;
+            this.mskAcidez.Font = new System.Drawing.Font("Calibri", 14F);
+            this.mskAcidez.Location = new System.Drawing.Point(397, 273);
+            this.mskAcidez.Mask = "00000.00%";
+            this.mskAcidez.Name = "mskAcidez";
+            this.mskAcidez.Size = new System.Drawing.Size(233, 30);
+            this.mskAcidez.TabIndex = 6;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(103, 450);
+            this.label13.Location = new System.Drawing.Point(103, 330);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(109, 26);
             this.label13.TabIndex = 53;
@@ -468,13 +416,65 @@
             // 
             // cboFornecedor
             // 
+            this.cboFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(383, 453);
+            this.cboFornecedor.Location = new System.Drawing.Point(397, 333);
             this.cboFornecedor.Name = "cboFornecedor";
-            this.cboFornecedor.Size = new System.Drawing.Size(766, 34);
-            this.cboFornecedor.TabIndex = 54;
-            this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
+            this.cboFornecedor.Size = new System.Drawing.Size(683, 34);
+            this.cboFornecedor.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(103, 390);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(127, 26);
+            this.label14.TabIndex = 55;
+            this.label14.Text = "Quantidade* ";
+            // 
+            // mskQuantidade
+            // 
+            this.mskQuantidade.Font = new System.Drawing.Font("Calibri", 14F);
+            this.mskQuantidade.Location = new System.Drawing.Point(397, 393);
+            this.mskQuantidade.Mask = "000000000";
+            this.mskQuantidade.Name = "mskQuantidade";
+            this.mskQuantidade.Size = new System.Drawing.Size(233, 30);
+            this.mskQuantidade.TabIndex = 8;
+            this.mskQuantidade.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(103, 450);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(188, 26);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "Unidade de medida*";
+            // 
+            // cboUnidadeMedida
+            // 
+            this.cboUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidadeMedida.Font = new System.Drawing.Font("Calibri", 14F);
+            this.cboUnidadeMedida.FormattingEnabled = true;
+            this.cboUnidadeMedida.Location = new System.Drawing.Point(397, 453);
+            this.cboUnidadeMedida.Name = "cboUnidadeMedida";
+            this.cboUnidadeMedida.Size = new System.Drawing.Size(233, 31);
+            this.cboUnidadeMedida.TabIndex = 9;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Location = new System.Drawing.Point(825, 513);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
+            this.btnRegistrar.TabIndex = 10;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // nova_semente
             // 
@@ -508,7 +508,6 @@
         private System.Windows.Forms.TableLayoutPanel tlpNovoDefensivo;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -523,20 +522,20 @@
         private System.Windows.Forms.TableLayoutPanel tlpNovoFuncionario;
         private System.Windows.Forms.Label lblFertilizante;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtTipoSolo;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cboFornecedor;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.MaskedTextBox mskQuantidade;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboUnidadeMedida;
+        private System.Windows.Forms.MaskedTextBox mskIncSolar;
+        private System.Windows.Forms.MaskedTextBox mskIncVento;
+        private System.Windows.Forms.MaskedTextBox mskAcidez;
     }
 }

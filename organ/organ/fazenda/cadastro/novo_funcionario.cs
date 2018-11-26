@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace organ
         {
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            CarregaEstado();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -24,48 +26,52 @@ namespace organ
             this.Close();
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        public void CarregaEstado()
         {
-            RegistrarFuncionario();
+            string[] estados = {"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN",
+                 "RS","RO","RR","SC","SP","SE","TO"};
+
+            for (int i = 0; i != estados.Length; i++)
+            {
+                cboUF.Items.Add(estados[i]);
+            }
+            cboUF.SelectedIndex = 0;
+
         }
 
-        void RegistrarFuncionario()
-        {
-            if (txtNome.Text == "" || txtCPF.Text == "" || txtRG.Text == "" || txtEndereco.Text == "" || txtNumCasa.Text == "" || txtCEP.Text == "" ||
-                   txtBairro.Text == "" || txtCidade.Text == "" || txtUF.Text == "" || txtCargo.Text == "" || txtSalario.Text == "")
-            {
-                MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        DateTime hoje = DateTime.Now;
 
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            DateTime DataNascimento = dtDataNasc.Value;
+            int anos = DateTime.Now.Year - DataNascimento.Year;
+            if (DateTime.Now.Month < DataNascimento.Month || (DateTime.Now.Month == DataNascimento.Month && DateTime.Now.Day < DataNascimento.Day))
+            {
+                anos--;
+            }
+                Regex veremail = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+            if (txtNome.Text == "" || mskCPF.Text == "" || mskRG.Text == "" || txtEndereco.Text == "" || mskNumero.Text == "" || mskCEP.Text == "" || 
+                txtBairro.Text == "" || txtCidade.Text == "" || cboUF.Text == "" || txtCargo.Text == "" || mskSalario.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (!CPF_CNPJ.IsValid(mskCPF.Text))
+            {
+                MessageBox.Show("Verifique se o CPF foi digitado corretamente.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txtEmail.Text != "" && !veremail.IsMatch(txtEmail.Text))
+            {
+                MessageBox.Show("Verifique se o e-mail foi digitado corretamente.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (anos < 18)
+            {
+                MessageBox.Show("Digite uma data de nascimento válida.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
-                string sql = "INSERT INTO tbFuncionario (nome_func, cpf_func, rg_func, tel_func, cel_func, email_func, cargo_func, salario_func, numcasa_func, cep_func) " +
-                             "VALUES ('" + txtNome.Text + "', " + txtCPF.Text + ", " + txtRG.Text + ", " + txtTelefone.Text + ", " + txtCelular.Text + ", '"
-                             + txtEmail.Text + "', '" + txtCargo.Text + "', " + txtSalario.Text + ", " + txtNumCasa.Text + ", " + txtCEP.Text + ")";
-
-                SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.CommandType = CommandType.Text;
-                con.Open();
-                try
-                {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > 0)
-                    {
-                        con.InfoMessage += delegate (object sender, SqlInfoMessageEventArgs e)
-                        {
-                            MessageBox.Show(e.Message);
-                        };
-                    }
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Erro: " + ex.ToString());
-                }
-                finally
-                {
-                    con.Close();
-                }
+                Funcionario f = new Funcionario(txtNome.Text, Convert.ToInt64(mskCPF.Text), Convert.ToInt64(mskRG.Text), Convert.ToInt64(mskTelefone.Text), Convert.ToInt64(mskCelular.Text), txtEmail.Text, txtCargo.Text, Convert.ToDouble(mskSalario.Text), Convert.ToString(dtDataNasc.Value), Convert.ToString(mskCEP.Text), Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
+                f.RegistrarFuncionario(f);
             }
         }
     }

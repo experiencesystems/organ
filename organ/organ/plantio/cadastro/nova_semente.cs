@@ -18,11 +18,24 @@ namespace organ
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             PreencherComboBox();
+            CarregaUnidadeMedida();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void CarregaUnidadeMedida()
+        {
+            string[] unidade_medida = { "un", "Kg", "g", "mL", "L" };
+
+            for (int i = 0; i != unidade_medida.Length; i++)
+            {
+                cboUnidadeMedida.Items.Add(unidade_medida[i]);
+            }
+            cboUnidadeMedida.SelectedIndex = 0;
+
         }
 
         void PreencherComboBox()
@@ -42,6 +55,10 @@ namespace organ
 
                 cboFornecedor.ValueMember = "CODIGO";
                 cboFornecedor.DisplayMember = "FORNECEDOR";
+                DataRow topItem = dt.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "";
+                dt.Rows.InsertAt(topItem, 0);
                 cboFornecedor.DataSource = dt;
             }
             catch (SqlException e)
@@ -56,12 +73,20 @@ namespace organ
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            if (txtNome.Text == "" || mskQuantidade.Text == "" || cboUnidadeMedida.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Semente s = new Semente(txtNome.Text, txtTipoSolo.Text, Convert.ToDouble(mskAcidez.Text), Convert.ToDouble(mskIncVento.Text), Convert.ToDouble(mskIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.ValueMember), cboUnidadeMedida.Text);
+                s.RegistrarSemente(s);
+            }
         }
 
-        private void cboFornecedor_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void cboFornecedor_SelectedIndexChanged(object sender, EventArgs e)
         {
             int ID = Convert.ToInt16(cboFornecedor.SelectedValue);
-        }
+        }*/
     }
 }
