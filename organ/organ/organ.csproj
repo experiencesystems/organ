@@ -55,6 +55,9 @@
   <PropertyGroup>
     <ApplicationIcon>Camada%25201.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>organ.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -83,6 +86,18 @@
     </Compile>
     <Compile Include="configuracao\configuracao.Designer.cs">
       <DependentUpon>configuracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="colheita\consulta_plantios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="colheita\consulta_plantios.Designer.cs">
+      <DependentUpon>consulta_plantios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="colheita\consulta_colheita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="colheita\consulta_colheita.Designer.cs">
+      <DependentUpon>consulta_colheita.cs</DependentUpon>
     </Compile>
     <Compile Include="dbOrgan.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -292,6 +307,7 @@
     <Compile Include="classes\CPF_CNPJ.cs" />
     <Compile Include="classes\StringConexao.cs" />
     <Compile Include="classes\Talhao.cs" />
+    <Compile Include="classes\Semente.cs" />
     <EmbeddedResource Include="classes\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="configuracao\configuracao.resx">
       <DependentUpon>configuracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="colheita\consulta_plantios.resx">
+      <DependentUpon>consulta_plantios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="colheita\consulta_colheita.resx">
+      <DependentUpon>consulta_colheita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fazenda\consulta\estoque.resx">
       <DependentUpon>estoque.cs</DependentUpon>
@@ -396,6 +418,7 @@
     <EmbeddedResource Include="plantio\consulta\sementes.resx">
       <DependentUpon>sementes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="organ.manifest" />
     <None Include="dbOrgan.xsc">
       <DependentUpon>dbOrgan.xsd</DependentUpon>
     </None>

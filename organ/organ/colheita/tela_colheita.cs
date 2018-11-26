@@ -23,6 +23,22 @@ namespace organ
             InitializeComponent();
         }
 
+        private void btnColheitasRealizadas_Click(object sender, EventArgs e)
+        {
+            using (consulta_colheita _consulta_colheita = new consulta_colheita())
+            {
+                _consulta_colheita.ShowDialog(this);
+            }
+        }
+
+        private void btnDetalhesPlantios_Click(object sender, EventArgs e)
+        {
+            using (consulta_plantios _consulta_plantios = new consulta_plantios())
+            {
+                _consulta_plantios.ShowDialog(this);
+            }
+        }
+        
         private void colheita_Load(object sender, EventArgs e)
         {
             PreencherCamposSementeData();

@@ -11,6 +11,7 @@ namespace organ
 {
     public class Funcionario
     {
+        private int codigo;
         private String nome_funcionario;
         private long cpf;
         private long rg;
@@ -19,7 +20,14 @@ namespace organ
         private String email;
         private String cargo;
         private double salario;
+        private String status;
+        private String data_nasc;
 
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
         public String Nome_funcionario
         {
             get { return nome_funcionario; }
@@ -60,10 +68,24 @@ namespace organ
             get { return salario; }
             set { salario = value; }
         }
-
+        public String Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
+        public String Data_nasc
+        {
+            get { return data_nasc; }
+            set { data_nasc = value; }
+        }
         public Endereco endereco { get; set; }
 
-        public Funcionario(String nome_funcionario, long cpf, long rg, long telefone, long celular, String email, String cargo, double salario, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+        public Funcionario(int codigo)
+        {
+            this.Codigo = codigo;
+        }
+
+        public Funcionario(String nome_funcionario, long cpf, long rg, long telefone, long celular, String email, String cargo, double salario, String data_nasc, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
             this.Nome_funcionario = nome_funcionario;
@@ -74,6 +96,7 @@ namespace organ
             this.Email = email;
             this.Cargo = cargo;
             this.Salario = salario;
+            this.Data_nasc = data_nasc;
             endereco.CEP = CEP;
             endereco.Numero = Numero;
             endereco.Rua = Rua;
@@ -99,12 +122,13 @@ namespace organ
             cmd.Parameters.Add("@UF", SqlDbType.Char).Value = f.endereco.UF;
             cmd.Parameters.Add("@NOME_FUNC", SqlDbType.VarChar).Value = f.Nome_funcionario;
             cmd.Parameters.Add("@CPF_FUNC", SqlDbType.NVarChar).Value = f.CPF;
-            cmd.Parameters.Add("@RG", SqlDbType.NVarChar).Value = f.RG;
-            cmd.Parameters.Add("@TEL_FORN", SqlDbType.NVarChar).Value = f.Telefone;
-            cmd.Parameters.Add("@CEL_FORN", SqlDbType.NVarChar).Value = f.Celular;
-            cmd.Parameters.Add("@EMAIL_FORN", SqlDbType.VarChar).Value = f.Email;
-            cmd.Parameters.Add("@CARGO", SqlDbType.VarChar).Value = f.Cargo;
-            cmd.Parameters.Add("@SALARIO", SqlDbType.Money).Value = f.Salario;
+            cmd.Parameters.Add("@RG_FUNC", SqlDbType.NVarChar).Value = f.RG;
+            cmd.Parameters.Add("@DATA_NASC", SqlDbType.Date).Value = f.Data_nasc;
+            cmd.Parameters.Add("@TEL_FUNC", SqlDbType.NVarChar).Value = f.Telefone;
+            cmd.Parameters.Add("@CEL_FUNC", SqlDbType.NVarChar).Value = f.Celular;
+            cmd.Parameters.Add("@EMAIL_FUNC", SqlDbType.VarChar).Value = f.Email;
+            cmd.Parameters.Add("@CARGO_FUNC", SqlDbType.VarChar).Value = f.Cargo;
+            cmd.Parameters.Add("@SALARIO_FUNC", SqlDbType.Money).Value = f.Salario;
 
             con.Open();
 
@@ -126,6 +150,20 @@ namespace organ
                 {
                     con.Close();
                 }
+            }
+        }
+
+        public void ExcluirFuncionario(Funcionario f)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_FUNCIONARIO", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_FUNCIONARIO", f.Codigo);
+                sqlCmd.ExecuteNonQuery();
             }
         }
     }

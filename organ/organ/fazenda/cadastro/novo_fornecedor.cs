@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +20,7 @@ namespace organ
         {
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            carregaEstado();
+            CarregaEstado();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace organ
             }
         }
 
-        public void carregaEstado()
+        public void CarregaEstado()
         {
             string[] estados = {"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN",
                  "RS","RO","RR","SC","SP","SE","TO"};
@@ -56,21 +57,24 @@ namespace organ
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            string CNPJ = mskCNPJ.Text;
-
+            Regex veremail = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
             if (txtNome.Text == "" || mskCNPJ.Text == "" || mskCEP.Text == "" || txtEndereco.Text == "" || mskNumero.Text == "" || txtBairro.Text == "" ||
                    txtCidade.Text == "" || cboUF.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (CPF_CNPJ.IsValid(CNPJ))
+            else if (!CPF_CNPJ.IsValid(mskCNPJ.Text))
             {
-                Fornecedor fornecedor = new Fornecedor(txtNome.Text, txtRazaoSocial.Text, Convert.ToInt64(mskCNPJ.Text), Convert.ToInt32(mskTel.Text), txtEmail.Text, txtSite.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
-                fornecedor.RegistrarFornecedor(fornecedor);
+                MessageBox.Show("Verifique se o CNPJ foi digitado corretamente.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txtEmail.Text != "" && !veremail.IsMatch(txtEmail.Text))
+            {
+                MessageBox.Show("Verifique se o e-mail foi digitado corretamente.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Digite um CNPJ válido.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Fornecedor f = new Fornecedor(txtNome.Text, txtRazaoSocial.Text, Convert.ToInt64(mskCNPJ.Text), Convert.ToInt32(mskTel.Text), txtEmail.Text, txtSite.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
+                f.RegistrarFornecedor(f);
             }
         }
     }

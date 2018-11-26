@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +24,13 @@ namespace organ
         private int cod_talhao2;
         private int cod_talhao3;
 
-        public Plantio(int cod_plantio, String nome_plantio, String data_inicio, String data_colheita, int cod_funcionario, int cod_funcionario2, int cod_funcionario3, int cod_semente, int cod_fertilizante, int cod_defensivo, int cod_talhao, int cod_talhao2, int cod_talhao3)
+        public Plantio(int cod_plantio)
         {
             this.Cod_plantio = cod_plantio;
+        }
+
+        public Plantio(String nome_plantio, String data_inicio, String data_colheita, int cod_funcionario, int cod_funcionario2, int cod_funcionario3, int cod_semente, int cod_fertilizante, int cod_defensivo, int cod_talhao, int cod_talhao2, int cod_talhao3)
+        {
             this.Nome_plantio = nome_plantio;
             this.Data_inicio = data_inicio;
             this.Data_colheita = data_colheita;
@@ -104,5 +110,20 @@ namespace organ
             get { return cod_talhao3; }
             set { cod_talhao3 = value; }
         }
+
+        public void ExcluirPlantio(Plantio p)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_PLANTIO", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_PLANTIO", p.Cod_plantio);
+                sqlCmd.ExecuteNonQuery();
+            }
+        }
+
     }
 }

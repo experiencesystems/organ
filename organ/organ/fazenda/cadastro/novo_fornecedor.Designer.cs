@@ -179,7 +179,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(308, 33);
-            this.txtNome.MaxLength = 100;
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(427, 33);
             this.txtNome.TabIndex = 2;
@@ -389,6 +389,7 @@
             // 
             // cboUF
             // 
+            this.cboUF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUF.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.cboUF.FormattingEnabled = true;
             this.cboUF.Location = new System.Drawing.Point(960, 393);
@@ -427,7 +428,7 @@
             this.mskNumero.Mask = "000000000";
             this.mskNumero.Name = "mskNumero";
             this.mskNumero.Size = new System.Drawing.Size(128, 33);
-            this.mskNumero.TabIndex = 75;
+            this.mskNumero.TabIndex = 10;
             // 
             // novo_fornecedor
             // 

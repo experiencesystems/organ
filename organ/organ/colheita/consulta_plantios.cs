@@ -1,36 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace organ
 {
-    public partial class doencas : UserControl
+    public partial class consulta_plantios : Form
     {
-
-        public doencas()
+        public consulta_plantios()
         {
             InitializeComponent();
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            int h = Screen.PrimaryScreen.WorkingArea.Height - 83;
+            int w = Screen.PrimaryScreen.WorkingArea.Width - 131;
+            this.ClientSize = new Size(w, h);
             PreencherDataGridView();
-        }
-
-        private void btnVoltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            using (nova_doenca _nova_doenca = new nova_doenca())
-            {
-                _nova_doenca.ShowDialog(this);
-            }
         }
 
         void PreencherDataGridView()
@@ -39,11 +29,11 @@ namespace organ
             {
                 try
                 {
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_doenca AS [Código], nome_doenca AS [Doença], desc_doenca AS [Descrição] FROM tbDoenca " +
-                                                              "ORDER BY cod_doenca ASC; ", con);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SP_SELECT_PLANTIO", con);
+                    sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
-                    dgvDoencas.DataSource = dtbl;
+                    dgvPlantios.DataSource = dtbl;
                 }
                 catch (SqlException e)
                 {
@@ -56,20 +46,25 @@ namespace organ
             }
         }
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             PreencherDataGridView();
         }
 
-        private void dgvDoencas_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        private void dgvPlantios_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (dgvDoencas.CurrentRow.Cells["Código"].Value != DBNull.Value)
+            if (dgvPlantios.CurrentRow.Cells["Código"].Value != DBNull.Value)
             {
                 if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                   Doenca d = new Doenca(Convert.ToInt16(dgvDoencas.CurrentRow.Cells["Código"].Value));
+                    Colheita c = new Colheita(Convert.ToInt16(dgvPlantios.CurrentRow.Cells["Código"].Value));
 
-                    d.ExcluirDoenca(d);
+                    c.ExcluirColheita(c);
                 }
                 else
                     e.Cancel = true;

@@ -11,13 +11,19 @@ namespace organ
 {
     public class Ferramenta : Produto
     {
-        public Ferramenta(String nome, String descricao, String marca, int quantidade, int cod_fornecedor)
+        public Ferramenta(int codigo)
+        {
+            this.Codigo = codigo;
+        }
+
+        public Ferramenta(String nome, String descricao, String marca, int quantidade, int cod_fornecedor, String unidademedida)
         {
             this.Nome = nome;
             this.Descricao = descricao;
             this.Marca = marca;
             this.Quantidade = quantidade;
             this.Cod_fornecedor = cod_fornecedor;
+            this.UnidadeMedida = unidademedida;
         }
 
         public void RegistrarFerramenta(Ferramenta f)
@@ -32,6 +38,7 @@ namespace organ
             cmd.Parameters.Add("@MARCA", SqlDbType.VarChar).Value = f.Marca;
             cmd.Parameters.Add("@QUANTIDADE", SqlDbType.Int).Value = f.Quantidade;
             cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = f.Cod_fornecedor;
+            cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = f.UnidadeMedida;
 
             con.Open();
 
@@ -53,6 +60,20 @@ namespace organ
                 {
                     con.Close();
                 }
+            }
+        }
+
+        public void ExcluirFerramenta(Ferramenta f)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_FERRAMENTA", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_FERRAMENTA", f.Codigo);
+                sqlCmd.ExecuteNonQuery();
             }
         }
     }

@@ -55,14 +55,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtBairro = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
+            this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mskCelular = new System.Windows.Forms.MaskedTextBox();
+            this.mskRG = new System.Windows.Forms.MaskedTextBox();
+            this.mskNumero = new System.Windows.Forms.MaskedTextBox();
+            this.mskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.cboUF = new System.Windows.Forms.ComboBox();
+            this.mskSalario = new System.Windows.Forms.MaskedTextBox();
+            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.dtDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -123,8 +125,8 @@
             this.tlpNovoFuncionario.ColumnCount = 4;
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.7685F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.37967F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.37673F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.4751F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.49275F));
+            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.43478F));
             this.tlpNovoFuncionario.Controls.Add(this.txtComplemento, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 5);
             this.tlpNovoFuncionario.Controls.Add(this.txtEndereco, 1, 4);
@@ -148,14 +150,16 @@
             this.tlpNovoFuncionario.Controls.Add(this.label8, 0, 6);
             this.tlpNovoFuncionario.Controls.Add(this.txtCidade, 3, 6);
             this.tlpNovoFuncionario.Controls.Add(this.txtBairro, 1, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox1, 1, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox2, 1, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox3, 3, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox4, 3, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox5, 3, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox6, 3, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.comboBox1, 1, 7);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox7, 3, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.mskTelefone, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.mskCelular, 3, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.mskRG, 3, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.mskNumero, 3, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.mskCEP, 3, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.cboUF, 1, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.mskSalario, 3, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.mskCPF, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.dtDataNasc, 3, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.label9, 2, 3);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -181,7 +185,7 @@
             this.txtComplemento.MaxLength = 20;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(401, 33);
-            this.txtComplemento.TabIndex = 44;
+            this.txtComplemento.TabIndex = 11;
             // 
             // label2
             // 
@@ -200,7 +204,7 @@
             this.txtEndereco.MaxLength = 50;
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(401, 33);
-            this.txtEndereco.TabIndex = 43;
+            this.txtEndereco.TabIndex = 9;
             // 
             // txtEmail
             // 
@@ -209,7 +213,7 @@
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(401, 33);
-            this.txtEmail.TabIndex = 42;
+            this.txtEmail.TabIndex = 7;
             // 
             // lblDefensivo
             // 
@@ -251,18 +255,17 @@
             this.lblQntDefensivo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQntDefensivo.Location = new System.Drawing.Point(794, 150);
             this.lblQntDefensivo.Name = "lblQntDefensivo";
-            this.lblQntDefensivo.Size = new System.Drawing.Size(137, 60);
+            this.lblQntDefensivo.Size = new System.Drawing.Size(193, 60);
             this.lblQntDefensivo.TabIndex = 7;
             this.lblQntDefensivo.Text = "Celular";
             // 
             // lblQntFertilizante
             // 
             this.lblQntFertilizante.AutoSize = true;
-            this.lblQntFertilizante.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblQntFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQntFertilizante.Location = new System.Drawing.Point(794, 90);
             this.lblQntFertilizante.Name = "lblQntFertilizante";
-            this.lblQntFertilizante.Size = new System.Drawing.Size(137, 60);
+            this.lblQntFertilizante.Size = new System.Drawing.Size(46, 26);
             this.lblQntFertilizante.TabIndex = 11;
             this.lblQntFertilizante.Text = "RG*";
             // 
@@ -296,7 +299,7 @@
             this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(401, 33);
-            this.txtNome.TabIndex = 18;
+            this.txtNome.TabIndex = 2;
             // 
             // label1
             // 
@@ -321,10 +324,10 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(937, 573);
+            this.btnRegistrar.Location = new System.Drawing.Point(993, 573);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -346,7 +349,7 @@
             this.txtCargo.MaxLength = 30;
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(401, 33);
-            this.txtCargo.TabIndex = 45;
+            this.txtCargo.TabIndex = 16;
             // 
             // label5
             // 
@@ -391,11 +394,11 @@
             // txtCidade
             // 
             this.txtCidade.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.txtCidade.Location = new System.Drawing.Point(937, 393);
+            this.txtCidade.Location = new System.Drawing.Point(993, 393);
             this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(361, 33);
-            this.txtCidade.TabIndex = 53;
+            this.txtCidade.TabIndex = 14;
             // 
             // txtBairro
             // 
@@ -404,80 +407,108 @@
             this.txtBairro.MaxLength = 50;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(401, 33);
-            this.txtBairro.TabIndex = 56;
+            this.txtBairro.TabIndex = 13;
             // 
-            // maskedTextBox1
+            // mskTelefone
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(334, 93);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(181, 33);
-            this.maskedTextBox1.TabIndex = 57;
+            this.mskTelefone.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskTelefone.Location = new System.Drawing.Point(334, 153);
+            this.mskTelefone.Mask = "(00) 0000-0000";
+            this.mskTelefone.Name = "mskTelefone";
+            this.mskTelefone.Size = new System.Drawing.Size(181, 33);
+            this.mskTelefone.TabIndex = 5;
+            this.mskTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox2
+            // mskCelular
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(334, 153);
-            this.maskedTextBox2.Mask = "(00) 0000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(181, 33);
-            this.maskedTextBox2.TabIndex = 58;
+            this.mskCelular.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskCelular.Location = new System.Drawing.Point(993, 153);
+            this.mskCelular.Mask = "(00) 00000-0000";
+            this.mskCelular.Name = "mskCelular";
+            this.mskCelular.Size = new System.Drawing.Size(191, 33);
+            this.mskCelular.TabIndex = 6;
+            this.mskCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox3
+            // mskRG
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox3.Location = new System.Drawing.Point(937, 153);
-            this.maskedTextBox3.Mask = "(00) 00000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(191, 33);
-            this.maskedTextBox3.TabIndex = 59;
+            this.mskRG.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskRG.Location = new System.Drawing.Point(993, 93);
+            this.mskRG.Mask = "00.000.000-0";
+            this.mskRG.Name = "mskRG";
+            this.mskRG.Size = new System.Drawing.Size(191, 33);
+            this.mskRG.TabIndex = 4;
+            this.mskRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox4
+            // mskNumero
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox4.Location = new System.Drawing.Point(937, 93);
-            this.maskedTextBox4.Mask = "00.000.000-0";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(191, 33);
-            this.maskedTextBox4.TabIndex = 60;
+            this.mskNumero.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskNumero.Location = new System.Drawing.Point(993, 273);
+            this.mskNumero.Mask = "000000000";
+            this.mskNumero.Name = "mskNumero";
+            this.mskNumero.Size = new System.Drawing.Size(191, 33);
+            this.mskNumero.TabIndex = 10;
+            this.mskNumero.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox5
+            // mskCEP
             // 
-            this.maskedTextBox5.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox5.Location = new System.Drawing.Point(937, 273);
-            this.maskedTextBox5.Mask = "000000000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(191, 33);
-            this.maskedTextBox5.TabIndex = 61;
+            this.mskCEP.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskCEP.Location = new System.Drawing.Point(993, 333);
+            this.mskCEP.Mask = "00000-000";
+            this.mskCEP.Name = "mskCEP";
+            this.mskCEP.Size = new System.Drawing.Size(191, 33);
+            this.mskCEP.TabIndex = 12;
+            this.mskCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox6
+            // cboUF
             // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox6.Location = new System.Drawing.Point(937, 333);
-            this.maskedTextBox6.Mask = "00000-000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(191, 33);
-            this.maskedTextBox6.TabIndex = 62;
+            this.cboUF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUF.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.cboUF.FormattingEnabled = true;
+            this.cboUF.Location = new System.Drawing.Point(334, 452);
+            this.cboUF.MaxLength = 2;
+            this.cboUF.Name = "cboUF";
+            this.cboUF.Size = new System.Drawing.Size(121, 34);
+            this.cboUF.TabIndex = 15;
             // 
-            // comboBox1
+            // mskSalario
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(334, 452);
-            this.comboBox1.MaxLength = 2;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 34);
-            this.comboBox1.TabIndex = 63;
+            this.mskSalario.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskSalario.Location = new System.Drawing.Point(993, 513);
+            this.mskSalario.Mask = "$ 00000.00";
+            this.mskSalario.Name = "mskSalario";
+            this.mskSalario.Size = new System.Drawing.Size(191, 33);
+            this.mskSalario.TabIndex = 17;
             // 
-            // maskedTextBox7
+            // mskCPF
             // 
-            this.maskedTextBox7.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.maskedTextBox7.Location = new System.Drawing.Point(937, 513);
-            this.maskedTextBox7.Mask = "$ 00000.00";
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(191, 33);
-            this.maskedTextBox7.TabIndex = 64;
+            this.mskCPF.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.mskCPF.Location = new System.Drawing.Point(334, 93);
+            this.mskCPF.Mask = "000.000.000-00";
+            this.mskCPF.Name = "mskCPF";
+            this.mskCPF.Size = new System.Drawing.Size(181, 33);
+            this.mskCPF.TabIndex = 3;
+            this.mskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // dtDataNasc
+            // 
+            this.dtDataNasc.CustomFormat = "dd/MM/yyyy";
+            this.dtDataNasc.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.dtDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDataNasc.Location = new System.Drawing.Point(993, 213);
+            this.dtDataNasc.Name = "dtDataNasc";
+            this.dtDataNasc.Size = new System.Drawing.Size(361, 33);
+            this.dtDataNasc.TabIndex = 8;
+            this.dtDataNasc.Value = new System.DateTime(2018, 11, 25, 0, 0, 0, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(794, 210);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(192, 26);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "Data de nascimento*";
             // 
             // novo_funcionario
             // 
@@ -528,13 +559,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
+        private System.Windows.Forms.MaskedTextBox mskCPF;
+        private System.Windows.Forms.MaskedTextBox mskTelefone;
+        private System.Windows.Forms.MaskedTextBox mskCelular;
+        private System.Windows.Forms.MaskedTextBox mskRG;
+        private System.Windows.Forms.MaskedTextBox mskNumero;
+        private System.Windows.Forms.MaskedTextBox mskCEP;
+        private System.Windows.Forms.ComboBox cboUF;
+        private System.Windows.Forms.MaskedTextBox mskSalario;
+        private System.Windows.Forms.DateTimePicker dtDataNasc;
+        private System.Windows.Forms.Label label9;
     }
 }

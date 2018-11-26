@@ -8,17 +8,29 @@ namespace organ
 {
     public class Talhao
     {
+        private int codigo;
         private String nome_talhao;
+        private String tipo_solo;
         private int tamanho;
         private double incidencia_solar;
         private double incidencia_vento;
         private double acidez;
         private bool disponibilidade;
         
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
         public String Nome_talhao
         {
             get { return nome_talhao; }
             set { nome_talhao = value; }
+        }
+        public String Tipo_solo
+        {
+            get { return tipo_solo; }
+            set { tipo_solo = value; }
         }
         public int Tamanho
         {
@@ -44,6 +56,11 @@ namespace organ
         {
             get { return disponibilidade; }
             set { disponibilidade = value; }
+        }
+
+        public Talhao(int codigo)
+        {
+            this.Codigo = codigo;
         }
 
         public Talhao(String nome_talhao, int tamanho, double incidencia_solar, double incidencia_vento, double acidez, bool disponibilidade)

@@ -35,16 +35,16 @@
             this.lblFertilizante = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxtDescricao = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.mskQuantidade = new System.Windows.Forms.MaskedTextBox();
+            this.cboUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -108,16 +108,16 @@
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.textBox1, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtMarca, 1, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 2);
             this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.richTextBox1, 1, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.rtxtDescricao, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 4);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 6);
             this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.maskedTextBox1, 1, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.comboBox1, 1, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.mskQuantidade, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 5);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -161,16 +161,16 @@
             this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(642, 33);
-            this.txtNome.TabIndex = 18;
+            this.txtNome.TabIndex = 2;
             // 
-            // textBox1
+            // txtMarca
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textBox1.Location = new System.Drawing.Point(380, 93);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(642, 30);
-            this.textBox1.TabIndex = 50;
+            this.txtMarca.Font = new System.Drawing.Font("Calibri", 14F);
+            this.txtMarca.Location = new System.Drawing.Point(380, 93);
+            this.txtMarca.MaxLength = 50;
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(642, 30);
+            this.txtMarca.TabIndex = 3;
             // 
             // label2
             // 
@@ -199,18 +199,17 @@
             this.cboFornecedor.Location = new System.Drawing.Point(380, 153);
             this.cboFornecedor.Name = "cboFornecedor";
             this.cboFornecedor.Size = new System.Drawing.Size(642, 31);
-            this.cboFornecedor.TabIndex = 53;
-            this.cboFornecedor.SelectedIndexChanged += new System.EventHandler(this.cboFornecedor_SelectedIndexChanged);
+            this.cboFornecedor.TabIndex = 4;
             // 
-            // richTextBox1
+            // rtxtDescricao
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(380, 213);
-            this.richTextBox1.MaxLength = 200;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(642, 67);
-            this.richTextBox1.TabIndex = 54;
-            this.richTextBox1.Text = "";
+            this.rtxtDescricao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtDescricao.Location = new System.Drawing.Point(380, 213);
+            this.rtxtDescricao.MaxLength = 200;
+            this.rtxtDescricao.Name = "rtxtDescricao";
+            this.rtxtDescricao.Size = new System.Drawing.Size(642, 67);
+            this.rtxtDescricao.TabIndex = 5;
+            this.rtxtDescricao.Text = "";
             // 
             // label3
             // 
@@ -229,9 +228,10 @@
             this.btnRegistrar.Location = new System.Drawing.Point(767, 414);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.TabIndex = 8;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label4
             // 
@@ -243,23 +243,24 @@
             this.label4.TabIndex = 56;
             this.label4.Text = "Unidade de medida*";
             // 
-            // maskedTextBox1
+            // mskQuantidade
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(380, 294);
-            this.maskedTextBox1.Mask = "000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(121, 31);
-            this.maskedTextBox1.TabIndex = 57;
+            this.mskQuantidade.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.mskQuantidade.Location = new System.Drawing.Point(380, 294);
+            this.mskQuantidade.Mask = "000000000";
+            this.mskQuantidade.Name = "mskQuantidade";
+            this.mskQuantidade.Size = new System.Drawing.Size(121, 31);
+            this.mskQuantidade.TabIndex = 6;
             // 
-            // comboBox1
+            // cboUnidadeMedida
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(380, 354);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 31);
-            this.comboBox1.TabIndex = 58;
+            this.cboUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidadeMedida.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.cboUnidadeMedida.FormattingEnabled = true;
+            this.cboUnidadeMedida.Location = new System.Drawing.Point(380, 354);
+            this.cboUnidadeMedida.Name = "cboUnidadeMedida";
+            this.cboUnidadeMedida.Size = new System.Drawing.Size(121, 31);
+            this.cboUnidadeMedida.TabIndex = 7;
             // 
             // nova_ferramenta
             // 
@@ -291,15 +292,15 @@
         private System.Windows.Forms.Label lblFertilizante;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboFornecedor;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtxtDescricao;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.MaskedTextBox mskQuantidade;
+        private System.Windows.Forms.ComboBox cboUnidadeMedida;
     }
 }

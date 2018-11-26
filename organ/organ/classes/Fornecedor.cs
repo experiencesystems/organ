@@ -11,13 +11,20 @@ namespace organ
 {
     public class Fornecedor
     {
+        private int codigo;
         private String nome_fantasia;
         private String razao_social;
         private long cnpj;
         private long telefone;
         private String email;
         private String site;
+        private String status;
         
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
         public String Nome_fantasia
         {
             get { return nome_fantasia; }
@@ -48,9 +55,18 @@ namespace organ
             get { return site; }
             set { site = value; }
         }
-
+        public String Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
         public Endereco endereco { get; set; }
        
+        public Fornecedor(int codigo)
+        {
+            this.Codigo = codigo;
+        }
+        
         public Fornecedor(String nome_fantasia, String razao_social, long cnpj, long telefone, String email, String site, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
@@ -73,8 +89,10 @@ namespace organ
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
 
-            SqlCommand cmd = new SqlCommand("SP_INSERT_FORNECEDOR", con);
-            cmd.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand("SP_INSERT_FORNECEDOR", con)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             cmd.Parameters.Add("@CEP", SqlDbType.Int).Value = f.endereco.CEP;
             cmd.Parameters.Add("@NUMERO", SqlDbType.Int).Value = f.endereco.Numero;
@@ -110,6 +128,20 @@ namespace organ
                 {
                     con.Close();
                 }
+            }
+        }
+
+        public void ExcluirFornecedor(Fornecedor f)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_FORNECEDOR", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_FORNECEDOR", f.Codigo);
+                sqlCmd.ExecuteNonQuery();
             }
         }
     }

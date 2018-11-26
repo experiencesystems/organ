@@ -44,11 +44,11 @@ namespace organ
                 try
                 {
                     SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT M.cod_maquina AS [Código], M.nome_maq AS [Nome], M.marca_maq AS [Marca], M.desc_maq AS [Descrição], " +
-                                                              "E.qtd_estoque AS [Quantidade], F.nome_fantasia AS [Fornecedor] " +
+                                                              "E.qtd_estoque AS [Quantidade], F.nome_fantasia AS [Fornecedor], F.cod_fornecedor AS [Código do fornecedor] " +
                                                               "FROM tbMaquina M " +
                                                               "INNER JOIN tbEstoque E ON M.cod_estoque = E.cod_estoque " +
-                                                              "INNER JOIN tbFornecedor F ON M.cod_fornecedor = F.cod_fornecedor " +
-                                                              "ORDER BY cod_maquina ASC;", con);
+                                                              "LEFT JOIN tbFornecedor F ON M.cod_fornecedor = F.cod_fornecedor " +
+                                                              "ORDER BY M.cod_maquina ASC;", con);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvMaquinas.DataSource = dtbl;
@@ -66,24 +66,24 @@ namespace organ
 
         private void dgvMaquinas_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (dgvMaquinas.CurrentRow.Cells["txtEmployeeID"].Value != DBNull.Value)
+            if (dgvMaquinas.CurrentRow.Cells["Código"].Value != DBNull.Value)
             {
-                if (MessageBox.Show("Tem certeza que quer deletar essa linha?", "DataGridView", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
-                    {
-                        sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("EmployeeDeleteByID", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue("@EmployeeID", Convert.ToInt32(dgvMaquinas.CurrentRow.Cells["txtEmployeeID"].Value));
-                        sqlCmd.ExecuteNonQuery();
-                    }
+                    Maquina m = new Maquina(Convert.ToInt16(dgvMaquinas.CurrentRow.Cells["Código"].Value));
+
+                    m.ExcluirMaquina(m);
                 }
                 else
                     e.Cancel = true;
             }
             else
                 e.Cancel = true;
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            PreencherDataGridView();
         }
     }
 }

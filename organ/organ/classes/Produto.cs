@@ -8,12 +8,19 @@ namespace organ
 {
     public class Produto
     {
+        private int codigo;
         private String nome;
         private String descricao;
         private String marca;
         private int quantidade;
+        public String unidademedida;
         private int cod_fornecedor;
 
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
         public String Nome
         {
             get { return nome; }
@@ -34,10 +41,21 @@ namespace organ
             get { return quantidade; }
             set { quantidade = value; }
         }
+
+        public String UnidadeMedida
+        {
+            get { return unidademedida; }
+            set { unidademedida = value; }
+        }
+
+        // perguntar pra aline
+
+        public Fornecedor fornecedor { get; set; }
+        
         public int Cod_fornecedor
         {
-            get { return cod_fornecedor; }
-            set { cod_fornecedor = value; }
+            get { return fornecedor.Codigo; }
+            set { cod_fornecedor = fornecedor.Codigo; }
         }
     }
 }

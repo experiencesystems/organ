@@ -141,6 +141,10 @@
             this.lblNomeSemente6 = new System.Windows.Forms.Label();
             this.lblDataColheita6 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpBotoesInferiores = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDetalhesPlantios = new System.Windows.Forms.Button();
+            this.btnColheitasRealizadas = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -176,6 +180,8 @@
             this.panel6.SuspendLayout();
             this.tlpPanelTalhao6.SuspendLayout();
             this.tlpLabelsTalhao6.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tlpBotoesInferiores.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -196,11 +202,11 @@
             this.lblProgressoPlantios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProgressoPlantios.AutoSize = true;
-            this.lblProgressoPlantios.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgressoPlantios.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProgressoPlantios.Location = new System.Drawing.Point(3, 0);
             this.lblProgressoPlantios.Name = "lblProgressoPlantios";
             this.lblProgressoPlantios.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.lblProgressoPlantios.Size = new System.Drawing.Size(1383, 43);
+            this.lblProgressoPlantios.Size = new System.Drawing.Size(1383, 44);
             this.lblProgressoPlantios.TabIndex = 6;
             this.lblProgressoPlantios.Text = "Progresso dos plantios";
             this.lblProgressoPlantios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -231,7 +237,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1389, 731);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1389, 636);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // panel11
@@ -1647,10 +1653,68 @@
             this.label24.TabIndex = 5;
             this.label24.Text = "Data da colheita:";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.tlpBotoesInferiores, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 693);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1389, 95);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // tlpBotoesInferiores
+            // 
+            this.tlpBotoesInferiores.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tlpBotoesInferiores.ColumnCount = 2;
+            this.tlpBotoesInferiores.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotoesInferiores.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotoesInferiores.Controls.Add(this.btnDetalhesPlantios, 0, 0);
+            this.tlpBotoesInferiores.Controls.Add(this.btnColheitasRealizadas, 1, 0);
+            this.tlpBotoesInferiores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBotoesInferiores.Location = new System.Drawing.Point(3, 3);
+            this.tlpBotoesInferiores.Name = "tlpBotoesInferiores";
+            this.tlpBotoesInferiores.RowCount = 1;
+            this.tlpBotoesInferiores.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotoesInferiores.Size = new System.Drawing.Size(1383, 89);
+            this.tlpBotoesInferiores.TabIndex = 0;
+            // 
+            // btnDetalhesPlantios
+            // 
+            this.btnDetalhesPlantios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDetalhesPlantios.FlatAppearance.BorderSize = 0;
+            this.btnDetalhesPlantios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalhesPlantios.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalhesPlantios.Location = new System.Drawing.Point(5, 5);
+            this.btnDetalhesPlantios.Name = "btnDetalhesPlantios";
+            this.btnDetalhesPlantios.Size = new System.Drawing.Size(682, 79);
+            this.btnDetalhesPlantios.TabIndex = 0;
+            this.btnDetalhesPlantios.Text = "Detalhes dos plantios";
+            this.btnDetalhesPlantios.UseVisualStyleBackColor = true;
+            this.btnDetalhesPlantios.Click += new System.EventHandler(this.btnDetalhesPlantios_Click);
+            // 
+            // btnColheitasRealizadas
+            // 
+            this.btnColheitasRealizadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnColheitasRealizadas.FlatAppearance.BorderSize = 0;
+            this.btnColheitasRealizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColheitasRealizadas.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColheitasRealizadas.Location = new System.Drawing.Point(695, 5);
+            this.btnColheitasRealizadas.Name = "btnColheitasRealizadas";
+            this.btnColheitasRealizadas.Size = new System.Drawing.Size(683, 79);
+            this.btnColheitasRealizadas.TabIndex = 1;
+            this.btnColheitasRealizadas.Text = "Colheitas realizadas";
+            this.btnColheitasRealizadas.UseVisualStyleBackColor = true;
+            this.btnColheitasRealizadas.Click += new System.EventHandler(this.btnColheitasRealizadas_Click);
+            // 
             // colheita
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "colheita";
@@ -1703,6 +1767,8 @@
             this.tlpPanelTalhao6.ResumeLayout(false);
             this.tlpLabelsTalhao6.ResumeLayout(false);
             this.tlpLabelsTalhao6.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tlpBotoesInferiores.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1822,5 +1888,9 @@
         private System.Windows.Forms.Label lblNomeSemente6;
         private System.Windows.Forms.Label lblDataColheita6;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tlpBotoesInferiores;
+        private System.Windows.Forms.Button btnDetalhesPlantios;
+        private System.Windows.Forms.Button btnColheitasRealizadas;
     }
 }

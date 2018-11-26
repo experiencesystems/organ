@@ -11,13 +11,19 @@ namespace organ
 {
     public class Maquina : Produto
     {
-        public Maquina(String nome, String descricao, String marca, int quantidade, int cod_fornecedor)
+        public Maquina(int codigo)
+        {
+            this.Codigo = codigo;
+        }
+
+        public Maquina(String nome, String descricao, String marca, int quantidade, int cod_fornecedor, String unidademedida)
         {
             this.Nome = nome;
             this.Descricao = descricao;
             this.Marca = marca;
             this.Quantidade = quantidade;
             this.Cod_fornecedor = cod_fornecedor;
+            this.UnidadeMedida = unidademedida;
         }
 
         public void RegistrarMaquina(Maquina m)
@@ -32,6 +38,7 @@ namespace organ
             cmd.Parameters.Add("@MARCA", SqlDbType.VarChar).Value = m.Marca;
             cmd.Parameters.Add("@QUANTIDADE", SqlDbType.Int).Value = m.Quantidade;
             cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = m.Cod_fornecedor;
+            cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = m.UnidadeMedida;
 
             con.Open();
 
@@ -53,6 +60,20 @@ namespace organ
                 {
                     con.Close();
                 }
+            }
+        }
+
+        public void ExcluirMaquina(Maquina m)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_MAQUINA", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_MAQUINA", m.Codigo);
+                sqlCmd.ExecuteNonQuery();
             }
         }
     }

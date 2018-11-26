@@ -36,11 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblNovaFerramenta = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tlpNovoFuncionario.SuspendLayout();
             this.tlpBarraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +91,7 @@
             this.richTextBox1.MaxLength = 200;
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(740, 160);
-            this.richTextBox1.TabIndex = 54;
+            this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
             // 
             // btnRegistrar
@@ -101,7 +101,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(844, 386);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(255, 50);
-            this.btnRegistrar.TabIndex = 49;
+            this.btnRegistrar.TabIndex = 6;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
@@ -127,21 +127,42 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(359, 93);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(740, 31);
-            this.comboBox2.TabIndex = 59;
+            this.comboBox2.TabIndex = 3;
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(359, 153);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(740, 31);
-            this.comboBox3.TabIndex = 60;
+            this.comboBox3.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(103, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 26);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Título";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(359, 33);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(740, 31);
+            this.textBox1.TabIndex = 2;
             // 
             // tlpBarraSuperior
             // 
@@ -190,24 +211,6 @@
             this.lblNovaFerramenta.Size = new System.Drawing.Size(157, 34);
             this.lblNovaFerramenta.TabIndex = 30;
             this.lblNovaFerramenta.Text = "Novo relatório";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 26);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Título";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(359, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(740, 31);
-            this.textBox1.TabIndex = 62;
             // 
             // novo_relatorio
             // 

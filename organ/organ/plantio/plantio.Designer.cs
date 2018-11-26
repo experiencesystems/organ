@@ -55,11 +55,11 @@
             this.btnDefensivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDefensivo.Font = new System.Drawing.Font("Calibri", 20F);
             this.btnDefensivo.Image = global::organ.Properties.Resources.defensivo_2;
-            this.btnDefensivo.Location = new System.Drawing.Point(1044, 354);
-            this.btnDefensivo.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.btnDefensivo.Location = new System.Drawing.Point(1044, 340);
+            this.btnDefensivo.Margin = new System.Windows.Forms.Padding(20);
             this.btnDefensivo.Name = "btnDefensivo";
             this.btnDefensivo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnDefensivo.Size = new System.Drawing.Size(473, 315);
+            this.btnDefensivo.Size = new System.Drawing.Size(473, 281);
             this.btnDefensivo.TabIndex = 9;
             this.btnDefensivo.Text = " Defensivo";
             this.btnDefensivo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -75,11 +75,11 @@
             this.btnFerramentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFerramentas.Font = new System.Drawing.Font("Calibri", 20F);
             this.btnFerramentas.Image = global::organ.Properties.Resources.ferramentas_2;
-            this.btnFerramentas.Location = new System.Drawing.Point(532, 354);
-            this.btnFerramentas.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.btnFerramentas.Location = new System.Drawing.Point(532, 340);
+            this.btnFerramentas.Margin = new System.Windows.Forms.Padding(20);
             this.btnFerramentas.Name = "btnFerramentas";
             this.btnFerramentas.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnFerramentas.Size = new System.Drawing.Size(472, 315);
+            this.btnFerramentas.Size = new System.Drawing.Size(472, 281);
             this.btnFerramentas.TabIndex = 8;
             this.btnFerramentas.Text = "Ferramentas";
             this.btnFerramentas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -95,11 +95,11 @@
             this.btnMaquinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaquinas.Font = new System.Drawing.Font("Calibri", 20F);
             this.btnMaquinas.Image = global::organ.Properties.Resources.trator_10;
-            this.btnMaquinas.Location = new System.Drawing.Point(20, 354);
-            this.btnMaquinas.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.btnMaquinas.Location = new System.Drawing.Point(20, 340);
+            this.btnMaquinas.Margin = new System.Windows.Forms.Padding(20);
             this.btnMaquinas.Name = "btnMaquinas";
             this.btnMaquinas.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnMaquinas.Size = new System.Drawing.Size(472, 315);
+            this.btnMaquinas.Size = new System.Drawing.Size(472, 281);
             this.btnMaquinas.TabIndex = 7;
             this.btnMaquinas.Text = "Máquinas";
             this.btnMaquinas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -119,7 +119,7 @@
             this.btnSementes.Margin = new System.Windows.Forms.Padding(20, 0, 20, 20);
             this.btnSementes.Name = "btnSementes";
             this.btnSementes.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnSementes.Size = new System.Drawing.Size(472, 314);
+            this.btnSementes.Size = new System.Drawing.Size(472, 300);
             this.btnSementes.TabIndex = 6;
             this.btnSementes.Text = "Sementes";
             this.btnSementes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -139,7 +139,7 @@
             this.btnFertilizantes.Margin = new System.Windows.Forms.Padding(20, 0, 20, 20);
             this.btnFertilizantes.Name = "btnFertilizantes";
             this.btnFertilizantes.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnFertilizantes.Size = new System.Drawing.Size(472, 314);
+            this.btnFertilizantes.Size = new System.Drawing.Size(472, 300);
             this.btnFertilizantes.TabIndex = 5;
             this.btnFertilizantes.Text = "Fertilizantes";
             this.btnFertilizantes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -159,7 +159,7 @@
             this.btnSolo.Margin = new System.Windows.Forms.Padding(20, 0, 20, 20);
             this.btnSolo.Name = "btnSolo";
             this.btnSolo.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
-            this.btnSolo.Size = new System.Drawing.Size(473, 314);
+            this.btnSolo.Size = new System.Drawing.Size(473, 300);
             this.btnSolo.TabIndex = 4;
             this.btnSolo.Text = "Solo";
             this.btnSolo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -206,7 +206,7 @@
             this.tlpBotoesCentrais.RowCount = 2;
             this.tlpBotoesCentrais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBotoesCentrais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBotoesCentrais.Size = new System.Drawing.Size(1537, 669);
+            this.tlpBotoesCentrais.Size = new System.Drawing.Size(1537, 641);
             this.tlpBotoesCentrais.TabIndex = 17;
             // 
             // novo_plantio1
