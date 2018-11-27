@@ -78,7 +78,7 @@ namespace organ
             }
             else
             {//registra, mas se telefones forem nulos nao le como int 64
-                Funcionario f = new Funcionario(txtNome.Text, Convert.ToInt64(mskCPF.Text), Convert.ToInt64(mskRG.Text), Convert.ToInt64(mskTelefone.Text), Convert.ToInt64(mskCelular.Text), txtEmail.Text, txtCargo.Text, salario, dtDataNasc.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
+                Funcionario f = new Funcionario(txtNome.Text, mskCPF.Text, mskRG.Text, mskTelefone.Text, mskCelular.Text, txtEmail.Text, txtCargo.Text, salario, dtDataNasc.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
                 f.RegistrarFuncionario(f);
             }
         }

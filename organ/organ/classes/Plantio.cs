@@ -144,7 +144,7 @@ namespace organ
             SqlCommand cmd = new SqlCommand("SP_INSERT_PLANTIO", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@DATA_COLHEITA", SqlDbType.Date).Value = p.Data_colheita;
+            cmd.Parameters.Add("@DATA_COLHEITA", SqlDbType.NVarChar).Value = p.Data_colheita;
             cmd.Parameters.Add("@COD_FUNCIONARIO", SqlDbType.Int).Value = p.Cod_funcionario;
             cmd.Parameters.Add("@COD_FUNCIONARIO2", SqlDbType.Int).Value = p.Cod_funcionario2;
             cmd.Parameters.Add("@COD_FUNCIONARIO3", SqlDbType.Int).Value = p.Cod_funcionario3;

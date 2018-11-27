@@ -62,5 +62,19 @@ namespace organ
         {
 
         }
+
+        private void dgvRelatorios_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_RELATORIO", sqlCon)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                sqlCmd.Parameters.AddWithValue("@COD_RELATORIO", Convert.ToInt16(dgvRelatorios.CurrentRow.Cells["Código"].Value));
+                sqlCmd.ExecuteNonQuery();
+            }
+        }
     }
-}
+    }

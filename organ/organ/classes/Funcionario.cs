@@ -13,10 +13,10 @@ namespace organ
     {
         private int codigo;
         private String nome_funcionario;
-        private long cpf;
-        private long rg;
-        private long telefone;
-        private long celular;
+        private String cpf;
+        private String rg;
+        private String telefone;
+        private String celular;
         private String email;
         private String cargo;
         private String salario;
@@ -33,22 +33,22 @@ namespace organ
             get { return nome_funcionario; }
             set { nome_funcionario = value; }
         }
-        public long CPF
+        public String CPF
         {
             get { return cpf; }
             set { cpf = value; }
         }
-        public long RG
+        public String RG
         {
             get { return rg; }
             set { rg = value; }
         }
-        public long Telefone
+        public String Telefone
         {
             get { return telefone; }
             set { telefone = value; }
         }
-        public long Celular
+        public String Celular
         {
             get { return celular; }
             set { celular = value; }
@@ -85,7 +85,7 @@ namespace organ
             this.Codigo = codigo;
         }
 
-        public Funcionario(String nome_funcionario, long cpf, long rg, long telefone, long celular, String email, String cargo, String salario, String data_nasc, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+        public Funcionario(String nome_funcionario, String cpf, String rg, String telefone, String celular, String email, String cargo, String salario, String data_nasc, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
             this.Nome_funcionario = nome_funcionario;
@@ -121,11 +121,11 @@ namespace organ
             cmd.Parameters.Add("@CIDADE", SqlDbType.VarChar).Value = f.endereco.Cidade;
             cmd.Parameters.Add("@UF", SqlDbType.Char).Value = f.endereco.UF;
             cmd.Parameters.Add("@NOME_FUNC", SqlDbType.VarChar).Value = f.Nome_funcionario;
-            cmd.Parameters.Add("@CPF_FUNC", SqlDbType.NVarChar).Value = f.CPF;
-            cmd.Parameters.Add("@RG_FUNC", SqlDbType.NVarChar).Value = f.RG;
+            cmd.Parameters.Add("@CPF_FUNC", SqlDbType.Char).Value = f.CPF;
+            cmd.Parameters.Add("@RG_FUNC", SqlDbType.Char).Value = f.RG;
             cmd.Parameters.Add("@DATA_NASC", SqlDbType.Date).Value = f.Data_nasc;
-            cmd.Parameters.Add("@TEL_FUNC", SqlDbType.NVarChar).Value = f.Telefone;
-            cmd.Parameters.Add("@CEL_FUNC", SqlDbType.NVarChar).Value = f.Celular;
+            cmd.Parameters.Add("@TEL_FUNC", SqlDbType.Char).Value = f.Telefone;
+            cmd.Parameters.Add("@CEL_FUNC", SqlDbType.Char).Value = f.Celular;
             cmd.Parameters.Add("@EMAIL_FUNC", SqlDbType.VarChar).Value = f.Email;
             cmd.Parameters.Add("@CARGO_FUNC", SqlDbType.VarChar).Value = f.Cargo;
             cmd.Parameters.Add("@SALARIO_FUNC", SqlDbType.VarChar).Value = f.Salario;

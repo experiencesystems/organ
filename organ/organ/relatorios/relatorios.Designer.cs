@@ -48,7 +48,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
             this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblDefensivo, 1, 0);
             this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -70,7 +70,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1194, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1193, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
@@ -158,6 +158,7 @@
             this.dgvRelatorios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRelatorios.Size = new System.Drawing.Size(1131, 662);
             this.dgvRelatorios.TabIndex = 39;
+            this.dgvRelatorios.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvRelatorios_UserDeletingRow);
             // 
             // relatorios
             // 

@@ -225,7 +225,7 @@
             this.lblDefensivo.Name = "lblDefensivo";
             this.lblDefensivo.Size = new System.Drawing.Size(225, 60);
             this.lblDefensivo.TabIndex = 9;
-            this.lblDefensivo.Text = "Telefone";
+            this.lblDefensivo.Text = "Telefone*";
             // 
             // lblDataColheita
             // 
@@ -258,7 +258,7 @@
             this.lblQntDefensivo.Name = "lblQntDefensivo";
             this.lblQntDefensivo.Size = new System.Drawing.Size(193, 60);
             this.lblQntDefensivo.TabIndex = 7;
-            this.lblQntDefensivo.Text = "Celular";
+            this.lblQntDefensivo.Text = "Celular*";
             // 
             // lblQntFertilizante
             // 

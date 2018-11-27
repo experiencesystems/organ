@@ -14,8 +14,8 @@ namespace organ
         private int cod_fornecedor;
         private String nome_fantasia;
         private String razao_social;
-        private long cnpj;
-        private long telefone;
+        private String cnpj;
+        private String telefone;
         private String email;
         private String site;
         private String status;
@@ -30,7 +30,7 @@ namespace organ
             get { return nome_fantasia; }
             set { nome_fantasia = value; }
         }
-        public long CNPJ
+        public String CNPJ
         {
             get { return cnpj; }
             set { cnpj = value; }
@@ -40,7 +40,7 @@ namespace organ
             get { return razao_social; }
             set { razao_social = value; }
         }
-        public long Telefone
+        public String Telefone
         {
             get { return telefone; }
             set { telefone = value; }
@@ -74,7 +74,7 @@ namespace organ
         }
 
         //sem cod fornecedor
-        public Fornecedor(String nome_fantasia, String razao_social, long cnpj, long telefone, String email, String site, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+        public Fornecedor(String nome_fantasia, String razao_social, String cnpj, String telefone, String email, String site, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
             this.Nome_fantasia = nome_fantasia;
@@ -111,7 +111,7 @@ namespace organ
             cmd.Parameters.Add("@NOME_FANTASIA", SqlDbType.VarChar).Value = f.Nome_fantasia;
             cmd.Parameters.Add("@CNPJ_FORN", SqlDbType.Char).Value = f.CNPJ;
             cmd.Parameters.Add("@RAZAO_SOCIAL", SqlDbType.VarChar).Value = f.Razao_social;
-            cmd.Parameters.Add("@TEL_FORN", SqlDbType.NVarChar).Value = f.Telefone;
+            cmd.Parameters.Add("@TEL_FORN", SqlDbType.Char).Value = f.Telefone;
             cmd.Parameters.Add("@EMAIL_FORN", SqlDbType.VarChar).Value = f.Email;
             cmd.Parameters.Add("@SITE_FORN", SqlDbType.VarChar).Value = f.Site;
 

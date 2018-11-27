@@ -280,7 +280,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_talhao AS [CODIGO], nome_tal AS [TALHAO] " +
                                             "FROM tbTalhao " +
-                                            "WHERE disponivel_tal = 1", con);
+                                            "WHERE disponivel_tal = 'Disponível'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -315,7 +315,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_talhao AS [CODIGO], nome_tal AS [TALHAO] " +
                                             "FROM tbTalhao " +
-                                            "WHERE disponivel_tal = 1", con);
+                                            "WHERE disponivel_tal = 'Disponível'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -350,7 +350,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_talhao AS [CODIGO], nome_tal AS [TALHAO] " +
                                             "FROM tbTalhao " +
-                                            "WHERE disponivel_tal = 1", con);
+                                            "WHERE disponivel_tal = 'Disponível'", con);
             SqlDataReader reader;
             con.Open();
             try

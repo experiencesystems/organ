@@ -48,8 +48,8 @@ namespace organ
                     if(readerNS.Read())
                     {
                         
-                        int disp = Convert.ToInt16(readerNS["disponivel_tal"]);
-                        if (disp == 1)
+                        string disp = readerNS["disponivel_tal"].ToString();
+                        if (disp == "Disponível")
                         {
                             i = i - 1;
                             labels[i].BackColor = Color.FromArgb(39, 174, 96);
