@@ -13,7 +13,7 @@ namespace organ
         private String descricao;
         private String marca;
         private int quantidade;
-        public String unidademedida;
+        private String unidademedida;
 
         public int Codigo
         {

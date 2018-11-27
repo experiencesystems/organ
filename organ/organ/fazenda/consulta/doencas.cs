@@ -39,8 +39,9 @@ namespace organ
             {
                 try
                 {
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_doenca AS [Código], nome_doenca AS [Doença], desc_doenca AS [Descrição] FROM tbDoenca " +
-                                                              "ORDER BY cod_doenca ASC; ", con);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT D.cod_doenca AS [Código], D.nome_doenca AS [Doença], D.desc_doenca AS [Descrição], S.nome_sem AS [Semente relacionada] FROM tbDoenca D " +
+                                                              "INNER JOIN tbSemente S ON D.cod_semente = S.cod_semente "+
+                                                              "ORDER BY D.cod_doenca ASC; ", con);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvDoencas.DataSource = dtbl;

@@ -17,10 +17,10 @@ namespace organ
         public inicio()
         {
             InitializeComponent();
-            StreamReader reader = new StreamReader("Resources\\cotacao.html");
+            /*StreamReader reader = new StreamReader("Resources\\cotacao.html");
             wbCotacoes.DocumentText = reader.ReadToEnd();
             StreamReader reader2 = new StreamReader("Resources\\clima.html");
-            wbClima.DocumentText = reader2.ReadToEnd();
+            wbClima.DocumentText = reader2.ReadToEnd();*/
         }
 
         private void btnProgresso_Click(object sender, EventArgs e)

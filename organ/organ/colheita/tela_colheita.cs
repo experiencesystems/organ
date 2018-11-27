@@ -17,28 +17,12 @@ namespace organ
         Label[] labels2 = new Label[11];
         string data_colheita1, data_colheita2, data_colheita3, data_colheita4, data_colheita5, data_colheita6, data_colheita7, data_colheita8, data_colheita9, data_colheita10, data_colheita11;
         string data_inicio1, data_inicio2, data_inicio3, data_inicio4, data_inicio5, data_inicio6, data_inicio7, data_inicio8, data_inicio9, data_inicio10, data_inicio11;
-
+        
         public colheita()
         {
             InitializeComponent();
         }
 
-        private void btnColheitasRealizadas_Click(object sender, EventArgs e)
-        {
-            using (consulta_colheita _consulta_colheita = new consulta_colheita())
-            {
-                _consulta_colheita.ShowDialog(this);
-            }
-        }
-
-        private void btnDetalhesPlantios_Click(object sender, EventArgs e)
-        {
-            using (consulta_plantios _consulta_plantios = new consulta_plantios())
-            {
-                _consulta_plantios.ShowDialog(this);
-            }
-        }
-        
         private void colheita_Load(object sender, EventArgs e)
         {
             PreencherCamposSementeData();
@@ -55,6 +39,392 @@ namespace organ
             CalcularBarraProgresso10();
             CalcularBarraProgresso11();
         }
+
+
+        //
+        //  ATUALIZAR PAINÉIS
+        //
+
+        private void lblProgressoPlantios_Click(object sender, EventArgs e)
+        {
+            colheita_Load(sender, e);
+        }
+
+        string qtdColhida;
+        int numtalhao;
+
+        //
+        //  CLIQUE NOS BOTÕES INFERIORES QUE ABREM NOVO FORM
+        //
+
+        private void btnColheitasRealizadas_Click(object sender, EventArgs e)
+        {
+            using (consulta_colheita _consulta_colheita = new consulta_colheita())
+            {
+                _consulta_colheita.ShowDialog(this);
+            }
+        }
+
+        private void btnDetalhesPlantios_Click(object sender, EventArgs e)
+        {
+            using (consulta_plantios _consulta_plantios = new consulta_plantios())
+            {
+                _consulta_plantios.ShowDialog(this);
+            }
+        }
+
+        //
+        //  INPUTBOX
+        //
+
+        public static string InputBox(string prompt, string title, string defaultValue)
+        {
+            InputBoxDialog ib = new InputBoxDialog();
+            ib.FormPrompt = prompt;
+            ib.FormCaption = title;
+            ib.DefaultValue = defaultValue;
+            ib.ShowDialog();
+            string s = ib.InputResponse;
+            ib.Close();
+
+            if (s == string.Empty)
+                return "";
+            else
+                return s;
+        }
+
+        //
+        //  MÉTODO QUE CHAMA O MÉTODO COLHEITA DA CLASSE
+        //
+
+        void Colheita()
+        {
+            DialogResult result = MessageBox.Show("Você irá repetir essa mesma colheita futuramente?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {//PROC REPETIR COLHEITA
+                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
+                if (!Valido)
+                {
+                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                    con.Open();
+                    string cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = " + numtalhao; //pega o valor do talhão declarado em cada botão
+                    SqlCommand com = new SqlCommand(cmd, con);
+                    SqlDataReader reader = com.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                        Colheita colheita = new Colheita(Convert.ToInt16(qtdColhida), lblDataColheita2.Text, cod_plantio);
+                        colheita.RepetirColheita(colheita);
+                    }
+                }
+            }
+            else
+            {//FINALIZA A COLHEITA E NAO COLHE DNV
+                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
+                if (!Valido)
+                {
+                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                    con.Open();
+                    string cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = " + numtalhao;
+                    SqlCommand com = new SqlCommand(cmd, con);
+                    SqlDataReader reader = com.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                        Colheita colheita = new Colheita(Convert.ToInt16(qtdColhida), lblDataColheita2.Text, cod_plantio);
+                        colheita.RealizarColheita(colheita);
+                    }
+                }
+            }
+        }
+
+        //
+        //  DECLARA OS BOTÕES PARA CADA COLHEITA
+        //
+
+        private void btnFazerColheita1_Click(object sender, EventArgs e)
+        {
+            numtalhao = 1;
+            if (lblDataColheita1.Text != "") //vê se existe colheita
+            {
+                if(pbTalhao1.Value < pbTalhao1.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita2_Click(object sender, EventArgs e)
+        {
+            numtalhao = 2;
+            if (lblDataColheita2.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao2.Value < pbTalhao2.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita3_Click(object sender, EventArgs e)
+        {
+            numtalhao = 3;
+            if (lblDataColheita3.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao3.Value < pbTalhao3.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita4_Click(object sender, EventArgs e)
+        {
+            numtalhao = 4;
+            if (lblDataColheita4.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao4.Value < pbTalhao4.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita5_Click(object sender, EventArgs e)
+        {
+            numtalhao = 5;
+            if (lblDataColheita5.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao5.Value < pbTalhao5.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita6_Click(object sender, EventArgs e)
+        {
+            numtalhao = 6;
+            if (lblDataColheita6.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao6.Value < pbTalhao6.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita7_Click(object sender, EventArgs e)
+        {
+            numtalhao = 7;
+            if (lblDataColheita7.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao7.Value < pbTalhao7.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita8_Click(object sender, EventArgs e)
+        {
+            numtalhao = 8;
+            if (lblDataColheita8.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao8.Value < pbTalhao8.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita9_Click(object sender, EventArgs e)
+        {
+            numtalhao = 9;
+            if (lblDataColheita9.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao9.Value < pbTalhao9.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita10_Click(object sender, EventArgs e)
+        {
+            numtalhao = 10;
+            if (lblDataColheita10.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao10.Value < pbTalhao10.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnFazerColheita11_Click(object sender, EventArgs e)
+        {
+            numtalhao = 11;
+            if (lblDataColheita11.Text != "") //vê se existe colheita
+            {
+                if (pbTalhao11.Value < pbTalhao11.Maximum)
+                {
+                    DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        Colheita();
+                    }
+                }
+                else
+                {
+                    Colheita();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não existe plantio!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        //
+        //  MÉTODO QUE PREENCHE OS DADOS DE PLANTIOS EM PAINÉIS
+        //
 
         void PreencherCamposSementeData()
         {
@@ -131,7 +501,11 @@ namespace organ
         }
 
         //
-        //Sim, eu também pensei em fazer um looping, PORÉM, não tem como definir vetor de ProgressBar igual eu tinha feito com as Labels
+        // Sim, eu também pensei em fazer um looping, PORÉM, não tem como definir vetor de ProgressBar igual eu tinha feito com as Labels :'(
+        //
+
+        //
+        //  CALCULA BARRA DE PROGRESSO
         //
 
         void CalcularBarraProgresso1()
@@ -594,95 +968,6 @@ namespace organ
                         pbTalhao11.Minimum = 0;
                         pbTalhao11.Maximum = diasFimcomeco;
                         pbTalhao11.Value = diasAgoracomeco;
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(e.Message);
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
-        }
-
-        public static string InputBox(string prompt, string title, string defaultValue)
-        {
-            InputBoxDialog ib = new InputBoxDialog();
-            ib.FormPrompt = prompt;
-            ib.FormCaption = title;
-            ib.DefaultValue = defaultValue;
-            ib.ShowDialog();
-            string s = ib.InputResponse;
-            ib.Close();
-
-            if (s == string.Empty)
-                return "";
-            else
-                return s;
-        }
-
-        string qtdColhida;
-
-        private void btnFazerColheita2_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Você irá repetir essa mesma colheita futuramente?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
-                if (!Valido)
-                {
-                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                }
-                else
-                {
-                    RepetirColheita();
-                }
-            }
-            else
-            {
-                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
-                if (!Valido)
-                {
-                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                }
-                else
-                {
-                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                    con.Open();
-                    string cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = 2";
-                    SqlCommand com = new SqlCommand(cmd, con);
-                    SqlDataReader reader = com.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
-
-                        Colheita colheita = new Colheita(Convert.ToInt16(qtdColhida), lblDataColheita2.Text, cod_plantio);
-                        colheita.RealizarColheita(colheita);
-                    }
-                }
-            }
-        }
-
-        void RepetirColheita()
-        {
-            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
-            {
-                try
-                {
-                    con.Open();
-                    string cmdDatas = "SELECT * FROM tbPlantio WHERE cod_talhao = 11";
-                    SqlCommand comData = new SqlCommand(cmdDatas, con);
-                    SqlDataReader reader = comData.ExecuteReader();
-
-                    if (reader.Read())
-                    {
                     }
                 }
                 catch (Exception e)

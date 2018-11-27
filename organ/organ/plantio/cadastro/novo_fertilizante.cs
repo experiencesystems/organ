@@ -77,13 +77,13 @@ namespace organ
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "" || mskQuantidade.Text == "" || cboUnidadeMedida.Text == "")
+            if (txtNome.Text == "" || mskQuantidade.Text == "" || cboUnidadeMedida.Text == "" || cboFornecedor.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                Fertilizante f = new Fertilizante(txtNome.Text, rtxtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.ValueMember), cboUnidadeMedida.Text);
+                Fertilizante f = new Fertilizante(txtNome.Text, rtxtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
                 f.RegistrarFertilizante(f);
             }
         }

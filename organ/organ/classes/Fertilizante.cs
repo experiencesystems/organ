@@ -38,11 +38,11 @@ namespace organ
                 CommandType = CommandType.StoredProcedure
             };
 
-            cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = f.Nome;
-            cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = f.Descricao;
-            cmd.Parameters.Add("@MARCA", SqlDbType.VarChar).Value = f.Marca;
-            cmd.Parameters.Add("@QUANTIDADE", SqlDbType.Int).Value = f.Quantidade;
+            cmd.Parameters.Add("@NOME_FERT", SqlDbType.VarChar).Value = f.Nome;
+            cmd.Parameters.Add("@DESC_FERT", SqlDbType.VarChar).Value = f.Descricao;
+            cmd.Parameters.Add("@MARCA_FERT", SqlDbType.VarChar).Value = f.Marca;
             cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
+            cmd.Parameters.Add("@QTD_ESTOQUE", SqlDbType.Int).Value = f.Quantidade;
             cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = f.UnidadeMedida;
 
             con.Open();

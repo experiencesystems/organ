@@ -19,9 +19,9 @@ namespace organ
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             CarregaEstado();
-            mskSalario.Text.Replace("R$", string.Empty).Replace(",", ".");
+            nupSalario.Text.Replace("R$", string.Empty).Replace(",", ".");
         }
-        
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,18 +42,25 @@ namespace organ
 
         DateTime hoje = DateTime.Now;
 
+        string salario;
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            decimal x = nupSalario.Value;
+            double y = decimal.ToDouble(x);
+            salario = Convert.ToString(y);
+            salario = salario.Replace(",", ".");
+
             DateTime DataNascimento = dtDataNasc.Value;
             int anos = DateTime.Now.Year - DataNascimento.Year;
+            
             if (DateTime.Now.Month < DataNascimento.Month || (DateTime.Now.Month == DataNascimento.Month && DateTime.Now.Day < DataNascimento.Day))
             {
                 anos--;
             }
                 Regex veremail = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
             if (txtNome.Text == "" || mskCPF.Text == "" || mskRG.Text == "" || txtEndereco.Text == "" || mskNumero.Text == "" || mskCEP.Text == "" || 
-                txtBairro.Text == "" || txtCidade.Text == "" || cboUF.Text == "" || txtCargo.Text == "" || mskSalario.Text == "")
+                txtBairro.Text == "" || txtCidade.Text == "" || cboUF.Text == "" || txtCargo.Text == "" || nupSalario.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -70,10 +77,18 @@ namespace organ
                 MessageBox.Show("Digite uma data de nascimento válida.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-            {
-                Funcionario f = new Funcionario(txtNome.Text, Convert.ToInt64(mskCPF.Text), Convert.ToInt64(mskRG.Text), Convert.ToInt64(mskTelefone.Text), Convert.ToInt64(mskCelular.Text), txtEmail.Text, txtCargo.Text, Convert.ToDouble(mskSalario.Text), Convert.ToString(dtDataNasc.Value), Convert.ToString(mskCEP.Text), Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
+            {//registra, mas se telefones forem nulos nao le como int 64
+                Funcionario f = new Funcionario(txtNome.Text, Convert.ToInt64(mskCPF.Text), Convert.ToInt64(mskRG.Text), Convert.ToInt64(mskTelefone.Text), Convert.ToInt64(mskCelular.Text), txtEmail.Text, txtCargo.Text, salario, dtDataNasc.Text, mskCEP.Text, Convert.ToInt16(mskNumero.Text), txtEndereco.Text, txtBairro.Text, txtComplemento.Text, txtCidade.Text, cboUF.Text);
                 f.RegistrarFuncionario(f);
             }
+        }
+
+        private void nupSalario_ValueChanged(object sender, EventArgs e)
+        {
+            decimal x = nupSalario.Value;
+            double y = decimal.ToDouble(x);
+            salario = Convert.ToString(y);
+            salario = salario.Replace(",", ".");
         }
     }
 }

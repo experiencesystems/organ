@@ -63,7 +63,8 @@ namespace organ
             }
             else
             {
-                MessageBox.Show("Você passou pelo teste de resistência.", "Foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Plantio p = new Plantio(txtNome.Text, Convert.ToString(dtDataColheita.Text), cboFuncionario1.SelectedIndex, cboFuncionario2.SelectedIndex, cboFuncionario3.SelectedIndex, cboSemente.SelectedIndex, Convert.ToInt16(mskQntSemente.Text), cboFertilizante.SelectedIndex, Convert.ToInt16(mskQntFertilizante.Text), cboDefensivo.SelectedIndex, Convert.ToInt16(mskQntDefensivo.Text), cboTalhao1.SelectedIndex, cboTalhao2.SelectedIndex, cboTalhao3.SelectedIndex);
+                p.NovoPlantio(p);
             }
         }
 

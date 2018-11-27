@@ -19,7 +19,7 @@ namespace organ
         private long celular;
         private String email;
         private String cargo;
-        private double salario;
+        private String salario;
         private String status;
         private String data_nasc;
 
@@ -63,7 +63,7 @@ namespace organ
             get { return cargo; }
             set { cargo = value; }
         }
-        public double Salario
+        public String Salario
         {
             get { return salario; }
             set { salario = value; }
@@ -85,7 +85,7 @@ namespace organ
             this.Codigo = codigo;
         }
 
-        public Funcionario(String nome_funcionario, long cpf, long rg, long telefone, long celular, String email, String cargo, double salario, String data_nasc, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
+        public Funcionario(String nome_funcionario, long cpf, long rg, long telefone, long celular, String email, String cargo, String salario, String data_nasc, String CEP, int Numero, String Rua, String Bairro, String Complemento, String Cidade, String UF)
         {
             endereco = new Endereco();
             this.Nome_funcionario = nome_funcionario;
@@ -128,7 +128,7 @@ namespace organ
             cmd.Parameters.Add("@CEL_FUNC", SqlDbType.NVarChar).Value = f.Celular;
             cmd.Parameters.Add("@EMAIL_FUNC", SqlDbType.VarChar).Value = f.Email;
             cmd.Parameters.Add("@CARGO_FUNC", SqlDbType.VarChar).Value = f.Cargo;
-            cmd.Parameters.Add("@SALARIO_FUNC", SqlDbType.Money).Value = f.Salario;
+            cmd.Parameters.Add("@SALARIO_FUNC", SqlDbType.VarChar).Value = f.Salario;
 
             con.Open();
 
@@ -137,7 +137,7 @@ namespace organ
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    MessageBox.Show("Fornecedor registrado com sucesso!", "Cadastro finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Funcionário registrado com sucesso!", "Cadastro finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (SqlException e)

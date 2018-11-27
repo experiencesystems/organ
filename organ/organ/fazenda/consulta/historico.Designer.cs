@@ -49,7 +49,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblEstoque, 1, 0);
             this.tlpBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -78,13 +78,14 @@
             this.btnVoltar.TabIndex = 0;
             this.btnVoltar.Text = "   Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // lblEstoque
             // 
             this.lblEstoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEstoque.AutoSize = true;
             this.lblEstoque.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblEstoque.Location = new System.Drawing.Point(513, 20);
+            this.lblEstoque.Location = new System.Drawing.Point(512, 20);
             this.lblEstoque.Name = "lblEstoque";
             this.lblEstoque.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblEstoque.Size = new System.Drawing.Size(298, 34);
@@ -116,6 +117,7 @@
             this.btnAtualizar.TabIndex = 46;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // dgvHistoricoEstoque
             // 
@@ -123,6 +125,8 @@
             this.dgvHistoricoEstoque.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvHistoricoEstoque.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHistoricoEstoque.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHistoricoEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +169,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tlpBarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(131, 83);
             this.Name = "historico";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "historico";
             this.tlpBarraSuperior.ResumeLayout(false);

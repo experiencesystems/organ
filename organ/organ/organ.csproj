@@ -418,6 +418,7 @@
     <EmbeddedResource Include="plantio\consulta\sementes.resx">
       <DependentUpon>sementes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="organ.manifest" />
     <None Include="dbOrgan.xsc">
       <DependentUpon>dbOrgan.xsd</DependentUpon>

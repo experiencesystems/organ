@@ -61,12 +61,13 @@
             this.mskNumero = new System.Windows.Forms.MaskedTextBox();
             this.mskCEP = new System.Windows.Forms.MaskedTextBox();
             this.cboUF = new System.Windows.Forms.ComboBox();
-            this.mskSalario = new System.Windows.Forms.MaskedTextBox();
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.dtDataNasc = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
+            this.nupSalario = new System.Windows.Forms.NumericUpDown();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupSalario)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpBarraSuperior
@@ -156,10 +157,10 @@
             this.tlpNovoFuncionario.Controls.Add(this.mskNumero, 3, 4);
             this.tlpNovoFuncionario.Controls.Add(this.mskCEP, 3, 5);
             this.tlpNovoFuncionario.Controls.Add(this.cboUF, 1, 7);
-            this.tlpNovoFuncionario.Controls.Add(this.mskSalario, 3, 8);
             this.tlpNovoFuncionario.Controls.Add(this.mskCPF, 1, 1);
             this.tlpNovoFuncionario.Controls.Add(this.dtDataNasc, 3, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label9, 2, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.nupSalario, 3, 8);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -470,15 +471,6 @@
             this.cboUF.Size = new System.Drawing.Size(121, 34);
             this.cboUF.TabIndex = 15;
             // 
-            // mskSalario
-            // 
-            this.mskSalario.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.mskSalario.Location = new System.Drawing.Point(993, 513);
-            this.mskSalario.Mask = "$00000.00";
-            this.mskSalario.Name = "mskSalario";
-            this.mskSalario.Size = new System.Drawing.Size(191, 33);
-            this.mskSalario.TabIndex = 17;
-            // 
             // mskCPF
             // 
             this.mskCPF.Font = new System.Drawing.Font("Calibri", 15.75F);
@@ -510,6 +502,21 @@
             this.label9.TabIndex = 66;
             this.label9.Text = "Data de nascimento*";
             // 
+            // nupSalario
+            // 
+            this.nupSalario.DecimalPlaces = 2;
+            this.nupSalario.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.nupSalario.Location = new System.Drawing.Point(993, 513);
+            this.nupSalario.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.nupSalario.Name = "nupSalario";
+            this.nupSalario.Size = new System.Drawing.Size(191, 33);
+            this.nupSalario.TabIndex = 17;
+            this.nupSalario.ValueChanged += new System.EventHandler(this.nupSalario_ValueChanged);
+            // 
             // novo_funcionario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -526,6 +533,7 @@
             this.tlpBarraSuperior.PerformLayout();
             this.tlpNovoFuncionario.ResumeLayout(false);
             this.tlpNovoFuncionario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupSalario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,8 +574,8 @@
         private System.Windows.Forms.MaskedTextBox mskNumero;
         private System.Windows.Forms.MaskedTextBox mskCEP;
         private System.Windows.Forms.ComboBox cboUF;
-        private System.Windows.Forms.MaskedTextBox mskSalario;
         private System.Windows.Forms.DateTimePicker dtDataNasc;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown nupSalario;
     }
 }

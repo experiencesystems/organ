@@ -105,8 +105,9 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(1088, 453);
+            this.btnRegistrar.Location = new System.Drawing.Point(776, 513);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(230, 50);
             this.btnRegistrar.TabIndex = 10;
@@ -117,7 +118,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(402, 393);
+            this.txtDescricao.Location = new System.Drawing.Point(468, 393);
             this.txtDescricao.MaxLength = 200;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(411, 31);
@@ -137,7 +138,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(402, 33);
+            this.txtNome.Location = new System.Drawing.Point(468, 33);
             this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(411, 31);
@@ -201,7 +202,7 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(402, 153);
+            this.txtMarca.Location = new System.Drawing.Point(468, 153);
             this.txtMarca.MaxLength = 50;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(411, 31);
@@ -212,7 +213,7 @@
             this.cboPraga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPraga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPraga.FormattingEnabled = true;
-            this.cboPraga.Location = new System.Drawing.Point(402, 213);
+            this.cboPraga.Location = new System.Drawing.Point(468, 213);
             this.cboPraga.Name = "cboPraga";
             this.cboPraga.Size = new System.Drawing.Size(411, 31);
             this.cboPraga.TabIndex = 6;
@@ -222,7 +223,7 @@
             this.cboDoenca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDoenca.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDoenca.FormattingEnabled = true;
-            this.cboDoenca.Location = new System.Drawing.Point(402, 273);
+            this.cboDoenca.Location = new System.Drawing.Point(468, 273);
             this.cboDoenca.Name = "cboDoenca";
             this.cboDoenca.Size = new System.Drawing.Size(411, 31);
             this.cboDoenca.TabIndex = 7;
@@ -232,7 +233,7 @@
             this.cboFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFornecedor.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(402, 333);
+            this.cboFornecedor.Location = new System.Drawing.Point(468, 333);
             this.cboFornecedor.Name = "cboFornecedor";
             this.cboFornecedor.Size = new System.Drawing.Size(411, 31);
             this.cboFornecedor.TabIndex = 8;
@@ -251,11 +252,9 @@
             // tlpNovoFuncionario
             // 
             this.tlpNovoFuncionario.AutoSize = true;
-            this.tlpNovoFuncionario.ColumnCount = 4;
+            this.tlpNovoFuncionario.ColumnCount = 2;
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.22556F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.77444F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
-            this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 273F));
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.txtDescricao, 1, 6);
@@ -269,15 +268,15 @@
             this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 3);
             this.tlpNovoFuncionario.Controls.Add(this.cboPraga, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.label7, 2, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 3, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 3, 7);
             this.tlpNovoFuncionario.Controls.Add(this.mskQuantidade, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 7);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
-            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 50, 0);
-            this.tlpNovoFuncionario.RowCount = 8;
+            this.tlpNovoFuncionario.Padding = new System.Windows.Forms.Padding(100, 30, 400, 0);
+            this.tlpNovoFuncionario.RowCount = 9;
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
@@ -286,6 +285,7 @@
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpNovoFuncionario.Size = new System.Drawing.Size(1409, 696);
             this.tlpNovoFuncionario.TabIndex = 48;
             // 
@@ -293,7 +293,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label7.Location = new System.Drawing.Point(846, 93);
+            this.label7.Location = new System.Drawing.Point(103, 453);
             this.label7.Margin = new System.Windows.Forms.Padding(3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(188, 26);
@@ -305,7 +305,7 @@
             this.cboUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUnidadeMedida.Font = new System.Drawing.Font("Calibri", 14.25F);
             this.cboUnidadeMedida.FormattingEnabled = true;
-            this.cboUnidadeMedida.Location = new System.Drawing.Point(1088, 93);
+            this.cboUnidadeMedida.Location = new System.Drawing.Point(468, 453);
             this.cboUnidadeMedida.Name = "cboUnidadeMedida";
             this.cboUnidadeMedida.Size = new System.Drawing.Size(267, 31);
             this.cboUnidadeMedida.TabIndex = 4;
@@ -313,7 +313,7 @@
             // mskQuantidade
             // 
             this.mskQuantidade.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.mskQuantidade.Location = new System.Drawing.Point(402, 93);
+            this.mskQuantidade.Location = new System.Drawing.Point(468, 93);
             this.mskQuantidade.Mask = "000000000";
             this.mskQuantidade.Name = "mskQuantidade";
             this.mskQuantidade.Size = new System.Drawing.Size(266, 31);

@@ -51,11 +51,8 @@
             this.txtTipoSolo = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.mskIncSolar = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.mskIncVento = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.mskAcidez = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -63,9 +60,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cboUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.nupIncSolar = new System.Windows.Forms.NumericUpDown();
+            this.nupIncVento = new System.Windows.Forms.NumericUpDown();
+            this.nupAcidez = new System.Windows.Forms.NumericUpDown();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoDefensivo.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupIncSolar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupIncVento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAcidez)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSementes
@@ -274,16 +277,15 @@
             this.tlpNovoFuncionario.ColumnCount = 2;
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tlpNovoFuncionario.Controls.Add(this.nupAcidez, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.nupIncVento, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 0);
             this.tlpNovoFuncionario.Controls.Add(this.txtTipoSolo, 1, 1);
             this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
             this.tlpNovoFuncionario.Controls.Add(this.label10, 0, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.mskIncSolar, 1, 2);
             this.tlpNovoFuncionario.Controls.Add(this.label11, 0, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.mskIncVento, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label12, 0, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.mskAcidez, 1, 4);
             this.tlpNovoFuncionario.Controls.Add(this.label13, 0, 5);
             this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 5);
             this.tlpNovoFuncionario.Controls.Add(this.label14, 0, 6);
@@ -291,6 +293,7 @@
             this.tlpNovoFuncionario.Controls.Add(this.label9, 0, 7);
             this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 7);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.nupIncSolar, 1, 2);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -353,18 +356,9 @@
             this.label10.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(103, 150);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 26);
+            this.label10.Size = new System.Drawing.Size(176, 26);
             this.label10.TabIndex = 52;
-            this.label10.Text = "Incidência solar";
-            // 
-            // mskIncSolar
-            // 
-            this.mskIncSolar.Font = new System.Drawing.Font("Calibri", 14F);
-            this.mskIncSolar.Location = new System.Drawing.Point(397, 153);
-            this.mskIncSolar.Mask = "00000.00%";
-            this.mskIncSolar.Name = "mskIncSolar";
-            this.mskIncSolar.Size = new System.Drawing.Size(233, 30);
-            this.mskIncSolar.TabIndex = 4;
+            this.label10.Text = "Incidência solar (%)";
             // 
             // label11
             // 
@@ -372,18 +366,9 @@
             this.label11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(103, 210);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(178, 26);
+            this.label11.Size = new System.Drawing.Size(210, 26);
             this.label11.TabIndex = 52;
-            this.label11.Text = "Incidência do vento";
-            // 
-            // mskIncVento
-            // 
-            this.mskIncVento.Font = new System.Drawing.Font("Calibri", 14F);
-            this.mskIncVento.Location = new System.Drawing.Point(397, 213);
-            this.mskIncVento.Mask = "00000.00%";
-            this.mskIncVento.Name = "mskIncVento";
-            this.mskIncVento.Size = new System.Drawing.Size(233, 30);
-            this.mskIncVento.TabIndex = 5;
+            this.label11.Text = "Incidência do vento (%)";
             // 
             // label12
             // 
@@ -391,18 +376,9 @@
             this.label12.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(103, 270);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 26);
+            this.label12.Size = new System.Drawing.Size(99, 26);
             this.label12.TabIndex = 52;
-            this.label12.Text = "Acidez";
-            // 
-            // mskAcidez
-            // 
-            this.mskAcidez.Font = new System.Drawing.Font("Calibri", 14F);
-            this.mskAcidez.Location = new System.Drawing.Point(397, 273);
-            this.mskAcidez.Mask = "00000.00%";
-            this.mskAcidez.Name = "mskAcidez";
-            this.mskAcidez.Size = new System.Drawing.Size(233, 30);
-            this.mskAcidez.TabIndex = 6;
+            this.label12.Text = "Acidez (%)";
             // 
             // label13
             // 
@@ -476,6 +452,33 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // nupIncSolar
+            // 
+            this.nupIncSolar.DecimalPlaces = 2;
+            this.nupIncSolar.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nupIncSolar.Location = new System.Drawing.Point(397, 153);
+            this.nupIncSolar.Name = "nupIncSolar";
+            this.nupIncSolar.Size = new System.Drawing.Size(233, 30);
+            this.nupIncSolar.TabIndex = 4;
+            // 
+            // nupIncVento
+            // 
+            this.nupIncVento.DecimalPlaces = 2;
+            this.nupIncVento.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nupIncVento.Location = new System.Drawing.Point(397, 213);
+            this.nupIncVento.Name = "nupIncVento";
+            this.nupIncVento.Size = new System.Drawing.Size(233, 30);
+            this.nupIncVento.TabIndex = 5;
+            // 
+            // nupAcidez
+            // 
+            this.nupAcidez.DecimalPlaces = 2;
+            this.nupAcidez.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nupAcidez.Location = new System.Drawing.Point(397, 273);
+            this.nupAcidez.Name = "nupAcidez";
+            this.nupAcidez.Size = new System.Drawing.Size(233, 30);
+            this.nupAcidez.TabIndex = 6;
+            // 
             // nova_semente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -495,6 +498,9 @@
             this.tlpNovoDefensivo.PerformLayout();
             this.tlpNovoFuncionario.ResumeLayout(false);
             this.tlpNovoFuncionario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupIncSolar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupIncVento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAcidez)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,8 +540,8 @@
         private System.Windows.Forms.MaskedTextBox mskQuantidade;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboUnidadeMedida;
-        private System.Windows.Forms.MaskedTextBox mskIncSolar;
-        private System.Windows.Forms.MaskedTextBox mskIncVento;
-        private System.Windows.Forms.MaskedTextBox mskAcidez;
+        private System.Windows.Forms.NumericUpDown nupAcidez;
+        private System.Windows.Forms.NumericUpDown nupIncVento;
+        private System.Windows.Forms.NumericUpDown nupIncSolar;
     }
 }

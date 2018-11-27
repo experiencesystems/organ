@@ -56,6 +56,8 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tlpBarraSuperior = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.tlpNovoPlantio.SuspendLayout();
             this.tlpBarraSuperior.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +79,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(934, 473);
+            this.btnRegistrar.Location = new System.Drawing.Point(934, 519);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(169, 50);
             this.btnRegistrar.TabIndex = 16;
@@ -93,35 +95,37 @@
             this.tlpNovoPlantio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.46106F));
             this.tlpNovoPlantio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.4081F));
             this.tlpNovoPlantio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.28205F));
-            this.tlpNovoPlantio.Controls.Add(this.mskQntDefensivo, 3, 2);
-            this.tlpNovoPlantio.Controls.Add(this.lblDefensivo, 0, 2);
-            this.tlpNovoPlantio.Controls.Add(this.lblDataColheita, 0, 3);
-            this.tlpNovoPlantio.Controls.Add(this.lblTalhao, 0, 4);
-            this.tlpNovoPlantio.Controls.Add(this.lblQntDefensivo, 2, 2);
-            this.tlpNovoPlantio.Controls.Add(this.lblQntFertilizante, 2, 1);
-            this.tlpNovoPlantio.Controls.Add(this.lblQntSemente, 2, 0);
-            this.tlpNovoPlantio.Controls.Add(this.cboSemente, 1, 0);
-            this.tlpNovoPlantio.Controls.Add(this.cboTalhao1, 1, 4);
-            this.tlpNovoPlantio.Controls.Add(this.cboFertilizante, 1, 1);
-            this.tlpNovoPlantio.Controls.Add(this.cboDefensivo, 1, 2);
-            this.tlpNovoPlantio.Controls.Add(this.dtDataColheita, 1, 3);
-            this.tlpNovoPlantio.Controls.Add(this.cboTalhao2, 1, 5);
-            this.tlpNovoPlantio.Controls.Add(this.cboTalhao3, 1, 6);
-            this.tlpNovoPlantio.Controls.Add(this.lblFertilizante, 0, 1);
-            this.tlpNovoPlantio.Controls.Add(this.lblSemente, 0, 0);
-            this.tlpNovoPlantio.Controls.Add(this.mskQntSemente, 3, 0);
-            this.tlpNovoPlantio.Controls.Add(this.mskQntFertilizante, 3, 1);
-            this.tlpNovoPlantio.Controls.Add(this.lblFuncionario, 2, 4);
-            this.tlpNovoPlantio.Controls.Add(this.cboFuncionario1, 3, 4);
-            this.tlpNovoPlantio.Controls.Add(this.cboFuncionario2, 3, 5);
-            this.tlpNovoPlantio.Controls.Add(this.cboFuncionario3, 3, 6);
-            this.tlpNovoPlantio.Controls.Add(this.btnRegistrar, 3, 8);
-            this.tlpNovoPlantio.Controls.Add(this.btnLimpar, 2, 8);
+            this.tlpNovoPlantio.Controls.Add(this.cboTalhao3, 1, 7);
+            this.tlpNovoPlantio.Controls.Add(this.cboTalhao2, 1, 6);
+            this.tlpNovoPlantio.Controls.Add(this.cboTalhao1, 1, 5);
+            this.tlpNovoPlantio.Controls.Add(this.dtDataColheita, 1, 4);
+            this.tlpNovoPlantio.Controls.Add(this.cboDefensivo, 1, 3);
+            this.tlpNovoPlantio.Controls.Add(this.cboFertilizante, 1, 2);
+            this.tlpNovoPlantio.Controls.Add(this.cboSemente, 1, 1);
+            this.tlpNovoPlantio.Controls.Add(this.lblTalhao, 0, 5);
+            this.tlpNovoPlantio.Controls.Add(this.lblDataColheita, 0, 4);
+            this.tlpNovoPlantio.Controls.Add(this.lblDefensivo, 0, 3);
+            this.tlpNovoPlantio.Controls.Add(this.lblFertilizante, 0, 2);
+            this.tlpNovoPlantio.Controls.Add(this.lblSemente, 0, 1);
+            this.tlpNovoPlantio.Controls.Add(this.cboFuncionario3, 3, 7);
+            this.tlpNovoPlantio.Controls.Add(this.cboFuncionario2, 3, 6);
+            this.tlpNovoPlantio.Controls.Add(this.cboFuncionario1, 3, 5);
+            this.tlpNovoPlantio.Controls.Add(this.lblFuncionario, 2, 5);
+            this.tlpNovoPlantio.Controls.Add(this.lblQntDefensivo, 2, 3);
+            this.tlpNovoPlantio.Controls.Add(this.lblQntFertilizante, 2, 2);
+            this.tlpNovoPlantio.Controls.Add(this.lblQntSemente, 2, 1);
+            this.tlpNovoPlantio.Controls.Add(this.mskQntDefensivo, 3, 3);
+            this.tlpNovoPlantio.Controls.Add(this.mskQntFertilizante, 3, 2);
+            this.tlpNovoPlantio.Controls.Add(this.mskQntSemente, 3, 1);
+            this.tlpNovoPlantio.Controls.Add(this.btnRegistrar, 3, 9);
+            this.tlpNovoPlantio.Controls.Add(this.btnLimpar, 2, 9);
+            this.tlpNovoPlantio.Controls.Add(this.label1, 0, 0);
+            this.tlpNovoPlantio.Controls.Add(this.txtNome, 1, 0);
             this.tlpNovoPlantio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoPlantio.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoPlantio.Name = "tlpNovoPlantio";
             this.tlpNovoPlantio.Padding = new System.Windows.Forms.Padding(50);
-            this.tlpNovoPlantio.RowCount = 9;
+            this.tlpNovoPlantio.RowCount = 10;
             this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
@@ -129,15 +133,16 @@
             this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tlpNovoPlantio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tlpNovoPlantio.Size = new System.Drawing.Size(1384, 708);
             this.tlpNovoPlantio.TabIndex = 23;
             // 
             // mskQntDefensivo
             // 
             this.mskQntDefensivo.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.mskQntDefensivo.Location = new System.Drawing.Point(934, 163);
+            this.mskQntDefensivo.Location = new System.Drawing.Point(934, 218);
             this.mskQntDefensivo.Mask = "000000000";
             this.mskQntDefensivo.Name = "mskQntDefensivo";
             this.mskQntDefensivo.Size = new System.Drawing.Size(244, 33);
@@ -147,7 +152,7 @@
             // 
             this.lblDefensivo.AutoSize = true;
             this.lblDefensivo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDefensivo.Location = new System.Drawing.Point(53, 160);
+            this.lblDefensivo.Location = new System.Drawing.Point(53, 215);
             this.lblDefensivo.Name = "lblDefensivo";
             this.lblDefensivo.Size = new System.Drawing.Size(94, 26);
             this.lblDefensivo.TabIndex = 9;
@@ -157,7 +162,7 @@
             // 
             this.lblDataColheita.AutoSize = true;
             this.lblDataColheita.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataColheita.Location = new System.Drawing.Point(53, 215);
+            this.lblDataColheita.Location = new System.Drawing.Point(53, 270);
             this.lblDataColheita.Name = "lblDataColheita";
             this.lblDataColheita.Size = new System.Drawing.Size(135, 26);
             this.lblDataColheita.TabIndex = 8;
@@ -167,7 +172,7 @@
             // 
             this.lblTalhao.AutoSize = true;
             this.lblTalhao.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTalhao.Location = new System.Drawing.Point(53, 270);
+            this.lblTalhao.Location = new System.Drawing.Point(53, 325);
             this.lblTalhao.Name = "lblTalhao";
             this.lblTalhao.Size = new System.Drawing.Size(77, 26);
             this.lblTalhao.TabIndex = 6;
@@ -177,7 +182,7 @@
             // 
             this.lblQntDefensivo.AutoSize = true;
             this.lblQntDefensivo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQntDefensivo.Location = new System.Drawing.Point(749, 160);
+            this.lblQntDefensivo.Location = new System.Drawing.Point(749, 215);
             this.lblQntDefensivo.Name = "lblQntDefensivo";
             this.lblQntDefensivo.Size = new System.Drawing.Size(112, 26);
             this.lblQntDefensivo.TabIndex = 7;
@@ -187,7 +192,7 @@
             // 
             this.lblQntFertilizante.AutoSize = true;
             this.lblQntFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQntFertilizante.Location = new System.Drawing.Point(749, 105);
+            this.lblQntFertilizante.Location = new System.Drawing.Point(749, 160);
             this.lblQntFertilizante.Name = "lblQntFertilizante";
             this.lblQntFertilizante.Size = new System.Drawing.Size(112, 26);
             this.lblQntFertilizante.TabIndex = 11;
@@ -197,7 +202,7 @@
             // 
             this.lblQntSemente.AutoSize = true;
             this.lblQntSemente.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQntSemente.Location = new System.Drawing.Point(749, 50);
+            this.lblQntSemente.Location = new System.Drawing.Point(749, 105);
             this.lblQntSemente.Name = "lblQntSemente";
             this.lblQntSemente.Size = new System.Drawing.Size(122, 26);
             this.lblQntSemente.TabIndex = 10;
@@ -205,11 +210,10 @@
             // 
             // cboSemente
             // 
-            this.cboSemente.Dock = System.Windows.Forms.DockStyle.Left;
             this.cboSemente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSemente.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSemente.FormattingEnabled = true;
-            this.cboSemente.Location = new System.Drawing.Point(268, 53);
+            this.cboSemente.Location = new System.Drawing.Point(268, 108);
             this.cboSemente.Name = "cboSemente";
             this.cboSemente.Size = new System.Drawing.Size(401, 34);
             this.cboSemente.TabIndex = 2;
@@ -219,29 +223,27 @@
             this.cboTalhao1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTalhao1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTalhao1.FormattingEnabled = true;
-            this.cboTalhao1.Location = new System.Drawing.Point(268, 273);
+            this.cboTalhao1.Location = new System.Drawing.Point(268, 328);
             this.cboTalhao1.Name = "cboTalhao1";
             this.cboTalhao1.Size = new System.Drawing.Size(401, 34);
             this.cboTalhao1.TabIndex = 9;
             // 
             // cboFertilizante
             // 
-            this.cboFertilizante.Dock = System.Windows.Forms.DockStyle.Left;
             this.cboFertilizante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFertilizante.FormattingEnabled = true;
-            this.cboFertilizante.Location = new System.Drawing.Point(268, 108);
+            this.cboFertilizante.Location = new System.Drawing.Point(268, 163);
             this.cboFertilizante.Name = "cboFertilizante";
             this.cboFertilizante.Size = new System.Drawing.Size(401, 34);
             this.cboFertilizante.TabIndex = 4;
             // 
             // cboDefensivo
             // 
-            this.cboDefensivo.Dock = System.Windows.Forms.DockStyle.Left;
             this.cboDefensivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDefensivo.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDefensivo.FormattingEnabled = true;
-            this.cboDefensivo.Location = new System.Drawing.Point(268, 163);
+            this.cboDefensivo.Location = new System.Drawing.Point(268, 218);
             this.cboDefensivo.Name = "cboDefensivo";
             this.cboDefensivo.Size = new System.Drawing.Size(401, 34);
             this.cboDefensivo.TabIndex = 6;
@@ -249,10 +251,9 @@
             // dtDataColheita
             // 
             this.dtDataColheita.CustomFormat = "dd/MM/yyyy";
-            this.dtDataColheita.Dock = System.Windows.Forms.DockStyle.Left;
             this.dtDataColheita.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDataColheita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDataColheita.Location = new System.Drawing.Point(268, 218);
+            this.dtDataColheita.Location = new System.Drawing.Point(268, 273);
             this.dtDataColheita.Name = "dtDataColheita";
             this.dtDataColheita.Size = new System.Drawing.Size(401, 33);
             this.dtDataColheita.TabIndex = 8;
@@ -260,22 +261,20 @@
             // 
             // cboTalhao2
             // 
-            this.cboTalhao2.Dock = System.Windows.Forms.DockStyle.Left;
             this.cboTalhao2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTalhao2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTalhao2.FormattingEnabled = true;
-            this.cboTalhao2.Location = new System.Drawing.Point(268, 328);
+            this.cboTalhao2.Location = new System.Drawing.Point(268, 383);
             this.cboTalhao2.Name = "cboTalhao2";
             this.cboTalhao2.Size = new System.Drawing.Size(401, 34);
             this.cboTalhao2.TabIndex = 11;
             // 
             // cboTalhao3
             // 
-            this.cboTalhao3.Dock = System.Windows.Forms.DockStyle.Left;
             this.cboTalhao3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTalhao3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTalhao3.FormattingEnabled = true;
-            this.cboTalhao3.Location = new System.Drawing.Point(268, 383);
+            this.cboTalhao3.Location = new System.Drawing.Point(268, 438);
             this.cboTalhao3.Name = "cboTalhao3";
             this.cboTalhao3.Size = new System.Drawing.Size(401, 34);
             this.cboTalhao3.TabIndex = 13;
@@ -284,7 +283,7 @@
             // 
             this.lblFertilizante.AutoSize = true;
             this.lblFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFertilizante.Location = new System.Drawing.Point(53, 105);
+            this.lblFertilizante.Location = new System.Drawing.Point(53, 160);
             this.lblFertilizante.Name = "lblFertilizante";
             this.lblFertilizante.Size = new System.Drawing.Size(107, 26);
             this.lblFertilizante.TabIndex = 4;
@@ -294,7 +293,7 @@
             // 
             this.lblSemente.AutoSize = true;
             this.lblSemente.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemente.Location = new System.Drawing.Point(53, 50);
+            this.lblSemente.Location = new System.Drawing.Point(53, 105);
             this.lblSemente.Name = "lblSemente";
             this.lblSemente.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblSemente.Size = new System.Drawing.Size(97, 26);
@@ -304,7 +303,7 @@
             // mskQntSemente
             // 
             this.mskQntSemente.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.mskQntSemente.Location = new System.Drawing.Point(934, 53);
+            this.mskQntSemente.Location = new System.Drawing.Point(934, 108);
             this.mskQntSemente.Mask = "000000000";
             this.mskQntSemente.Name = "mskQntSemente";
             this.mskQntSemente.Size = new System.Drawing.Size(244, 33);
@@ -313,7 +312,7 @@
             // mskQntFertilizante
             // 
             this.mskQntFertilizante.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.mskQntFertilizante.Location = new System.Drawing.Point(934, 108);
+            this.mskQntFertilizante.Location = new System.Drawing.Point(934, 163);
             this.mskQntFertilizante.Mask = "000000000";
             this.mskQntFertilizante.Name = "mskQntFertilizante";
             this.mskQntFertilizante.Size = new System.Drawing.Size(244, 33);
@@ -323,7 +322,7 @@
             // 
             this.lblFuncionario.AutoSize = true;
             this.lblFuncionario.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncionario.Location = new System.Drawing.Point(749, 270);
+            this.lblFuncionario.Location = new System.Drawing.Point(749, 325);
             this.lblFuncionario.Name = "lblFuncionario";
             this.lblFuncionario.Size = new System.Drawing.Size(123, 26);
             this.lblFuncionario.TabIndex = 5;
@@ -334,7 +333,7 @@
             this.cboFuncionario1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFuncionario1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFuncionario1.FormattingEnabled = true;
-            this.cboFuncionario1.Location = new System.Drawing.Point(934, 273);
+            this.cboFuncionario1.Location = new System.Drawing.Point(934, 328);
             this.cboFuncionario1.Name = "cboFuncionario1";
             this.cboFuncionario1.Size = new System.Drawing.Size(377, 34);
             this.cboFuncionario1.TabIndex = 10;
@@ -344,7 +343,7 @@
             this.cboFuncionario2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFuncionario2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFuncionario2.FormattingEnabled = true;
-            this.cboFuncionario2.Location = new System.Drawing.Point(934, 328);
+            this.cboFuncionario2.Location = new System.Drawing.Point(934, 383);
             this.cboFuncionario2.Name = "cboFuncionario2";
             this.cboFuncionario2.Size = new System.Drawing.Size(377, 34);
             this.cboFuncionario2.TabIndex = 12;
@@ -354,7 +353,7 @@
             this.cboFuncionario3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFuncionario3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFuncionario3.FormattingEnabled = true;
-            this.cboFuncionario3.Location = new System.Drawing.Point(934, 383);
+            this.cboFuncionario3.Location = new System.Drawing.Point(934, 438);
             this.cboFuncionario3.Name = "cboFuncionario3";
             this.cboFuncionario3.Size = new System.Drawing.Size(377, 34);
             this.cboFuncionario3.TabIndex = 14;
@@ -362,7 +361,7 @@
             // btnLimpar
             // 
             this.btnLimpar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(749, 473);
+            this.btnLimpar.Location = new System.Drawing.Point(749, 519);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(166, 50);
             this.btnLimpar.TabIndex = 15;
@@ -405,6 +404,25 @@
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpBarraSuperior.Size = new System.Drawing.Size(1384, 66);
             this.tlpBarraSuperior.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(53, 50);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(166, 26);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Nome do plantio*";
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.txtNome.Location = new System.Drawing.Point(268, 53);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(401, 33);
+            this.txtNome.TabIndex = 18;
             // 
             // novo_plantio
             // 
@@ -452,5 +470,7 @@
         private System.Windows.Forms.MaskedTextBox mskQntSemente;
         private System.Windows.Forms.MaskedTextBox mskQntFertilizante;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }

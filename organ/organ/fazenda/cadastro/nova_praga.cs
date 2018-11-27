@@ -28,7 +28,8 @@ namespace organ
         void PreencherComboBox()
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
-            SqlCommand cmd = new SqlCommand("SELECT cod_semente AS [CODIGO], nome_sem AS [SEMENTE] from tbSemente", con);
+            SqlCommand cmd = new SqlCommand("SELECT cod_semente AS [CODIGO], nome_sem AS [SEMENTE] from tbSemente"+
+                                            "", con);
 
             SqlDataReader reader;
             con.Open();

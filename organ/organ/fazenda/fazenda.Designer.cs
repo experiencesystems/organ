@@ -147,7 +147,7 @@
             this.btnEstoque.Padding = new System.Windows.Forms.Padding(0, 0, 0, 22);
             this.btnEstoque.Size = new System.Drawing.Size(403, 324);
             this.btnEstoque.TabIndex = 17;
-            this.btnEstoque.Text = "so";
+            this.btnEstoque.Text = "Estoque";
             this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEstoque.UseVisualStyleBackColor = false;
             this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);

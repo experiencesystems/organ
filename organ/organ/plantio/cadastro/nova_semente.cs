@@ -19,9 +19,6 @@ namespace organ
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             PreencherComboBox();
             CarregaUnidadeMedida();
-            mskAcidez.Text.Replace("%", string.Empty).Replace(",", ".");
-            mskIncSolar.Text.Replace("%", string.Empty).Replace(",", ".");
-            mskIncVento.Text.Replace("%", string.Empty).Replace(",", ".");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -82,7 +79,7 @@ namespace organ
             }
             else
             {
-                Semente s = new Semente(txtNome.Text, txtTipoSolo.Text, Convert.ToDouble(mskAcidez.Text), Convert.ToDouble(mskIncVento.Text), Convert.ToDouble(mskIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.ValueMember), cboUnidadeMedida.Text);
+                Semente s = new Semente(txtNome.Text, txtTipoSolo.Text, Convert.ToDouble(nupAcidez.Text), Convert.ToDouble(nupIncVento.Text), Convert.ToDouble(nupIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
                 s.RegistrarSemente(s);
             }
         }

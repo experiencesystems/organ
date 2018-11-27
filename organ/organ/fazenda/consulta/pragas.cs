@@ -16,6 +16,7 @@ namespace organ
         public pragas()
         {
             InitializeComponent();
+            PreencherDataGridView();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -37,8 +38,9 @@ namespace organ
             {
                 try
                 {
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_praga AS [Código], nome_praga AS [Nome], desc_praga AS [Descrição] FROM tbPraga " +
-                                                              "ORDER BY cod_praga ASC ", con);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT P.cod_praga AS [Código], P.nome_praga AS [Nome], P.desc_praga AS [Descrição], S.nome_sem AS [Semente relacionada] FROM tbPraga P " +
+                                                              "INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente "+
+                                                              "ORDER BY P.cod_praga ASC", con);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvPragas.DataSource = dtbl;

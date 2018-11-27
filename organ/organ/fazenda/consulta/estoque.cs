@@ -16,6 +16,7 @@ namespace organ
         public estoque()
         {
             InitializeComponent();
+            PreencherDataGridView();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -29,8 +30,8 @@ namespace organ
             {
                 try
                 {
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_doenca AS [Código], nome_doenca AS [Doença], desc_doenca AS [Descrição] FROM tbDoenca " +
-                                                              "ORDER BY cod_doenca ASC; ", con);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SP_SELECT_ESTOQUE", con);
+                    sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvEstoque.DataSource = dtbl;
@@ -48,7 +49,34 @@ namespace organ
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            PreencherDataGridView();
+        }
 
+        private void dgvEstoque_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvEstoque.CurrentRow != null)
+            {
+                using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
+                {
+                    sqlCon.Open();
+                    DataGridViewRow dgvRow = dgvEstoque.CurrentRow;
+                    SqlCommand sqlCmd = new SqlCommand("SP_UPDATE_ESTOQUE", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@COD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Código"].Value));
+                    sqlCmd.Parameters.AddWithValue("@QTD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Quantidade"].Value));
+                    sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", dgvRow.Cells["Unidade de medida"].Value);
+                    sqlCmd.ExecuteNonQuery();
+                    PreencherDataGridView();
+                }
+            }
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            using (historico _historico = new historico())
+            {
+                _historico.ShowDialog(this);
+            }
         }
     }
 }

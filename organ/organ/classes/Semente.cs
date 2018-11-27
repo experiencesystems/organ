@@ -97,9 +97,15 @@ namespace organ
 
             cmd.Parameters.Add("@NOME_SEM", SqlDbType.VarChar).Value = s.Nome;
             cmd.Parameters.Add("@TIPO_SOLO_SEM", SqlDbType.VarChar).Value = s.Tipo_solo;
-            cmd.Parameters.Add("@ACIDEZ_SEM", SqlDbType.NVarChar).Value = s.Acidez;
-            cmd.Parameters.Add("@INC_VENTO_SEM", SqlDbType.NVarChar).Value = s.Incidencia_vento;
-            cmd.Parameters.Add("@INC_SOLAR_SEM", SqlDbType.NVarChar).Value = s.Incidencia_solar;
+            cmd.Parameters.Add("@ACIDEZ_SEM", SqlDbType.Decimal).Value = s.Acidez;
+            cmd.Parameters["@ACIDEZ_SEM"].Precision = 5;
+            cmd.Parameters["@ACIDEZ_SEM"].Scale = 2;
+            cmd.Parameters.Add("@INC_VENTO_SEM", SqlDbType.Decimal).Value = s.Incidencia_vento;
+            cmd.Parameters["@INC_VENTO_SEM"].Precision = 5;
+            cmd.Parameters["@INC_VENTO_SEM"].Scale = 2;
+            cmd.Parameters.Add("@INC_SOLAR_SEM", SqlDbType.Decimal).Value = s.Incidencia_solar;
+            cmd.Parameters["@INC_SOLAR_SEM"].Precision = 5;
+            cmd.Parameters["@INC_SOLAR_SEM"].Scale = 2;
             cmd.Parameters.Add("@QTD_ESTOQUE", SqlDbType.Int).Value = s.Quantidade;
             cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
             cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = s.UnidadeMedida;

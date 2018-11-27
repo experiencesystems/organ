@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace organ
 {
@@ -18,8 +19,11 @@ namespace organ
         private int cod_funcionario2;
         private int cod_funcionario3;
         private int cod_semente;
+        private int qtd_semente;
         private int cod_fertilizante;
+        private int qtd_fertilizante;
         private int cod_defensivo;
+        private int qtd_defensivo;
         private int cod_talhao;
         private int cod_talhao2;
         private int cod_talhao3;
@@ -29,17 +33,24 @@ namespace organ
             this.Cod_plantio = cod_plantio;
         }
 
-        public Plantio(String nome_plantio, String data_inicio, String data_colheita, int cod_funcionario, int cod_funcionario2, int cod_funcionario3, int cod_semente, int cod_fertilizante, int cod_defensivo, int cod_talhao, int cod_talhao2, int cod_talhao3)
+        public Plantio()
+        {
+
+        }
+
+        public Plantio(String nome_plantio, String data_colheita, int cod_funcionario, int cod_funcionario2, int cod_funcionario3, int cod_semente, int qtd_semente, int cod_fertilizante, int qtd_fertilizante, int cod_defensivo, int qtd_defensivo, int cod_talhao, int cod_talhao2, int cod_talhao3)
         {
             this.Nome_plantio = nome_plantio;
-            this.Data_inicio = data_inicio;
             this.Data_colheita = data_colheita;
             this.Cod_funcionario = cod_funcionario;
             this.Cod_funcionario2 = cod_funcionario2;
             this.Cod_funcionario3 = cod_funcionario3;
             this.Cod_semente = cod_semente;
+            this.Qtd_semente = qtd_semente;
             this.Cod_fertilizante = cod_fertilizante;
+            this.Qtd_fertilizante = qtd_fertilizante;
             this.Cod_defensivo = cod_defensivo;
+            this.Qtd_defensivo = qtd_defensivo;
             this.Cod_talhao = cod_talhao;
             this.Cod_talhao2 = cod_talhao2;
             this.Cod_talhao3 = cod_talhao3;
@@ -85,15 +96,30 @@ namespace organ
             get { return cod_semente; }
             set { cod_semente = value; }
         }
+        public int Qtd_semente
+        {
+            get { return qtd_semente; }
+            set { qtd_semente = value; }
+        }
         public int Cod_fertilizante
         {
             get { return cod_fertilizante; }
             set { cod_fertilizante = value; }
         }
+        public int Qtd_fertilizante
+        {
+            get { return qtd_fertilizante; }
+            set { qtd_fertilizante = value; }
+        }
         public int Cod_defensivo
         {
             get { return cod_defensivo; }
             set { cod_defensivo = value; }
+        }
+        public int Qtd_defensivo
+        {
+            get { return qtd_defensivo; }
+            set { qtd_defensivo = value; }
         }
         public int Cod_talhao
         {
@@ -109,6 +135,50 @@ namespace organ
         {
             get { return cod_talhao3; }
             set { cod_talhao3 = value; }
+        }
+
+        public void NovoPlantio(Plantio p)
+        {
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
+
+            SqlCommand cmd = new SqlCommand("SP_INSERT_PLANTIO", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@DATA_COLHEITA", SqlDbType.Date).Value = p.Data_colheita;
+            cmd.Parameters.Add("@COD_FUNCIONARIO", SqlDbType.Int).Value = p.Cod_funcionario;
+            cmd.Parameters.Add("@COD_FUNCIONARIO2", SqlDbType.Int).Value = p.Cod_funcionario2;
+            cmd.Parameters.Add("@COD_FUNCIONARIO3", SqlDbType.Int).Value = p.Cod_funcionario3;
+            cmd.Parameters.Add("@COD_SEMENTE", SqlDbType.Int).Value = p.Cod_semente;
+            cmd.Parameters.Add("@QTD_SEMENTE", SqlDbType.Int).Value = p.Qtd_semente;
+            cmd.Parameters.Add("@COD_FERTILIZANTE", SqlDbType.Int).Value = p.Cod_fertilizante;
+            cmd.Parameters.Add("@QTD_FERTILIZANTE", SqlDbType.Int).Value = p.Qtd_fertilizante;
+            cmd.Parameters.Add("@COD_DEFENSIVO", SqlDbType.Int).Value = p.Cod_defensivo;
+            cmd.Parameters.Add("@QTD_DEFENSIVO", SqlDbType.Int).Value = p.Qtd_defensivo;
+            cmd.Parameters.Add("@COD_TALHAO", SqlDbType.Int).Value = p.Cod_talhao;
+            cmd.Parameters.Add("@COD_TALHAO2", SqlDbType.Int).Value = p.Cod_talhao2;
+            cmd.Parameters.Add("@COD_TALHAO3", SqlDbType.Int).Value = p.Cod_talhao3;
+
+            con.Open();
+
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Plantio registrado com sucesso!", "Cadastro finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show("Erro: " + e.ToString());
+            }
+            finally
+            {
+                if (con != null)
+                {
+                    con.Close();
+                }
+            }
         }
 
         public void ExcluirPlantio(Plantio p)

@@ -72,10 +72,10 @@ namespace organ
 
         private void btnDetalhes_Click(object sender, EventArgs e)
         {
-            using (detalhes_solo _detalhes_solo = new detalhes_solo())
+            /*using (detalhes_solo _detalhes_solo = new detalhes_solo())
             {
                 _detalhes_solo.ShowDialog(this);
-            }
+            }*/
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

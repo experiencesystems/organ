@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="organ.Colheita" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAARAAAAAAAAAAAAAAEAAAABQAAAAAAIAAAAg=</HashCode>
+      <FileName>classes\Colheita.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Defensivo" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgAgAAIAIAAAAACAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>classes\Defensivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Doenca" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABABAAABABAAAAAQCAEAAAAAAAAAAAAACAAAAAgAA=</HashCode>
+      <FileName>classes\Doenca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Ferramenta" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>classes\Ferramenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Fertilizante" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>classes\Fertilizante.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Fornecedor" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEgCACoIAgAIAAAAAAAQAIAAAAIAAQACAAACE=</HashCode>
+      <FileName>classes\Fornecedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Funcionario" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAQBAEIEgSAAAIAgAgAAgACAAAAAAAAFAMCQAQgAgAA=</HashCode>
+      <FileName>classes\Funcionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Maquina" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>classes\Maquina.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Plantio" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAIgINBAAEAYQQJACAEAAAABAEIAAxBKAAAUAAACJA=</HashCode>
+      <FileName>classes\Plantio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Praga" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABABAAAAABAAAAAQAAAAAAAAAAAAgAQAAAAAIAAAA=</HashCode>
+      <FileName>classes\Praga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Produto" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQABABAAAQQRAAAAAQAAAEAAAAAAAAAAAAAQAAEAEAA=</HashCode>
+      <FileName>classes\Produto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Semente" Collapsed="true">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAAAQAwAAAAJAAgECQAAAAgAAAAEAUgAEAEgA=</HashCode>
+      <FileName>classes\Semente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="organ.Talhao" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAwAAAEJAAABCQAAAAgAAAAIAEAACAAAA=</HashCode>
+      <FileName>classes\Talhao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

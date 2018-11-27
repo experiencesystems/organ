@@ -39,12 +39,12 @@
             this.lblNomeSemente11 = new System.Windows.Forms.Label();
             this.lblDataColheita11 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
-            this.progressBar11 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao11 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao1 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita1 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblDataColheita1 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao2 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao2 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita2 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao10 = new System.Windows.Forms.TableLayoutPanel();
             this.button19 = new System.Windows.Forms.Button();
-            this.progressBar10 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao10 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita10 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao10 = new System.Windows.Forms.TableLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao4 = new System.Windows.Forms.TableLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao4 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita4 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao4 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao9 = new System.Windows.Forms.TableLayoutPanel();
             this.button17 = new System.Windows.Forms.Button();
-            this.progressBar9 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao9 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita9 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao9 = new System.Windows.Forms.TableLayoutPanel();
             this.label27 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao3 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao3 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita3 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao3 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao8 = new System.Windows.Forms.TableLayoutPanel();
             this.button15 = new System.Windows.Forms.Button();
-            this.progressBar8 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao8 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita8 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao8 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
@@ -114,7 +114,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao5 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao5 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita5 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao5 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
@@ -124,7 +124,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao7 = new System.Windows.Forms.TableLayoutPanel();
             this.button13 = new System.Windows.Forms.Button();
-            this.progressBar7 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao7 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita7 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao7 = new System.Windows.Forms.TableLayoutPanel();
             this.label25 = new System.Windows.Forms.Label();
@@ -134,13 +134,17 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.tlpPanelTalhao6 = new System.Windows.Forms.TableLayoutPanel();
             this.button11 = new System.Windows.Forms.Button();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.pbTalhao6 = new System.Windows.Forms.ProgressBar();
             this.btnFazerColheita6 = new System.Windows.Forms.Button();
             this.tlpLabelsTalhao6 = new System.Windows.Forms.TableLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
             this.lblNomeSemente6 = new System.Windows.Forms.Label();
             this.lblDataColheita6 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpBotoesInferiores = new System.Windows.Forms.TableLayoutPanel();
+            this.btnDetalhesPlantios = new System.Windows.Forms.Button();
+            this.btnColheitasRealizadas = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -176,6 +180,8 @@
             this.panel6.SuspendLayout();
             this.tlpPanelTalhao6.SuspendLayout();
             this.tlpLabelsTalhao6.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tlpBotoesInferiores.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -196,14 +202,15 @@
             this.lblProgressoPlantios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProgressoPlantios.AutoSize = true;
-            this.lblProgressoPlantios.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgressoPlantios.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProgressoPlantios.Location = new System.Drawing.Point(3, 0);
             this.lblProgressoPlantios.Name = "lblProgressoPlantios";
             this.lblProgressoPlantios.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.lblProgressoPlantios.Size = new System.Drawing.Size(1383, 56);
+            this.lblProgressoPlantios.Size = new System.Drawing.Size(1383, 44);
             this.lblProgressoPlantios.TabIndex = 6;
             this.lblProgressoPlantios.Text = "Progresso dos plantios";
             this.lblProgressoPlantios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblProgressoPlantios.Click += new System.EventHandler(this.lblProgressoPlantios_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -231,7 +238,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 350F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1389, 731);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1389, 636);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // panel11
@@ -252,7 +259,7 @@
             this.tlpPanelTalhao11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao11.Controls.Add(this.tlpLabelsTalhao11, 0, 1);
             this.tlpPanelTalhao11.Controls.Add(this.button21, 0, 0);
-            this.tlpPanelTalhao11.Controls.Add(this.progressBar11, 0, 2);
+            this.tlpPanelTalhao11.Controls.Add(this.pbTalhao11, 0, 2);
             this.tlpPanelTalhao11.Controls.Add(this.btnFazerColheita11, 0, 3);
             this.tlpPanelTalhao11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpPanelTalhao11.Location = new System.Drawing.Point(0, 0);
@@ -291,7 +298,7 @@
             this.label29.Location = new System.Drawing.Point(20, 94);
             this.label29.Margin = new System.Windows.Forms.Padding(20);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(117, 35);
+            this.label29.Size = new System.Drawing.Size(138, 23);
             this.label29.TabIndex = 5;
             this.label29.Text = "Data da colheita:";
             // 
@@ -302,7 +309,7 @@
             this.label23.Location = new System.Drawing.Point(20, 20);
             this.label23.Margin = new System.Windows.Forms.Padding(20);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(126, 34);
+            this.label23.Size = new System.Drawing.Size(82, 23);
             this.label23.TabIndex = 4;
             this.label23.Text = "Semente:";
             // 
@@ -313,7 +320,7 @@
             this.lblNomeSemente11.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente11.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente11.Name = "lblNomeSemente11";
-            this.lblNomeSemente11.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente11.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente11.TabIndex = 7;
             // 
             // lblDataColheita11
@@ -323,7 +330,7 @@
             this.lblDataColheita11.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita11.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita11.Name = "lblDataColheita11";
-            this.lblDataColheita11.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita11.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita11.TabIndex = 8;
             // 
             // button21
@@ -339,14 +346,14 @@
             this.button21.Text = "Talhão 11";
             this.button21.UseVisualStyleBackColor = true;
             // 
-            // progressBar11
+            // pbTalhao11
             // 
-            this.progressBar11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar11.Location = new System.Drawing.Point(16, 218);
-            this.progressBar11.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar11.Name = "progressBar11";
-            this.progressBar11.Size = new System.Drawing.Size(391, 27);
-            this.progressBar11.TabIndex = 2;
+            this.pbTalhao11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao11.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao11.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao11.Name = "pbTalhao11";
+            this.pbTalhao11.Size = new System.Drawing.Size(391, 27);
+            this.pbTalhao11.TabIndex = 2;
             // 
             // btnFazerColheita11
             // 
@@ -362,6 +369,7 @@
             this.btnFazerColheita11.TabIndex = 1;
             this.btnFazerColheita11.Text = "FAZER COLHEITA";
             this.btnFazerColheita11.UseVisualStyleBackColor = false;
+            this.btnFazerColheita11.Click += new System.EventHandler(this.btnFazerColheita11_Click);
             // 
             // panel1
             // 
@@ -380,7 +388,7 @@
             this.tlpPanelTalhao1.ColumnCount = 1;
             this.tlpPanelTalhao1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao1.Controls.Add(this.button1, 0, 0);
-            this.tlpPanelTalhao1.Controls.Add(this.progressBar1, 0, 2);
+            this.tlpPanelTalhao1.Controls.Add(this.pbTalhao1, 0, 2);
             this.tlpPanelTalhao1.Controls.Add(this.btnFazerColheita1, 0, 3);
             this.tlpPanelTalhao1.Controls.Add(this.tlpLabelsTalhao1, 0, 1);
             this.tlpPanelTalhao1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -407,14 +415,14 @@
             this.button1.Text = "Talhão 1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
+            // pbTalhao1
             // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(11, 218);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(10);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(400, 27);
-            this.progressBar1.TabIndex = 2;
+            this.pbTalhao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao1.Location = new System.Drawing.Point(11, 218);
+            this.pbTalhao1.Margin = new System.Windows.Forms.Padding(10);
+            this.pbTalhao1.Name = "pbTalhao1";
+            this.pbTalhao1.Size = new System.Drawing.Size(400, 27);
+            this.pbTalhao1.TabIndex = 2;
             // 
             // btnFazerColheita1
             // 
@@ -430,6 +438,7 @@
             this.btnFazerColheita1.TabIndex = 1;
             this.btnFazerColheita1.Text = "FAZER COLHEITA";
             this.btnFazerColheita1.UseVisualStyleBackColor = false;
+            this.btnFazerColheita1.Click += new System.EventHandler(this.btnFazerColheita1_Click);
             // 
             // tlpLabelsTalhao1
             // 
@@ -456,7 +465,7 @@
             this.lblDataColheita1.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita1.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita1.Name = "lblDataColheita1";
-            this.lblDataColheita1.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita1.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita1.TabIndex = 3;
             // 
             // lblNomeSemente1
@@ -466,7 +475,7 @@
             this.lblNomeSemente1.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente1.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente1.Name = "lblNomeSemente1";
-            this.lblNomeSemente1.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente1.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente1.TabIndex = 2;
             // 
             // lblDescS1
@@ -476,7 +485,7 @@
             this.lblDescS1.Location = new System.Drawing.Point(20, 20);
             this.lblDescS1.Margin = new System.Windows.Forms.Padding(20);
             this.lblDescS1.Name = "lblDescS1";
-            this.lblDescS1.Size = new System.Drawing.Size(126, 34);
+            this.lblDescS1.Size = new System.Drawing.Size(82, 23);
             this.lblDescS1.TabIndex = 0;
             this.lblDescS1.Text = "Semente:";
             // 
@@ -487,7 +496,7 @@
             this.lblDescD1.Location = new System.Drawing.Point(20, 94);
             this.lblDescD1.Margin = new System.Windows.Forms.Padding(20);
             this.lblDescD1.Name = "lblDescD1";
-            this.lblDescD1.Size = new System.Drawing.Size(117, 35);
+            this.lblDescD1.Size = new System.Drawing.Size(138, 23);
             this.lblDescD1.TabIndex = 1;
             this.lblDescD1.Text = "Data da colheita:";
             // 
@@ -508,7 +517,7 @@
             this.tlpPanelTalhao2.ColumnCount = 1;
             this.tlpPanelTalhao2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao2.Controls.Add(this.button3, 0, 0);
-            this.tlpPanelTalhao2.Controls.Add(this.progressBar2, 0, 2);
+            this.tlpPanelTalhao2.Controls.Add(this.pbTalhao2, 0, 2);
             this.tlpPanelTalhao2.Controls.Add(this.btnFazerColheita2, 0, 3);
             this.tlpPanelTalhao2.Controls.Add(this.tlpLabelsTalhao2, 0, 1);
             this.tlpPanelTalhao2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -535,14 +544,14 @@
             this.button3.Text = "Talhão 2";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // progressBar2
+            // pbTalhao2
             // 
-            this.progressBar2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar2.Location = new System.Drawing.Point(16, 218);
-            this.progressBar2.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(391, 27);
-            this.progressBar2.TabIndex = 2;
+            this.pbTalhao2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao2.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao2.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao2.Name = "pbTalhao2";
+            this.pbTalhao2.Size = new System.Drawing.Size(391, 27);
+            this.pbTalhao2.TabIndex = 2;
             // 
             // btnFazerColheita2
             // 
@@ -586,7 +595,7 @@
             this.label3.Location = new System.Drawing.Point(20, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 35);
+            this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Data da colheita:";
             // 
@@ -597,7 +606,7 @@
             this.label2.Location = new System.Drawing.Point(20, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 34);
+            this.label2.Size = new System.Drawing.Size(82, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Semente:";
             // 
@@ -608,7 +617,7 @@
             this.lblNomeSemente2.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente2.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente2.Name = "lblNomeSemente2";
-            this.lblNomeSemente2.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente2.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente2.TabIndex = 3;
             // 
             // lblDataColheita2
@@ -618,7 +627,7 @@
             this.lblDataColheita2.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita2.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita2.Name = "lblDataColheita2";
-            this.lblDataColheita2.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita2.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita2.TabIndex = 4;
             // 
             // panel10
@@ -638,7 +647,7 @@
             this.tlpPanelTalhao10.ColumnCount = 1;
             this.tlpPanelTalhao10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao10.Controls.Add(this.button19, 0, 0);
-            this.tlpPanelTalhao10.Controls.Add(this.progressBar10, 0, 2);
+            this.tlpPanelTalhao10.Controls.Add(this.pbTalhao10, 0, 2);
             this.tlpPanelTalhao10.Controls.Add(this.btnFazerColheita10, 0, 3);
             this.tlpPanelTalhao10.Controls.Add(this.tlpLabelsTalhao10, 0, 1);
             this.tlpPanelTalhao10.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -665,14 +674,14 @@
             this.button19.Text = "Talhão 10";
             this.button19.UseVisualStyleBackColor = true;
             // 
-            // progressBar10
+            // pbTalhao10
             // 
-            this.progressBar10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar10.Location = new System.Drawing.Point(16, 218);
-            this.progressBar10.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar10.Name = "progressBar10";
-            this.progressBar10.Size = new System.Drawing.Size(390, 27);
-            this.progressBar10.TabIndex = 2;
+            this.pbTalhao10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao10.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao10.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao10.Name = "pbTalhao10";
+            this.pbTalhao10.Size = new System.Drawing.Size(390, 27);
+            this.pbTalhao10.TabIndex = 2;
             // 
             // btnFazerColheita10
             // 
@@ -688,6 +697,7 @@
             this.btnFazerColheita10.TabIndex = 1;
             this.btnFazerColheita10.Text = "FAZER COLHEITA";
             this.btnFazerColheita10.UseVisualStyleBackColor = false;
+            this.btnFazerColheita10.Click += new System.EventHandler(this.btnFazerColheita10_Click);
             // 
             // tlpLabelsTalhao10
             // 
@@ -714,7 +724,7 @@
             this.label28.Location = new System.Drawing.Point(20, 94);
             this.label28.Margin = new System.Windows.Forms.Padding(20);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(117, 35);
+            this.label28.Size = new System.Drawing.Size(138, 23);
             this.label28.TabIndex = 5;
             this.label28.Text = "Data da colheita:";
             // 
@@ -725,7 +735,7 @@
             this.label22.Location = new System.Drawing.Point(20, 20);
             this.label22.Margin = new System.Windows.Forms.Padding(20);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(126, 34);
+            this.label22.Size = new System.Drawing.Size(82, 23);
             this.label22.TabIndex = 4;
             this.label22.Text = "Semente:";
             // 
@@ -736,7 +746,7 @@
             this.lblNomeSemente10.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente10.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente10.Name = "lblNomeSemente10";
-            this.lblNomeSemente10.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente10.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente10.TabIndex = 7;
             // 
             // lblDataColheita10
@@ -746,7 +756,7 @@
             this.lblDataColheita10.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita10.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita10.Name = "lblDataColheita10";
-            this.lblDataColheita10.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita10.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita10.TabIndex = 8;
             // 
             // panel4
@@ -766,7 +776,7 @@
             this.tlpPanelTalhao4.ColumnCount = 1;
             this.tlpPanelTalhao4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao4.Controls.Add(this.button7, 0, 0);
-            this.tlpPanelTalhao4.Controls.Add(this.progressBar4, 0, 2);
+            this.tlpPanelTalhao4.Controls.Add(this.pbTalhao4, 0, 2);
             this.tlpPanelTalhao4.Controls.Add(this.btnFazerColheita4, 0, 3);
             this.tlpPanelTalhao4.Controls.Add(this.tlpLabelsTalhao4, 0, 1);
             this.tlpPanelTalhao4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -793,14 +803,14 @@
             this.button7.Text = "Talhão 4";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // progressBar4
+            // pbTalhao4
             // 
-            this.progressBar4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar4.Location = new System.Drawing.Point(16, 218);
-            this.progressBar4.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(390, 27);
-            this.progressBar4.TabIndex = 2;
+            this.pbTalhao4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao4.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao4.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao4.Name = "pbTalhao4";
+            this.pbTalhao4.Size = new System.Drawing.Size(390, 27);
+            this.pbTalhao4.TabIndex = 2;
             // 
             // btnFazerColheita4
             // 
@@ -816,6 +826,7 @@
             this.btnFazerColheita4.TabIndex = 1;
             this.btnFazerColheita4.Text = "FAZER COLHEITA";
             this.btnFazerColheita4.UseVisualStyleBackColor = false;
+            this.btnFazerColheita4.Click += new System.EventHandler(this.btnFazerColheita4_Click);
             // 
             // tlpLabelsTalhao4
             // 
@@ -842,7 +853,7 @@
             this.label10.Location = new System.Drawing.Point(20, 20);
             this.label10.Margin = new System.Windows.Forms.Padding(20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 34);
+            this.label10.Size = new System.Drawing.Size(82, 23);
             this.label10.TabIndex = 2;
             this.label10.Text = "Semente:";
             // 
@@ -853,7 +864,7 @@
             this.lblNomeSemente4.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente4.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente4.Name = "lblNomeSemente4";
-            this.lblNomeSemente4.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente4.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente4.TabIndex = 5;
             // 
             // lblDataColheita4
@@ -863,7 +874,7 @@
             this.lblDataColheita4.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita4.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita4.Name = "lblDataColheita4";
-            this.lblDataColheita4.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita4.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita4.TabIndex = 6;
             // 
             // label11
@@ -873,7 +884,7 @@
             this.label11.Location = new System.Drawing.Point(20, 94);
             this.label11.Margin = new System.Windows.Forms.Padding(20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 35);
+            this.label11.Size = new System.Drawing.Size(138, 23);
             this.label11.TabIndex = 3;
             this.label11.Text = "Data da colheita:";
             // 
@@ -894,7 +905,7 @@
             this.tlpPanelTalhao9.ColumnCount = 1;
             this.tlpPanelTalhao9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao9.Controls.Add(this.button17, 0, 0);
-            this.tlpPanelTalhao9.Controls.Add(this.progressBar9, 0, 2);
+            this.tlpPanelTalhao9.Controls.Add(this.pbTalhao9, 0, 2);
             this.tlpPanelTalhao9.Controls.Add(this.btnFazerColheita9, 0, 3);
             this.tlpPanelTalhao9.Controls.Add(this.tlpLabelsTalhao9, 0, 1);
             this.tlpPanelTalhao9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -921,14 +932,14 @@
             this.button17.Text = "Talhão 9";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // progressBar9
+            // pbTalhao9
             // 
-            this.progressBar9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar9.Location = new System.Drawing.Point(16, 218);
-            this.progressBar9.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar9.Name = "progressBar9";
-            this.progressBar9.Size = new System.Drawing.Size(392, 27);
-            this.progressBar9.TabIndex = 2;
+            this.pbTalhao9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao9.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao9.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao9.Name = "pbTalhao9";
+            this.pbTalhao9.Size = new System.Drawing.Size(392, 27);
+            this.pbTalhao9.TabIndex = 2;
             // 
             // btnFazerColheita9
             // 
@@ -944,6 +955,7 @@
             this.btnFazerColheita9.TabIndex = 1;
             this.btnFazerColheita9.Text = "FAZER COLHEITA";
             this.btnFazerColheita9.UseVisualStyleBackColor = false;
+            this.btnFazerColheita9.Click += new System.EventHandler(this.btnFazerColheita9_Click);
             // 
             // tlpLabelsTalhao9
             // 
@@ -970,7 +982,7 @@
             this.label27.Location = new System.Drawing.Point(20, 94);
             this.label27.Margin = new System.Windows.Forms.Padding(20);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(117, 35);
+            this.label27.Size = new System.Drawing.Size(138, 23);
             this.label27.TabIndex = 5;
             this.label27.Text = "Data da colheita:";
             // 
@@ -981,7 +993,7 @@
             this.label21.Location = new System.Drawing.Point(20, 20);
             this.label21.Margin = new System.Windows.Forms.Padding(20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(126, 34);
+            this.label21.Size = new System.Drawing.Size(82, 23);
             this.label21.TabIndex = 4;
             this.label21.Text = "Semente:";
             // 
@@ -992,7 +1004,7 @@
             this.lblNomeSemente9.Location = new System.Drawing.Point(228, 20);
             this.lblNomeSemente9.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente9.Name = "lblNomeSemente9";
-            this.lblNomeSemente9.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente9.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente9.TabIndex = 7;
             // 
             // lblDataColheita9
@@ -1002,7 +1014,7 @@
             this.lblDataColheita9.Location = new System.Drawing.Point(228, 94);
             this.lblDataColheita9.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita9.Name = "lblDataColheita9";
-            this.lblDataColheita9.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita9.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita9.TabIndex = 8;
             // 
             // panel3
@@ -1022,7 +1034,7 @@
             this.tlpPanelTalhao3.ColumnCount = 1;
             this.tlpPanelTalhao3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao3.Controls.Add(this.button5, 0, 0);
-            this.tlpPanelTalhao3.Controls.Add(this.progressBar3, 0, 2);
+            this.tlpPanelTalhao3.Controls.Add(this.pbTalhao3, 0, 2);
             this.tlpPanelTalhao3.Controls.Add(this.btnFazerColheita3, 0, 3);
             this.tlpPanelTalhao3.Controls.Add(this.tlpLabelsTalhao3, 0, 1);
             this.tlpPanelTalhao3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1049,14 +1061,14 @@
             this.button5.Text = "Talhão 3";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // progressBar3
+            // pbTalhao3
             // 
-            this.progressBar3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar3.Location = new System.Drawing.Point(16, 218);
-            this.progressBar3.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(392, 27);
-            this.progressBar3.TabIndex = 2;
+            this.pbTalhao3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao3.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao3.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao3.Name = "pbTalhao3";
+            this.pbTalhao3.Size = new System.Drawing.Size(392, 27);
+            this.pbTalhao3.TabIndex = 2;
             // 
             // btnFazerColheita3
             // 
@@ -1072,6 +1084,7 @@
             this.btnFazerColheita3.TabIndex = 1;
             this.btnFazerColheita3.Text = "FAZER COLHEITA";
             this.btnFazerColheita3.UseVisualStyleBackColor = false;
+            this.btnFazerColheita3.Click += new System.EventHandler(this.btnFazerColheita3_Click);
             // 
             // tlpLabelsTalhao3
             // 
@@ -1099,7 +1112,7 @@
             this.label5.Location = new System.Drawing.Point(20, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 35);
+            this.label5.Size = new System.Drawing.Size(138, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Data da colheita:";
             // 
@@ -1110,7 +1123,7 @@
             this.label4.Location = new System.Drawing.Point(20, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 34);
+            this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Semente:";
             // 
@@ -1121,7 +1134,7 @@
             this.lblNomeSemente3.Location = new System.Drawing.Point(228, 20);
             this.lblNomeSemente3.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente3.Name = "lblNomeSemente3";
-            this.lblNomeSemente3.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente3.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente3.TabIndex = 4;
             // 
             // lblDataColheita3
@@ -1131,7 +1144,7 @@
             this.lblDataColheita3.Location = new System.Drawing.Point(228, 94);
             this.lblDataColheita3.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita3.Name = "lblDataColheita3";
-            this.lblDataColheita3.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita3.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita3.TabIndex = 5;
             // 
             // panel8
@@ -1151,7 +1164,7 @@
             this.tlpPanelTalhao8.ColumnCount = 1;
             this.tlpPanelTalhao8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao8.Controls.Add(this.button15, 0, 0);
-            this.tlpPanelTalhao8.Controls.Add(this.progressBar8, 0, 2);
+            this.tlpPanelTalhao8.Controls.Add(this.pbTalhao8, 0, 2);
             this.tlpPanelTalhao8.Controls.Add(this.btnFazerColheita8, 0, 3);
             this.tlpPanelTalhao8.Controls.Add(this.tlpLabelsTalhao8, 0, 1);
             this.tlpPanelTalhao8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1178,14 +1191,14 @@
             this.button15.Text = "Talhão 8";
             this.button15.UseVisualStyleBackColor = true;
             // 
-            // progressBar8
+            // pbTalhao8
             // 
-            this.progressBar8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar8.Location = new System.Drawing.Point(16, 218);
-            this.progressBar8.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar8.Name = "progressBar8";
-            this.progressBar8.Size = new System.Drawing.Size(391, 27);
-            this.progressBar8.TabIndex = 2;
+            this.pbTalhao8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao8.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao8.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao8.Name = "pbTalhao8";
+            this.pbTalhao8.Size = new System.Drawing.Size(391, 27);
+            this.pbTalhao8.TabIndex = 2;
             // 
             // btnFazerColheita8
             // 
@@ -1201,6 +1214,7 @@
             this.btnFazerColheita8.TabIndex = 1;
             this.btnFazerColheita8.Text = "FAZER COLHEITA";
             this.btnFazerColheita8.UseVisualStyleBackColor = false;
+            this.btnFazerColheita8.Click += new System.EventHandler(this.btnFazerColheita8_Click);
             // 
             // tlpLabelsTalhao8
             // 
@@ -1227,7 +1241,7 @@
             this.label26.Location = new System.Drawing.Point(20, 94);
             this.label26.Margin = new System.Windows.Forms.Padding(20);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(117, 35);
+            this.label26.Size = new System.Drawing.Size(138, 23);
             this.label26.TabIndex = 5;
             this.label26.Text = "Data da colheita:";
             // 
@@ -1238,7 +1252,7 @@
             this.label20.Location = new System.Drawing.Point(20, 20);
             this.label20.Margin = new System.Windows.Forms.Padding(20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(126, 34);
+            this.label20.Size = new System.Drawing.Size(82, 23);
             this.label20.TabIndex = 4;
             this.label20.Text = "Semente:";
             // 
@@ -1249,7 +1263,7 @@
             this.lblNomeSemente8.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente8.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente8.Name = "lblNomeSemente8";
-            this.lblNomeSemente8.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente8.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente8.TabIndex = 7;
             // 
             // lblDataColheita8
@@ -1259,7 +1273,7 @@
             this.lblDataColheita8.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita8.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita8.Name = "lblDataColheita8";
-            this.lblDataColheita8.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita8.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita8.TabIndex = 8;
             // 
             // panel5
@@ -1279,7 +1293,7 @@
             this.tlpPanelTalhao5.ColumnCount = 1;
             this.tlpPanelTalhao5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao5.Controls.Add(this.button9, 0, 0);
-            this.tlpPanelTalhao5.Controls.Add(this.progressBar5, 0, 2);
+            this.tlpPanelTalhao5.Controls.Add(this.pbTalhao5, 0, 2);
             this.tlpPanelTalhao5.Controls.Add(this.btnFazerColheita5, 0, 3);
             this.tlpPanelTalhao5.Controls.Add(this.tlpLabelsTalhao5, 0, 1);
             this.tlpPanelTalhao5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1306,14 +1320,14 @@
             this.button9.Text = "Talhão 5";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // progressBar5
+            // pbTalhao5
             // 
-            this.progressBar5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar5.Location = new System.Drawing.Point(16, 218);
-            this.progressBar5.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(391, 27);
-            this.progressBar5.TabIndex = 2;
+            this.pbTalhao5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao5.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao5.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao5.Name = "pbTalhao5";
+            this.pbTalhao5.Size = new System.Drawing.Size(391, 27);
+            this.pbTalhao5.TabIndex = 2;
             // 
             // btnFazerColheita5
             // 
@@ -1329,6 +1343,7 @@
             this.btnFazerColheita5.TabIndex = 1;
             this.btnFazerColheita5.Text = "FAZER COLHEITA";
             this.btnFazerColheita5.UseVisualStyleBackColor = false;
+            this.btnFazerColheita5.Click += new System.EventHandler(this.btnFazerColheita5_Click);
             // 
             // tlpLabelsTalhao5
             // 
@@ -1355,7 +1370,7 @@
             this.label14.Location = new System.Drawing.Point(20, 20);
             this.label14.Margin = new System.Windows.Forms.Padding(20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(126, 34);
+            this.label14.Size = new System.Drawing.Size(82, 23);
             this.label14.TabIndex = 3;
             this.label14.Text = "Semente:";
             // 
@@ -1366,7 +1381,7 @@
             this.lblNomeSemente5.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente5.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente5.Name = "lblNomeSemente5";
-            this.lblNomeSemente5.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente5.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente5.TabIndex = 6;
             // 
             // lblDataColheita5
@@ -1376,7 +1391,7 @@
             this.lblDataColheita5.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita5.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita5.Name = "lblDataColheita5";
-            this.lblDataColheita5.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita5.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita5.TabIndex = 7;
             // 
             // label15
@@ -1386,7 +1401,7 @@
             this.label15.Location = new System.Drawing.Point(20, 94);
             this.label15.Margin = new System.Windows.Forms.Padding(20);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 35);
+            this.label15.Size = new System.Drawing.Size(138, 23);
             this.label15.TabIndex = 4;
             this.label15.Text = "Data da colheita:";
             // 
@@ -1407,7 +1422,7 @@
             this.tlpPanelTalhao7.ColumnCount = 1;
             this.tlpPanelTalhao7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao7.Controls.Add(this.button13, 0, 0);
-            this.tlpPanelTalhao7.Controls.Add(this.progressBar7, 0, 2);
+            this.tlpPanelTalhao7.Controls.Add(this.pbTalhao7, 0, 2);
             this.tlpPanelTalhao7.Controls.Add(this.btnFazerColheita7, 0, 3);
             this.tlpPanelTalhao7.Controls.Add(this.tlpLabelsTalhao7, 0, 1);
             this.tlpPanelTalhao7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1434,14 +1449,14 @@
             this.button13.Text = "Talhão 7";
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // progressBar7
+            // pbTalhao7
             // 
-            this.progressBar7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar7.Location = new System.Drawing.Point(16, 218);
-            this.progressBar7.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar7.Name = "progressBar7";
-            this.progressBar7.Size = new System.Drawing.Size(390, 27);
-            this.progressBar7.TabIndex = 2;
+            this.pbTalhao7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao7.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao7.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao7.Name = "pbTalhao7";
+            this.pbTalhao7.Size = new System.Drawing.Size(390, 27);
+            this.pbTalhao7.TabIndex = 2;
             // 
             // btnFazerColheita7
             // 
@@ -1457,6 +1472,7 @@
             this.btnFazerColheita7.TabIndex = 1;
             this.btnFazerColheita7.Text = "FAZER COLHEITA";
             this.btnFazerColheita7.UseVisualStyleBackColor = false;
+            this.btnFazerColheita7.Click += new System.EventHandler(this.btnFazerColheita7_Click);
             // 
             // tlpLabelsTalhao7
             // 
@@ -1483,7 +1499,7 @@
             this.label25.Location = new System.Drawing.Point(20, 94);
             this.label25.Margin = new System.Windows.Forms.Padding(20);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(117, 35);
+            this.label25.Size = new System.Drawing.Size(138, 23);
             this.label25.TabIndex = 5;
             this.label25.Text = "Data da colheita:";
             // 
@@ -1494,7 +1510,7 @@
             this.label19.Location = new System.Drawing.Point(20, 20);
             this.label19.Margin = new System.Windows.Forms.Padding(20);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(126, 34);
+            this.label19.Size = new System.Drawing.Size(82, 23);
             this.label19.TabIndex = 4;
             this.label19.Text = "Semente:";
             // 
@@ -1505,7 +1521,7 @@
             this.lblNomeSemente7.Location = new System.Drawing.Point(227, 20);
             this.lblNomeSemente7.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente7.Name = "lblNomeSemente7";
-            this.lblNomeSemente7.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente7.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente7.TabIndex = 7;
             // 
             // lblDataColheita7
@@ -1515,7 +1531,7 @@
             this.lblDataColheita7.Location = new System.Drawing.Point(227, 94);
             this.lblDataColheita7.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita7.Name = "lblDataColheita7";
-            this.lblDataColheita7.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita7.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita7.TabIndex = 8;
             // 
             // panel6
@@ -1535,7 +1551,7 @@
             this.tlpPanelTalhao6.ColumnCount = 1;
             this.tlpPanelTalhao6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlpPanelTalhao6.Controls.Add(this.button11, 0, 0);
-            this.tlpPanelTalhao6.Controls.Add(this.progressBar6, 0, 2);
+            this.tlpPanelTalhao6.Controls.Add(this.pbTalhao6, 0, 2);
             this.tlpPanelTalhao6.Controls.Add(this.btnFazerColheita6, 0, 3);
             this.tlpPanelTalhao6.Controls.Add(this.tlpLabelsTalhao6, 0, 1);
             this.tlpPanelTalhao6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1562,14 +1578,14 @@
             this.button11.Text = "Talhão 6";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // progressBar6
+            // pbTalhao6
             // 
-            this.progressBar6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar6.Location = new System.Drawing.Point(16, 218);
-            this.progressBar6.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(392, 27);
-            this.progressBar6.TabIndex = 2;
+            this.pbTalhao6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTalhao6.Location = new System.Drawing.Point(16, 218);
+            this.pbTalhao6.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao6.Name = "pbTalhao6";
+            this.pbTalhao6.Size = new System.Drawing.Size(392, 27);
+            this.pbTalhao6.TabIndex = 2;
             // 
             // btnFazerColheita6
             // 
@@ -1585,6 +1601,7 @@
             this.btnFazerColheita6.TabIndex = 1;
             this.btnFazerColheita6.Text = "FAZER COLHEITA";
             this.btnFazerColheita6.UseVisualStyleBackColor = false;
+            this.btnFazerColheita6.Click += new System.EventHandler(this.btnFazerColheita6_Click);
             // 
             // tlpLabelsTalhao6
             // 
@@ -1611,7 +1628,7 @@
             this.label18.Location = new System.Drawing.Point(20, 20);
             this.label18.Margin = new System.Windows.Forms.Padding(20);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 34);
+            this.label18.Size = new System.Drawing.Size(82, 23);
             this.label18.TabIndex = 4;
             this.label18.Text = "Semente:";
             // 
@@ -1623,7 +1640,7 @@
             this.lblNomeSemente6.Location = new System.Drawing.Point(228, 20);
             this.lblNomeSemente6.Margin = new System.Windows.Forms.Padding(20);
             this.lblNomeSemente6.Name = "lblNomeSemente6";
-            this.lblNomeSemente6.Size = new System.Drawing.Size(0, 34);
+            this.lblNomeSemente6.Size = new System.Drawing.Size(0, 23);
             this.lblNomeSemente6.TabIndex = 7;
             // 
             // lblDataColheita6
@@ -1633,7 +1650,7 @@
             this.lblDataColheita6.Location = new System.Drawing.Point(228, 94);
             this.lblDataColheita6.Margin = new System.Windows.Forms.Padding(20);
             this.lblDataColheita6.Name = "lblDataColheita6";
-            this.lblDataColheita6.Size = new System.Drawing.Size(0, 35);
+            this.lblDataColheita6.Size = new System.Drawing.Size(0, 23);
             this.lblDataColheita6.TabIndex = 8;
             // 
             // label24
@@ -1643,14 +1660,72 @@
             this.label24.Location = new System.Drawing.Point(20, 94);
             this.label24.Margin = new System.Windows.Forms.Padding(20);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(117, 35);
+            this.label24.Size = new System.Drawing.Size(138, 23);
             this.label24.TabIndex = 5;
             this.label24.Text = "Data da colheita:";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.tlpBotoesInferiores, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 693);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1389, 95);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // tlpBotoesInferiores
+            // 
+            this.tlpBotoesInferiores.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tlpBotoesInferiores.ColumnCount = 2;
+            this.tlpBotoesInferiores.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotoesInferiores.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotoesInferiores.Controls.Add(this.btnDetalhesPlantios, 0, 0);
+            this.tlpBotoesInferiores.Controls.Add(this.btnColheitasRealizadas, 1, 0);
+            this.tlpBotoesInferiores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpBotoesInferiores.Location = new System.Drawing.Point(3, 3);
+            this.tlpBotoesInferiores.Name = "tlpBotoesInferiores";
+            this.tlpBotoesInferiores.RowCount = 1;
+            this.tlpBotoesInferiores.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpBotoesInferiores.Size = new System.Drawing.Size(1383, 89);
+            this.tlpBotoesInferiores.TabIndex = 0;
+            // 
+            // btnDetalhesPlantios
+            // 
+            this.btnDetalhesPlantios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDetalhesPlantios.FlatAppearance.BorderSize = 0;
+            this.btnDetalhesPlantios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalhesPlantios.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalhesPlantios.Location = new System.Drawing.Point(5, 5);
+            this.btnDetalhesPlantios.Name = "btnDetalhesPlantios";
+            this.btnDetalhesPlantios.Size = new System.Drawing.Size(682, 79);
+            this.btnDetalhesPlantios.TabIndex = 0;
+            this.btnDetalhesPlantios.Text = "Detalhes dos plantios";
+            this.btnDetalhesPlantios.UseVisualStyleBackColor = true;
+            this.btnDetalhesPlantios.Click += new System.EventHandler(this.btnDetalhesPlantios_Click);
+            // 
+            // btnColheitasRealizadas
+            // 
+            this.btnColheitasRealizadas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnColheitasRealizadas.FlatAppearance.BorderSize = 0;
+            this.btnColheitasRealizadas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColheitasRealizadas.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColheitasRealizadas.Location = new System.Drawing.Point(695, 5);
+            this.btnColheitasRealizadas.Name = "btnColheitasRealizadas";
+            this.btnColheitasRealizadas.Size = new System.Drawing.Size(683, 79);
+            this.btnColheitasRealizadas.TabIndex = 1;
+            this.btnColheitasRealizadas.Text = "Colheitas realizadas";
+            this.btnColheitasRealizadas.UseVisualStyleBackColor = true;
+            this.btnColheitasRealizadas.Click += new System.EventHandler(this.btnColheitasRealizadas_Click);
             // 
             // colheita
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "colheita";
@@ -1703,6 +1778,8 @@
             this.tlpPanelTalhao6.ResumeLayout(false);
             this.tlpLabelsTalhao6.ResumeLayout(false);
             this.tlpLabelsTalhao6.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tlpBotoesInferiores.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1725,55 +1802,55 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pbTalhao1;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar pbTalhao2;
         private System.Windows.Forms.Button btnFazerColheita2;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao11;
         private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.ProgressBar progressBar11;
+        private System.Windows.Forms.ProgressBar pbTalhao11;
         private System.Windows.Forms.Button btnFazerColheita11;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao1;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao2;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao10;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.ProgressBar progressBar10;
+        private System.Windows.Forms.ProgressBar pbTalhao10;
         private System.Windows.Forms.Button btnFazerColheita10;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao10;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao4;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.ProgressBar pbTalhao4;
         private System.Windows.Forms.Button btnFazerColheita4;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao4;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao9;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.ProgressBar progressBar9;
+        private System.Windows.Forms.ProgressBar pbTalhao9;
         private System.Windows.Forms.Button btnFazerColheita9;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao9;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.ProgressBar pbTalhao3;
         private System.Windows.Forms.Button btnFazerColheita3;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao3;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao8;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.ProgressBar progressBar8;
+        private System.Windows.Forms.ProgressBar pbTalhao8;
         private System.Windows.Forms.Button btnFazerColheita8;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao8;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao5;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ProgressBar progressBar5;
+        private System.Windows.Forms.ProgressBar pbTalhao5;
         private System.Windows.Forms.Button btnFazerColheita5;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao5;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao7;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.ProgressBar progressBar7;
+        private System.Windows.Forms.ProgressBar pbTalhao7;
         private System.Windows.Forms.Button btnFazerColheita7;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao7;
         private System.Windows.Forms.TableLayoutPanel tlpPanelTalhao6;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.ProgressBar pbTalhao6;
         private System.Windows.Forms.Button btnFazerColheita6;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao6;
         private System.Windows.Forms.TableLayoutPanel tlpLabelsTalhao11;
@@ -1822,5 +1899,9 @@
         private System.Windows.Forms.Label lblNomeSemente6;
         private System.Windows.Forms.Label lblDataColheita6;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tlpBotoesInferiores;
+        private System.Windows.Forms.Button btnDetalhesPlantios;
+        private System.Windows.Forms.Button btnColheitasRealizadas;
     }
 }

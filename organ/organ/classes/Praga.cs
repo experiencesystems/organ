@@ -55,8 +55,8 @@ namespace organ
                 CommandType = CommandType.StoredProcedure
             };
 
-            cmd.Parameters.Add("@NOME", SqlDbType.VarChar).Value = p.Nome_praga;
-            cmd.Parameters.Add("@DESCRICAO", SqlDbType.VarChar).Value = p.Descricao;
+            cmd.Parameters.Add("@NOME_PRAGA", SqlDbType.VarChar).Value = p.Nome_praga;
+            cmd.Parameters.Add("@DESC_PRAGA", SqlDbType.VarChar).Value = p.Descricao;
             cmd.Parameters.Add("@COD_SEMENTE", SqlDbType.Int).Value = p.semente.Codigo_semente;
 
             con.Open();
