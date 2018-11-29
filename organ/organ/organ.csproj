@@ -56,7 +56,7 @@
     <ApplicationIcon>Camada%25201.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>organ.manifest</ApplicationManifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -106,6 +106,18 @@
     </Compile>
     <Compile Include="classes\Defensivo.cs" />
     <Compile Include="classes\Doenca.cs" />
+    <Compile Include="configuracao\novo_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracao\novo_usuario.Designer.cs">
+      <DependentUpon>novo_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="plantio\consulta\detalhes_solo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plantio\consulta\detalhes_solo.Designer.cs">
+      <DependentUpon>detalhes_solo.cs</DependentUpon>
+    </Compile>
     <Compile Include="fazenda\consulta\estoque.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,7 +175,7 @@
     <Compile Include="classes\Fornecedor.cs" />
     <Compile Include="classes\Login.cs" />
     <Compile Include="configuracao\gerenciamento_contas.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="configuracao\gerenciamento_contas.Designer.cs">
       <DependentUpon>gerenciamento_contas.cs</DependentUpon>
@@ -323,6 +335,12 @@
     <EmbeddedResource Include="colheita\consulta_colheita.resx">
       <DependentUpon>consulta_colheita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="configuracao\novo_usuario.resx">
+      <DependentUpon>novo_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plantio\consulta\detalhes_solo.resx">
+      <DependentUpon>detalhes_solo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fazenda\consulta\estoque.resx">
       <DependentUpon>estoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +436,9 @@
     <EmbeddedResource Include="plantio\consulta\sementes.resx">
       <DependentUpon>sementes.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="organ.manifest" />
     <None Include="dbOrgan.xsc">

@@ -66,7 +66,7 @@ namespace organ
             }
             else
             {
-                Doenca d = new Doenca(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(cboSemente.ValueMember));
+                Doenca d = new Doenca(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(cboSemente.SelectedIndex));
                 d.RegistrarDoenca(d);
             }
         }
