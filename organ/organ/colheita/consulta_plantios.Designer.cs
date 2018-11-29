@@ -75,6 +75,7 @@
             // dgvPlantios
             // 
             this.dgvPlantios.AllowUserToAddRows = false;
+            this.dgvPlantios.AllowUserToDeleteRows = false;
             this.dgvPlantios.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPlantios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -113,7 +114,6 @@
             this.dgvPlantios.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPlantios.Size = new System.Drawing.Size(1205, 674);
             this.dgvPlantios.TabIndex = 0;
-            this.dgvPlantios.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvPlantios_UserDeletingRow);
             // 
             // tlpBarraSuperior
             // 

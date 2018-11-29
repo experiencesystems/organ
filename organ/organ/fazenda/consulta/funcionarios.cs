@@ -39,10 +39,10 @@ namespace organ
                 try
                 {
                     SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT F.cod_funcionario AS [Código], F.nome_func AS [Nome], F.cpf_func AS [CPF], F.rg_func AS [RG], " +
-                                                              "F.tel_func AS [Telefone], F.cel_func AS [Celular], F.email_func AS [Email], F.cargo_func AS [Cargo], " +
+                                                              "F.tel_func AS [Telefone], F.cel_func AS [Celular], F.email_func AS [Email], F.cargo_func AS [Cargo], F.status_func AS [Status], " +
                                                               "E.rua AS [Rua], E.numero AS [Número], E.complemento AS [Complemento], E.bairro AS [Bairro], " +
                                                               "E.cep AS [CEP], E.cidade AS [Cidade], E.uf AS [UF] FROM tbFuncionario F INNER JOIN tbEndereco E ON F.cep_func = E.cep " +
-                                                              "ORDER BY cod_funcionario ASC; ", con);
+                                                              "ORDER BY F.cod_funcionario ASC; ", con);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvFuncionarios.DataSource = dtbl;
@@ -72,6 +72,7 @@ namespace organ
                     Funcionario f = new Funcionario(Convert.ToInt16(dgvFuncionarios.CurrentRow.Cells["Código"].Value));
 
                     f.ExcluirFuncionario(f);
+                    PreencherDataGridView();
                 }
                 else
                     e.Cancel = true;

@@ -67,7 +67,7 @@ namespace organ
             }
             else
             {
-                Praga p = new Praga(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(cboSemente.ValueMember));
+                Praga p = new Praga(txtNome.Text, rtxtDescricao.Text, cboSemente.SelectedIndex);
                 p.RegistrarPraga(p);
             }
         }

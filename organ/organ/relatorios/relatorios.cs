@@ -18,7 +18,7 @@ namespace organ
             InitializeComponent();
             PreencherDataGridView();
         }
-        
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             using (novo_relatorio _novo_relatorio = new novo_relatorio())
@@ -67,14 +67,24 @@ namespace organ
         {
             using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
             {
-                sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_RELATORIO", sqlCon)
+                if (dgvRelatorios.CurrentRow.Cells["Código"].Value != DBNull.Value)
                 {
-                    CommandType = CommandType.StoredProcedure
-                };
-                sqlCmd.Parameters.AddWithValue("@COD_RELATORIO", Convert.ToInt16(dgvRelatorios.CurrentRow.Cells["Código"].Value));
-                sqlCmd.ExecuteNonQuery();
+                    if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        sqlCon.Open();
+                        SqlCommand sqlCmd = new SqlCommand("SP_DELETE_RELATORIO", sqlCon)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        sqlCmd.Parameters.AddWithValue("@COD_RELATORIO", Convert.ToInt16(dgvRelatorios.CurrentRow.Cells["Código"].Value));
+                        sqlCmd.ExecuteNonQuery();
+                    }
+                    else
+                        e.Cancel = true;
+                }
+                else
+                    e.Cancel = true;
             }
         }
     }
-    }
+}

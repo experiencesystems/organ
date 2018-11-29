@@ -50,7 +50,7 @@ namespace organ
             }
             catch (SqlException e)
             {
-                throw new Exception(e.Message);
+                MessageBox.Show(e.Message);
             }
             finally
             {
@@ -66,7 +66,8 @@ namespace organ
             }
             else
             {
-                Doenca d = new Doenca(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(cboSemente.ValueMember));
+                string semente = cboSemente.SelectedValue.ToString();
+                Doenca d = new Doenca(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(semente));
                 d.RegistrarDoenca(d);
             }
         }

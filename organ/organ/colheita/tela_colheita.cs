@@ -17,7 +17,7 @@ namespace organ
         Label[] labels2 = new Label[11];
         string data_colheita1, data_colheita2, data_colheita3, data_colheita4, data_colheita5, data_colheita6, data_colheita7, data_colheita8, data_colheita9, data_colheita10, data_colheita11;
         string data_inicio1, data_inicio2, data_inicio3, data_inicio4, data_inicio5, data_inicio6, data_inicio7, data_inicio8, data_inicio9, data_inicio10, data_inicio11;
-        
+
         public colheita()
         {
             InitializeComponent();
@@ -96,59 +96,78 @@ namespace organ
         //
         //  MÉTODO QUE CHAMA O MÉTODO COLHEITA DA CLASSE
         //
+        string cmd;
+        SqlCommand com;
+        SqlDataReader reader;
 
         void Colheita()
         {
             DialogResult result = MessageBox.Show("Você irá repetir essa mesma colheita futuramente?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {//PROC REPETIR COLHEITA
-                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
-                if (!Valido)
+                qtdColhida = InputBox("Digite quantas sacas foram colhidas.", "Colheita", "");
+                if (qtdColhida != "")
                 {
-                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                }
-                else
-                {
-                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                    con.Open();
-                    string cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = " + numtalhao; //pega o valor do talhão declarado em cada botão
-                    SqlCommand com = new SqlCommand(cmd, con);
-                    SqlDataReader reader = com.ExecuteReader();
-
-                    if (reader.Read())
+                    using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
                     {
-                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+                        con.Open();
+                        try
+                        {
+                            cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = " + numtalhao; //pega o valor do talhão declarado em cada botão
+                            com = new SqlCommand(cmd, con);
+                            reader = com.ExecuteReader();
 
-                        Colheita colheita = new Colheita(Convert.ToInt16(qtdColhida), lblDataColheita2.Text, cod_plantio);
-                        colheita.RepetirColheita(colheita);
+                            if (reader.Read())
+                            {
+                                int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                                Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio);
+                                colheita.RepetirColheita(colheita);
+                                reader.Close();
+                            }
+                        }
+                        catch (SqlException e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                        finally
+                        {
+                            con.Close();
+                        }
                     }
                 }
             }
             else
             {//FINALIZA A COLHEITA E NAO COLHE DNV
-                qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                bool Valido = qtdColhida.Length <= 9 && qtdColhida.All(char.IsDigit) && qtdColhida != "";
-                if (!Valido)
+                qtdColhida = InputBox("Digite quantas sacas foram colhidas.", "Colheita", "");
+                if (qtdColhida != "")
                 {
-                    MessageBox.Show("Digite valores numéricos!", "Colheita", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    qtdColhida = InputBox("Digite a quantidade que foi colhida", "Colheita", "");
-                }
-                else
-                {
-                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                    con.Open();
-                    string cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = " + numtalhao;
-                    SqlCommand com = new SqlCommand(cmd, con);
-                    SqlDataReader reader = com.ExecuteReader();
-
-                    if (reader.Read())
+                    using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
                     {
-                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+                        con.Open();
+                        try
+                        {
+                            cmd = "SELECT * FROM tbPlantio WHERE cod_talhao = " + numtalhao;
+                            com = new SqlCommand(cmd, con);
+                            reader = com.ExecuteReader();
 
-                        Colheita colheita = new Colheita(Convert.ToInt16(qtdColhida), lblDataColheita2.Text, cod_plantio);
-                        colheita.RealizarColheita(colheita);
+                            if (reader.Read())
+                            {
+                                int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                                Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio);
+                                colheita.RealizarColheita(colheita);
+                                reader.Close();
+                            }
+                        }
+                        catch (SqlException e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                        finally
+                        {
+                            con.Close();
+                        }
                     }
                 }
             }
@@ -163,7 +182,7 @@ namespace organ
             numtalhao = 1;
             if (lblDataColheita1.Text != "") //vê se existe colheita
             {
-                if(pbTalhao1.Value < pbTalhao1.Maximum)
+                if (pbTalhao1.Value < pbTalhao1.Maximum)
                 {
                     DialogResult dialog = MessageBox.Show("Você realmente deseja fazer a colheita antes da data estimada?", "Colheita", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                     if (dialog == DialogResult.Yes)
@@ -456,47 +475,122 @@ namespace organ
             labels2[10] = lblDataColheita11;
 
             string cmdDC;
+            SqlCommand comNS;
+            SqlDataReader readerNS;
+            SqlCommand comDC;
+            SqlDataReader readerDC;
 
-            try
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
-                for (int i = 0; i <= 10; i++)
+                con.Open();
+                try
                 {
-                    SqlConnection con = new SqlConnection(StringConexao.connectionString);
-                    con.Open();
-                    i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
-                    cmdNS = "SELECT S.nome_sem FROM tbPlantio P INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente WHERE cod_talhao = " + i + ";";
-                    SqlCommand comNS = new SqlCommand(cmdNS, con);
-                    SqlDataReader readerNS = comNS.ExecuteReader();
-
-                    if (readerNS.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
+                    for (int i = 0; i <= 10; i++)
                     {
-                        i = i - 1;
-                        labels[i].Text = readerNS["nome_sem"].ToString();
-                        readerNS.Close(); //Tem que fechar um reader para abrir outro
+                        i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
+                        cmdNS = "SELECT S.nome_sem FROM tbPlantio P INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente WHERE cod_talhao = " + i;
+                        comNS = new SqlCommand(cmdNS, con);
+                        readerNS = comNS.ExecuteReader();
 
-                        i = i + 1; //Como tinha subtraído na linha de cima, soma de novo (mesmo esquema do primeiro comentário)
-                        cmdDC = "SELECT data_colheita FROM tbPlantio WHERE cod_talhao = " + i + ";";
-                        SqlCommand comDC = new SqlCommand(cmdDC, con);
-                        SqlDataReader readerDC = comDC.ExecuteReader();
-
-                        if (readerDC.Read())
+                        if (readerNS.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
                         {
-                            i = i - 1; //Subtrai por causa do vetor (A matriz 0 é relacionada com o talhão 1, e tava
-                                       //somando 1 antes, então o talhão 2 iria na label[2], que é o lblDataColheita3)
-                            labels2[i].Text = Convert.ToDateTime(readerDC["data_colheita"]).ToString("dd/MM/yyyy");
-                            readerDC.Close();
+                            i = i - 1;
+                            labels[i].Text = readerNS["nome_sem"].ToString();
+                            readerNS.Close(); //Tem que fechar um reader para abrir outro
+
+                            i = i + 1; //Como tinha subtraído na linha de cima, soma de novo (mesmo esquema do primeiro comentário)
+                            cmdDC = "SELECT data_colheita FROM tbPlantio WHERE cod_talhao = " + i + ";";
+                            comDC = new SqlCommand(cmdDC, con);
+                            readerDC = comDC.ExecuteReader();
+
+                            if (readerDC.Read())
+                            {
+                                i = i - 1; //Subtrai por causa do vetor (A matriz 0 é relacionada com o talhão 1, e tava
+                                           //somando 1 antes, então o talhão 2 iria na label[2], que é o lblDataColheita3)
+                                           //loop já voltou ao normal
+                                labels2[i].Text = Convert.ToDateTime(readerDC["data_colheita"]).ToString("dd/MM/yyyy");
+                                readerDC.Close();
+                            }
+                            else
+                            {
+                                labels2[i].Text = "";
+                            }
+                        }
+                        else //tenta no codtalhao2
+                        {//ta somado 1 já
+                            cmdNS = "SELECT S.nome_sem FROM tbPlantio P INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente WHERE cod_talhao2 = " + i;
+                            comNS = new SqlCommand(cmdNS, con);
+                            readerNS.Close();
+                            readerNS = comNS.ExecuteReader();
+
+                            if (readerNS.Read())
+                            {
+                                i = i - 1;
+                                labels[i].Text = readerNS["nome_sem"].ToString();
+                                readerNS.Close();
+
+                                i = i + 1;
+                                cmdDC = "SELECT data_colheita FROM tbPlantio WHERE cod_talhao2 = " + i + ";";
+                                comDC = new SqlCommand(cmdDC, con);
+                                readerDC = comDC.ExecuteReader();
+
+                                if (readerDC.Read())
+                                {
+                                    i = i - 1;
+                                    labels2[i].Text = Convert.ToDateTime(readerDC["data_colheita"]).ToString("dd/MM/yyyy");
+                                    readerDC.Close();
+                                }
+                                else
+                                {
+                                    labels2[i].Text = "";
+                                }
+                            }
+                            else //tenta no codtalhao3
+                            {//ta somado 1 também
+                                cmdNS = "SELECT S.nome_sem FROM tbPlantio P INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente WHERE cod_talhao3 = " + i;
+                                comNS = new SqlCommand(cmdNS, con);
+                                readerNS.Close();
+                                readerNS = comNS.ExecuteReader();
+
+                                if (readerNS.Read())
+                                {
+                                    i = i - 1;
+                                    labels[i].Text = readerNS["nome_sem"].ToString();
+                                    readerNS.Close();
+
+                                    i = i + 1;
+                                    cmdDC = "SELECT data_colheita FROM tbPlantio WHERE cod_talhao3 = " + i + ";";
+                                    comDC = new SqlCommand(cmdDC, con);
+                                    readerDC = comDC.ExecuteReader();
+
+                                    if (readerDC.Read())
+                                    {
+                                        i = i - 1;
+                                        labels2[i].Text = Convert.ToDateTime(readerDC["data_colheita"]).ToString("dd/MM/yyyy");
+                                        readerDC.Close();
+                                    }
+                                    else
+                                    {
+                                        labels2[i].Text = "";
+                                    }
+                                }
+                                else
+                                {
+                                    i = i - 1;
+                                    readerNS.Close();
+                                }
+                            }
                         }
                     }
-                    else
-                    {
-                        i = i - 1; //Mesmo se não ler nada faz o loop voltar ao normal
-                    }
-                    readerNS.Close(); //Fechar um reader para abrir outro
                 }
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception(ex.Message);
+                catch (SqlException ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
             }
         }
 

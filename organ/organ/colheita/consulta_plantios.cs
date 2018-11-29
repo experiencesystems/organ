@@ -55,22 +55,5 @@ namespace organ
         {
             PreencherDataGridView();
         }
-
-        private void dgvPlantios_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            if (dgvPlantios.CurrentRow.Cells["Código"].Value != DBNull.Value)
-            {
-                if (MessageBox.Show("Tem certeza que deseja deletar esse registro?", "Excluir dados", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    Colheita c = new Colheita(Convert.ToInt16(dgvPlantios.CurrentRow.Cells["Código"].Value));
-
-                    c.ExcluirColheita(c);
-                }
-                else
-                    e.Cancel = true;
-            }
-            else
-                e.Cancel = true;
-        }
     }
 }

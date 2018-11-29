@@ -31,6 +31,11 @@ namespace organ
             set { descricao = value; }
         }
 
+        public Doenca()
+        {
+
+        }
+
         public Doenca(int codigo)
         {
             this.Codigo_doenca = codigo;

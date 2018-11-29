@@ -1,4 +1,4 @@
-﻿       using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,8 +18,21 @@ namespace organ
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             PreencherComboBoxFornecedor();
-            PreencherComboBoxPraga();
             PreencherComboBoxDoenca();
+            PreencherComboBoxPraga();
+            CarregaUnidadeMedida();
+        }
+
+        public void CarregaUnidadeMedida()
+        {
+            string[] unidade_medida = { "un", "Kg", "g", "mL", "L" };
+
+            for (int i = 0; i != unidade_medida.Length; i++)
+            {
+                cboUnidadeMedida.Items.Add(unidade_medida[i]);
+            }
+            cboUnidadeMedida.SelectedIndex = 0;
+
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -35,8 +48,67 @@ namespace organ
             }
             else
             {
-                Defensivo d = new  Defensivo(txtNome.Text, txtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.ValueMember), Convert.ToInt16(cboPraga.ValueMember), Convert.ToInt16(cboDoenca.ValueMember), cboUnidadeMedida.Text);
+                string fornecedor, doenca, praga;
+                if (cboDoenca.SelectedIndex == -1)
+                {
+                    doenca = cboDoenca.SelectedIndex.ToString();
+                }
+                else
+                {
+                    doenca = cboDoenca.SelectedValue.ToString();
+                }
+
+                if (cboPraga.SelectedIndex == -1)
+                {
+                    praga =  cboPraga.SelectedIndex.ToString();
+                }
+                else
+                {
+                    praga = cboPraga.SelectedValue.ToString();
+                }
+
+                if (cboFornecedor.SelectedIndex == -1)
+                {
+                    fornecedor = cboFornecedor.SelectedIndex.ToString();
+                }
+                else
+                {
+                    fornecedor = cboFornecedor.SelectedValue.ToString();
+                }
+
+                Defensivo d = new Defensivo(txtNome.Text, txtDescricao.Text, txtMarca.Text, Convert.ToInt16(doenca), Convert.ToInt16(praga), Convert.ToInt16(fornecedor), Convert.ToInt32(mskQuantidade.Text), cboUnidadeMedida.Text);
                 d.RegistrarDefensivo(d);
+            }
+        }
+        
+
+        void PreencherComboBoxFornecedor()
+        {
+            SqlConnection con = new SqlConnection(StringConexao.connectionString);
+            SqlCommand cmd = new SqlCommand("SELECT cod_fornecedor AS [CODIGO], nome_fantasia AS [FORNECEDOR] FROM tbFornecedor", con);
+
+            SqlDataReader reader;
+            con.Open();
+            try
+            {
+                reader = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("CODIGO", typeof(int));
+                dt.Columns.Add("FORNECEDOR", typeof(string));
+                dt.Load(reader);
+
+                cboFornecedor.ValueMember = "CODIGO";
+                cboFornecedor.DisplayMember = "FORNECEDOR";
+                cboFornecedor.SelectedIndex = -1;
+                cboFornecedor.DataSource = dt;
+            }
+            catch (SqlException e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                con.Close();
             }
         }
 
@@ -55,13 +127,10 @@ namespace organ
                 dt.Columns.Add("DOENCA", typeof(string));
                 dt.Load(reader);
 
-                cboPraga.ValueMember = "CODIGO";
-                cboPraga.DisplayMember = "DOENCA";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
-                cboPraga.DataSource = dt;
+                cboDoenca.DataSource = dt;
+                cboDoenca.ValueMember = "CODIGO";
+                cboDoenca.DisplayMember = "DOENCA";
+                cboFornecedor.SelectedIndex = -1;
             }
             catch (SqlException e)
             {
@@ -88,46 +157,10 @@ namespace organ
                 dt.Columns.Add("PRAGA", typeof(string));
                 dt.Load(reader);
 
+                cboPraga.DataSource = dt;
                 cboPraga.ValueMember = "CODIGO";
                 cboPraga.DisplayMember = "PRAGA";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
-                cboPraga.DataSource = dt;
-            }
-            catch (SqlException e)
-            {
-                throw new Exception(e.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
-        void PreencherComboBoxFornecedor()
-        {
-            SqlConnection con = new SqlConnection(StringConexao.connectionString);
-            SqlCommand cmd = new SqlCommand("SELECT cod_fornecedor AS [CODIGO], nome_fantasia AS [FORNECEDOR] FROM tbFornecedor", con);
-
-            SqlDataReader reader;
-            con.Open();
-            try
-            {
-                reader = cmd.ExecuteReader();
-                DataTable dt = new DataTable();
-                dt.Columns.Add("CODIGO", typeof(int));
-                dt.Columns.Add("FORNECEDOR", typeof(string));
-                dt.Load(reader);
-
-                cboFornecedor.ValueMember = "CODIGO";
-                cboFornecedor.DisplayMember = "FORNECEDOR";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
-                cboFornecedor.DataSource = dt;
+                cboFornecedor.SelectedIndex = -1;
             }
             catch (SqlException e)
             {

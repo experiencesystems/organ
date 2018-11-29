@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace organ
 {
@@ -20,11 +21,10 @@ namespace organ
             this.Cod_colheita = codigo_colheita;
         }
 
-        public Colheita(int qtd_colheita, String data_colheita, int cod_plantio)
+        public Colheita(int qtd_colheita, int cod_plantio)
         {
             plantio = new Plantio();
             this.Qtd_colheita = qtd_colheita;
-            plantio.Data_colheita = data_colheita;
             plantio.Cod_plantio = cod_plantio;
         }
 
@@ -40,6 +40,8 @@ namespace organ
             set { codigo_colheita = value; }
         }
 
+        string unidade_medida = "sac";
+
         public void RealizarColheita(Colheita c)
         {
             using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
@@ -50,9 +52,24 @@ namespace organ
                     CommandType = CommandType.StoredProcedure
                 };
                 sqlCmd.Parameters.AddWithValue("@COD_PLANTIO", SqlDbType.Int).Value = plantio.Cod_plantio;
-                sqlCmd.Parameters.AddWithValue("@COD_COLHEITA", SqlDbType.Int).Value = c.Cod_colheita;
-                sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", SqlDbType.Char).Value = c.Cod_colheita;
-                sqlCmd.ExecuteNonQuery();
+                sqlCmd.Parameters.AddWithValue("@QTD_COLHEITA", SqlDbType.Int).Value = c.Qtd_colheita;
+                sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", SqlDbType.Char).Value = unidade_medida;
+                try
+                {
+                    int i = sqlCmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Plantio foi colhido com sucesso!", "Colheita realizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Erro");
+                }
+                finally
+                {
+                    sqlCon.Close();
+                }
             }
         }
 
@@ -66,9 +83,24 @@ namespace organ
                     CommandType = CommandType.StoredProcedure
                 };
                 sqlCmd.Parameters.AddWithValue("@COD_PLANTIO", SqlDbType.Int).Value = plantio.Cod_plantio;
-                sqlCmd.Parameters.AddWithValue("@COD_COLHEITA", SqlDbType.Int).Value = c.Cod_colheita;
-                sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", SqlDbType.Char).Value = c.Cod_colheita;
-                sqlCmd.ExecuteNonQuery();
+                sqlCmd.Parameters.AddWithValue("@QTD_COLHEITA", SqlDbType.Int).Value = c.Qtd_colheita;
+                sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", SqlDbType.Char).Value = unidade_medida;
+                try
+                {
+                    int i = sqlCmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        MessageBox.Show("Plantio foi colhido com sucesso!", "Colheita realizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Erro");
+                }
+                finally
+                {
+                    sqlCon.Close();
+                }
             }
         }
 

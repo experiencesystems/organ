@@ -11,37 +11,27 @@ namespace organ
 {
     public class Defensivo : Produto
     {
-        private int cod_praga;
-        private int cod_doenca;
-
-        public int Cod_praga
-        {
-            get { return cod_praga; }
-            set { cod_praga = value; }
-        }
-        public int Cod_doenca
-        {
-            get { return cod_doenca; }
-            set { cod_doenca = value; }
-        }
-
         public Defensivo(int codigo)
         {
             this.Codigo = codigo;
         }
 
+        public Doenca doenca { get; set; }
+        public Praga praga { get; set; }
         public Fornecedor fornecedor { get; set; }
 
-        public Defensivo(String nome, String descricao, String marca, int quantidade, int cod_fornecedor, int cod_praga, int cod_doenca, String unidademedida)
+        public Defensivo(String nome, String descricao, String marca, int cod_doenca, int cod_praga, int cod_fornecedor, int quantidade, String unidademedida)
         {
+            doenca = new Doenca();
+            praga = new Praga();
             fornecedor = new Fornecedor();
             this.Nome = nome;
             this.Descricao = descricao;
             this.Marca = marca;
-            this.Quantidade = quantidade;
+            doenca.Codigo_doenca = cod_doenca;
+            praga.Codigo_praga = cod_doenca;
             fornecedor.Codigo_fornecedor = cod_fornecedor;
-            this.Cod_praga = cod_praga;
-            this.Cod_doenca = cod_doenca;
+            this.Quantidade = quantidade;
             this.UnidadeMedida = unidademedida;
         }
 
@@ -57,7 +47,34 @@ namespace organ
             cmd.Parameters.Add("@NOME_DEF", SqlDbType.VarChar).Value = d.Nome;
             cmd.Parameters.Add("@DESC_DEF", SqlDbType.VarChar).Value = d.Descricao;
             cmd.Parameters.Add("@MARCA_DEF", SqlDbType.VarChar).Value = d.Marca;
-            cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
+
+            if (doenca.Codigo_doenca != -1)
+            {
+                cmd.Parameters.Add("@COD_DOENCA", SqlDbType.Int).Value = doenca.Codigo_doenca;
+            }
+            else if (doenca.Codigo_doenca == -1)
+            {
+                cmd.Parameters.Add("@COD_DOENCA", SqlDbType.Int).Value = DBNull.Value;
+            }
+
+            if (praga.Codigo_praga != -1)
+            {
+                cmd.Parameters.Add("@COD_PRAGA", SqlDbType.Int).Value = praga.Codigo_praga;
+            }
+            else if (praga.Codigo_praga == -1)
+            {
+                cmd.Parameters.Add("@COD_PRAGA", SqlDbType.Int).Value = DBNull.Value;
+            }
+
+            if (fornecedor.Codigo_fornecedor != -1)
+            {
+                cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = fornecedor.Codigo_fornecedor;
+            }
+            else if (fornecedor.Codigo_fornecedor == -1)
+            {
+                cmd.Parameters.Add("@COD_FORNECEDOR", SqlDbType.Int).Value = DBNull.Value;
+            }
+            
             cmd.Parameters.Add("@QTD_ESTOQUE", SqlDbType.Int).Value = d.Quantidade;
             cmd.Parameters.Add("@UNIDADE_MEDIDA", SqlDbType.Char).Value = d.UnidadeMedida;
 

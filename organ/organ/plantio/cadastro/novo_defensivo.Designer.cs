@@ -36,19 +36,19 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
-            this.cboPraga = new System.Windows.Forms.ComboBox();
-            this.cboDoenca = new System.Windows.Forms.ComboBox();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tlpNovoFuncionario = new System.Windows.Forms.TableLayoutPanel();
+            this.mskQuantidade = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboUnidadeMedida = new System.Windows.Forms.ComboBox();
-            this.mskQuantidade = new System.Windows.Forms.MaskedTextBox();
+            this.cboDoenca = new System.Windows.Forms.ComboBox();
+            this.cboPraga = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +118,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(468, 393);
+            this.txtDescricao.Location = new System.Drawing.Point(468, 153);
             this.txtDescricao.MaxLength = 200;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(411, 31);
@@ -148,40 +148,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label1.Location = new System.Drawing.Point(103, 153);
+            this.label1.Location = new System.Drawing.Point(103, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 26);
             this.label1.TabIndex = 33;
             this.label1.Text = "Marca";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label3.Location = new System.Drawing.Point(103, 213);
-            this.label3.Margin = new System.Windows.Forms.Padding(3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 26);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Praga relacionada";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label4.Location = new System.Drawing.Point(103, 273);
-            this.label4.Margin = new System.Windows.Forms.Padding(3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 26);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Doença relacionada";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label2.Location = new System.Drawing.Point(103, 393);
+            this.label2.Location = new System.Drawing.Point(103, 153);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 26);
@@ -192,7 +170,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 15.75F);
-            this.label5.Location = new System.Drawing.Point(103, 93);
+            this.label5.Location = new System.Drawing.Point(103, 393);
             this.label5.Margin = new System.Windows.Forms.Padding(3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 26);
@@ -202,31 +180,11 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(468, 153);
+            this.txtMarca.Location = new System.Drawing.Point(468, 93);
             this.txtMarca.MaxLength = 50;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(411, 31);
             this.txtMarca.TabIndex = 5;
-            // 
-            // cboPraga
-            // 
-            this.cboPraga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPraga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboPraga.FormattingEnabled = true;
-            this.cboPraga.Location = new System.Drawing.Point(468, 213);
-            this.cboPraga.Name = "cboPraga";
-            this.cboPraga.Size = new System.Drawing.Size(411, 31);
-            this.cboPraga.TabIndex = 6;
-            // 
-            // cboDoenca
-            // 
-            this.cboDoenca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDoenca.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDoenca.FormattingEnabled = true;
-            this.cboDoenca.Location = new System.Drawing.Point(468, 273);
-            this.cboDoenca.Name = "cboDoenca";
-            this.cboDoenca.Size = new System.Drawing.Size(411, 31);
-            this.cboDoenca.TabIndex = 7;
             // 
             // cboFornecedor
             // 
@@ -256,22 +214,22 @@
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.22556F));
             this.tlpNovoFuncionario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.77444F));
             this.tlpNovoFuncionario.Controls.Add(this.lblNome, 0, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 5);
-            this.tlpNovoFuncionario.Controls.Add(this.txtDescricao, 1, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.label6, 0, 5);
             this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.label5, 0, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 6);
-            this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.txtMarca, 1, 2);
-            this.tlpNovoFuncionario.Controls.Add(this.cboDoenca, 1, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.cboPraga, 1, 3);
-            this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 4);
-            this.tlpNovoFuncionario.Controls.Add(this.mskQuantidade, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
             this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 7);
             this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 7);
-            this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
+            this.tlpNovoFuncionario.Controls.Add(this.mskQuantidade, 1, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.label5, 0, 6);
+            this.tlpNovoFuncionario.Controls.Add(this.cboFornecedor, 1, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.label6, 0, 5);
+            this.tlpNovoFuncionario.Controls.Add(this.label1, 0, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtMarca, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.label2, 0, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.txtDescricao, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.cboDoenca, 1, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.cboPraga, 1, 4);
+            this.tlpNovoFuncionario.Controls.Add(this.label3, 0, 3);
+            this.tlpNovoFuncionario.Controls.Add(this.label4, 0, 4);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -288,6 +246,15 @@
             this.tlpNovoFuncionario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpNovoFuncionario.Size = new System.Drawing.Size(1409, 696);
             this.tlpNovoFuncionario.TabIndex = 48;
+            // 
+            // mskQuantidade
+            // 
+            this.mskQuantidade.Font = new System.Drawing.Font("Calibri", 14.25F);
+            this.mskQuantidade.Location = new System.Drawing.Point(468, 393);
+            this.mskQuantidade.Mask = "000000000";
+            this.mskQuantidade.Name = "mskQuantidade";
+            this.mskQuantidade.Size = new System.Drawing.Size(266, 31);
+            this.mskQuantidade.TabIndex = 3;
             // 
             // label7
             // 
@@ -310,14 +277,47 @@
             this.cboUnidadeMedida.Size = new System.Drawing.Size(267, 31);
             this.cboUnidadeMedida.TabIndex = 4;
             // 
-            // mskQuantidade
+            // cboDoenca
             // 
-            this.mskQuantidade.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.mskQuantidade.Location = new System.Drawing.Point(468, 93);
-            this.mskQuantidade.Mask = "000000000";
-            this.mskQuantidade.Name = "mskQuantidade";
-            this.mskQuantidade.Size = new System.Drawing.Size(266, 31);
-            this.mskQuantidade.TabIndex = 3;
+            this.cboDoenca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDoenca.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDoenca.FormattingEnabled = true;
+            this.cboDoenca.Location = new System.Drawing.Point(468, 213);
+            this.cboDoenca.Name = "cboDoenca";
+            this.cboDoenca.Size = new System.Drawing.Size(411, 31);
+            this.cboDoenca.TabIndex = 47;
+            // 
+            // cboPraga
+            // 
+            this.cboPraga.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPraga.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPraga.FormattingEnabled = true;
+            this.cboPraga.Location = new System.Drawing.Point(468, 273);
+            this.cboPraga.Name = "cboPraga";
+            this.cboPraga.Size = new System.Drawing.Size(411, 31);
+            this.cboPraga.TabIndex = 48;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label3.Location = new System.Drawing.Point(103, 213);
+            this.label3.Margin = new System.Windows.Forms.Padding(3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 26);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Doença relacionada";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.label4.Location = new System.Drawing.Point(103, 273);
+            this.label4.Margin = new System.Windows.Forms.Padding(3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 26);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Praga relacionada";
             // 
             // novo_defensivo
             // 
@@ -349,18 +349,18 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.ComboBox cboPraga;
-        private System.Windows.Forms.ComboBox cboDoenca;
         private System.Windows.Forms.ComboBox cboFornecedor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tlpNovoFuncionario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboUnidadeMedida;
         private System.Windows.Forms.MaskedTextBox mskQuantidade;
+        private System.Windows.Forms.ComboBox cboDoenca;
+        private System.Windows.Forms.ComboBox cboPraga;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -29,10 +29,13 @@ namespace organ
         }
 
         DateTime hoje = DateTime.Now;
-        
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            if (MessageBox.Show("Você tem certeza que deseja voltar? Você perderá toda a informação inserida.", "Voltar",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -49,11 +52,11 @@ namespace organ
             {
                 MessageBox.Show("Insira a quantidade utilizada do defensivo selecionado.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if ((cboFuncionario1.ValueMember == cboFuncionario2.ValueMember && cboFuncionario2.Text != "") || (cboFuncionario1.ValueMember == cboFuncionario3.ValueMember && cboFuncionario3.Text != "") || (cboFuncionario2.ValueMember == cboFuncionario3.ValueMember && cboFuncionario2.Text != "" && cboFuncionario3.Text != ""))
+            else if ((cboFuncionario1.SelectedIndex == cboFuncionario2.SelectedIndex && cboFuncionario2.Text != "") || (cboFuncionario1.SelectedIndex == cboFuncionario3.SelectedIndex && cboFuncionario3.Text != "") || (cboFuncionario2.SelectedIndex == cboFuncionario3.SelectedIndex && cboFuncionario2.Text != "" && cboFuncionario3.Text != ""))
             {
                 MessageBox.Show("Selecione funcionários diferentes para a colheita.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if ((cboTalhao1.ValueMember == cboTalhao2.ValueMember && cboTalhao2.Text != "") || (cboTalhao1.ValueMember == cboTalhao3.ValueMember && cboTalhao3.Text != "") || (cboTalhao2.ValueMember == cboTalhao3.ValueMember && cboTalhao2.Text != "" && cboTalhao3.Text != ""))
+            else if ((cboTalhao1.SelectedIndex == cboTalhao2.SelectedIndex && cboTalhao2.Text != "") || (cboTalhao1.SelectedIndex == cboTalhao3.SelectedIndex && cboTalhao3.Text != "") || (cboTalhao2.SelectedIndex == cboTalhao3.SelectedIndex && cboTalhao2.Text != "" && cboTalhao3.Text != ""))
             {
                 MessageBox.Show("Selecione talhões diferentes para a colheita.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -63,8 +66,72 @@ namespace organ
             }
             else
             {
-                Plantio p = new Plantio(txtNome.Text, Convert.ToString(dtDataColheita.Text), cboFuncionario1.SelectedIndex, cboFuncionario2.SelectedIndex, cboFuncionario3.SelectedIndex, cboSemente.SelectedIndex, Convert.ToInt16(mskQntSemente.Text), cboFertilizante.SelectedIndex, Convert.ToInt16(mskQntFertilizante.Text), cboDefensivo.SelectedIndex, Convert.ToInt16(mskQntDefensivo.Text), cboTalhao1.SelectedIndex, cboTalhao2.SelectedIndex, cboTalhao3.SelectedIndex);
+                ConverteValoresCBO();
+                Plantio p = new Plantio(txtNome.Text, dtDataColheita.Text, Convert.ToInt16(func1), Convert.ToInt16(func2), Convert.ToInt16(func3), Convert.ToInt16(semente), Convert.ToInt32(mskQntSemente.Text), Convert.ToInt16(fertilizante), mskQntFertilizante.Text, Convert.ToInt16(defensivo), mskQntDefensivo.Text, Convert.ToInt16(talhao1), Convert.ToInt16(talhao2), Convert.ToInt16(talhao3));
                 p.NovoPlantio(p);
+            }
+        }
+
+        string semente, fertilizante, defensivo, talhao1, talhao2, talhao3, func1, func2, func3;
+
+        void ConverteValoresCBO()
+        {
+            semente = cboSemente.SelectedValue.ToString();
+            talhao1 = cboTalhao1.SelectedValue.ToString();
+            func1 = cboFuncionario1.SelectedValue.ToString();
+
+            if (cboFertilizante.SelectedIndex == -1)//selected index é oq deixa o campo vazio
+            {
+                fertilizante = cboFertilizante.SelectedIndex.ToString();//ai deixaria como -1 para mudar pra nulo lá na classe plantio
+            }
+            else
+            {//se nao for converte o object selectedvalue (que pega o valuemember) para string para depois converter para numero quando chama o método
+                fertilizante = cboFertilizante.SelectedValue.ToString();
+            }
+
+            if (cboDefensivo.SelectedIndex == -1)
+            {
+                defensivo = cboDefensivo.SelectedIndex.ToString();
+            }
+            else
+            {
+                defensivo = cboDefensivo.SelectedValue.ToString();
+            }
+
+            if (cboFuncionario2.SelectedIndex == -1)
+            {
+                func2 = cboFuncionario2.SelectedIndex.ToString();
+            }
+            else
+            {
+                func2 = cboFuncionario2.SelectedValue.ToString();
+            }
+
+            if (cboFuncionario3.SelectedIndex == -1)
+            {
+                func3 = cboFuncionario3.SelectedIndex.ToString();
+            }
+            else
+            {
+                func3 = cboFuncionario3.SelectedValue.ToString();
+            }
+
+            if (cboTalhao2.SelectedIndex == -1)
+            {
+                talhao2 = cboTalhao2.SelectedIndex.ToString();
+            }
+            else
+            {
+                talhao2 = cboTalhao2.SelectedValue.ToString();
+            }
+
+            if (cboTalhao3.SelectedIndex == -1)
+            {
+                talhao3 = cboTalhao3.SelectedIndex.ToString();
+            }
+            else
+            {
+                talhao3 = cboTalhao3.SelectedValue.ToString();
             }
         }
 
@@ -73,7 +140,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_funcionario AS [CODIGO], nome_func AS [FUNCIONARIO] " +
                                             "FROM tbFuncionario " +
-                                            "/*WHERE status_funcionario = 1*/", con);
+                                            "WHERE status_func = 'Ativo'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -86,10 +153,7 @@ namespace organ
 
                 cboFuncionario1.ValueMember = "CODIGO";
                 cboFuncionario1.DisplayMember = "FUNCIONARIO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboFuncionario1.SelectedIndex = -1;
                 cboFuncionario1.DataSource = dt;
             }
             catch (SqlException e)
@@ -107,7 +171,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_funcionario AS [CODIGO], nome_func AS [FUNCIONARIO] " +
                                             "FROM tbFuncionario " +
-                                            "/*WHERE status_funcionario = 1*/", con);
+                                            "WHERE status_func = 'Ativo'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -120,10 +184,7 @@ namespace organ
 
                 cboFuncionario2.ValueMember = "CODIGO";
                 cboFuncionario2.DisplayMember = "FUNCIONARIO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboFuncionario2.SelectedIndex = -1;
                 cboFuncionario2.DataSource = dt;
             }
             catch (SqlException e)
@@ -141,7 +202,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_funcionario AS [CODIGO], nome_func AS [FUNCIONARIO] " +
                                             "FROM tbFuncionario " +
-                                            "/*WHERE status_funcionario = 1*/", con);
+                                            "WHERE status_func = 'Ativo'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -154,10 +215,7 @@ namespace organ
 
                 cboFuncionario3.ValueMember = "CODIGO";
                 cboFuncionario3.DisplayMember = "FUNCIONARIO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboFuncionario3.SelectedIndex = -1;
                 cboFuncionario3.DataSource = dt;
             }
             catch (SqlException e)
@@ -189,10 +247,7 @@ namespace organ
 
                 cboSemente.ValueMember = "CODIGO";
                 cboSemente.DisplayMember = "SEMENTE";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboSemente.SelectedIndex = -1;
                 cboSemente.DataSource = dt;
             }
             catch (SqlException e)
@@ -209,8 +264,8 @@ namespace organ
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT F.cod_fertilizante AS [CODIGO], F.nome_fert AS [FERTILIZANTE] " +
-                                            "FROM tbFertilizante F " +
-                                            "INNER JOIN tbEstoque E ON F.cod_estoque = F.cod_estoque " +
+                                            "FROM tbFertilizante F "+
+                                            "INNER JOIN tbEstoque E ON F.cod_estoque = E.cod_estoque " +
                                             "WHERE E.qtd_estoque > 0", con);
             SqlDataReader reader;
             con.Open();
@@ -224,10 +279,7 @@ namespace organ
 
                 cboFertilizante.ValueMember = "CODIGO";
                 cboFertilizante.DisplayMember = "FERTILIZANTE";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboFertilizante.SelectedIndex = -1;
                 cboFertilizante.DataSource = dt;
             }
             catch (SqlException e)
@@ -244,8 +296,8 @@ namespace organ
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT D.cod_defensivo AS [CODIGO], D.nome_def AS [DEFENSIVO] " +
-                                            "FROM tbDefensivo D " +
-                                            "INNER JOIN tbEstoque E ON D.cod_estoque = D.cod_estoque " +
+                                            "FROM tbDefensivo D "+
+                                            "INNER JOIN tbEstoque E ON D.cod_estoque = E.cod_estoque " +
                                             "WHERE E.qtd_estoque > 0", con);
             SqlDataReader reader;
             con.Open();
@@ -259,10 +311,7 @@ namespace organ
 
                 cboDefensivo.ValueMember = "CODIGO";
                 cboDefensivo.DisplayMember = "DEFENSIVO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboDefensivo.SelectedIndex = -1;
                 cboDefensivo.DataSource = dt;
             }
             catch (SqlException e)
@@ -280,7 +329,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_talhao AS [CODIGO], nome_tal AS [TALHAO] " +
                                             "FROM tbTalhao " +
-                                            "WHERE disponivel_tal = 'Disponível'", con);
+                                            "WHERE disponivel_tal = 'Disponivel'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -294,10 +343,7 @@ namespace organ
 
                 cboTalhao1.ValueMember = "CODIGO";
                 cboTalhao1.DisplayMember = "TALHAO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboTalhao1.SelectedIndex = -1;
                 cboTalhao1.DataSource = dt;
             }
             catch (SqlException e)
@@ -315,7 +361,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_talhao AS [CODIGO], nome_tal AS [TALHAO] " +
                                             "FROM tbTalhao " +
-                                            "WHERE disponivel_tal = 'Disponível'", con);
+                                            "WHERE disponivel_tal = 'Disponivel'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -329,10 +375,7 @@ namespace organ
 
                 cboTalhao2.ValueMember = "CODIGO";
                 cboTalhao2.DisplayMember = "TALHAO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboTalhao2.SelectedIndex = -1;
                 cboTalhao2.DataSource = dt;
             }
             catch (SqlException e)
@@ -350,7 +393,7 @@ namespace organ
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
             SqlCommand cmd = new SqlCommand("SELECT cod_talhao AS [CODIGO], nome_tal AS [TALHAO] " +
                                             "FROM tbTalhao " +
-                                            "WHERE disponivel_tal = 'Disponível'", con);
+                                            "WHERE disponivel_tal = 'Disponivel'", con);
             SqlDataReader reader;
             con.Open();
             try
@@ -364,10 +407,7 @@ namespace organ
 
                 cboTalhao3.ValueMember = "CODIGO";
                 cboTalhao3.DisplayMember = "TALHAO";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboTalhao3.SelectedIndex = -1;
                 cboTalhao3.DataSource = dt;
             }
             catch (SqlException e)
@@ -382,14 +422,31 @@ namespace organ
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            cboFertilizante.SelectedIndex = 0;
+            cboSemente.SelectedIndex = -1;
+            mskQntSemente.Text = "";
+            cboFertilizante.SelectedIndex = -1;
             mskQntFertilizante.Text = "";
-            cboDefensivo.SelectedIndex = 0;
+            cboDefensivo.SelectedIndex = -1;
             mskQntDefensivo.Text = "";
-            cboTalhao2.SelectedIndex = 0;
-            cboTalhao3.SelectedIndex = 0;
-            cboFuncionario2.SelectedIndex = 0;
-            cboFuncionario3.SelectedIndex = 0;
+            cboTalhao1.SelectedIndex = -1;
+            cboTalhao2.SelectedIndex = -1;
+            cboTalhao3.SelectedIndex = -1;
+            cboFuncionario1.SelectedIndex = -1;
+            cboFuncionario2.SelectedIndex = -1;
+            cboFuncionario3.SelectedIndex = -1;
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            PreencherComboBoxDefensivo();
+            PreencherComboBoxFertilizante();
+            PreencherComboBoxFuncionario();
+            PreencherComboBoxFuncionario2();
+            PreencherComboBoxFuncionario3();
+            PreencherComboBoxSemente();
+            PreencherComboBoxTalhoes();
+            PreencherComboBoxTalhoes2();
+            PreencherComboBoxTalhoes3();
         }
     }
 }

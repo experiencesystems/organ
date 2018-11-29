@@ -50,7 +50,7 @@
             this.tlpBarraSuperior.ColumnCount = 3;
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.705373F));
             this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.29462F));
-            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
+            this.tlpBarraSuperior.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 220F));
             this.tlpBarraSuperior.Controls.Add(this.btnVoltar, 0, 0);
             this.tlpBarraSuperior.Controls.Add(this.btnAdd, 2, 0);
             this.tlpBarraSuperior.Controls.Add(this.lblFornecedores, 1, 0);
@@ -91,7 +91,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 16F);
             this.btnAdd.Image = global::organ.Properties.Resources.soma;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(1167, 23);
+            this.btnAdd.Location = new System.Drawing.Point(1166, 23);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAdd.Size = new System.Drawing.Size(204, 30);
@@ -105,7 +105,7 @@
             this.lblFornecedores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFornecedores.AutoSize = true;
             this.lblFornecedores.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblFornecedores.Location = new System.Drawing.Point(544, 20);
+            this.lblFornecedores.Location = new System.Drawing.Point(543, 20);
             this.lblFornecedores.Name = "lblFornecedores";
             this.lblFornecedores.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
             this.lblFornecedores.Size = new System.Drawing.Size(207, 34);
@@ -130,7 +130,6 @@
             // dgvFornecedores
             // 
             this.dgvFornecedores.AllowUserToAddRows = false;
-            this.dgvFornecedores.AllowUserToDeleteRows = false;
             this.dgvFornecedores.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;

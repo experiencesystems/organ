@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace organ
 {
-    class Praga
+    public class Praga
     {
         private int codigo;
         private String nome_praga;
         private String descricao;
+
+        public Praga()
+        {
+
+        }
 
         public Praga(int codigo)
         {

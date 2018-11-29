@@ -351,9 +351,11 @@
             this.pbTalhao11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao11.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao11.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao11.Minimum = 1;
             this.pbTalhao11.Name = "pbTalhao11";
             this.pbTalhao11.Size = new System.Drawing.Size(391, 27);
             this.pbTalhao11.TabIndex = 2;
+            this.pbTalhao11.Value = 1;
             // 
             // btnFazerColheita11
             // 
@@ -420,9 +422,11 @@
             this.pbTalhao1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao1.Location = new System.Drawing.Point(11, 218);
             this.pbTalhao1.Margin = new System.Windows.Forms.Padding(10);
+            this.pbTalhao1.Minimum = 1;
             this.pbTalhao1.Name = "pbTalhao1";
             this.pbTalhao1.Size = new System.Drawing.Size(400, 27);
             this.pbTalhao1.TabIndex = 2;
+            this.pbTalhao1.Value = 1;
             // 
             // btnFazerColheita1
             // 
@@ -549,9 +553,11 @@
             this.pbTalhao2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao2.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao2.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao2.Minimum = 1;
             this.pbTalhao2.Name = "pbTalhao2";
             this.pbTalhao2.Size = new System.Drawing.Size(391, 27);
             this.pbTalhao2.TabIndex = 2;
+            this.pbTalhao2.Value = 1;
             // 
             // btnFazerColheita2
             // 
@@ -679,9 +685,11 @@
             this.pbTalhao10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao10.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao10.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao10.Minimum = 1;
             this.pbTalhao10.Name = "pbTalhao10";
             this.pbTalhao10.Size = new System.Drawing.Size(390, 27);
             this.pbTalhao10.TabIndex = 2;
+            this.pbTalhao10.Value = 1;
             // 
             // btnFazerColheita10
             // 
@@ -808,9 +816,11 @@
             this.pbTalhao4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao4.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao4.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao4.Minimum = 1;
             this.pbTalhao4.Name = "pbTalhao4";
             this.pbTalhao4.Size = new System.Drawing.Size(390, 27);
             this.pbTalhao4.TabIndex = 2;
+            this.pbTalhao4.Value = 1;
             // 
             // btnFazerColheita4
             // 
@@ -937,9 +947,11 @@
             this.pbTalhao9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao9.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao9.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao9.Minimum = 1;
             this.pbTalhao9.Name = "pbTalhao9";
             this.pbTalhao9.Size = new System.Drawing.Size(392, 27);
             this.pbTalhao9.TabIndex = 2;
+            this.pbTalhao9.Value = 1;
             // 
             // btnFazerColheita9
             // 
@@ -1066,9 +1078,11 @@
             this.pbTalhao3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao3.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao3.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao3.Minimum = 1;
             this.pbTalhao3.Name = "pbTalhao3";
             this.pbTalhao3.Size = new System.Drawing.Size(392, 27);
             this.pbTalhao3.TabIndex = 2;
+            this.pbTalhao3.Value = 1;
             // 
             // btnFazerColheita3
             // 
@@ -1196,9 +1210,11 @@
             this.pbTalhao8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao8.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao8.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao8.Minimum = 1;
             this.pbTalhao8.Name = "pbTalhao8";
             this.pbTalhao8.Size = new System.Drawing.Size(391, 27);
             this.pbTalhao8.TabIndex = 2;
+            this.pbTalhao8.Value = 1;
             // 
             // btnFazerColheita8
             // 
@@ -1325,9 +1341,11 @@
             this.pbTalhao5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao5.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao5.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao5.Minimum = 1;
             this.pbTalhao5.Name = "pbTalhao5";
             this.pbTalhao5.Size = new System.Drawing.Size(391, 27);
             this.pbTalhao5.TabIndex = 2;
+            this.pbTalhao5.Value = 1;
             // 
             // btnFazerColheita5
             // 
@@ -1454,9 +1472,11 @@
             this.pbTalhao7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao7.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao7.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao7.Minimum = 1;
             this.pbTalhao7.Name = "pbTalhao7";
             this.pbTalhao7.Size = new System.Drawing.Size(390, 27);
             this.pbTalhao7.TabIndex = 2;
+            this.pbTalhao7.Value = 1;
             // 
             // btnFazerColheita7
             // 
@@ -1583,9 +1603,11 @@
             this.pbTalhao6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbTalhao6.Location = new System.Drawing.Point(16, 218);
             this.pbTalhao6.Margin = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.pbTalhao6.Minimum = 1;
             this.pbTalhao6.Name = "pbTalhao6";
             this.pbTalhao6.Size = new System.Drawing.Size(392, 27);
             this.pbTalhao6.TabIndex = 2;
+            this.pbTalhao6.Value = 1;
             // 
             // btnFazerColheita6
             // 

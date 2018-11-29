@@ -21,9 +21,9 @@ namespace organ
         private int cod_semente;
         private int qtd_semente;
         private int cod_fertilizante;
-        private int qtd_fertilizante;
+        private String qtd_fertilizante;
         private int cod_defensivo;
-        private int qtd_defensivo;
+        private String qtd_defensivo;
         private int cod_talhao;
         private int cod_talhao2;
         private int cod_talhao3;
@@ -38,7 +38,7 @@ namespace organ
 
         }
 
-        public Plantio(String nome_plantio, String data_colheita, int cod_funcionario, int cod_funcionario2, int cod_funcionario3, int cod_semente, int qtd_semente, int cod_fertilizante, int qtd_fertilizante, int cod_defensivo, int qtd_defensivo, int cod_talhao, int cod_talhao2, int cod_talhao3)
+        public Plantio(String nome_plantio, String data_colheita, int cod_funcionario, int cod_funcionario2, int cod_funcionario3, int cod_semente, int qtd_semente, int cod_fertilizante, String qtd_fertilizante, int cod_defensivo, String qtd_defensivo, int cod_talhao, int cod_talhao2, int cod_talhao3)
         {
             this.Nome_plantio = nome_plantio;
             this.Data_colheita = data_colheita;
@@ -106,7 +106,7 @@ namespace organ
             get { return cod_fertilizante; }
             set { cod_fertilizante = value; }
         }
-        public int Qtd_fertilizante
+        public String Qtd_fertilizante
         {
             get { return qtd_fertilizante; }
             set { qtd_fertilizante = value; }
@@ -116,7 +116,7 @@ namespace organ
             get { return cod_defensivo; }
             set { cod_defensivo = value; }
         }
-        public int Qtd_defensivo
+        public String Qtd_defensivo
         {
             get { return qtd_defensivo; }
             set { qtd_defensivo = value; }
@@ -144,19 +144,86 @@ namespace organ
             SqlCommand cmd = new SqlCommand("SP_INSERT_PLANTIO", con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@DATA_COLHEITA", SqlDbType.NVarChar).Value = p.Data_colheita;
+            cmd.Parameters.Add("@NOME_PLANTIO", SqlDbType.VarChar).Value = p.Nome_plantio;
+            cmd.Parameters.Add("@DATA_COLHEITA", SqlDbType.VarChar).Value = p.Data_colheita;
             cmd.Parameters.Add("@COD_FUNCIONARIO", SqlDbType.Int).Value = p.Cod_funcionario;
-            cmd.Parameters.Add("@COD_FUNCIONARIO2", SqlDbType.Int).Value = p.Cod_funcionario2;
-            cmd.Parameters.Add("@COD_FUNCIONARIO3", SqlDbType.Int).Value = p.Cod_funcionario3;
+
+            if (p.Cod_funcionario2 == -1)
+            {
+                cmd.Parameters.Add("@COD_FUNCIONARIO2", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@COD_FUNCIONARIO2", SqlDbType.Int).Value = p.Cod_funcionario2;
+            }
+
+            if (p.Cod_funcionario3 == -1)
+            {
+                cmd.Parameters.Add("@COD_FUNCIONARIO3", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@COD_FUNCIONARIO3", SqlDbType.Int).Value = p.Cod_funcionario3;
+            }
+
             cmd.Parameters.Add("@COD_SEMENTE", SqlDbType.Int).Value = p.Cod_semente;
             cmd.Parameters.Add("@QTD_SEMENTE", SqlDbType.Int).Value = p.Qtd_semente;
-            cmd.Parameters.Add("@COD_FERTILIZANTE", SqlDbType.Int).Value = p.Cod_fertilizante;
-            cmd.Parameters.Add("@QTD_FERTILIZANTE", SqlDbType.Int).Value = p.Qtd_fertilizante;
-            cmd.Parameters.Add("@COD_DEFENSIVO", SqlDbType.Int).Value = p.Cod_defensivo;
-            cmd.Parameters.Add("@QTD_DEFENSIVO", SqlDbType.Int).Value = p.Qtd_defensivo;
+
+            if (p.Cod_fertilizante == -1)
+            {
+                cmd.Parameters.Add("@COD_FERTILIZANTE", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@COD_FERTILIZANTE", SqlDbType.Int).Value = p.Cod_fertilizante;
+            }
+
+            if (p.Qtd_fertilizante == "")
+            {
+                cmd.Parameters.Add("@QTD_FERTILIZANTE", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@QTD_FERTILIZANTE", SqlDbType.Int).Value = Convert.ToInt32(p.Qtd_fertilizante);
+            }
+
+            if (p.Cod_defensivo == -1)
+            {
+                cmd.Parameters.Add("@COD_DEFENSIVO", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@COD_DEFENSIVO", SqlDbType.Int).Value = p.Cod_defensivo;
+            }
+
+            if (p.Qtd_defensivo == "")
+            {
+                cmd.Parameters.Add("@QTD_DEFENSIVO", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@QTD_DEFENSIVO", SqlDbType.Int).Value = Convert.ToInt32(p.Qtd_defensivo);
+            }
+            
             cmd.Parameters.Add("@COD_TALHAO", SqlDbType.Int).Value = p.Cod_talhao;
-            cmd.Parameters.Add("@COD_TALHAO2", SqlDbType.Int).Value = p.Cod_talhao2;
-            cmd.Parameters.Add("@COD_TALHAO3", SqlDbType.Int).Value = p.Cod_talhao3;
+
+            if (p.Cod_talhao2 == -1)
+            {
+                cmd.Parameters.Add("@COD_TALHAO2", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@COD_TALHAO2", SqlDbType.Int).Value = p.Cod_talhao2;
+            }
+
+            if (p.Cod_talhao3 == -1)
+            {
+                cmd.Parameters.Add("@COD_TALHAO3", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@COD_TALHAO3", SqlDbType.Int).Value = p.Cod_talhao3;
+            }
 
             con.Open();
 
@@ -180,20 +247,5 @@ namespace organ
                 }
             }
         }
-
-        public void ExcluirPlantio(Plantio p)
-        {
-            using (SqlConnection sqlCon = new SqlConnection(StringConexao.connectionString))
-            {
-                sqlCon.Open();
-                SqlCommand sqlCmd = new SqlCommand("SP_DELETE_PLANTIO", sqlCon)
-                {
-                    CommandType = CommandType.StoredProcedure
-                };
-                sqlCmd.Parameters.AddWithValue("@COD_PLANTIO", p.Cod_plantio);
-                sqlCmd.ExecuteNonQuery();
-            }
-        }
-
     }
 }

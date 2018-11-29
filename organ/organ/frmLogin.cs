@@ -121,9 +121,13 @@ namespace organ
             {
                 try
                 {
-                    string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = '" + txtUsuario.Text + "' AND senha = '" + txtSenha.Text + "';";
-
+                    string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = @nome_login AND senha = @senha;";
+                    
                     SqlCommand scmd = new SqlCommand(sql, con);
+
+                    scmd.Parameters.Add("@NOME_LOGIN", SqlDbType.NVarChar).Value = txtUsuario.Text;
+                    scmd.Parameters.Add("@SENHA", SqlDbType.NVarChar).Value = txtSenha.Text;
+
                     con.Open();
 
                     if ((txtUsuario.Text == "") || (txtUsuario.Text == "Usuário") || (txtSenha.Text == "Senha") || (txtSenha.Text == ""))
@@ -153,7 +157,7 @@ namespace organ
                 }
                 catch (SqlException ex)
                 {
-                    throw new Exception(ex.Message);
+                    MessageBox.Show("Primeiro cadastre um usuário no banco!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

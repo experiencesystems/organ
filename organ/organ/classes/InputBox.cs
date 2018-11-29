@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace organ
 {
@@ -235,8 +236,16 @@ namespace organ
         {
 
             InputResponse = this.txtInput.Text;
-
-            this.Close();
+            bool Valido = txtInput.Text.Length <= 9 && txtInput.Text.All(char.IsDigit) && txtInput.Text != "";
+            if (!Valido)
+            {
+                MessageBox.Show("Digite um valor válido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                this.Close();
+            }
+                     
 
         }
 
