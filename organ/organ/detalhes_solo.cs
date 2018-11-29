@@ -16,9 +16,7 @@ namespace organ
         public detalhes_solo()
         {
             InitializeComponent();
-            int h = Screen.PrimaryScreen.WorkingArea.Height - 83;
-            int w = Screen.PrimaryScreen.WorkingArea.Width - 131;
-            this.ClientSize = new Size(w, h);
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             PreencherDataGridView();
         }
 

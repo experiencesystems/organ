@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Win32;
 
 namespace organ
 {
@@ -21,6 +22,39 @@ namespace organ
 
         private void llblGerenciamentoContas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            string cmdCodUser;
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    cmdCodUser = "select * from tbUsuario where cod_usuario = 1";
+                    SqlCommand comUser = new SqlCommand(cmdCodUser, con);
+                    SqlDataReader reader = comUser.ExecuteReader();
+                    if (reader.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
+                    {
+                        using (gerenciamento_contas _gerenciamento_contas = new gerenciamento_contas())
+                        {
+                            _gerenciamento_contas.ShowDialog(this);
+                        }
+                        reader.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Você não tem permissão para acessar.", "Sem permissão", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        reader.Close();
+                    }
+                }
+                catch (Exception c)
+                {
+                    throw new Exception(c.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+
             //gerenciamento_contas1.Visible = true;
             //gerenciamento_contas1.Dock = DockStyle.Fill;
         }
@@ -56,6 +90,92 @@ namespace organ
                     con.Close();
                 }
             }
+        }
+
+        public static void AbrirIniciar(bool OnOff)
+        {
+            try
+            {
+                //Nome a ser exibido no registro ou quando Der MSCONFIG - Pode Alterar
+                string appName = "organ";
+                string runKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
+
+                //Diretorio da chave do Registro NAO ALTERAR
+
+
+                //Abre o registro
+                RegistryKey startupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+                //Valida se vai incluir o iniciar com o Windows ou remover
+                if (OnOff)//Iniciar
+                {
+                    if (startupKey.GetValue(appName) == null)
+                    {
+                        // Add startup reg key
+                        startupKey.SetValue(appName, @"""" + Application.ExecutablePath.ToString() + @"""");
+                        startupKey.Close();
+                    }
+                }
+                else//Nao iniciar mais
+                {
+                    // remove startup
+                    startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                    startupKey.DeleteValue(appName, false);
+                    startupKey.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ckbAbrirIniciar_Click(object sender, EventArgs e)
+        {
+
+            string appName = "Organ";
+            string runKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
+            RegistryKey startupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+            if (startupKey.GetValue(appName) == startupKey.GetValue(appName))
+            {
+                ckbAbrirIniciar.Checked = true;
+            }
+            else
+            {
+                switch (ckbAbrirIniciar.CheckState)
+                {
+                    case CheckState.Checked:
+                        if (startupKey.GetValue(appName) == null)
+                        {
+                            // Add startup reg key
+                            startupKey.SetValue(appName, @"""" + Application.ExecutablePath.ToString() + @"""");
+                            startupKey.Close();
+                        }
+                        break;
+                    case CheckState.Unchecked:
+                        startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                        startupKey.DeleteValue(appName, false);
+                        startupKey.Close();
+                        break;
+
+                    case CheckState.Indeterminate:
+                        startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                        startupKey.DeleteValue(appName, false);
+                        startupKey.Close();
+                        break;
+                }
+            }
+        }
+
+        private void btnFaleConosco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
