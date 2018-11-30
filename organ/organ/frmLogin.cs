@@ -121,26 +121,29 @@ namespace organ
             {
                 try
                 {
-                    string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = @nome_login AND senha = @senha;";
-                    
-                    SqlCommand scmd = new SqlCommand(sql, con);
-
-                    scmd.Parameters.Add("@NOME_LOGIN", SqlDbType.NVarChar).Value = txtUsuario.Text;
-                    scmd.Parameters.Add("@SENHA", SqlDbType.NVarChar).Value = txtSenha.Text;
-
-                    con.Open();
-
                     if ((txtUsuario.Text == "") || (txtUsuario.Text == "Usuário") || (txtSenha.Text == "Senha") || (txtSenha.Text == ""))
                     {
                         MessageBox.Show("Digite valores válidos nos campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
+                        string sql = "SELECT COUNT (*) AS CNT FROM tbLogin WHERE nome_login = @NOME_LOGIN AND senha = @SENHA";
+
+                        SqlCommand scmd = new SqlCommand(sql, con);
+
+                        scmd.Parameters.Add("@NOME_LOGIN", SqlDbType.NVarChar).Value = txtUsuario.Text;
+                        scmd.Parameters.Add("@SENHA", SqlDbType.NVarChar).Value = txtSenha.Text;
+
+                        con.Open();
+
                         if (scmd.ExecuteScalar().ToString() == "1")
                         {
-                            string logar = "UPDATE tbUsuario SET ativacao_usuario = 1 FROM tbUsuario U INNER JOIN tbLogin L ON L.cod_login = U.cod_login WHERE L.nome_login = '" +
-                            txtUsuario.Text + "' AND L.senha = '" + txtSenha.Text + "';";
+                            string logar = "UPDATE tbUsuario SET ativacao_usuario = 1 FROM tbUsuario U INNER JOIN tbLogin L ON L.cod_login = U.cod_login WHERE L.nome_login = @NOME_LOGIN AND L.senha = @SENHA";
                             SqlCommand login_usuario = new SqlCommand(logar, con);
+                                
+                            login_usuario.Parameters.Add("@NOME_LOGIN", SqlDbType.NVarChar).Value = txtUsuario.Text;
+                            login_usuario.Parameters.Add("@SENHA", SqlDbType.NVarChar).Value = txtSenha.Text;
+
                             login_usuario.ExecuteScalar();
 
                             frmOrgan Interface_Organ = new frmOrgan();

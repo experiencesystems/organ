@@ -23,7 +23,29 @@ namespace organ
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtModelo.Text != "" || rtxtDescricao.Text != "" || txtMarca.Text != "" || cboFornecedor.SelectedIndex != -1 || mskQuantidade.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
+                                                      "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    LimparCampos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        void LimparCampos()
+        {
+            txtModelo.Text = "";
+            rtxtDescricao.Text = "";
+            cboFornecedor.SelectedIndex = -1;
+            txtMarca.Text = "";
+            mskQuantidade.Text = "";
         }
 
         public void CarregaUnidadeMedida()
@@ -55,10 +77,7 @@ namespace organ
 
                 cboFornecedor.ValueMember = "CODIGO";
                 cboFornecedor.DisplayMember = "FORNECEDOR";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboFornecedor.SelectedIndex = -1;
                 cboFornecedor.DataSource = dt;
             }
             catch (SqlException e)

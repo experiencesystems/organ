@@ -8,7 +8,7 @@ namespace organ
 {
     public static class StringConexao
     {
-        private static string _connectionString = @"Data Source=SANTANA-COMPUTE\SQLEXPRESS;Initial Catalog=dbOrgan;Integrated Security=True";
+        private static string _connectionString = @"Data Source = LAPTOP-B8RLEG27; Initial Catalog = dbOrgan; Integrated Security = True";
         //private static string _connectionString = @"Data Source=SANTANA-COMPUTE\SQLEXPRESS;Initial Catalog=dbOrgan;Integrated Security=True";
         //private static string _connectionString = @"Data Source=SANTANA-COMPUTE\SQLEXPRESS;Initial Catalog=dbOrgan;Integrated Security=True";
         public static string connectionString

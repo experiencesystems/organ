@@ -23,50 +23,45 @@ namespace organ
 
         }
 
-            void DispCor()
+        void DispCor()
+        {
+            labels[0] = lblSolo1;
+            labels[1] = lblSolo2;
+            labels[2] = lblSolo3;
+            labels[3] = lblSolo4;
+            labels[4] = lblSolo5;
+            labels[5] = lblSolo6;
+            labels[6] = lblSolo7;
+            labels[7] = lblSolo8;
+            labels[8] = lblSolo9;
+            labels[9] = lblSolo10;
+            labels[10] = lblSolo11;
+
+            string cmdNS, disp;
+            SqlDataReader readerNS;
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
-                labels[0] = lblSolo1;
-                labels[1] = lblSolo2;
-                labels[2] = lblSolo3;
-                labels[3] = lblSolo4;
-                labels[4] = lblSolo5;
-                labels[5] = lblSolo6;
-                labels[6] = lblSolo7;
-                labels[7] = lblSolo8;
-                labels[8] = lblSolo9;
-                labels[9] = lblSolo10;
-                labels[10] = lblSolo11;
-
-                string cmdNS;
-
                 try
                 {
-
                     for (int i = 0; i <= 10; i++)
                     {
-                        SqlConnection con = new SqlConnection(StringConexao.connectionString);
+                        i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
+                        cmdNS = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao = " + i;
+                        SqlCommand disptal = new SqlCommand(cmdNS, con);
                         con.Open();
 
-                        i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
-                        cmdNS = "select disponivel_tal from tbTalhao where cod_talhao = " + i + ";";
-                        SqlCommand disptal = new SqlCommand(cmdNS, con);
-                        SqlDataReader readerNS = disptal.ExecuteReader();
-                        if (readerNS.Read())
+                        if (disptal.ExecuteScalar().ToString() == "1")
                         {
-
-                            int disp = Convert.ToInt16(readerNS["disponivel_tal"]);
-                            if (disp == 1)
-                            {
-                                i = i - 1;
-                                labels[i].BackColor = Color.FromArgb(39, 174, 96);
-                            }
-                            else
-                            {
-                                i = i - 1;
-                                labels[i].BackColor = Color.FromArgb(192, 57, 43);
-                            }
+                            i = i - 1;
+                            labels[i].BackColor = Color.FromArgb(39, 174, 96);
+                            con.Close();
                         }
-
+                        else
+                        {
+                            i = i - 1;
+                            labels[i].BackColor = Color.FromArgb(192, 57, 43);
+                            con.Close();
+                        }
                     }
                 }
 
@@ -74,26 +69,32 @@ namespace organ
                 {
                     throw new Exception(ex.Message);
                 }
-            }
 
-
-            private void btnDetalhes_Click(object sender, EventArgs e)
-            {
-                using (detalhes_solo _detalhes_solo = new detalhes_solo())
+                finally
                 {
-                    _detalhes_solo.ShowDialog(this);
+                    con.Close();
                 }
             }
+        }
 
-            private void btnVoltar_Click(object sender, EventArgs e)
-            {
-                this.Hide();
-            }
 
-            private void btnAtualizar_Click(object sender, EventArgs e)
+        private void btnDetalhes_Click(object sender, EventArgs e)
+        {
+            using (detalhes_solo _detalhes_solo = new detalhes_solo())
             {
-                DispCor();
+                _detalhes_solo.ShowDialog(this);
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            DispCor();
+        }
 
     }
 }

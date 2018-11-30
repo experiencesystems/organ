@@ -232,12 +232,12 @@ namespace organ
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
-                    MessageBox.Show("Plantio registrado com sucesso!", "Cadastro finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Plantio registrado com sucesso! Clique no texto 'Progresso dos plantios' na tela de colheita para acompanhar seu plantio!", "Cadastro finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (SqlException e)
             {
-                MessageBox.Show("Erro: " + e.ToString());
+                MessageBox.Show("Verifique se as quantidades inseridas não ultrapassam as do estoque.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {

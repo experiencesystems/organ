@@ -22,7 +22,27 @@ namespace organ
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNome.Text != "" || rtxtDescricao.Text != "" || cboSemente.SelectedIndex != -1)
+            {
+                DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
+                                                      "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    LimparCampos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        void LimparCampos()
+        {
+            txtNome.Text = "";
+            rtxtDescricao.Text = "";
+            cboSemente.SelectedIndex = -1;
         }
 
         void PreencherComboBox()

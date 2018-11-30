@@ -96,10 +96,10 @@
             this.lblSolo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSolo.AutoSize = true;
             this.lblSolo.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblSolo.Location = new System.Drawing.Point(581, 20);
+            this.lblSolo.Location = new System.Drawing.Point(595, 20);
             this.lblSolo.Name = "lblSolo";
             this.lblSolo.Padding = new System.Windows.Forms.Padding(60, 5, 0, 0);
-            this.lblSolo.Size = new System.Drawing.Size(143, 49);
+            this.lblSolo.Size = new System.Drawing.Size(116, 34);
             this.lblSolo.TabIndex = 6;
             this.lblSolo.Text = "Solo";
             // 
@@ -177,10 +177,10 @@
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.lblSolo11);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(402, 1230);
+            this.panel11.Location = new System.Drawing.Point(405, 1230);
             this.panel11.Margin = new System.Windows.Forms.Padding(20);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(332, 360);
+            this.panel11.Size = new System.Drawing.Size(335, 360);
             this.panel11.TabIndex = 3;
             // 
             // lblSolo11
@@ -192,7 +192,8 @@
             this.lblSolo11.Location = new System.Drawing.Point(0, 0);
             this.lblSolo11.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo11.Name = "lblSolo11";
-            this.lblSolo11.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo11.Size = new System.Drawing.Size(335, 360);
             this.lblSolo11.TabIndex = 1;
             this.lblSolo11.Text = "Solo 11";
             this.lblSolo11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -205,7 +206,7 @@
             this.panel1.Location = new System.Drawing.Point(30, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(332, 360);
+            this.panel1.Size = new System.Drawing.Size(335, 360);
             this.panel1.TabIndex = 0;
             // 
             // lblSolo1
@@ -220,7 +221,7 @@
             this.lblSolo1.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo1.Name = "lblSolo1";
             this.lblSolo1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblSolo1.Size = new System.Drawing.Size(326, 360);
+            this.lblSolo1.Size = new System.Drawing.Size(335, 360);
             this.lblSolo1.TabIndex = 0;
             this.lblSolo1.Text = "Solo 1";
             this.lblSolo1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -230,10 +231,10 @@
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.lblSolo2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(402, 30);
+            this.panel2.Location = new System.Drawing.Point(405, 30);
             this.panel2.Margin = new System.Windows.Forms.Padding(20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(332, 360);
+            this.panel2.Size = new System.Drawing.Size(335, 360);
             this.panel2.TabIndex = 1;
             // 
             // lblSolo2
@@ -246,7 +247,7 @@
             this.lblSolo2.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo2.Name = "lblSolo2";
             this.lblSolo2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.lblSolo2.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo2.Size = new System.Drawing.Size(335, 360);
             this.lblSolo2.TabIndex = 1;
             this.lblSolo2.Text = "Solo 2";
             this.lblSolo2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -259,7 +260,7 @@
             this.panel10.Location = new System.Drawing.Point(30, 1230);
             this.panel10.Margin = new System.Windows.Forms.Padding(20);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(332, 360);
+            this.panel10.Size = new System.Drawing.Size(335, 360);
             this.panel10.TabIndex = 2;
             // 
             // lblSolo10
@@ -271,7 +272,8 @@
             this.lblSolo10.Location = new System.Drawing.Point(0, 0);
             this.lblSolo10.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo10.Name = "lblSolo10";
-            this.lblSolo10.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo10.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo10.Size = new System.Drawing.Size(335, 360);
             this.lblSolo10.TabIndex = 1;
             this.lblSolo10.Text = "Solo 10";
             this.lblSolo10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -284,7 +286,7 @@
             this.panel4.Location = new System.Drawing.Point(30, 430);
             this.panel4.Margin = new System.Windows.Forms.Padding(20);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(332, 360);
+            this.panel4.Size = new System.Drawing.Size(335, 360);
             this.panel4.TabIndex = 1;
             // 
             // lblSolo4
@@ -296,7 +298,8 @@
             this.lblSolo4.Location = new System.Drawing.Point(0, 0);
             this.lblSolo4.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo4.Name = "lblSolo4";
-            this.lblSolo4.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo4.Size = new System.Drawing.Size(335, 360);
             this.lblSolo4.TabIndex = 1;
             this.lblSolo4.Text = "Solo 4";
             this.lblSolo4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -306,10 +309,10 @@
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.lblSolo9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(774, 830);
+            this.panel9.Location = new System.Drawing.Point(780, 830);
             this.panel9.Margin = new System.Windows.Forms.Padding(20);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(333, 360);
+            this.panel9.Size = new System.Drawing.Size(336, 360);
             this.panel9.TabIndex = 1;
             // 
             // lblSolo9
@@ -321,7 +324,8 @@
             this.lblSolo9.Location = new System.Drawing.Point(0, 0);
             this.lblSolo9.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo9.Name = "lblSolo9";
-            this.lblSolo9.Size = new System.Drawing.Size(333, 360);
+            this.lblSolo9.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo9.Size = new System.Drawing.Size(336, 360);
             this.lblSolo9.TabIndex = 1;
             this.lblSolo9.Text = "Solo 9";
             this.lblSolo9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -331,10 +335,10 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.lblSolo3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(774, 30);
+            this.panel3.Location = new System.Drawing.Point(780, 30);
             this.panel3.Margin = new System.Windows.Forms.Padding(20);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(333, 360);
+            this.panel3.Size = new System.Drawing.Size(336, 360);
             this.panel3.TabIndex = 1;
             // 
             // lblSolo3
@@ -346,7 +350,8 @@
             this.lblSolo3.Location = new System.Drawing.Point(0, 0);
             this.lblSolo3.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo3.Name = "lblSolo3";
-            this.lblSolo3.Size = new System.Drawing.Size(333, 360);
+            this.lblSolo3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo3.Size = new System.Drawing.Size(336, 360);
             this.lblSolo3.TabIndex = 1;
             this.lblSolo3.Text = "Solo 3";
             this.lblSolo3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -356,10 +361,10 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.lblSolo8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(402, 830);
+            this.panel8.Location = new System.Drawing.Point(405, 830);
             this.panel8.Margin = new System.Windows.Forms.Padding(20);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(332, 360);
+            this.panel8.Size = new System.Drawing.Size(335, 360);
             this.panel8.TabIndex = 1;
             // 
             // lblSolo8
@@ -371,7 +376,8 @@
             this.lblSolo8.Location = new System.Drawing.Point(0, 0);
             this.lblSolo8.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo8.Name = "lblSolo8";
-            this.lblSolo8.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo8.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo8.Size = new System.Drawing.Size(335, 360);
             this.lblSolo8.TabIndex = 1;
             this.lblSolo8.Text = "Solo 8";
             this.lblSolo8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -381,10 +387,10 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.lblSolo5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(402, 430);
+            this.panel5.Location = new System.Drawing.Point(405, 430);
             this.panel5.Margin = new System.Windows.Forms.Padding(20);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(332, 360);
+            this.panel5.Size = new System.Drawing.Size(335, 360);
             this.panel5.TabIndex = 1;
             // 
             // lblSolo5
@@ -396,7 +402,8 @@
             this.lblSolo5.Location = new System.Drawing.Point(0, 0);
             this.lblSolo5.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo5.Name = "lblSolo5";
-            this.lblSolo5.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo5.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo5.Size = new System.Drawing.Size(335, 360);
             this.lblSolo5.TabIndex = 1;
             this.lblSolo5.Text = "Solo 5";
             this.lblSolo5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -409,7 +416,7 @@
             this.panel7.Location = new System.Drawing.Point(30, 830);
             this.panel7.Margin = new System.Windows.Forms.Padding(20);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(332, 360);
+            this.panel7.Size = new System.Drawing.Size(335, 360);
             this.panel7.TabIndex = 1;
             // 
             // lblSolo7
@@ -421,7 +428,8 @@
             this.lblSolo7.Location = new System.Drawing.Point(0, 0);
             this.lblSolo7.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo7.Name = "lblSolo7";
-            this.lblSolo7.Size = new System.Drawing.Size(332, 360);
+            this.lblSolo7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo7.Size = new System.Drawing.Size(335, 360);
             this.lblSolo7.TabIndex = 1;
             this.lblSolo7.Text = "Solo 7";
             this.lblSolo7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -431,10 +439,10 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.lblSolo6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(774, 430);
+            this.panel6.Location = new System.Drawing.Point(780, 430);
             this.panel6.Margin = new System.Windows.Forms.Padding(20);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(333, 360);
+            this.panel6.Size = new System.Drawing.Size(336, 360);
             this.panel6.TabIndex = 1;
             // 
             // lblSolo6
@@ -446,14 +454,15 @@
             this.lblSolo6.Location = new System.Drawing.Point(0, 0);
             this.lblSolo6.Margin = new System.Windows.Forms.Padding(0);
             this.lblSolo6.Name = "lblSolo6";
-            this.lblSolo6.Size = new System.Drawing.Size(333, 360);
+            this.lblSolo6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.lblSolo6.Size = new System.Drawing.Size(336, 360);
             this.lblSolo6.TabIndex = 1;
             this.lblSolo6.Text = "Solo 6";
             this.lblSolo6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnAtualizar
             // 
-            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.Font = new System.Drawing.Font("Calibri", 14F);
             this.btnAtualizar.Location = new System.Drawing.Point(1184, 30);
             this.btnAtualizar.Margin = new System.Windows.Forms.Padding(15, 30, 15, 3);
             this.btnAtualizar.Name = "btnAtualizar";

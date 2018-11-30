@@ -13,6 +13,7 @@ namespace organ
     {
         private int qtd_colheita;
         private int codigo_colheita;
+        private String data_colheita;
 
         public Plantio plantio { get; set; }
 
@@ -28,6 +29,14 @@ namespace organ
             plantio.Cod_plantio = cod_plantio;
         }
 
+        public Colheita(int qtd_colheita, int cod_plantio, String data_colheita)
+        {
+            plantio = new Plantio();
+            this.Qtd_colheita = qtd_colheita;
+            plantio.Cod_plantio = cod_plantio;
+            this.Data_colheita = data_colheita;
+        }
+
         public int Qtd_colheita
         {
             get { return qtd_colheita; }
@@ -38,6 +47,12 @@ namespace organ
         {
             get { return codigo_colheita; }
             set { codigo_colheita = value; }
+        }
+
+        public String Data_colheita
+        {
+            get { return data_colheita; }
+            set { data_colheita = value; }
         }
 
         string unidade_medida = "sac";
@@ -59,7 +74,7 @@ namespace organ
                     int i = sqlCmd.ExecuteNonQuery();
                     if (i > 0)
                     {
-                        MessageBox.Show("Plantio foi colhido com sucesso!", "Colheita realizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Plantio foi colhido com sucesso! Clique no texto 'Progresso dos plantios' na tela de colheita para atualizar os painéis.", "Colheita realizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception e)
@@ -85,12 +100,13 @@ namespace organ
                 sqlCmd.Parameters.AddWithValue("@COD_PLANTIO", SqlDbType.Int).Value = plantio.Cod_plantio;
                 sqlCmd.Parameters.AddWithValue("@QTD_COLHEITA", SqlDbType.Int).Value = c.Qtd_colheita;
                 sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", SqlDbType.Char).Value = unidade_medida;
+                sqlCmd.Parameters.AddWithValue("@DATA_COLHEITA", SqlDbType.VarChar).Value = c.Data_colheita;
                 try
                 {
                     int i = sqlCmd.ExecuteNonQuery();
                     if (i > 0)
                     {
-                        MessageBox.Show("Plantio foi colhido com sucesso!", "Colheita realizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Plantio foi colhido com sucesso! Clique no texto 'Progresso dos plantios' na tela de colheita para atualizar os painéis.", "Colheita realizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception e)

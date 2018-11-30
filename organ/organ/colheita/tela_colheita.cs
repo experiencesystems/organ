@@ -25,6 +25,11 @@ namespace organ
 
         private void colheita_Load(object sender, EventArgs e)
         {
+            CarregaTudo();
+        }
+
+        void CarregaTudo()
+        {
             PreencherCamposSementeData();
 
             CalcularBarraProgresso1();
@@ -40,14 +45,13 @@ namespace organ
             CalcularBarraProgresso11();
         }
 
-
         //
         //  ATUALIZAR PAINÉIS
         //
 
         private void lblProgressoPlantios_Click(object sender, EventArgs e)
         {
-            colheita_Load(sender, e);
+            CarregaTudo();
         }
 
         string qtdColhida;
@@ -96,7 +100,7 @@ namespace organ
         //
         //  MÉTODO QUE CHAMA O MÉTODO COLHEITA DA CLASSE
         //
-        string cmd;
+        string cmd, dataColheita;
         SqlCommand com;
         SqlDataReader reader;
 
@@ -108,6 +112,7 @@ namespace organ
                 qtdColhida = InputBox("Digite quantas sacas foram colhidas.", "Colheita", "");
                 if (qtdColhida != "")
                 {
+                    dataColheita = InputBoxData("Digite uma data para o plantio futuro.", "Colheita");
                     using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
                     {
                         con.Open();
@@ -120,10 +125,39 @@ namespace organ
                             if (reader.Read())
                             {
                                 int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
-
-                                Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio);
+                                Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio, dataColheita);
                                 colheita.RepetirColheita(colheita);
                                 reader.Close();
+                            }
+                            else
+                            {
+                                cmd = "SELECT * FROM tbPlantio WHERE cod_talhao2 = " + numtalhao; //pega o valor do talhão declarado em cada botão
+                                com = new SqlCommand(cmd, con);
+                                reader = com.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                                    Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio, dataColheita);
+                                    colheita.RepetirColheita(colheita);
+                                    reader.Close();
+                                }
+                                else
+                                {
+                                    cmd = "SELECT * FROM tbPlantio WHERE cod_talhao3 = " + numtalhao; //pega o valor do talhão declarado em cada botão
+                                    com = new SqlCommand(cmd, con);
+                                    reader = com.ExecuteReader();
+
+                                    if (reader.Read())
+                                    {
+                                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                                        Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio, dataColheita);
+                                        colheita.RepetirColheita(colheita);
+                                        reader.Close();
+                                    }
+                                }
                             }
                         }
                         catch (SqlException e)
@@ -133,7 +167,7 @@ namespace organ
                         finally
                         {
                             con.Close();
-                        }
+                        }   
                     }
                 }
             }
@@ -159,6 +193,36 @@ namespace organ
                                 colheita.RealizarColheita(colheita);
                                 reader.Close();
                             }
+                            else
+                            {
+                                cmd = "SELECT * FROM tbPlantio WHERE cod_talhao2 = " + numtalhao;
+                                com = new SqlCommand(cmd, con);
+                                reader = com.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                                    Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio);
+                                    colheita.RealizarColheita(colheita);
+                                    reader.Close();
+                                }
+                                else
+                                {
+                                    cmd = "SELECT * FROM tbPlantio WHERE cod_talha3 = " + numtalhao;
+                                    com = new SqlCommand(cmd, con);
+                                    reader = com.ExecuteReader();
+
+                                    if (reader.Read())
+                                    {
+                                        int cod_plantio = Convert.ToInt16(reader["cod_plantio"]);
+
+                                        Colheita colheita = new Colheita(Convert.ToInt32(qtdColhida), cod_plantio);
+                                        colheita.RealizarColheita(colheita);
+                                        reader.Close();
+                                    }
+                                }
+                            }
                         }
                         catch (SqlException e)
                         {
@@ -171,6 +235,17 @@ namespace organ
                     }
                 }
             }
+        }
+        
+        public static string InputBoxData(string prompt, string title)
+        {
+            InputBoxDialogData ib = new InputBoxDialogData();
+            ib.FormPrompt = prompt;
+            ib.FormCaption = title;
+            ib.ShowDialog();
+            string s = ib.InputResponse;
+            ib.Close();
+            return s;
         }
 
         //
@@ -578,6 +653,7 @@ namespace organ
                                 {
                                     i = i - 1;
                                     readerNS.Close();
+                                    labels[i].Text = "";
                                 }
                             }
                         }

@@ -37,7 +37,32 @@ namespace organ
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNome.Text != "" || txtDescricao.Text != "" || txtMarca.Text != "" || cboFornecedor.SelectedIndex != -1 || mskQuantidade.Text != ""||
+                cboDoenca.SelectedIndex != -1 || cboPraga.SelectedIndex != -1)
+            {
+                DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
+                                                      "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    LimparCampos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        void LimparCampos()
+        {
+            txtNome.Text = "";
+            txtDescricao.Text = "";
+            cboFornecedor.SelectedIndex = -1;
+            cboPraga.SelectedIndex = -1;
+            cboDoenca.SelectedIndex = -1;
+            txtMarca.Text = "";
+            mskQuantidade.Text = "";
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

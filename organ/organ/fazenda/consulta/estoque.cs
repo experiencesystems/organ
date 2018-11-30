@@ -65,8 +65,23 @@ namespace organ
                     sqlCmd.Parameters.AddWithValue("@COD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Código"].Value));
                     sqlCmd.Parameters.AddWithValue("@QTD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Quantidade"].Value));
                     sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", dgvRow.Cells["Unidade de medida"].Value);
-                    sqlCmd.ExecuteNonQuery();
-                    PreencherDataGridView();
+                    try
+                    {
+                        int i = sqlCmd.ExecuteNonQuery();
+                        if (i > 0)
+                        {
+                            MessageBox.Show("Quantidade no estoque alterada com sucesso!", "Alteração finalizada.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            PreencherDataGridView();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Você não pode ter uma quantidade menor que zero registrada no estoque.", "Erro ao mudar quantidade.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    finally
+                    {
+                        sqlCon.Close();
+                    }
                 }
             }
         }

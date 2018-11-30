@@ -55,7 +55,7 @@ namespace organ
             }
             catch (SqlException e)
             {
-                MessageBox.Show("Erro: " + e.ToString());
+                MessageBox.Show(e.Message);
             }
             finally
             {

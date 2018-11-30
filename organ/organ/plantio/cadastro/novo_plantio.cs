@@ -26,16 +26,46 @@ namespace organ
             PreencherComboBoxTalhoes();
             PreencherComboBoxTalhoes2();
             PreencherComboBoxTalhoes3();
+            btnLimpar.PerformClick();
         }
 
         DateTime hoje = DateTime.Now;
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Você tem certeza que deseja voltar? Você perderá toda a informação inserida.", "Voltar",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtNome.Text != "" || cboSemente.SelectedIndex != -1 || mskQntSemente.Text != "" || mskQntDefensivo.Text != "" ||
+                mskQntFertilizante.Text != "" || cboFertilizante.SelectedIndex != -1 || cboDefensivo.SelectedIndex != -1 ||
+                cboTalhao1.SelectedIndex != -1 || cboTalhao2.SelectedIndex != -1 || cboTalhao3.SelectedIndex != -1 ||
+                cboFuncionario1.SelectedIndex != -1|| cboFuncionario2.SelectedIndex != -1 || cboFuncionario3.SelectedIndex != -1)
+            {
+                DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
+                                                      "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    btnLimpar.PerformClick();
+                    this.Hide();
+                }
+            }
+            else
             {
                 this.Hide();
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            cboSemente.SelectedIndex = -1;
+            mskQntSemente.Text = "";
+            cboFertilizante.SelectedIndex = -1;
+            mskQntFertilizante.Text = "";
+            cboDefensivo.SelectedIndex = -1;
+            mskQntDefensivo.Text = "";
+            cboTalhao1.SelectedIndex = -1;
+            cboTalhao2.SelectedIndex = -1;
+            cboTalhao3.SelectedIndex = -1;
+            cboFuncionario1.SelectedIndex = -1;
+            cboFuncionario2.SelectedIndex = -1;
+            cboFuncionario3.SelectedIndex = -1;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -418,22 +448,6 @@ namespace organ
             {
                 con.Close();
             }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            cboSemente.SelectedIndex = -1;
-            mskQntSemente.Text = "";
-            cboFertilizante.SelectedIndex = -1;
-            mskQntFertilizante.Text = "";
-            cboDefensivo.SelectedIndex = -1;
-            mskQntDefensivo.Text = "";
-            cboTalhao1.SelectedIndex = -1;
-            cboTalhao2.SelectedIndex = -1;
-            cboTalhao3.SelectedIndex = -1;
-            cboFuncionario1.SelectedIndex = -1;
-            cboFuncionario2.SelectedIndex = -1;
-            cboFuncionario3.SelectedIndex = -1;
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)

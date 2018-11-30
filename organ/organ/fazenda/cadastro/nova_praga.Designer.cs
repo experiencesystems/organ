@@ -151,6 +151,7 @@
             // rtxtDescricao
             // 
             this.rtxtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtxtDescricao.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.rtxtDescricao.Location = new System.Drawing.Point(397, 93);
             this.rtxtDescricao.MaxLength = 200;
             this.rtxtDescricao.Name = "rtxtDescricao";

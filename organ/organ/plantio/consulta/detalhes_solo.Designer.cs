@@ -58,7 +58,7 @@
             this.tlpBarraSuperior.Padding = new System.Windows.Forms.Padding(20, 20, 0, 10);
             this.tlpBarraSuperior.RowCount = 1;
             this.tlpBarraSuperior.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpBarraSuperior.Size = new System.Drawing.Size(2000, 66);
+            this.tlpBarraSuperior.Size = new System.Drawing.Size(1940, 66);
             this.tlpBarraSuperior.TabIndex = 40;
             // 
             // btnVoltar
@@ -86,9 +86,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNovaMaquina.AutoSize = true;
             this.lblNovaMaquina.Font = new System.Drawing.Font("Calibri", 18F);
-            this.lblNovaMaquina.Location = new System.Drawing.Point(191, 20);
+            this.lblNovaMaquina.Location = new System.Drawing.Point(185, 20);
             this.lblNovaMaquina.Name = "lblNovaMaquina";
-            this.lblNovaMaquina.Size = new System.Drawing.Size(1632, 36);
+            this.lblNovaMaquina.Size = new System.Drawing.Size(1578, 29);
             this.lblNovaMaquina.TabIndex = 30;
             this.lblNovaMaquina.Text = "Detalhes solo";
             this.lblNovaMaquina.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -133,6 +133,7 @@
             this.dgvDetalhesSolo.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDetalhesSolo.Size = new System.Drawing.Size(1205, 674);
             this.dgvDetalhesSolo.TabIndex = 39;
+            this.dgvDetalhesSolo.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalhesSolo_CellValueChanged);
             // 
             // btnAtualizar
             // 
@@ -164,7 +165,7 @@
             // detalhes_solo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(2000, 801);
+            this.ClientSize = new System.Drawing.Size(1940, 801);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tlpBarraSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

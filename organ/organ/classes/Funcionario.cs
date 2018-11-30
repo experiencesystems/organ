@@ -124,8 +124,22 @@ namespace organ
             cmd.Parameters.Add("@CPF_FUNC", SqlDbType.Char).Value = f.CPF;
             cmd.Parameters.Add("@RG_FUNC", SqlDbType.Char).Value = f.RG;
             cmd.Parameters.Add("@DATA_NASC", SqlDbType.Date).Value = f.Data_nasc;
-            cmd.Parameters.Add("@TEL_FUNC", SqlDbType.Char).Value = f.Telefone;
-            cmd.Parameters.Add("@CEL_FUNC", SqlDbType.Char).Value = f.Celular;
+            if (f.Telefone == "")
+            {
+                cmd.Parameters.Add("@TEL_FUNC", SqlDbType.Char).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@TEL_FUNC", SqlDbType.Char).Value = f.Telefone;
+            }
+            if (f.Celular == "")
+            {
+                cmd.Parameters.Add("@CEL_FUNC", SqlDbType.Char).Value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters.Add("@CEL_FUNC", SqlDbType.Char).Value = f.Celular;
+            }
             cmd.Parameters.Add("@EMAIL_FUNC", SqlDbType.VarChar).Value = f.Email;
             cmd.Parameters.Add("@CARGO_FUNC", SqlDbType.VarChar).Value = f.Cargo;
             cmd.Parameters.Add("@SALARIO_FUNC", SqlDbType.VarChar).Value = f.Salario;

@@ -19,6 +19,7 @@ namespace organ
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             PreencherComboBox();
             CarregaUnidadeMedida();
+            CarregaTipoSolo();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -35,6 +36,18 @@ namespace organ
                 cboUnidadeMedida.Items.Add(unidade_medida[i]);
             }
             cboUnidadeMedida.SelectedIndex = 0;
+
+        }
+
+        public void CarregaTipoSolo()
+        {
+            string[] solo = {"Argiloso","Arenoso", "Humoso", "Calcário", "Terra roxa"};
+
+            for (int i = 0; i != solo.Length; i++)
+            {
+                cboTipoSolo.Items.Add(solo[i]);
+            }
+            cboTipoSolo.SelectedIndex = 0;
 
         }
 
@@ -79,7 +92,7 @@ namespace organ
             }
             else
             {
-                Semente s = new Semente(txtNome.Text, txtTipoSolo.Text, Convert.ToDouble(nupAcidez.Text), Convert.ToDouble(nupIncVento.Text), Convert.ToDouble(nupIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
+                Semente s = new Semente(txtNome.Text, cboTipoSolo.Text, Convert.ToDouble(nupAcidez.Text), Convert.ToDouble(nupIncVento.Text), Convert.ToDouble(nupIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
                 s.RegistrarSemente(s);
             }
         }

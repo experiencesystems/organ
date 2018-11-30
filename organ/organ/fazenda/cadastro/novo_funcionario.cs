@@ -19,15 +19,47 @@ namespace organ
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             CarregaEstado();
-            nupSalario.Text.Replace("R$", string.Empty).Replace(",", ".");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNome.Text != "" || mskCPF.Text != "" || mskRG.Text != "" || mskTelefone.Text != "" || mskCelular.Text != "" || 
+                txtEmail.Text != "" || nupSalario.Text != "0,00" || txtCargo.Text != ""|| mskCEP.Text != "" || txtEndereco.Text != "" || 
+                mskNumero.Text != "" || txtBairro.Text != "" || txtCidade.Text != "" || txtComplemento.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
+                                                      "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    LimparCampos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
-        public void CarregaEstado()
+        void LimparCampos()
+        {
+            txtNome.Text = "";
+            mskCPF.Text = "";
+            mskRG.Text = "";
+            mskTelefone.Text = "";
+            mskCelular.Text = "";
+            txtEmail.Text = "";
+            nupSalario.Text = "0,00";
+            txtCargo.Text = "";
+            mskCEP.Text = "";
+            txtEndereco.Text = "";
+            mskNumero.Text = "";
+            txtBairro.Text = "";
+            txtCidade.Text = "";
+            txtComplemento.Text = "";
+        }
+
+        void CarregaEstado()
         {
             string[] estados = {"AC","AL","AP","AM","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN",
                  "RS","RO","RR","SC","SP","SE","TO"};
@@ -51,6 +83,8 @@ namespace organ
             salario = Convert.ToString(y);
             salario = salario.Replace(",", ".");
 
+            //repeti o método pq sou insegura quanto aos meus códigos, é isso
+
             DateTime DataNascimento = dtDataNasc.Value;
             int anos = DateTime.Now.Year - DataNascimento.Year;
             
@@ -60,7 +94,7 @@ namespace organ
             }
                 Regex veremail = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
             if (txtNome.Text == "" || mskCPF.Text == "" || mskRG.Text == "" || txtEndereco.Text == "" || mskNumero.Text == "" || mskCEP.Text == "" || 
-                txtBairro.Text == "" || txtCidade.Text == "" || cboUF.Text == "" || txtCargo.Text == "" || nupSalario.Text == "")
+                txtBairro.Text == "" || txtCidade.Text == "" || cboUF.Text == "" || txtCargo.Text == "" || nupSalario.Text == "0,00" || nupSalario.Text == "")
             {
                 MessageBox.Show("Preencha todos os campos requeridos.", "Não foi possível criar um novo registro.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

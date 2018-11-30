@@ -50,7 +50,6 @@
             this.nupIncVento = new System.Windows.Forms.NumericUpDown();
             this.lblFertilizante = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTipoSolo = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.cboUnidadeMedida = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.nupIncSolar = new System.Windows.Forms.NumericUpDown();
+            this.cboTipoSolo = new System.Windows.Forms.ComboBox();
             this.tlpBarraSuperior.SuspendLayout();
             this.tlpNovoDefensivo.SuspendLayout();
             this.tlpNovoFuncionario.SuspendLayout();
@@ -281,8 +281,6 @@
             this.tlpNovoFuncionario.Controls.Add(this.nupIncVento, 1, 3);
             this.tlpNovoFuncionario.Controls.Add(this.lblFertilizante, 0, 1);
             this.tlpNovoFuncionario.Controls.Add(this.label7, 0, 0);
-            this.tlpNovoFuncionario.Controls.Add(this.txtTipoSolo, 1, 1);
-            this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
             this.tlpNovoFuncionario.Controls.Add(this.label10, 0, 2);
             this.tlpNovoFuncionario.Controls.Add(this.label11, 0, 3);
             this.tlpNovoFuncionario.Controls.Add(this.label12, 0, 4);
@@ -294,6 +292,8 @@
             this.tlpNovoFuncionario.Controls.Add(this.cboUnidadeMedida, 1, 7);
             this.tlpNovoFuncionario.Controls.Add(this.btnRegistrar, 1, 8);
             this.tlpNovoFuncionario.Controls.Add(this.nupIncSolar, 1, 2);
+            this.tlpNovoFuncionario.Controls.Add(this.cboTipoSolo, 1, 1);
+            this.tlpNovoFuncionario.Controls.Add(this.txtNome, 1, 0);
             this.tlpNovoFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpNovoFuncionario.Location = new System.Drawing.Point(0, 66);
             this.tlpNovoFuncionario.Name = "tlpNovoFuncionario";
@@ -349,15 +349,6 @@
             this.label7.Size = new System.Drawing.Size(74, 26);
             this.label7.TabIndex = 3;
             this.label7.Text = "Nome*";
-            // 
-            // txtTipoSolo
-            // 
-            this.txtTipoSolo.Font = new System.Drawing.Font("Calibri", 14F);
-            this.txtTipoSolo.Location = new System.Drawing.Point(397, 93);
-            this.txtTipoSolo.MaxLength = 50;
-            this.txtTipoSolo.Name = "txtTipoSolo";
-            this.txtTipoSolo.Size = new System.Drawing.Size(683, 30);
-            this.txtTipoSolo.TabIndex = 3;
             // 
             // txtNome
             // 
@@ -479,6 +470,16 @@
             this.nupIncSolar.Size = new System.Drawing.Size(233, 30);
             this.nupIncSolar.TabIndex = 4;
             // 
+            // cboTipoSolo
+            // 
+            this.cboTipoSolo.Font = new System.Drawing.Font("Calibri", 15.75F);
+            this.cboTipoSolo.FormattingEnabled = true;
+            this.cboTipoSolo.Location = new System.Drawing.Point(397, 93);
+            this.cboTipoSolo.MaxLength = 25;
+            this.cboTipoSolo.Name = "cboTipoSolo";
+            this.cboTipoSolo.Size = new System.Drawing.Size(683, 34);
+            this.cboTipoSolo.TabIndex = 3;
+            // 
             // nova_semente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -529,7 +530,6 @@
         private System.Windows.Forms.Label lblFertilizante;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtTipoSolo;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -543,5 +543,6 @@
         private System.Windows.Forms.NumericUpDown nupAcidez;
         private System.Windows.Forms.NumericUpDown nupIncVento;
         private System.Windows.Forms.NumericUpDown nupIncSolar;
+        private System.Windows.Forms.ComboBox cboTipoSolo;
     }
 }

@@ -74,6 +74,9 @@
   <ItemGroup>
     <Compile Include="classes\Colheita.cs" />
     <Compile Include="classes\Endereco.cs" />
+    <Compile Include="classes\InputBoxData.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="classes\Plantio.cs" />
     <Compile Include="colheita\tela_colheita.cs">
       <SubType>UserControl</SubType>
@@ -320,6 +323,9 @@
     <Compile Include="classes\StringConexao.cs" />
     <Compile Include="classes\Talhao.cs" />
     <Compile Include="classes\Semente.cs" />
+    <EmbeddedResource Include="classes\InputBoxData.resx">
+      <DependentUpon>InputBoxData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="classes\InputBox.resx">
       <DependentUpon>InputBox.cs</DependentUpon>
     </EmbeddedResource>
