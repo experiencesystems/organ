@@ -233,9 +233,18 @@ namespace organ
 
         {
 
-            InputResponse = this.dtpData.Text;
-            this.Close();
-
+            
+            DateTime hoje = DateTime.Now;
+            bool Valido = dtpData.Value > hoje;
+            if (!Valido)
+            {
+                MessageBox.Show("Selecione uma data válida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                InputResponse = this.dtpData.Text;
+                this.Close();
+            }
 
         }
 

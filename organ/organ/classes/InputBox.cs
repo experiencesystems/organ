@@ -235,7 +235,7 @@ namespace organ
 
         {
 
-            InputResponse = this.txtInput.Text;
+            
             bool Valido = txtInput.Text.Length <= 9 && txtInput.Text.All(char.IsDigit) && txtInput.Text != "";
             if (!Valido)
             {
@@ -243,6 +243,7 @@ namespace organ
             }
             else
             {
+                InputResponse = this.txtInput.Text;
                 this.Close();
             }
                      
