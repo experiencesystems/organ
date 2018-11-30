@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Reflection;
+using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace organ
 {
@@ -17,14 +19,12 @@ namespace organ
         public inicio()
         {
             InitializeComponent();
+            WebBrowserHelper.FixBrowserVersion();
+
             StreamReader reader = new StreamReader("Resources\\cotacao.html");
             wbCotacoes.DocumentText = reader.ReadToEnd();
-            /*StreamReader reader2 = new StreamReader("Resources\\clima.html");
-            wbClima.DocumentText = reader2.ReadToEnd();*/
             string curDir = Directory.GetCurrentDirectory();
             this.wbClima.Url = new Uri(String.Format("file:///{0}/Resources/clima.html", curDir));
-            /*string curDir = Path.GetDirectoryName(Application.ExecutablePath);
-            string html = Path.Combine(curDir, "clima.html");*/
         }
     }
 }

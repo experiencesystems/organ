@@ -321,6 +321,7 @@
     <Compile Include="classes\StringConexao.cs" />
     <Compile Include="classes\Talhao.cs" />
     <Compile Include="classes\Semente.cs" />
+    <Compile Include="WebBrowserHelper.cs" />
     <EmbeddedResource Include="classes\InputBoxData.resx">
       <DependentUpon>InputBoxData.cs</DependentUpon>
     </EmbeddedResource>

@@ -83,7 +83,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(934, 527);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(169, 50);
-            this.btnRegistrar.TabIndex = 16;
+            this.btnRegistrar.TabIndex = 17;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -148,7 +148,7 @@
             this.cboTalhao3.Location = new System.Drawing.Point(268, 438);
             this.cboTalhao3.Name = "cboTalhao3";
             this.cboTalhao3.Size = new System.Drawing.Size(401, 34);
-            this.cboTalhao3.TabIndex = 13;
+            this.cboTalhao3.TabIndex = 12;
             // 
             // cboTalhao2
             // 
@@ -168,7 +168,7 @@
             this.cboTalhao1.Location = new System.Drawing.Point(268, 328);
             this.cboTalhao1.Name = "cboTalhao1";
             this.cboTalhao1.Size = new System.Drawing.Size(401, 34);
-            this.cboTalhao1.TabIndex = 9;
+            this.cboTalhao1.TabIndex = 10;
             // 
             // dtDataColheita
             // 
@@ -178,7 +178,7 @@
             this.dtDataColheita.Location = new System.Drawing.Point(268, 273);
             this.dtDataColheita.Name = "dtDataColheita";
             this.dtDataColheita.Size = new System.Drawing.Size(401, 33);
-            this.dtDataColheita.TabIndex = 8;
+            this.dtDataColheita.TabIndex = 9;
             this.dtDataColheita.Value = new System.DateTime(2018, 11, 25, 0, 0, 0, 0);
             // 
             // cboDefensivo
@@ -189,7 +189,7 @@
             this.cboDefensivo.Location = new System.Drawing.Point(268, 218);
             this.cboDefensivo.Name = "cboDefensivo";
             this.cboDefensivo.Size = new System.Drawing.Size(401, 34);
-            this.cboDefensivo.TabIndex = 6;
+            this.cboDefensivo.TabIndex = 7;
             // 
             // cboFertilizante
             // 
@@ -199,7 +199,7 @@
             this.cboFertilizante.Location = new System.Drawing.Point(268, 163);
             this.cboFertilizante.Name = "cboFertilizante";
             this.cboFertilizante.Size = new System.Drawing.Size(401, 34);
-            this.cboFertilizante.TabIndex = 4;
+            this.cboFertilizante.TabIndex = 5;
             // 
             // cboSemente
             // 
@@ -209,7 +209,7 @@
             this.cboSemente.Location = new System.Drawing.Point(268, 108);
             this.cboSemente.Name = "cboSemente";
             this.cboSemente.Size = new System.Drawing.Size(401, 34);
-            this.cboSemente.TabIndex = 2;
+            this.cboSemente.TabIndex = 3;
             // 
             // lblTalhao
             // 
@@ -270,7 +270,7 @@
             this.cboFuncionario3.Location = new System.Drawing.Point(934, 438);
             this.cboFuncionario3.Name = "cboFuncionario3";
             this.cboFuncionario3.Size = new System.Drawing.Size(377, 34);
-            this.cboFuncionario3.TabIndex = 14;
+            this.cboFuncionario3.TabIndex = 15;
             // 
             // cboFuncionario2
             // 
@@ -280,7 +280,7 @@
             this.cboFuncionario2.Location = new System.Drawing.Point(934, 383);
             this.cboFuncionario2.Name = "cboFuncionario2";
             this.cboFuncionario2.Size = new System.Drawing.Size(377, 34);
-            this.cboFuncionario2.TabIndex = 12;
+            this.cboFuncionario2.TabIndex = 14;
             // 
             // cboFuncionario1
             // 
@@ -290,7 +290,7 @@
             this.cboFuncionario1.Location = new System.Drawing.Point(934, 328);
             this.cboFuncionario1.Name = "cboFuncionario1";
             this.cboFuncionario1.Size = new System.Drawing.Size(377, 34);
-            this.cboFuncionario1.TabIndex = 10;
+            this.cboFuncionario1.TabIndex = 13;
             // 
             // lblFuncionario
             // 
@@ -339,7 +339,7 @@
             this.mskQntDefensivo.Mask = "000000000";
             this.mskQntDefensivo.Name = "mskQntDefensivo";
             this.mskQntDefensivo.Size = new System.Drawing.Size(244, 33);
-            this.mskQntDefensivo.TabIndex = 7;
+            this.mskQntDefensivo.TabIndex = 8;
             // 
             // mskQntFertilizante
             // 
@@ -348,7 +348,7 @@
             this.mskQntFertilizante.Mask = "000000000";
             this.mskQntFertilizante.Name = "mskQntFertilizante";
             this.mskQntFertilizante.Size = new System.Drawing.Size(244, 33);
-            this.mskQntFertilizante.TabIndex = 5;
+            this.mskQntFertilizante.TabIndex = 6;
             // 
             // mskQntSemente
             // 
@@ -357,7 +357,7 @@
             this.mskQntSemente.Mask = "000000000";
             this.mskQntSemente.Name = "mskQntSemente";
             this.mskQntSemente.Size = new System.Drawing.Size(244, 33);
-            this.mskQntSemente.TabIndex = 3;
+            this.mskQntSemente.TabIndex = 4;
             // 
             // btnLimpar
             // 
@@ -365,7 +365,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(749, 527);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(166, 50);
-            this.btnLimpar.TabIndex = 15;
+            this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -387,7 +387,7 @@
             this.txtNome.Location = new System.Drawing.Point(268, 53);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(401, 33);
-            this.txtNome.TabIndex = 18;
+            this.txtNome.TabIndex = 2;
             // 
             // btnVoltar
             // 
@@ -403,7 +403,7 @@
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnVoltar.Size = new System.Drawing.Size(106, 30);
-            this.btnVoltar.TabIndex = 0;
+            this.btnVoltar.TabIndex = 19;
             this.btnVoltar.Text = "   Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -434,7 +434,7 @@
             this.btnAtualizar.Location = new System.Drawing.Point(1225, 23);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(156, 30);
-            this.btnAtualizar.TabIndex = 19;
+            this.btnAtualizar.TabIndex = 18;
             this.btnAtualizar.Text = "Atualizar dados";
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);

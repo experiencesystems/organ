@@ -54,6 +54,7 @@ namespace organ
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            txtNome.Text = "";
             cboSemente.SelectedIndex = -1;
             mskQntSemente.Text = "";
             cboFertilizante.SelectedIndex = -1;

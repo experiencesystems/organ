@@ -158,7 +158,7 @@ namespace organ
                         }
                     }
                 }
-                catch (SqlException ex)
+                catch
                 {
                     MessageBox.Show("Primeiro cadastre um usuário no banco ou confirme se a string de conexão está correta.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

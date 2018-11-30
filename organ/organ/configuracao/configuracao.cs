@@ -28,7 +28,7 @@ namespace organ
                 try
                 {
                     con.Open();
-                    cmdCodUser = "select * from tbUsuario where cod_usuario = 1";
+                    cmdCodUser = "select * from tbUsuario where cod_usuario = 1";//adm
                     SqlCommand comUser = new SqlCommand(cmdCodUser, con);
                     SqlDataReader reader = comUser.ExecuteReader();
                     if (reader.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)
@@ -94,7 +94,6 @@ namespace organ
 
         public static void AbrirIniciar(bool OnOff)
         {
-            /*
             try
             {
                 //Nome a ser exibido no registro ou quando Der MSCONFIG - Pode Alterar
@@ -128,55 +127,88 @@ namespace organ
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
 
         private void ckbAbrirIniciar_Click(object sender, EventArgs e)
         {
-
-            string appName = "Organ";
-            string runKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
-            RegistryKey startupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-
-            if (startupKey.GetValue(appName) == startupKey.GetValue(appName))
+            try
             {
-                ckbAbrirIniciar.Checked = true;
-            }
-            else
-            {
-                switch (ckbAbrirIniciar.CheckState)
+                string appName = "Organ";
+                string runKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Run";
+                RegistryKey startupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+                if (startupKey.GetValue(appName) == startupKey.GetValue(appName))
                 {
-                    case CheckState.Checked:
-                        if (startupKey.GetValue(appName) == null)
-                        {
-                            // Add startup reg key
-                            startupKey.SetValue(appName, @"""" + Application.ExecutablePath.ToString() + @"""");
-                            startupKey.Close();
-                        }
-                        break;
-                    case CheckState.Unchecked:
-                        startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                        startupKey.DeleteValue(appName, false);
-                        startupKey.Close();
-                        break;
-
-                    case CheckState.Indeterminate:
-                        startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
-                        startupKey.DeleteValue(appName, false);
-                        startupKey.Close();
-                        break;
+                    ckbAbrirIniciar.Checked = true;
                 }
+                else
+                {
+                    switch (ckbAbrirIniciar.CheckState)
+                    {
+                        case CheckState.Checked:
+                            if (startupKey.GetValue(appName) == null)
+                            {
+                                // Add startup reg key
+                                startupKey.SetValue(appName, @"""" + Application.ExecutablePath.ToString() + @"""");
+                                startupKey.Close();
+                            }
+                            break;
+                        case CheckState.Unchecked:
+                            startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                            startupKey.DeleteValue(appName, false);
+                            startupKey.Close();
+                            break;
+
+                        case CheckState.Indeterminate:
+                            startupKey = Registry.LocalMachine.OpenSubKey(runKey, true);
+                            startupKey.DeleteValue(appName, false);
+                            startupKey.Close();
+                            break;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Você deve executar o programa como administrador para definir essa opção.", "Não foi possível completar a operação requisitada.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void btnFaleConosco_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Acesse o site moreexpsystems.cs!", "Só que esse site não existe...", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void llblSair_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Application.Restart();
+            DialogResult result = MessageBox.Show("Tem certeza que deseja sair dessa aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Deslogar();
+                Application.Restart();
+            }
+        }
+
+        void Deslogar()
+        {
+            using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string deslogar = "UPDATE tbUsuario SET ativacao_usuario = 0 WHERE ativacao_usuario = 1;";//só teria um usuário logado
+                    SqlCommand sair = new SqlCommand(deslogar, con);
+                    sair.ExecuteScalar();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
     }
 }

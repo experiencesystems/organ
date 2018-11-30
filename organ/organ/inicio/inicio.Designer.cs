@@ -59,13 +59,11 @@
             // wbCotacoes
             // 
             this.wbCotacoes.AllowNavigation = false;
-            this.wbCotacoes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.wbCotacoes.Location = new System.Drawing.Point(14, 72);
+            this.wbCotacoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbCotacoes.Location = new System.Drawing.Point(0, 65);
             this.wbCotacoes.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbCotacoes.Name = "wbCotacoes";
-            this.wbCotacoes.Size = new System.Drawing.Size(598, 572);
+            this.wbCotacoes.Size = new System.Drawing.Size(623, 593);
             this.wbCotacoes.TabIndex = 5;
             this.wbCotacoes.WebBrowserShortcutsEnabled = false;
             // 
@@ -129,13 +127,11 @@
             // wbClima
             // 
             this.wbClima.AllowNavigation = false;
-            this.wbClima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.wbClima.Location = new System.Drawing.Point(14, 72);
+            this.wbClima.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbClima.Location = new System.Drawing.Point(0, 65);
             this.wbClima.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbClima.Name = "wbClima";
-            this.wbClima.Size = new System.Drawing.Size(598, 572);
+            this.wbClima.Size = new System.Drawing.Size(623, 593);
             this.wbClima.TabIndex = 5;
             this.wbClima.WebBrowserShortcutsEnabled = false;
             // 

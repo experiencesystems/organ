@@ -15,13 +15,13 @@
  Especificar o elemento requestedExecutionLevel desabilitará a virtualização de arquivos e Registro. 
  Remova esse elemento se seu aplicativo requer essa virtualização para compatibilidade
             com versões anteriores.  
-            
-         <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-       <requestedExecutionLevel level="asInvoker" uiAccess="false" />
-      </requestedPrivileges> 
         -->
 
-    </security>
+ <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+   <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
+ </requestedPrivileges>
+
+</security>
   </trustInfo>
 
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

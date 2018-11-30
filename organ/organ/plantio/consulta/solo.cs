@@ -36,9 +36,7 @@ namespace organ
             labels[8] = lblSolo9;
             labels[9] = lblSolo10;
             labels[10] = lblSolo11;
-
-            string cmdNS, disp;
-            SqlDataReader readerNS;
+            
             using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
                 try
@@ -46,7 +44,7 @@ namespace organ
                     for (int i = 0; i <= 10; i++)
                     {
                         i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
-                        cmdNS = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao = " + i;
+                        string cmdNS = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao = " + i;
                         SqlCommand disptal = new SqlCommand(cmdNS, con);
                         con.Open();
 
