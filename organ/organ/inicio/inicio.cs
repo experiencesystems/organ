@@ -21,18 +21,10 @@ namespace organ
             wbCotacoes.DocumentText = reader.ReadToEnd();
             /*StreamReader reader2 = new StreamReader("Resources\\clima.html");
             wbClima.DocumentText = reader2.ReadToEnd();*/
-            string curDir = Path.GetDirectoryName(Application.ExecutablePath);
-            string html = Path.Combine(curDir, "clima.html");
-        }
-
-        private void btnProgresso_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClima_Click(object sender, EventArgs e)
-        {
-
+            string curDir = Directory.GetCurrentDirectory();
+            this.wbClima.Url = new Uri(String.Format("file:///{0}/Resources/clima.html", curDir));
+            /*string curDir = Path.GetDirectoryName(Application.ExecutablePath);
+            string html = Path.Combine(curDir, "clima.html");*/
         }
     }
 }

@@ -22,6 +22,7 @@ namespace organ
             this.ClientSize = new Size(w, h);
             PreencherDataGridView();
         }
+
         void PreencherDataGridView()
         {
             using (SqlConnection con = new SqlConnection(StringConexao.connectionString))

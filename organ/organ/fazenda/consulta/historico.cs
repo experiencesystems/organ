@@ -28,9 +28,8 @@ namespace organ
             {
                 try
                 {
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("select cod_estoque AS [Código], data_alteracao AS [Data de alteração], qtd_antiga AS "+
-                        "[Quantidade anterior], qtd_alt AS [Quantidade alterada], unidade_medida AS [Unidade de medida], desc_hist AS [Descrição] from"+
-                        " tbHistorico_Estoque", con);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SP_SELECT_HISTORICO", con);
+                    sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvHistoricoEstoque.DataSource = dtbl;

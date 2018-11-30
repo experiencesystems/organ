@@ -461,6 +461,7 @@ namespace organ
             PreencherComboBoxTalhoes();
             PreencherComboBoxTalhoes2();
             PreencherComboBoxTalhoes3();
+            btnLimpar.PerformClick();
         }
     }
 }

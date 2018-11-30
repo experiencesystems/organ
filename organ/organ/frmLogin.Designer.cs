@@ -64,7 +64,7 @@ namespace organ
             this.pnlBackground.Controls.Add(this.pcbSair);
             this.pnlBackground.Controls.Add(this.lblBemVindo);
             this.pnlBackground.Controls.Add(this.pnlLogin);
-            this.pnlBackground.Location = new System.Drawing.Point(-26, -19);
+            this.pnlBackground.Location = new System.Drawing.Point(-26, -12);
             this.pnlBackground.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBackground.Name = "pnlBackground";
             this.pnlBackground.Size = new System.Drawing.Size(677, 426);

@@ -55,9 +55,7 @@
   <PropertyGroup>
     <ApplicationIcon>Camada%25201.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -442,9 +440,6 @@
     <EmbeddedResource Include="plantio\consulta\sementes.resx">
       <DependentUpon>sementes.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.manifest">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="organ.manifest" />
     <None Include="dbOrgan.xsc">

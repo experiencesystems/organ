@@ -94,6 +94,7 @@ namespace organ
 
         public static void AbrirIniciar(bool OnOff)
         {
+            /*
             try
             {
                 //Nome a ser exibido no registro ou quando Der MSCONFIG - Pode Alterar
@@ -127,7 +128,7 @@ namespace organ
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void ckbAbrirIniciar_Click(object sender, EventArgs e)

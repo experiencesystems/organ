@@ -12,7 +12,7 @@ namespace organ.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -63,6 +63,28 @@ namespace organ.Properties {
         public string dbOrganCERTO {
             get {
                 return ((string)(this["dbOrganCERTO"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SANTANA-COMPUTE\\SQLEXPRESS;Initial Catalog=dbOrgan;Integrated Securit" +
+            "y=True")]
+        public string dbOrganPCSANTANAConnectionString {
+            get {
+                return ((string)(this["dbOrganPCSANTANAConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAB2PC12\\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User I" +
+            "D=sa;Password=1234567")]
+        public string dbOrganConnectionString2 {
+            get {
+                return ((string)(this["dbOrganConnectionString2"]));
             }
         }
     }

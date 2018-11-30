@@ -654,6 +654,7 @@ namespace organ
                                     i = i - 1;
                                     readerNS.Close();
                                     labels[i].Text = "";
+                                    labels2[i].Text = "";
                                 }
                             }
                         }
