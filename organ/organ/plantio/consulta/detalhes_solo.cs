@@ -34,7 +34,7 @@ namespace organ
             {
                 try
                 {
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_talhao AS [Código], nome_tal AS [Nome], tam_tal AS [Tamanho], tipo_solo_tal AS [Tipo de solo], inc_solar_tal AS [Incidência solar], inc_vento_tal AS [Incidência do vento], acidez_tal AS [Acidez], disponivel_tal AS [Disponível] FROM tbTalhao ORDER BY cod_talhao ASC;", con);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT cod_talhao AS [Codigo], nome_tal AS [Nome], tam_tal AS [Tamanho], tipo_solo_tal AS [Tipo de solo], inc_solar_tal AS [Incidencia solar], inc_vento_tal AS [Incidencia do vento], acidez_tal AS [Acidez], disponivel_tal AS [Disponivel] FROM tbTalhao ORDER BY cod_talhao ASC;", con);
                     DataTable dtbl = new DataTable();
                     sqlDa.Fill(dtbl);
                     dgvDetalhesSolo.DataSource = dtbl;
@@ -67,14 +67,14 @@ namespace organ
                     DataGridViewRow dgvRow = dgvDetalhesSolo.CurrentRow;
                     SqlCommand sqlCmd = new SqlCommand("SP_UPDATE_TALHAO", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@COD_TALHAO", Convert.ToInt32(dgvRow.Cells["Código"].Value));
+                    sqlCmd.Parameters.AddWithValue("@COD_TALHAO", Convert.ToInt32(dgvRow.Cells["Codigo"].Value));
                     sqlCmd.Parameters.AddWithValue("NOME_TAL", dgvRow.Cells["Nome"].Value);
                     sqlCmd.Parameters.AddWithValue("@TAM_TAL", Convert.ToInt32(dgvRow.Cells["Tamanho"].Value));
                     sqlCmd.Parameters.AddWithValue("@TIPO_SOLO_TAL", dgvRow.Cells["Tipo de solo"].Value);
-                    sqlCmd.Parameters.Add("@INC_SOLAR_TAL", SqlDbType.Decimal).Value = Convert.ToDouble(dgvRow.Cells["Incidência solar"].Value == DBNull.Value ? "0" : dgvRow.Cells["Incidência solar"].Value.ToString());
+                    sqlCmd.Parameters.Add("@INC_SOLAR_TAL", SqlDbType.Decimal).Value = Convert.ToDouble(dgvRow.Cells["Incidencia solar"].Value == DBNull.Value ? "0" : dgvRow.Cells["Incidencia solar"].Value.ToString());
                     sqlCmd.Parameters["@INC_SOLAR_TAL"].Precision = 5;
                     sqlCmd.Parameters["@INC_SOLAR_TAL"].Scale = 2;
-                    sqlCmd.Parameters.AddWithValue("@INC_VENTO_TAL", SqlDbType.Decimal).Value = Convert.ToDouble(dgvRow.Cells["Incidência do vento"].Value == DBNull.Value ? "0" : dgvRow.Cells["Incidência do vento"].Value.ToString());
+                    sqlCmd.Parameters.AddWithValue("@INC_VENTO_TAL", SqlDbType.Decimal).Value = Convert.ToDouble(dgvRow.Cells["Incidencia do vento"].Value == DBNull.Value ? "0" : dgvRow.Cells["Incidencia do vento"].Value.ToString());
                     sqlCmd.Parameters["@INC_VENTO_TAL"].Precision = 5;
                     sqlCmd.Parameters["@INC_VENTO_TAL"].Scale = 2;
                     sqlCmd.Parameters.AddWithValue("@ACIDEZ_TAL", SqlDbType.Decimal).Value = Convert.ToDouble(dgvRow.Cells["Acidez"].Value == DBNull.Value ? "0" : dgvRow.Cells["Acidez"].Value.ToString());
@@ -91,7 +91,7 @@ namespace organ
                     }
                     catch
                     {
-                        MessageBox.Show("Não foi possível alterar esse valor na tabela.", "Erro ao alterar tabela.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Não foi possível alterar esse valor na tabela. Certifique-se de usar vírgulas antes dos decimais.", "Erro ao alterar tabela.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     finally
                     {
@@ -99,6 +99,11 @@ namespace organ
                     }
                 }
             }
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+            PreencherDataGridView();
         }
     }
 }

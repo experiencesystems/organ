@@ -20,7 +20,6 @@ namespace organ
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             DispCor();
-
         }
 
         void DispCor()
@@ -36,7 +35,10 @@ namespace organ
             labels[8] = lblSolo9;
             labels[9] = lblSolo10;
             labels[10] = lblSolo11;
-            
+
+            string cmdT;
+            SqlCommand disptal;
+
             using (SqlConnection con = new SqlConnection(StringConexao.connectionString))
             {
                 try
@@ -44,8 +46,8 @@ namespace organ
                     for (int i = 0; i <= 10; i++)
                     {
                         i = i + 1; //Aqui eu somei 1 porque tem que ser respectivo ao talhão de 1 a 11, e não existe talhão 0.
-                        string cmdNS = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao = " + i;
-                        SqlCommand disptal = new SqlCommand(cmdNS, con);
+                        cmdT = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao = " + i;
+                        disptal = new SqlCommand(cmdT, con);
                         con.Open();
 
                         if (disptal.ExecuteScalar().ToString() == "1")
@@ -54,11 +56,41 @@ namespace organ
                             labels[i].BackColor = Color.FromArgb(39, 174, 96);
                             con.Close();
                         }
+
                         else
                         {
-                            i = i - 1;
-                            labels[i].BackColor = Color.FromArgb(192, 57, 43);
                             con.Close();
+                            cmdT = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao2 = " + i;
+                            disptal = new SqlCommand(cmdT, con);
+                            con.Open();
+
+                            if (disptal.ExecuteScalar().ToString() == "1")
+                            {
+                                i = i - 1;
+                                labels[i].BackColor = Color.FromArgb(39, 174, 96);
+                                con.Close();
+                            }
+
+                            else
+                            {
+                                con.Close();
+                                cmdT = "SELECT COUNT (*) AS CNT from tbTalhao where disponivel_tal = 'Disponivel' and cod_talhao3 = " + i;
+                                disptal = new SqlCommand(cmdT, con);
+                                con.Open();
+
+                                if (disptal.ExecuteScalar().ToString() == "1")
+                                {
+                                    i = i - 1;
+                                    labels[i].BackColor = Color.FromArgb(39, 174, 96);
+                                    con.Close();
+                                }
+
+                                else
+                                {
+                                    i = i - 1;
+                                    labels[i].BackColor = Color.FromArgb(192, 57, 43);
+                                }
+                            }
                         }
                     }
                 }

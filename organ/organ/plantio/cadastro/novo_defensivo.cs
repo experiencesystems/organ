@@ -74,27 +74,27 @@ namespace organ
             else
             {
                 string fornecedor, doenca, praga;
-                if (cboDoenca.SelectedIndex == -1)
+                if (cboDoenca.Text == "")
                 {
-                    doenca = cboDoenca.SelectedIndex.ToString();
+                    doenca = "-1";
                 }
                 else
                 {
                     doenca = cboDoenca.SelectedValue.ToString();
                 }
 
-                if (cboPraga.SelectedIndex == -1)
+                if (cboPraga.Text == "")
                 {
-                    praga =  cboPraga.SelectedIndex.ToString();
+                    praga = "-1";
                 }
                 else
                 {
                     praga = cboPraga.SelectedValue.ToString();
                 }
 
-                if (cboFornecedor.SelectedIndex == -1)
+                if (cboFornecedor.Text == "")
                 {
-                    fornecedor = cboFornecedor.SelectedIndex.ToString();
+                    fornecedor = "-1";
                 }
                 else
                 {
@@ -124,7 +124,10 @@ namespace organ
 
                 cboFornecedor.ValueMember = "CODIGO";
                 cboFornecedor.DisplayMember = "FORNECEDOR";
-                cboFornecedor.SelectedIndex = -1;
+                DataRow topItem = dt.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "";
+                dt.Rows.InsertAt(topItem, 0);
                 cboFornecedor.DataSource = dt;
             }
             catch (SqlException e)
@@ -152,10 +155,13 @@ namespace organ
                 dt.Columns.Add("DOENCA", typeof(string));
                 dt.Load(reader);
 
-                cboDoenca.DataSource = dt;
                 cboDoenca.ValueMember = "CODIGO";
                 cboDoenca.DisplayMember = "DOENCA";
-                cboFornecedor.SelectedIndex = -1;
+                DataRow topItem = dt.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "";
+                dt.Rows.InsertAt(topItem, 0);
+                cboDoenca.DataSource = dt;
             }
             catch (SqlException e)
             {
@@ -182,10 +188,13 @@ namespace organ
                 dt.Columns.Add("PRAGA", typeof(string));
                 dt.Load(reader);
 
-                cboPraga.DataSource = dt;
                 cboPraga.ValueMember = "CODIGO";
                 cboPraga.DisplayMember = "PRAGA";
-                cboFornecedor.SelectedIndex = -1;
+                DataRow topItem = dt.NewRow();
+                topItem[0] = 0;
+                topItem[1] = "";
+                dt.Rows.InsertAt(topItem, 0);
+                cboPraga.DataSource = dt;
             }
             catch (SqlException e)
             {
