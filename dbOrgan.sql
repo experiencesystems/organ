@@ -270,7 +270,7 @@ begin
 				values(@cod_estoque, -@qtd_alterada, @qtd_antiga, @unidade_medida);
 		end
 		else
-		print('Impossivel realizar esta operação, tente novamente com um valor maior que zero!');
+		print('Impossivel realizar esta operaçao, tente novamente com um valor maior que zero!');
 	end
 end
 GO
@@ -294,7 +294,7 @@ begin
 
 	end
 	else
-	print('Impossivel realizar esta operação, pois o código '+convert(varchar(20), @cod_estoque)+' não existe na tabela tbEstoque, tente novamente com um código válido!');;
+	print('Impossivel realizar esta operaçao, pois o codigo '+convert(varchar(20), @cod_estoque)+' nao existe na tabela tbEstoque, tente novamente com um codigo valido!');;
 end
 GO
 
@@ -313,14 +313,14 @@ create proc sp_insert_ferramenta(
 			insert into tbEstoque(qtd_estoque, unidade_medida) values(@qtd_estoque, @unidade_medida);
 			declare @cod_estoque int = (select top 1 cod_estoque from tbEstoque order by cod_estoque desc);	
 
-			if(@desc_ferra = '')set @desc_ferra = 'Sem descrição';	
-			if(@marca_ferra = '')set @marca_ferra = 'Marca não registrada';
+			if(@desc_ferra = '')set @desc_ferra = 'Sem descriçao';	
+			if(@marca_ferra = '')set @marca_ferra = 'Marca nao registrada';
 
 			insert into tbFerramenta (nome_ferra, desc_ferra, marca_ferra, cod_estoque, cod_fornecedor)
 						 values(@nome_ferra, @desc_ferra, @marca_ferra, @cod_estoque, @cod_fornecedor);
 		end
 		else
-		print('Impossível inserir um valor menor que zero, por favor insira novamente com outro valor.')
+		print('Impossivel inserir um valor menor que zero, por favor insira novamente com outro valor.')
  end
  
  
@@ -355,14 +355,14 @@ create proc sp_insert_maquina(
 		insert into tbEstoque(qtd_estoque, unidade_medida) values(@qtd_estoque, @unidade_medida);
 		declare @cod_estoque int = (select top 1 cod_estoque from tbEstoque order by cod_estoque desc);
 
-		if(@desc_maq = '')set @desc_maq = 'Sem descrição';	
-		if(@marca_maq = '')set @marca_maq = 'Marca não registrada';
+		if(@desc_maq = '')set @desc_maq = 'Sem descriçao';	
+		if(@marca_maq = '')set @marca_maq = 'Marca nao registrada';
 
 		insert into tbMaquina (nome_maq, desc_maq, marca_maq, cod_estoque, cod_fornecedor)
 				values(@nome_maq, @desc_maq, @marca_maq, @cod_estoque, @cod_fornecedor);
 	end
 	else
-	print('Impossível inserir um valor menor que zero, por favor insira novamente com outro valor.');
+	print('Impossivel inserir um valor menor que zero, por favor insira novamente com outro valor.');
  end
  GO
 
@@ -397,14 +397,14 @@ create proc sp_insert_defensivo(
 		insert into tbEstoque(qtd_estoque, unidade_medida) values(@qtd_estoque, @unidade_medida);
 		declare @cod_estoque int = (select top 1 cod_estoque from tbEstoque order by cod_estoque desc);
 
-		if(@desc_def = '')set @desc_def = 'Sem descrição';	
-		if(@marca_def = '')set @marca_def = 'Marca não registrada';
+		if(@desc_def = '')set @desc_def = 'Sem descriçao';	
+		if(@marca_def = '')set @marca_def = 'Marca nao registrada';
 
 		insert into tbDefensivo (nome_def, desc_def, marca_def, cod_estoque, cod_doenca, cod_praga, cod_fornecedor)
 				values(@nome_def, @desc_def, @marca_def, @cod_estoque, @cod_doenca, @cod_praga, @cod_fornecedor);
 	end
 	else
-	print('Impossível inserir um valor menor que zero, por favor insira novamente com outro valor.');
+	print('Impossivel inserir um valor menor que zero, por favor insira novamente com outro valor.');
  end
  GO
 
@@ -439,13 +439,13 @@ create proc sp_insert_semente(
 		insert into tbEstoque(qtd_estoque, unidade_medida) values(@qtd_estoque, @unidade_medida);
 		declare @cod_estoque int = (select top 1 cod_estoque from tbEstoque order by cod_estoque desc);
 
-		if(@tipo_solo_sem = '')set @tipo_solo_sem = 'Solo não especificado';	
+		if(@tipo_solo_sem = '')set @tipo_solo_sem = 'Solo nao especificado';	
 
 		insert into tbSemente(nome_sem, tipo_solo_sem, acidez_sem, inc_vento_sem, inc_solar_sem, cod_estoque, cod_fornecedor)
 					values(@nome_sem, @tipo_solo_sem, @acidez_sem, @inc_vento_sem, @inc_solar_sem, @cod_estoque, @cod_fornecedor);
 	end
 	else
-	print('Impossível inserir um valor menor que zero, por favor insira novamente com outro valor.');
+	print('Impossivel inserir um valor menor que zero, por favor insira novamente com outro valor.');
  end
 GO
 
@@ -478,8 +478,8 @@ create proc sp_insert_fertilizante(
 	insert into tbEstoque(qtd_estoque, unidade_medida) values(@qtd_estoque, @unidade_medida);
 	declare @cod_estoque int = (select top 1 cod_estoque from tbEstoque order by cod_estoque desc);
 
-	if(@marca_fert = '')set @marca_fert='Marca não especificada';
-	if(@desc_fert = '')set @desc_fert='Sem descrição';
+	if(@marca_fert = '')set @marca_fert='Marca nao especificada';
+	if(@desc_fert = '')set @desc_fert='Sem descriçao';
 
 	insert into tbFertilizante (nome_fert, desc_fert, marca_fert, cod_estoque, cod_fornecedor)
 			values(@nome_fert, @desc_fert, @marca_fert, @cod_estoque, @cod_fornecedor);
@@ -670,9 +670,9 @@ create proc sp_insert_fornecedor(
 )as
 begin
 	if(@complemento = '')set @complemento = 'Sem complemento';
-	if(@razao_social = '')set @razao_social = 'Razão social não registrada';
-	if(@email_forn = '')set @email_forn = 'Email não registrado';
-	if(@site_Forn = '')set @site_forn = 'Site não registrado';
+	if(@razao_social = '')set @razao_social = 'Razao social nao registrada';
+	if(@email_forn = '')set @email_forn = 'Email nao registrado';
+	if(@site_Forn = '')set @site_forn = 'Site nao registrado';
 
 	insert into tbEndereco (cep, numero, rua, bairro, complemento, cidade, uf)
 			values (@cep, @numero, @rua, @bairro, @complemento, @cidade, @uf);
@@ -711,7 +711,7 @@ begin
 	if(@tel_func = '') set @tel_func = null;
 	if(@cel_func = '') set @cel_func = null;
 	if(@complemento = '')set @complemento = 'Sem complemento';
-	if(@email_func = '')set @email_func = 'Email não registrado';
+	if(@email_func = '')set @email_func = 'Email nao registrado';
 
 		insert into tbEndereco (cep, numero, rua, bairro, complemento, cidade, uf)
 				values (@cep, @numero, @rua, @bairro, @complemento, @cidade, @uf);
@@ -761,7 +761,7 @@ create proc sp_insert_praga(
  @desc_praga varchar(200)
 )as
 begin
-	if(@desc_praga = '')set @desc_praga = 'Sem descrição';
+	if(@desc_praga = '')set @desc_praga = 'Sem descriçao';
 	insert into tbPraga(nome_praga, desc_praga, cod_semente)values(@nome_praga, @desc_praga, @cod_semente);
 end
 GO
@@ -780,7 +780,7 @@ create proc sp_insert_doenca(
  @cod_semente int
 )as
 begin
-	if(@desc_doenca = '')set @desc_doenca = 'Sem descrição';
+	if(@desc_doenca = '')set @desc_doenca = 'Sem descriçao';
 	insert into tbDoenca(nome_doenca, desc_doenca, cod_semente)values(@nome_doenca, @desc_doenca, @cod_semente);
 end
 GO
@@ -830,13 +830,12 @@ create proc sp_update_talhao(
  @tipo_solo_tal varchar(25),
  @inc_solar_tal decimal(5,2),
  @inc_vento_tal decimal(5,2),
- @acidez_tal decimal(5,2),
- @disponivel_tal char(11)
+ @acidez_tal decimal(5,2)
 )as
 begin
 	update tbTalhao
 	set nome_tal = @nome_tal, tam_tal = @tam_tal, tipo_solo_tal = @tipo_solo_tal, inc_solar_tal = @inc_solar_tal, inc_vento_tal = @inc_vento_tal,
-	 acidez_tal = @acidez_tal, disponivel_tal = @disponivel_tal
+	 acidez_tal = @acidez_tal
 	where cod_talhao = @cod_talhao;
 end
 GO
@@ -844,9 +843,9 @@ GO
 CREATE PROC SP_SELECT_PLANTIO
 AS
 BEGIN											  
-SELECT P.cod_plantio AS [Código], P.nome_plantio AS [Nome], S.nome_sem AS [Semente], P.data_inicio AS [Data início], P.data_colheita AS [Data colheita], 
-			F1.nome_func AS [Funcionário 1], F2.nome_func AS [Funcionário 2], F3.nome_func AS [Funcionário 3], F.nome_fert AS [Fertilizante], D.nome_def AS [Defensivo], 
-			T1.nome_tal AS [Talhão 1], T2.nome_tal AS [Talhão 2], T3.nome_tal AS [Talhão 3]
+SELECT P.cod_plantio AS [Codigo], P.nome_plantio AS [Nome], S.nome_sem AS [Semente], P.data_inicio AS [Data inicio], P.data_colheita AS [Data colheita], 
+			F1.nome_func AS [Funcionario 1], F2.nome_func AS [Funcionario 2], F3.nome_func AS [Funcionario 3], F.nome_fert AS [Fertilizante], D.nome_def AS [Defensivo], 
+			T1.nome_tal AS [Talhao 1], T2.nome_tal AS [Talhao 2], T3.nome_tal AS [Talhao 3]
 			FROM tbPlantio P
 			INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente
 			INNER JOIN tbFuncionario F1 ON P.cod_funcionario = F1.cod_funcionario
@@ -863,12 +862,12 @@ GO
 CREATE PROC SP_SELECT_COLHEITA
 AS
 BEGIN
-			SELECT C.cod_plantio AS [Código], C.data_colheita AS [Data colheita], C.qtd_colheita AS [Quantidade colhida], P.nome_plantio AS [Nome], S.nome_sem AS [Semente], 
-			P.data_inicio AS [Data início], F1.nome_func AS [Funcionário 1], F2.nome_func AS [Funcionário 2], F3.nome_func AS [Funcionário 3], 
-			F.nome_fert AS [Fertilizante], D.nome_def AS [Defensivo], T1.nome_tal AS [Talhão 1], T2.nome_tal AS [Talhão 2], T3.nome_tal AS [Talhão 3]
+			SELECT C.cod_plantio AS [Codigo], C.data_colheita AS [Data colheita], C.qtd_colheita AS [Quantidade colhida], P.nome_plantio AS [Nome], S.nome_sem AS [Semente], 
+			P.data_inicio AS [Data inicio], F1.nome_func AS [Funcionario 1], F2.nome_func AS [Funcionario 2], F3.nome_func AS [Funcionario 3], 
+			F.nome_fert AS [Fertilizante], D.nome_def AS [Defensivo], T1.nome_tal AS [Talhao 1], T2.nome_tal AS [Talhao 2], T3.nome_tal AS [Talhao 3]
 			FROM tbColheita C
 			LEFT JOIN tbPlantio P ON C.cod_plantio = P.cod_plantio
-			LEFT JOIN tbSemente S ON P.cod_semente = S.cod_semente
+			LEFT JOIN tbSemente S ON P.cod_semente = S.cod_semente	
 			LEFT JOIN tbFuncionario F1 ON P.cod_funcionario = F1.cod_funcionario
 			LEFT JOIN tbFuncionario F2 ON P.cod_funcionario2 = F2.cod_funcionario
 			LEFT JOIN tbFuncionario F3 ON P.cod_funcionario3 = F3.cod_funcionario
@@ -883,27 +882,27 @@ GO
 CREATE PROC SP_SELECT_ESTOQUE
 AS
 BEGIN
-SELECT E.cod_estoque AS [Código], S.nome_sem AS [Item], E.qtd_estoque AS [Quantidade], E.unidade_medida as [Unidade de medida]
+SELECT E.cod_estoque AS [Codigo], S.nome_sem AS [Item], E.qtd_estoque AS [Quantidade], E.unidade_medida as [Unidade de medida]
 FROM tbEstoque E
 INNER JOIN tbSemente S ON E.cod_estoque = S.cod_estoque
 UNION
-SELECT E.cod_estoque AS [Código],M.nome_maq, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
+SELECT E.cod_estoque AS [Codigo],M.nome_maq, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
 FROM tbEstoque E
 INNER JOIN tbMaquina M ON E.cod_estoque = M.cod_estoque
 UNION
-SELECT E.cod_estoque AS [Código],F.nome_ferra, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
+SELECT E.cod_estoque AS [Codigo],F.nome_ferra, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
 FROM tbEstoque E
 INNER JOIN tbFerramenta F ON E.cod_estoque = F.cod_estoque
 UNION
-SELECT E.cod_estoque AS [Código],D.nome_def, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
+SELECT E.cod_estoque AS [Codigo],D.nome_def, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
 FROM tbEstoque E
 INNER JOIN tbDefensivo D ON E.cod_estoque = D.cod_estoque
 UNION
-SELECT E.cod_estoque AS [Código],FE.nome_fert, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
+SELECT E.cod_estoque AS [Codigo],FE.nome_fert, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
 FROM tbEstoque E
 INNER JOIN tbFertilizante FE ON E.cod_estoque = FE.cod_estoque
 UNION
-SELECT E.cod_estoque AS [Código],P.nome_plantio, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
+SELECT E.cod_estoque AS [Codigo],P.nome_plantio, E.qtd_estoque, E.unidade_medida as [Unidade de medida]
 FROM tbEstoque E
 INNER JOIN tbColheita C ON E.cod_estoque = C.cod_estoque
 INNER JOIN tbPlantio P ON C.cod_plantio = P.cod_plantio
@@ -952,22 +951,23 @@ end
 GO
 
 
-exec sp_insert_funcionario 055451, 561, 'Rua', 'Bairro', 'Complemento', 'City', 'AM', 'Rogeirinho', 123123123, 1312312, '23-10-1999', 123123, 1212312, 'email', 'trabalhador', '1230'
+exec sp_insert_funcionario 055451, 561, 'Rua', 'Bairro', 'Complemento', 'City', 'AM', 'Rogeirinho', 123123123, 1312312, '19991023', 123123, 1212312, 'email', 'trabalhador', '1230';
 GO
 exec sp_insert_login 'usuario', 'senha';
 GO
-exec sp_insert_usuario 'Teste', 1, 1;
-go
+exec sp_insert_usuario 'Mayro', 1, 1;
+GO
 
-insert into tbTalhao(nome_tal, disponivel_tal, tam_tal, tipo_solo_tal) values('Talhão 1', 'Disponivel', 15, 'Argiloso'),
-('Talhão 2', 'Disponivel', 15, 'Argiloso'),
-('Talhão 3', 'Disponivel', 15, 'Argiloso'),
-('Talhão 4', 'Disponivel', 15, 'Argiloso'),
-('Talhão 5', 'Disponivel', 15, 'Argiloso'),
-('Talhão 6', 'Disponivel', 15, 'Argiloso'),
-('Talhão 7', 'Disponivel', 15, 'Argiloso'),
-('Talhão 8', 'Disponivel', 15, 'Argiloso'),
-('Talhão 9', 'Disponivel', 15, 'Argiloso'),
-('Talhão 10', 'Disponivel', 15, 'Argiloso'),
-('Talhão 11', 'Disponivel', 15, 'Argiloso');
+insert into tbTalhao(nome_tal, disponivel_tal, tam_tal, tipo_solo_tal) values
+('Talhao 1', 'Disponivel', 15, 'Argiloso'),
+('Talhao 2', 'Disponivel', 15, 'Argiloso'),
+('Talhao 3', 'Disponivel', 15, 'Argiloso'),
+('Talhao 4', 'Disponivel', 15, 'Argiloso'),
+('Talhao 5', 'Disponivel', 15, 'Argiloso'),
+('Talhao 6', 'Disponivel', 15, 'Argiloso'),
+('Talhao 7', 'Disponivel', 15, 'Argiloso'),
+('Talhao 8', 'Disponivel', 15, 'Argiloso'),
+('Talhao 9', 'Disponivel', 15, 'Argiloso'),
+('Talhao 10', 'Disponivel', 15, 'Argiloso'),
+('Talhao 11', 'Disponivel', 15, 'Argiloso');
 go
