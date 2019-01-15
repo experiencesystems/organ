@@ -21,10 +21,10 @@ namespace organ
             InitializeComponent();
             WebBrowserHelper.FixBrowserVersion();
 
-            StreamReader reader = new StreamReader("Resources\\cotacao.html");
+            StreamReader reader = new StreamReader("C:\\Program Files\\More Experience Systems\\Organ\\Resources\\cotacao.html");
             wbCotacoes.DocumentText = reader.ReadToEnd();
             string curDir = Directory.GetCurrentDirectory();
-            this.wbClima.Url = new Uri(String.Format("file:///{0}/Resources/clima.html", curDir));
+            this.wbClima.Url = new Uri(String.Format("C:\\Program Files\\More Experience Systems\\Organ\\Resources\\clima.html", curDir));
         }
     }
 }
