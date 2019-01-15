@@ -721,9 +721,6 @@ begin
 end
 GO
 
-exec sp_insert_funcionario 055451, 561, 'Rua', 'Bairro', 'Complemento', 'City', 'AM', 'Rogeirinho', 123123123, 1312312, '23-10-1999', 123123, 1212312, 'email', 'trabalhador', '1230'
-GO
-
 create proc sp_delete_funcionario
 @cod_funcionario int
 as
@@ -866,19 +863,18 @@ GO
 CREATE PROC SP_SELECT_COLHEITA
 AS
 BEGIN
-			SELECT C.cod_plantio AS [Código], P.nome_plantio AS [Nome], S.nome_sem AS [Semente], P.data_inicio AS [Data início], P.data_colheita AS [Data colheita],
-			E.qtd_estoque AS [Quantidade colhida], F1.nome_func AS [Funcionário 1], F2.nome_func AS [Funcionário 2], F3.nome_func AS [Funcionário 3], 
+			SELECT C.cod_plantio AS [Código], C.data_colheita AS [Data colheita], C.qtd_colheita AS [Quantidade colhida], P.nome_plantio AS [Nome], S.nome_sem AS [Semente], 
+			P.data_inicio AS [Data início], F1.nome_func AS [Funcionário 1], F2.nome_func AS [Funcionário 2], F3.nome_func AS [Funcionário 3], 
 			F.nome_fert AS [Fertilizante], D.nome_def AS [Defensivo], T1.nome_tal AS [Talhão 1], T2.nome_tal AS [Talhão 2], T3.nome_tal AS [Talhão 3]
 			FROM tbColheita C
-			INNER JOIN tbEstoque E ON C.cod_estoque = E.cod_estoque
-			INNER JOIN tbPlantio P ON C.cod_plantio = C.cod_plantio
-			INNER JOIN tbSemente S ON P.cod_semente = S.cod_semente
-			INNER JOIN tbFuncionario F1 ON P.cod_funcionario = F1.cod_funcionario
+			LEFT JOIN tbPlantio P ON C.cod_plantio = P.cod_plantio
+			LEFT JOIN tbSemente S ON P.cod_semente = S.cod_semente
+			LEFT JOIN tbFuncionario F1 ON P.cod_funcionario = F1.cod_funcionario
 			LEFT JOIN tbFuncionario F2 ON P.cod_funcionario2 = F2.cod_funcionario
 			LEFT JOIN tbFuncionario F3 ON P.cod_funcionario3 = F3.cod_funcionario
 			LEFT JOIN tbFertilizante F ON P.cod_fertilizante = F.cod_fertilizante
 			LEFT JOIN tbDefensivo D ON P.cod_defensivo = D.cod_defensivo
-			INNER JOIN tbTalhao T1 ON P.cod_talhao = T1.cod_talhao
+			LEFT JOIN tbTalhao T1 ON P.cod_talhao = T1.cod_talhao
 			LEFT JOIN tbTalhao T2 ON P.cod_talhao2 = T2.cod_talhao
 			LEFT JOIN tbTalhao T3 ON P.cod_talhao3 = T3.cod_talhao
 END
@@ -916,37 +912,37 @@ GO
 
 create proc sp_select_historico
 as begin
-select nome_sem [Item], H.qtd_antiga[Quantidade Antiga], H.qtd_alt [Quanidade Alterada], E.qtd_estoque [Quantidade Atual],
+select nome_sem [Item], H.qtd_antiga[Quantidade Antiga], H.qtd_alt [Quantidade Alterada], E.qtd_estoque [Quantidade Atual],
 E.unidade_medida [Unidade de medida], H.data_alteracao
 from tbSemente S
 inner join tbEstoque E on E.cod_estoque = S.cod_estoque
 inner join tbHistorico_Estoque H on H.cod_estoque = E.cod_estoque
 union
-select nome_maq [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quanidade Alterada], qtd_estoque [Quantidade Atual],
+select nome_maq [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quantidade Alterada], qtd_estoque [Quantidade Atual],
 E.unidade_medida [Unidade de medida], data_alteracao
 from tbMaquina M
 inner join tbEstoque E on E.cod_estoque = M.cod_estoque
 inner join tbHistorico_Estoque H on H.cod_estoque = E.cod_estoque
 union
-select nome_ferra [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quanidade Alterada], qtd_estoque [Quantidade Atual],
+select nome_ferra [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quantidade Alterada], qtd_estoque [Quantidade Atual],
 E.unidade_medida [Unidade de medida], data_alteracao
 from tbFerramenta F
 inner join tbEstoque E on E.cod_estoque = F.cod_estoque
 inner join tbHistorico_Estoque H on H.cod_estoque = E.cod_estoque
 union
-select nome_def [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quanidade Alterada], qtd_estoque [Quantidade Atual],
+select nome_def [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quantidade Alterada], qtd_estoque [Quantidade Atual],
 E.unidade_medida [Unidade de medida], data_alteracao
 from tbDefensivo D
 inner join tbEstoque E on E.cod_estoque = D.cod_estoque
 inner join tbHistorico_Estoque H on H.cod_estoque = E.cod_estoque
 union
-select nome_ferra [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quanidade Alterada], qtd_estoque [Quantidade Atual],
+select nome_ferra [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quantidade Alterada], qtd_estoque [Quantidade Atual],
 E.unidade_medida [Unidade de medida], data_alteracao
 from tbFerramenta FE
 inner join tbEstoque E on E.cod_estoque = FE.cod_estoque
 inner join tbHistorico_Estoque H on H.cod_estoque = E.cod_estoque
 union
-select nome_plantio [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quanidade Alterada], qtd_estoque [Quantidade Atual],
+select nome_plantio [Item], qtd_antiga[Quantidade Antiga], qtd_alt [Quantidade Alterada], qtd_estoque [Quantidade Atual],
 E.unidade_medida [Unidade de medida], data_alteracao
 from tbPlantio P
 inner join tbColheita C on C.cod_plantio = P.cod_plantio
@@ -954,6 +950,14 @@ inner JOIN tbEstoque E on E.cod_estoque = C.cod_estoque
 inner join tbHistorico_Estoque H on H.cod_estoque = E.cod_estoque
 end 
 GO
+
+
+exec sp_insert_funcionario 055451, 561, 'Rua', 'Bairro', 'Complemento', 'City', 'AM', 'Rogeirinho', 123123123, 1312312, '23-10-1999', 123123, 1212312, 'email', 'trabalhador', '1230'
+GO
+exec sp_insert_login 'usuario', 'senha';
+GO
+exec sp_insert_usuario 'Teste', 1, 1;
+go
 
 insert into tbTalhao(nome_tal, disponivel_tal, tam_tal, tipo_solo_tal) values('Talhão 1', 'Disponivel', 15, 'Argiloso'),
 ('Talhão 2', 'Disponivel', 15, 'Argiloso'),
@@ -967,7 +971,3 @@ insert into tbTalhao(nome_tal, disponivel_tal, tam_tal, tipo_solo_tal) values('T
 ('Talhão 10', 'Disponivel', 15, 'Argiloso'),
 ('Talhão 11', 'Disponivel', 15, 'Argiloso');
 go
-
-/*insert into tbPlantio(nome_plantio, data_inicio, data_colheita, cod_funcionario, cod_talhao, cod_semente)
-values('Plantio 1','25/11/2018', '28/11/2018', 1, 1, 2);
-GO*/

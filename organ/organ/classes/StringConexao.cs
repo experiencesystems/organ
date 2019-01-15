@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace organ
 {
-    public static class StringConexao { 
-    
+    public static class StringConexao
+    { 
         //private static string _connectionString = @"Data Source=LAB2PC12\SA;Initial Catalog=dbOrgan;Persist Security Info=True;User ID=sa;Password=1234567";
-        private static string _connectionString = @"Data Source = LAPTOP-B8RLEG27; Initial Catalog = dbOrgan; Integrated Security = True";
+        private static string _connectionString = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = dbOrgan; Integrated Security = True";
         //private static string _connectionString = @"Data Source=SANTANA-COMPUTE\SQLEXPRESS;Initial Catalog=dbOrgan;Integrated Security=True";
         //private static string _connectionString = @"Data Source=SANTANA-COMPUTE\SQLEXPRESS;Initial Catalog=dbOrgan;Integrated Security=True";
         public static string connectionString

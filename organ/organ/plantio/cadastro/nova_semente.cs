@@ -24,7 +24,32 @@ namespace organ
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNome.Text != "" || nupIncSolar.Text != "0,00" || cboFornecedor.SelectedIndex != -1 || mskQuantidade.Text != "" ||
+            nupIncVento.Text != "0,00" || nupAcidez.Text != "0,00")
+            {
+                DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
+                                                      "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    LimparCampos();
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        void LimparCampos()
+        {
+            txtNome.Text = "";
+            cboTipoSolo.Text = "";
+            nupIncSolar.Text = "0,00";
+            cboFornecedor.SelectedIndex = -1;
+            mskQuantidade.Text = "";
+            nupIncVento.Text = "0,00";
+            nupAcidez.Text = "0,00";
         }
 
         public void CarregaUnidadeMedida()
@@ -68,10 +93,7 @@ namespace organ
 
                 cboFornecedor.ValueMember = "CODIGO";
                 cboFornecedor.DisplayMember = "FORNECEDOR";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboFornecedor.SelectedIndex = -1;
                 cboFornecedor.DataSource = dt;
             }
             catch (SqlException e)
@@ -92,14 +114,9 @@ namespace organ
             }
             else
             {
-                Semente s = new Semente(txtNome.Text, cboTipoSolo.Text, Convert.ToDouble(nupAcidez.Text), Convert.ToDouble(nupIncVento.Text), Convert.ToDouble(nupIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
+                Semente s = new Semente(txtNome.Text, cboTipoSolo.Text, Convert.ToDouble(nupAcidez.Text), Convert.ToDouble(nupIncVento.Text), Convert.ToDouble(nupIncSolar.Text), Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.SelectedValue), cboUnidadeMedida.Text);
                 s.RegistrarSemente(s);
             }
         }
-
-        /*private void cboFornecedor_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int ID = Convert.ToInt16(cboFornecedor.SelectedValue);
-        }*/
     }
 }

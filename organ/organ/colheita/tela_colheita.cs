@@ -131,6 +131,7 @@ namespace organ
                             }
                             else
                             {
+                                reader.Close();
                                 cmd = "SELECT * FROM tbPlantio WHERE cod_talhao2 = " + numtalhao; //pega o valor do talhão declarado em cada botão
                                 com = new SqlCommand(cmd, con);
                                 reader = com.ExecuteReader();
@@ -145,6 +146,7 @@ namespace organ
                                 }
                                 else
                                 {
+                                    reader.Close();
                                     cmd = "SELECT * FROM tbPlantio WHERE cod_talhao3 = " + numtalhao; //pega o valor do talhão declarado em cada botão
                                     com = new SqlCommand(cmd, con);
                                     reader = com.ExecuteReader();

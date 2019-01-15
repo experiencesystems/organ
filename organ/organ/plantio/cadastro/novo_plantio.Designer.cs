@@ -172,7 +172,7 @@
             // 
             // dtDataColheita
             // 
-            this.dtDataColheita.CustomFormat = "dd/MM/yyyy";
+            this.dtDataColheita.CustomFormat = "yyyy/MM/dd";
             this.dtDataColheita.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDataColheita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDataColheita.Location = new System.Drawing.Point(268, 273);

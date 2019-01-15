@@ -22,7 +22,7 @@ namespace organ
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text != "" || rtxtDescricao.Text != "" || cboSemente.SelectedIndex != -1)
+            if (txtNome.Text != "" || rtxtDescricao.Text != "")
             {
                 DialogResult result = MessageBox.Show("Tem certeza que deseja voltar? Você irá perder todas as informações preenchidas.",
                                                       "Voltar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -62,10 +62,7 @@ namespace organ
 
                 cboSemente.ValueMember = "CODIGO";
                 cboSemente.DisplayMember = "SEMENTE";
-                DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "";
-                dt.Rows.InsertAt(topItem, 0);
+                cboSemente.SelectedIndex = -1;
                 cboSemente.DataSource = dt;
             }
             catch (SqlException e)
@@ -86,8 +83,7 @@ namespace organ
             }
             else
             {
-                string semente = cboSemente.SelectedValue.ToString();
-                Doenca d = new Doenca(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(semente));
+                Doenca d = new Doenca(txtNome.Text, rtxtDescricao.Text, Convert.ToInt16(cboSemente.SelectedValue));
                 d.RegistrarDoenca(d);
             }
         }

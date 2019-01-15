@@ -50,7 +50,7 @@ namespace organ
 
         public void CarregaUnidadeMedida()
         {
-            string[] unidade_medida = { "un", "Kg", "g", "mL", "L" };
+            string[] unidade_medida = { "un" };
 
             for (int i = 0; i != unidade_medida.Length; i++)
             {
@@ -103,7 +103,7 @@ namespace organ
             }
             else
             {
-                Maquina m = new Maquina(txtModelo.Text, rtxtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), cboFornecedor.SelectedIndex, cboUnidadeMedida.Text);
+                Maquina m = new Maquina(txtModelo.Text, rtxtDescricao.Text, txtMarca.Text, Convert.ToInt16(mskQuantidade.Text), Convert.ToInt16(cboFornecedor.SelectedValue), cboUnidadeMedida.Text);
                 m.RegistrarMaquina(m);
             }
         }

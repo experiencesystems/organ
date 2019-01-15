@@ -28,7 +28,7 @@ namespace organ
                 try
                 {
                     con.Open();
-                    cmdCodUser = "select * from tbUsuario where cod_usuario = 1";//adm
+                    cmdCodUser = "select * from tbUsuario where cod_usuario = 1 and ativacao_usuario = 1;";//adm
                     SqlCommand comUser = new SqlCommand(cmdCodUser, con);
                     SqlDataReader reader = comUser.ExecuteReader();
                     if (reader.Read()) //Se não colocasse aqui dava erro (se o reader ler algo, executa isso)

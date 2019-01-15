@@ -62,7 +62,7 @@ namespace organ
                     DataGridViewRow dgvRow = dgvEstoque.CurrentRow;
                     SqlCommand sqlCmd = new SqlCommand("SP_UPDATE_ESTOQUE", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@COD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Código"].Value));
+                    sqlCmd.Parameters.AddWithValue("@COD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Codigo"].Value));
                     sqlCmd.Parameters.AddWithValue("@QTD_ESTOQUE", Convert.ToInt32(dgvRow.Cells["Quantidade"].Value));
                     sqlCmd.Parameters.AddWithValue("@UNIDADE_MEDIDA", dgvRow.Cells["Unidade de medida"].Value);
                     try
