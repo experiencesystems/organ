@@ -12,6 +12,7 @@ O Organ é um sistema desktop gestor de agronegócio, e tem como foco:
 - Controle de pragas e doenças
 - Visualização de dados de cotação de produtos e clima local
 
+<img style="width:70%;" src="https://i.postimg.cc/yxPFc6t4/equipe.png"/>
 <details open>
   <summary><h2>Imagens</h2>
   </summary><br/>
