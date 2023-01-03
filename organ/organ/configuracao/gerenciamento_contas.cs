@@ -123,7 +123,9 @@ namespace organ
         void PreencherComboBoxUsuario2()
         {
             SqlConnection con = new SqlConnection(StringConexao.connectionString);
-            SqlCommand cmd = new SqlCommand("SELECT cod_login AS [CODIGO], nome_login AS [NOME] FROM tbLogin", con);
+            SqlCommand cmd = new SqlCommand(@"SELECT tbLogin.cod_login AS [CODIGO], tbLogin.nome_login AS [NOME] FROM tbLogin 
+                                              INNER JOIN tbUsuario ON tbLogin.cod_login =tbUsuario.cod_login 
+                                              WHERE tbUsuario.ativacao_usuario = 0 ", con);
 
             SqlDataReader reader;
             con.Open();

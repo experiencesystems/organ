@@ -20,6 +20,20 @@ namespace organ
             VerificarUserLogado();
         }
 
+        protected override void OnCreateControl()
+        {
+
+            try
+            {
+                //Exibe Campo caso esteja como administrador
+                RegistryKey startupKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+                ckbAbrirIniciar.Visible = true;
+            }
+            catch { }
+
+            base.OnCreateControl();
+        }
+
         private void llblGerenciamentoContas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string cmdCodUser;
